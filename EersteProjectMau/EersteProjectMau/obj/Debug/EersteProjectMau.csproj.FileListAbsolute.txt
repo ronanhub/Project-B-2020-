@@ -1,0 +1,9 @@
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
