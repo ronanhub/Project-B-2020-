@@ -18,15 +18,27 @@ namespace ronans_project
             //het maken van de stoelgrid met prijzen en status van stoel
             stoelGrid = new List<Tuple<float, status>> {
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.bezet), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
 
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.0f,status.bezet), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
             };
+            for (int i = 0; i < 24; i++) {
+                updateKleur(vindStoel(i));
+            }
+            basisPrijs = 0.0f;
         }
-
+        public void updatePrijs() {
+            basisPrijs = 0.0f;
+            for (int i = 0; i < 24; i++) {
+                if (stoelGrid[i].Item2 == status.keuze) {
+                    basisPrijs += stoelGrid[i].Item1;
+                }
+            }
+            labelPrijs.Text = "Totaal: € "+(checkKortingscode(textBoxKorting.Text)*basisPrijs).ToString();
+        }
         public void updateKleur(Button button) {
             int nummer;
             Color kleur;
@@ -56,7 +68,21 @@ namespace ronans_project
             button.BackColor = kleur;
         }
 
+        public Button vindStoel(int nummer) {
+            string nummerString;
+            if (nummer < 10) {
+                nummerString = "0" + nummer.ToString();
+            }
+            else {
+                nummerString = nummer.ToString();
+            }
+            return this.Controls["buttonStoel" + nummerString] as Button;
+        }
+
         public List<Tuple<float, status>> stoelGrid;
+
+        public float basisPrijs;
+        public string kortingsCode;
         public enum status {
             vrij = 0,
             bezet = 1,
@@ -112,11 +138,32 @@ namespace ronans_project
                 }
             }
             updateKleur(senderButton);
+            updatePrijs();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //geeft een prijs multiplier terug
+        private float checkKortingscode(string code) {
+            switch(code) {
+                case "kortingNU": {
+                    return 0.8f;
+                }
+                case "korting": {
+                    return 0.7f;
+                }
+                default: {
+                    return 1.0f;
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            updatePrijs();
         }
     }
 }

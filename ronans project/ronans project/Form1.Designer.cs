@@ -53,7 +53,8 @@
             this.buttonStoel15 = new System.Windows.Forms.Button();
             this.buttonStoel14 = new System.Windows.Forms.Button();
             this.buttonStoel13 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPrijs = new System.Windows.Forms.Label();
+            this.textBoxKorting = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonBetalen
@@ -306,22 +307,31 @@
             this.buttonStoel13.UseVisualStyleBackColor = false;
             this.buttonStoel13.Click += new System.EventHandler(this.buttonStoel1_Click);
             // 
-            // label1
+            // labelPrijs
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(660, 338);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Totaal: € ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelPrijs.AutoSize = true;
+            this.labelPrijs.Location = new System.Drawing.Point(660, 338);
+            this.labelPrijs.Name = "labelPrijs";
+            this.labelPrijs.Size = new System.Drawing.Size(52, 13);
+            this.labelPrijs.TabIndex = 25;
+            this.labelPrijs.Text = "Totaal: € ";
+            this.labelPrijs.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBoxKorting
+            // 
+            this.textBoxKorting.Location = new System.Drawing.Point(663, 288);
+            this.textBoxKorting.Name = "textBoxKorting";
+            this.textBoxKorting.Size = new System.Drawing.Size(125, 20);
+            this.textBoxKorting.TabIndex = 26;
+            this.textBoxKorting.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxKorting);
+            this.Controls.Add(this.labelPrijs);
             this.Controls.Add(this.buttonStoel00);
             this.Controls.Add(this.buttonStoel23);
             this.Controls.Add(this.buttonStoel22);
@@ -381,7 +391,8 @@
         private System.Windows.Forms.Button buttonStoel15;
         private System.Windows.Forms.Button buttonStoel14;
         private System.Windows.Forms.Button buttonStoel13;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPrijs;
+        private System.Windows.Forms.TextBox textBoxKorting;
     }
 }
 
