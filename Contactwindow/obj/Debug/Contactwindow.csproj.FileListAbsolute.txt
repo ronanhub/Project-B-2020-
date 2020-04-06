@@ -1,0 +1,9 @@
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\bin\Debug\Contactwindow.exe.config
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\bin\Debug\Contactwindow.exe
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\bin\Debug\Contactwindow.pdb
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\obj\Debug\Contactwindow.csprojAssemblyReference.cache
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\obj\Debug\Contactwindow.ContactWindow.resources
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\obj\Debug\Contactwindow.Properties.Resources.resources
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\obj\Debug\Contactwindow.csproj.GenerateResource.cache
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\obj\Debug\Contactwindow.exe
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\Contactwindow\obj\Debug\Contactwindow.pdb
