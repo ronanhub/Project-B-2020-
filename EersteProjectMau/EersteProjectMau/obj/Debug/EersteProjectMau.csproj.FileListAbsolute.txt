@@ -1,0 +1,19 @@
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\Yoga\source\repos\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
