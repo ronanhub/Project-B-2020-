@@ -24,15 +24,25 @@ namespace ronans_project
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
                 new Tuple<float,status>(11.0f,status.bezet), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.bezet)
             };
-            for (int i = 0; i < 24; i++) {
-                updateKleur(vindStoel(i));
+            for (int i = 0; i < 48; i++) {
+                var stoel = vindStoel(i);
+                updateKleur(stoel);
+                updatePrijs(stoel);
             }
             basisPrijs = 0.0f;
         }
         public void updatePrijs() {
             basisPrijs = 0.0f;
-            for (int i = 0; i < 24; i++) {
+            for (int i = 0; i < 48; i++) {
                 if (stoelGrid[i].Item2 == status.keuze) {
                     basisPrijs += stoelGrid[i].Item1;
                 }
@@ -68,6 +78,15 @@ namespace ronans_project
             button.BackColor = kleur;
         }
 
+        public void updatePrijs(Button button)
+        {
+            int nummer;
+            Color kleur;
+            string nummerString = button.Name.Substring(startIndex: 11, length: 2);
+            Int32.TryParse(nummerString, out nummer);
+
+            button.Text = "€"+(stoelGrid[nummer].Item1*checkKortingscode(textBoxKorting.Text)).ToString();
+        }
         public Button vindStoel(int nummer) {
             string nummerString;
             if (nummer < 10) {
@@ -76,7 +95,10 @@ namespace ronans_project
             else {
                 nummerString = nummer.ToString();
             }
-            return this.Controls["buttonStoel" + nummerString] as Button;
+            var tabControl = this.Controls["tabControl1"] as TabControl;
+            var tabPage = tabControl.Controls["TabPage1"] as TabPage;
+            return tabPage.Controls["buttonStoel" + nummerString] as Button;
+            //return this.Controls["buttonStoel" + nummerString] as Button;
         }
 
         public List<Tuple<float, status>> stoelGrid;
@@ -91,12 +113,13 @@ namespace ronans_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var frm = new Form2();
+
+            /*var frm = new Form2();
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;
             frm.FormClosing += delegate { this.Close(); };
             frm.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         public Tuple<int, int> stoelLocatie(int nummer, int width)
@@ -164,6 +187,11 @@ namespace ronans_project
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             updatePrijs();
+            for (int i = 0; i < 48; i++)
+            {
+                var stoel = vindStoel(i);
+                updatePrijs(stoel);
+            }
         }
     }
 }
