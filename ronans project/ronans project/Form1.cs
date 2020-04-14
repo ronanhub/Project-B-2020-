@@ -17,8 +17,8 @@ namespace ronans_project
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
             stoelGrid = new List<Tuple<float, status>> {
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.bezet), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
+                new Tuple<float,status>(10.8f,status.vrij), new Tuple<float,status>(10.000f,status.vrij), new Tuple<float,status>(10.0000f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.10f,status.vrij), new Tuple<float,status>(11.1f,status.bezet), new Tuple<float,status>(11.12f,status.vrij), new Tuple<float,status>(11.10f,status.vrij),
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
 
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
@@ -85,8 +85,36 @@ namespace ronans_project
             string nummerString = button.Name.Substring(startIndex: 11, length: 2);
             Int32.TryParse(nummerString, out nummer);
 
-            button.Text = "€"+(stoelGrid[nummer].Item1*checkKortingscode(textBoxKorting.Text)).ToString();
+            button.Text = "€" + prijstString(stoelGrid[nummer].Item1 * checkKortingscode(textBoxKorting.Text));//(stoelGrid[nummer].Item1*checkKortingscode(textBoxKorting.Text)).ToString();
         }
+
+        public string prijstString(float prijs)
+        {
+            string result;
+            result = prijs.ToString();
+            int loc = result.IndexOf(",");
+            if (loc == -1)
+            {
+                return result;
+            }
+            if (result.Length == loc)
+            {
+                return result + "00";
+            }
+            else if (result.Length == loc + 1)
+            {
+                return result + "00";
+            }
+            else if (result.Length == loc + 2)
+            {
+                return result + "0";
+            }
+            else  //(result.Length > loc + 1)
+            {
+                return result.Substring(0,loc+3);
+            }
+        }
+
         public Button vindStoel(int nummer) {
             string nummerString;
             if (nummer < 10) {
@@ -113,7 +141,7 @@ namespace ronans_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabPage2;
             /*var frm = new Form2();
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;

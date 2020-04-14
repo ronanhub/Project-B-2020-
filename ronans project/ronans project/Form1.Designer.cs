@@ -88,7 +88,7 @@
             // 
             // buttonBetalen
             // 
-            this.buttonBetalen.Location = new System.Drawing.Point(620, 220);
+            this.buttonBetalen.Location = new System.Drawing.Point(660, 359);
             this.buttonBetalen.Name = "buttonBetalen";
             this.buttonBetalen.Size = new System.Drawing.Size(125, 55);
             this.buttonBetalen.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.buttonStoel01.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel01.Location = new System.Drawing.Point(54, 6);
             this.buttonStoel01.Name = "buttonStoel01";
-            this.buttonStoel01.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel01.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel01.TabIndex = 1;
             this.buttonStoel01.UseVisualStyleBackColor = false;
             this.buttonStoel01.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -111,7 +111,7 @@
             this.buttonStoel02.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel02.Location = new System.Drawing.Point(105, 6);
             this.buttonStoel02.Name = "buttonStoel02";
-            this.buttonStoel02.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel02.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel02.TabIndex = 2;
             this.buttonStoel02.UseVisualStyleBackColor = false;
             this.buttonStoel02.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -121,7 +121,7 @@
             this.buttonStoel04.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel04.Location = new System.Drawing.Point(207, 6);
             this.buttonStoel04.Name = "buttonStoel04";
-            this.buttonStoel04.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel04.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel04.TabIndex = 4;
             this.buttonStoel04.UseVisualStyleBackColor = false;
             this.buttonStoel04.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -131,7 +131,7 @@
             this.buttonStoel03.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel03.Location = new System.Drawing.Point(156, 6);
             this.buttonStoel03.Name = "buttonStoel03";
-            this.buttonStoel03.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel03.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel03.TabIndex = 3;
             this.buttonStoel03.UseVisualStyleBackColor = false;
             this.buttonStoel03.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -141,7 +141,7 @@
             this.buttonStoel08.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel08.Location = new System.Drawing.Point(411, 6);
             this.buttonStoel08.Name = "buttonStoel08";
-            this.buttonStoel08.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel08.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel08.TabIndex = 8;
             this.buttonStoel08.UseVisualStyleBackColor = false;
             this.buttonStoel08.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -151,7 +151,7 @@
             this.buttonStoel07.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel07.Location = new System.Drawing.Point(360, 6);
             this.buttonStoel07.Name = "buttonStoel07";
-            this.buttonStoel07.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel07.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel07.TabIndex = 7;
             this.buttonStoel07.UseVisualStyleBackColor = false;
             this.buttonStoel07.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -161,7 +161,7 @@
             this.buttonStoel06.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel06.Location = new System.Drawing.Point(309, 6);
             this.buttonStoel06.Name = "buttonStoel06";
-            this.buttonStoel06.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel06.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel06.TabIndex = 6;
             this.buttonStoel06.UseVisualStyleBackColor = false;
             this.buttonStoel06.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -171,7 +171,7 @@
             this.buttonStoel05.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel05.Location = new System.Drawing.Point(258, 6);
             this.buttonStoel05.Name = "buttonStoel05";
-            this.buttonStoel05.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel05.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel05.TabIndex = 5;
             this.buttonStoel05.UseVisualStyleBackColor = false;
             this.buttonStoel05.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -181,7 +181,7 @@
             this.buttonStoel12.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel12.Location = new System.Drawing.Point(3, 57);
             this.buttonStoel12.Name = "buttonStoel12";
-            this.buttonStoel12.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel12.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel12.TabIndex = 12;
             this.buttonStoel12.UseVisualStyleBackColor = false;
             this.buttonStoel12.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -191,7 +191,7 @@
             this.buttonStoel11.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel11.Location = new System.Drawing.Point(564, 6);
             this.buttonStoel11.Name = "buttonStoel11";
-            this.buttonStoel11.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel11.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel11.TabIndex = 11;
             this.buttonStoel11.UseVisualStyleBackColor = false;
             this.buttonStoel11.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -201,7 +201,7 @@
             this.buttonStoel10.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel10.Location = new System.Drawing.Point(513, 6);
             this.buttonStoel10.Name = "buttonStoel10";
-            this.buttonStoel10.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel10.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel10.TabIndex = 10;
             this.buttonStoel10.UseVisualStyleBackColor = false;
             this.buttonStoel10.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -211,7 +211,7 @@
             this.buttonStoel09.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel09.Location = new System.Drawing.Point(462, 6);
             this.buttonStoel09.Name = "buttonStoel09";
-            this.buttonStoel09.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel09.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel09.TabIndex = 9;
             this.buttonStoel09.UseVisualStyleBackColor = false;
             this.buttonStoel09.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -221,7 +221,7 @@
             this.buttonStoel00.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel00.Location = new System.Drawing.Point(3, 6);
             this.buttonStoel00.Name = "buttonStoel00";
-            this.buttonStoel00.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel00.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel00.TabIndex = 24;
             this.buttonStoel00.UseVisualStyleBackColor = false;
             this.buttonStoel00.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -231,7 +231,7 @@
             this.buttonStoel23.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel23.Location = new System.Drawing.Point(564, 57);
             this.buttonStoel23.Name = "buttonStoel23";
-            this.buttonStoel23.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel23.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel23.TabIndex = 23;
             this.buttonStoel23.UseVisualStyleBackColor = false;
             this.buttonStoel23.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -241,7 +241,7 @@
             this.buttonStoel22.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel22.Location = new System.Drawing.Point(513, 57);
             this.buttonStoel22.Name = "buttonStoel22";
-            this.buttonStoel22.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel22.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel22.TabIndex = 22;
             this.buttonStoel22.UseVisualStyleBackColor = false;
             this.buttonStoel22.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -251,7 +251,7 @@
             this.buttonStoel21.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel21.Location = new System.Drawing.Point(462, 57);
             this.buttonStoel21.Name = "buttonStoel21";
-            this.buttonStoel21.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel21.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel21.TabIndex = 21;
             this.buttonStoel21.UseVisualStyleBackColor = false;
             this.buttonStoel21.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -261,7 +261,7 @@
             this.buttonStoel20.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel20.Location = new System.Drawing.Point(411, 57);
             this.buttonStoel20.Name = "buttonStoel20";
-            this.buttonStoel20.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel20.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel20.TabIndex = 20;
             this.buttonStoel20.UseVisualStyleBackColor = false;
             this.buttonStoel20.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -271,7 +271,7 @@
             this.buttonStoel19.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel19.Location = new System.Drawing.Point(360, 57);
             this.buttonStoel19.Name = "buttonStoel19";
-            this.buttonStoel19.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel19.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel19.TabIndex = 19;
             this.buttonStoel19.UseVisualStyleBackColor = false;
             this.buttonStoel19.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -281,7 +281,7 @@
             this.buttonStoel18.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel18.Location = new System.Drawing.Point(309, 57);
             this.buttonStoel18.Name = "buttonStoel18";
-            this.buttonStoel18.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel18.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel18.TabIndex = 18;
             this.buttonStoel18.UseVisualStyleBackColor = false;
             this.buttonStoel18.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -291,7 +291,7 @@
             this.buttonStoel17.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel17.Location = new System.Drawing.Point(258, 57);
             this.buttonStoel17.Name = "buttonStoel17";
-            this.buttonStoel17.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel17.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel17.TabIndex = 17;
             this.buttonStoel17.UseVisualStyleBackColor = false;
             this.buttonStoel17.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -301,7 +301,7 @@
             this.buttonStoel16.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel16.Location = new System.Drawing.Point(207, 57);
             this.buttonStoel16.Name = "buttonStoel16";
-            this.buttonStoel16.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel16.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel16.TabIndex = 16;
             this.buttonStoel16.UseVisualStyleBackColor = false;
             this.buttonStoel16.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -311,7 +311,7 @@
             this.buttonStoel15.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel15.Location = new System.Drawing.Point(156, 57);
             this.buttonStoel15.Name = "buttonStoel15";
-            this.buttonStoel15.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel15.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel15.TabIndex = 15;
             this.buttonStoel15.UseVisualStyleBackColor = false;
             this.buttonStoel15.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -321,7 +321,7 @@
             this.buttonStoel14.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel14.Location = new System.Drawing.Point(105, 57);
             this.buttonStoel14.Name = "buttonStoel14";
-            this.buttonStoel14.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel14.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel14.TabIndex = 14;
             this.buttonStoel14.UseVisualStyleBackColor = false;
             this.buttonStoel14.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -331,7 +331,7 @@
             this.buttonStoel13.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel13.Location = new System.Drawing.Point(54, 57);
             this.buttonStoel13.Name = "buttonStoel13";
-            this.buttonStoel13.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel13.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel13.TabIndex = 13;
             this.buttonStoel13.UseVisualStyleBackColor = false;
             this.buttonStoel13.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -339,7 +339,7 @@
             // labelPrijs
             // 
             this.labelPrijs.AutoSize = true;
-            this.labelPrijs.Location = new System.Drawing.Point(617, 189);
+            this.labelPrijs.Location = new System.Drawing.Point(657, 328);
             this.labelPrijs.Name = "labelPrijs";
             this.labelPrijs.Size = new System.Drawing.Size(52, 13);
             this.labelPrijs.TabIndex = 25;
@@ -348,7 +348,7 @@
             // 
             // textBoxKorting
             // 
-            this.textBoxKorting.Location = new System.Drawing.Point(620, 139);
+            this.textBoxKorting.Location = new System.Drawing.Point(660, 278);
             this.textBoxKorting.Name = "textBoxKorting";
             this.textBoxKorting.Size = new System.Drawing.Size(125, 20);
             this.textBoxKorting.TabIndex = 26;
@@ -440,7 +440,7 @@
             this.buttonStoel24.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel24.Location = new System.Drawing.Point(3, 108);
             this.buttonStoel24.Name = "buttonStoel24";
-            this.buttonStoel24.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel24.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel24.TabIndex = 50;
             this.buttonStoel24.UseVisualStyleBackColor = false;
             this.buttonStoel24.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -450,7 +450,7 @@
             this.buttonStoel25.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel25.Location = new System.Drawing.Point(54, 108);
             this.buttonStoel25.Name = "buttonStoel25";
-            this.buttonStoel25.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel25.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel25.TabIndex = 27;
             this.buttonStoel25.UseVisualStyleBackColor = false;
             this.buttonStoel25.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -460,7 +460,7 @@
             this.buttonStoel26.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel26.Location = new System.Drawing.Point(105, 108);
             this.buttonStoel26.Name = "buttonStoel26";
-            this.buttonStoel26.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel26.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel26.TabIndex = 28;
             this.buttonStoel26.UseVisualStyleBackColor = false;
             this.buttonStoel26.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -470,7 +470,7 @@
             this.buttonStoel47.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel47.Location = new System.Drawing.Point(564, 159);
             this.buttonStoel47.Name = "buttonStoel47";
-            this.buttonStoel47.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel47.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel47.TabIndex = 49;
             this.buttonStoel47.UseVisualStyleBackColor = false;
             this.buttonStoel47.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -480,7 +480,7 @@
             this.buttonStoel27.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel27.Location = new System.Drawing.Point(156, 108);
             this.buttonStoel27.Name = "buttonStoel27";
-            this.buttonStoel27.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel27.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel27.TabIndex = 29;
             this.buttonStoel27.UseVisualStyleBackColor = false;
             this.buttonStoel27.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -490,7 +490,7 @@
             this.buttonStoel46.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel46.Location = new System.Drawing.Point(513, 159);
             this.buttonStoel46.Name = "buttonStoel46";
-            this.buttonStoel46.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel46.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel46.TabIndex = 48;
             this.buttonStoel46.UseVisualStyleBackColor = false;
             this.buttonStoel46.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -500,7 +500,7 @@
             this.buttonStoel28.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel28.Location = new System.Drawing.Point(207, 108);
             this.buttonStoel28.Name = "buttonStoel28";
-            this.buttonStoel28.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel28.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel28.TabIndex = 30;
             this.buttonStoel28.UseVisualStyleBackColor = false;
             this.buttonStoel28.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -510,7 +510,7 @@
             this.buttonStoel45.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel45.Location = new System.Drawing.Point(462, 159);
             this.buttonStoel45.Name = "buttonStoel45";
-            this.buttonStoel45.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel45.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel45.TabIndex = 47;
             this.buttonStoel45.UseVisualStyleBackColor = false;
             this.buttonStoel45.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -520,7 +520,7 @@
             this.buttonStoel29.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel29.Location = new System.Drawing.Point(258, 108);
             this.buttonStoel29.Name = "buttonStoel29";
-            this.buttonStoel29.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel29.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel29.TabIndex = 31;
             this.buttonStoel29.UseVisualStyleBackColor = false;
             this.buttonStoel29.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -530,7 +530,7 @@
             this.buttonStoel44.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel44.Location = new System.Drawing.Point(411, 159);
             this.buttonStoel44.Name = "buttonStoel44";
-            this.buttonStoel44.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel44.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel44.TabIndex = 46;
             this.buttonStoel44.UseVisualStyleBackColor = false;
             this.buttonStoel44.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -540,7 +540,7 @@
             this.buttonStoel30.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel30.Location = new System.Drawing.Point(309, 108);
             this.buttonStoel30.Name = "buttonStoel30";
-            this.buttonStoel30.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel30.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel30.TabIndex = 32;
             this.buttonStoel30.UseVisualStyleBackColor = false;
             this.buttonStoel30.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -550,7 +550,7 @@
             this.buttonStoel43.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel43.Location = new System.Drawing.Point(360, 159);
             this.buttonStoel43.Name = "buttonStoel43";
-            this.buttonStoel43.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel43.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel43.TabIndex = 45;
             this.buttonStoel43.UseVisualStyleBackColor = false;
             this.buttonStoel43.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -560,7 +560,7 @@
             this.buttonStoel31.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel31.Location = new System.Drawing.Point(360, 108);
             this.buttonStoel31.Name = "buttonStoel31";
-            this.buttonStoel31.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel31.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel31.TabIndex = 33;
             this.buttonStoel31.UseVisualStyleBackColor = false;
             this.buttonStoel31.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -570,7 +570,7 @@
             this.buttonStoel42.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel42.Location = new System.Drawing.Point(309, 159);
             this.buttonStoel42.Name = "buttonStoel42";
-            this.buttonStoel42.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel42.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel42.TabIndex = 44;
             this.buttonStoel42.UseVisualStyleBackColor = false;
             this.buttonStoel42.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -580,7 +580,7 @@
             this.buttonStoel32.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel32.Location = new System.Drawing.Point(411, 108);
             this.buttonStoel32.Name = "buttonStoel32";
-            this.buttonStoel32.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel32.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel32.TabIndex = 34;
             this.buttonStoel32.UseVisualStyleBackColor = false;
             this.buttonStoel32.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -590,7 +590,7 @@
             this.buttonStoel41.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel41.Location = new System.Drawing.Point(258, 159);
             this.buttonStoel41.Name = "buttonStoel41";
-            this.buttonStoel41.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel41.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel41.TabIndex = 43;
             this.buttonStoel41.UseVisualStyleBackColor = false;
             this.buttonStoel41.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -600,7 +600,7 @@
             this.buttonStoel33.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel33.Location = new System.Drawing.Point(462, 108);
             this.buttonStoel33.Name = "buttonStoel33";
-            this.buttonStoel33.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel33.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel33.TabIndex = 35;
             this.buttonStoel33.UseVisualStyleBackColor = false;
             this.buttonStoel33.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -610,7 +610,7 @@
             this.buttonStoel40.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel40.Location = new System.Drawing.Point(207, 159);
             this.buttonStoel40.Name = "buttonStoel40";
-            this.buttonStoel40.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel40.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel40.TabIndex = 42;
             this.buttonStoel40.UseVisualStyleBackColor = false;
             this.buttonStoel40.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -620,7 +620,7 @@
             this.buttonStoel34.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel34.Location = new System.Drawing.Point(513, 108);
             this.buttonStoel34.Name = "buttonStoel34";
-            this.buttonStoel34.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel34.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel34.TabIndex = 36;
             this.buttonStoel34.UseVisualStyleBackColor = false;
             this.buttonStoel34.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -630,7 +630,7 @@
             this.buttonStoel39.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel39.Location = new System.Drawing.Point(156, 159);
             this.buttonStoel39.Name = "buttonStoel39";
-            this.buttonStoel39.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel39.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel39.TabIndex = 41;
             this.buttonStoel39.UseVisualStyleBackColor = false;
             this.buttonStoel39.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -640,7 +640,7 @@
             this.buttonStoel35.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel35.Location = new System.Drawing.Point(564, 108);
             this.buttonStoel35.Name = "buttonStoel35";
-            this.buttonStoel35.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel35.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel35.TabIndex = 37;
             this.buttonStoel35.UseVisualStyleBackColor = false;
             this.buttonStoel35.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -650,7 +650,7 @@
             this.buttonStoel38.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel38.Location = new System.Drawing.Point(105, 159);
             this.buttonStoel38.Name = "buttonStoel38";
-            this.buttonStoel38.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel38.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel38.TabIndex = 40;
             this.buttonStoel38.UseVisualStyleBackColor = false;
             this.buttonStoel38.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -660,7 +660,7 @@
             this.buttonStoel36.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel36.Location = new System.Drawing.Point(3, 159);
             this.buttonStoel36.Name = "buttonStoel36";
-            this.buttonStoel36.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel36.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel36.TabIndex = 38;
             this.buttonStoel36.UseVisualStyleBackColor = false;
             this.buttonStoel36.Click += new System.EventHandler(this.buttonStoel1_Click);
@@ -670,7 +670,7 @@
             this.buttonStoel37.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel37.Location = new System.Drawing.Point(54, 159);
             this.buttonStoel37.Name = "buttonStoel37";
-            this.buttonStoel37.Size = new System.Drawing.Size(45, 45);
+            this.buttonStoel37.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel37.TabIndex = 39;
             this.buttonStoel37.UseVisualStyleBackColor = false;
             this.buttonStoel37.Click += new System.EventHandler(this.buttonStoel1_Click);
