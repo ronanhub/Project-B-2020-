@@ -117,24 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="uitlegLabel1.Text" xml:space="preserve">
-    <value>·  Klik op AGENDA om te zien welke
-   films er in de toekomst in de
-   gedraaid worden.
-   
-·  Klik op CONTACT in de bovenste 
-   balk om de contactgevens van onze
-   bioscoop te zien en eventueel 
-   contact op te nemen.
-
-·  Klik op FAQ om de meest gestelde
-   vragen over onze bioscoop te zien
-   met een antwoord.
-
-·  Klik op RESERVEREN onder de film
-   om stoelen te reserveren voor deze
-   bioscoop film.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="logoBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2149,6 +2131,23 @@
         Y4wxxhhjjDHGGGOMMU1S+aExxhhjjDHGGGOMMcYYY4wxxhhjTJNUfmiMMcYYY4wxxhhjjDHGGGOMMcYY
         0ySVHxpjjDHGGGOMMcYYY4wxxhhjjDHGNEnlh8YYY4wxxhhjjDHGGGOMMcYYY4wxzRH+1/8AjkzAGyLT
         vJEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="hulpFAQ.Text" xml:space="preserve">
+    <value>Hier staan de meest
+gestelde vragen!
+
+Klik op een vraag om
+de antwoord op het 
+schermpje hier links te krijgen.
+
+Bij lange antwoorden kunt u door
+het balkje rechts van 
+de antwoorden naar beneden te 
+slepen het hele antwoord zien.
+
+Staat jouw vraag er niet bij?
+
 </value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
