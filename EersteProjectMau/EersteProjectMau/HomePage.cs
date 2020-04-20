@@ -431,5 +431,32 @@ namespace EersteProjectMau
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(1);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+        }
+
+
     }
 }
