@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Net;
+using System.Net.Mail;
 namespace Contactwindow
 {
     public partial class ContactWindow : Form
     {
+        NetworkCredential login;
+        SmtpClient Client;
+        MailMessage msg;
+
         public ContactWindow()
         {
             InitializeComponent();
@@ -56,6 +61,13 @@ namespace Contactwindow
 
         private void VolgendeMailbox_Click(object sender, EventArgs e)
         {
+            login = new NetworkCredential(UserEmailText.Text, txtWachtwoord.Text);
+            Client = new SmtpClient(txtSmtp.Text);
+            Client.Port = Convert.ToInt32(txtPort.Text);
+            Client.EnableSsl = ChkSSL.Checked;
+            Client.Credentials = login;
+            
+
             if(StuurMailBox.Visible== true)
             {
                 InvulMailBox.Visible = true;
@@ -65,10 +77,38 @@ namespace Contactwindow
 
         private void StuurMailText_Click(object sender, EventArgs e)
         {
+            msg = new MailMessage { From = new MailAddress(UserEmailText.Text + txtSmtp.Text.Replace("smtp.", "@"), "lucy", Encoding.UTF8) };
+            msg.To.Add(new MailAddress(txtTo.Text));
+            if (!string.IsNullOrEmpty(txtCC.Text))
+            {
+                msg.To.Add(new MailAddress(txtCC.Text));
+            }
+
+
             if (InvulMailBox.Visible == true)
             {
                 InvulMailBox.Visible = false;
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ContactWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
