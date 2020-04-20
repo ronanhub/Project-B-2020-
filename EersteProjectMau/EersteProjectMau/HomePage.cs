@@ -459,7 +459,14 @@ namespace EersteProjectMau
 
         private void ButtonMaps_Click(object sender, EventArgs e)
         {
-            
+            if (PictureMaps.Visible== false)
+            {
+                PictureMaps.Visible = true;
+            }
+            else
+            {
+                PictureMaps.Visible = false;
+            }
         }
     }
 }
