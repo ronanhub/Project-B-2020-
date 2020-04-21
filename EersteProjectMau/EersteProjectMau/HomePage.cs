@@ -44,6 +44,7 @@ namespace EersteProjectMau
         public List<Tuple<float, status>> stoelGrid;
         public float basisPrijs;
         public string kortingsCode;
+        public float totaalPrijs;
         public enum status
         {
             vrij = 0,
@@ -103,7 +104,8 @@ namespace EersteProjectMau
                     basisPrijs += stoelGrid[i].Item1;
                 }
             }
-            labelPrijs.Text = "Totaal: € " + (checkKortingscode(textBoxKorting.Text) * basisPrijs).ToString();
+            totaalPrijs = checkKortingscode(textBoxKorting.Text) * basisPrijs;
+            labelPrijs.Text = "Totaal: € " + (totaalPrijs).ToString();
         }
 
         //geeft een prijs multiplier terug
@@ -264,7 +266,7 @@ namespace EersteProjectMau
 
         private void faqButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(3);
+            tabControl1.SelectTab(4);
             tabControl2.SelectTab(3);
         }
 
@@ -449,12 +451,12 @@ namespace EersteProjectMau
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(1);
+            tabControl1.SelectTab(6);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(0);
+            tabControl1.SelectTab(5);
         }
 
         private void ButtonMaps_Click(object sender, EventArgs e)
@@ -469,6 +471,9 @@ namespace EersteProjectMau
             }
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+        }
     }
 }
