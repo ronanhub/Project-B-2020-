@@ -2,8 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\EersteProjectMau",
-    "\\EersteProjectMau\\EersteProjectMau"
+    "\\EersteProjectMau\\EersteProjectMau",
+    "\\EersteProjectMau\\EersteProjectMau\\bin",
+    "\\EersteProjectMau\\EersteProjectMau\\bin\\Release",
+    "\\EersteProjectMau\\EersteProjectMau\\obj",
+    "\\EersteProjectMau\\EersteProjectMau\\obj\\Debug",
+    "\\EersteProjectMau\\EersteProjectMau\\obj\\Release"
   ],
-  "SelectedNode": "\\EersteProjectMau\\EersteProjectMau",
+  "SelectedNode": "\\EersteProjectMau\\EersteProjectMau\\HomePage.cs",
   "PreviewInSolutionExplorer": false
 }
