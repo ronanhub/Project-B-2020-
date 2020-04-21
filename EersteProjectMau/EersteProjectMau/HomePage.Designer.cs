@@ -46,6 +46,11 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.PictureMaps = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ButtonMaps = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.filmPanel1 = new System.Windows.Forms.Panel();
@@ -142,17 +147,14 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.ButtonMaps = new System.Windows.Forms.Button();
-            this.PictureMaps = new System.Windows.Forms.PictureBox();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.filmPanel1.SuspendLayout();
             this.tabPageStoelselectie.SuspendLayout();
@@ -164,8 +166,6 @@
             this.tabPage6.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).BeginInit();
             this.SuspendLayout();
             // 
             // navigatiePanel
@@ -277,7 +277,7 @@
             this.tabControl1.Controls.Add(this.tabPageBetalen);
             this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Location = new System.Drawing.Point(12, 130);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(559, 308);
@@ -287,9 +287,9 @@
             // 
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(551, 282);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
@@ -311,9 +311,9 @@
             // 
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(551, 282);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
@@ -338,12 +338,62 @@
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(551, 282);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // PictureMaps
+            // 
+            this.PictureMaps.Image = ((System.Drawing.Image)(resources.GetObject("PictureMaps.Image")));
+            this.PictureMaps.Location = new System.Drawing.Point(256, 15);
+            this.PictureMaps.Name = "PictureMaps";
+            this.PictureMaps.Size = new System.Drawing.Size(292, 233);
+            this.PictureMaps.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureMaps.TabIndex = 4;
+            this.PictureMaps.TabStop = false;
+            this.PictureMaps.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ButtonMaps);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Location = new System.Drawing.Point(3, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(247, 100);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // ButtonMaps
+            // 
+            this.ButtonMaps.Location = new System.Drawing.Point(72, 55);
+            this.ButtonMaps.Name = "ButtonMaps";
+            this.ButtonMaps.Size = new System.Drawing.Size(69, 23);
+            this.ButtonMaps.TabIndex = 4;
+            this.ButtonMaps.Text = "Maps";
+            this.ButtonMaps.UseVisualStyleBackColor = true;
+            this.ButtonMaps.Click += new System.EventHandler(this.ButtonMaps_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(7, 39);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(227, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Locatie : Wijnhaven 107, 3011 WN Rotterdam";
+            // 
+            // label15
+            // 
+            this.label15.Location = new System.Drawing.Point(6, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(174, 23);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Telephoon: 06 64589325";
             // 
             // label3
             // 
@@ -360,7 +410,7 @@
             // 
             this.tabPage4.Controls.Add(this.filmPanel1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(551, 282);
             this.tabPage4.TabIndex = 3;
@@ -386,7 +436,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel1.Location = new System.Drawing.Point(295, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(4, 288);
             this.panel1.TabIndex = 6;
@@ -437,7 +487,7 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(312, 12);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(218, 262);
@@ -515,7 +565,7 @@
             this.tabPageStoelselectie.Controls.Add(this.buttonStoel13);
             this.tabPageStoelselectie.Location = new System.Drawing.Point(4, 22);
             this.tabPageStoelselectie.Name = "tabPageStoelselectie";
-            this.tabPageStoelselectie.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageStoelselectie.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageStoelselectie.Size = new System.Drawing.Size(551, 282);
             this.tabPageStoelselectie.TabIndex = 4;
             this.tabPageStoelselectie.Text = "tabPageStoelselectie";
@@ -1060,7 +1110,7 @@
             this.tabPageBetalen.Controls.Add(this.textBox1);
             this.tabPageBetalen.Location = new System.Drawing.Point(4, 22);
             this.tabPageBetalen.Name = "tabPageBetalen";
-            this.tabPageBetalen.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageBetalen.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageBetalen.Size = new System.Drawing.Size(551, 282);
             this.tabPageBetalen.TabIndex = 5;
             this.tabPageBetalen.Text = "tabPageBetalen";
@@ -1071,7 +1121,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(463, -33);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 56);
             this.button3.TabIndex = 55;
@@ -1093,7 +1143,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(86, 240);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 78);
             this.button2.TabIndex = 53;
@@ -1104,7 +1154,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(259, 240);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 78);
             this.button1.TabIndex = 52;
@@ -1127,7 +1177,7 @@
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(226, 170);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(196, 25);
@@ -1137,7 +1187,7 @@
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(86, 170);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(83, 25);
@@ -1147,7 +1197,7 @@
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(86, 139);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(336, 25);
@@ -1157,7 +1207,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(86, 108);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(336, 25);
@@ -1168,7 +1218,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(86, 201);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(336, 25);
             this.comboBox1.TabIndex = 46;
@@ -1243,7 +1293,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox2.Location = new System.Drawing.Point(86, 77);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(336, 25);
@@ -1253,11 +1303,12 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(86, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(336, 25);
             this.textBox1.TabIndex = 38;
+            
             // 
             // tabPage9
             // 
@@ -1265,9 +1316,9 @@
             this.tabPage9.Controls.Add(this.pictureBox3);
             this.tabPage9.Controls.Add(this.pictureBox2);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage9.Size = new System.Drawing.Size(551, 282);
             this.tabPage9.TabIndex = 6;
             this.tabPage9.Text = "tabPage9";
@@ -1277,7 +1328,7 @@
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(118, 232);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 78);
             this.button4.TabIndex = 7;
@@ -1288,7 +1339,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(322, -25);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(112, 122);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1298,7 +1349,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(206, -25);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1379,9 +1430,9 @@
             // tabPage5
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage5.Size = new System.Drawing.Size(201, 284);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "tabPage5";
@@ -1392,9 +1443,9 @@
             this.tabPage6.Controls.Add(this.hulpLabel1);
             this.tabPage6.Controls.Add(this.huidigePaginaLabel1);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage6.Size = new System.Drawing.Size(201, 284);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "tabPage6";
@@ -1407,7 +1458,7 @@
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Location = new System.Drawing.Point(579, 130);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(209, 310);
@@ -1416,9 +1467,9 @@
             // tabPage7
             // 
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage7.Size = new System.Drawing.Size(201, 284);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "tabPage7";
@@ -1428,63 +1479,13 @@
             // 
             this.tabPage8.Controls.Add(this.helpFAQ);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage8.Size = new System.Drawing.Size(201, 284);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.Location = new System.Drawing.Point(6, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(174, 23);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Telephoon: 06 64589325";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.ButtonMaps);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(3, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(247, 100);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(7, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(227, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Locatie : Wijnhaven 107, 3011 WN Rotterdam";
-            // 
-            // ButtonMaps
-            // 
-            this.ButtonMaps.Location = new System.Drawing.Point(72, 55);
-            this.ButtonMaps.Name = "ButtonMaps";
-            this.ButtonMaps.Size = new System.Drawing.Size(69, 23);
-            this.ButtonMaps.TabIndex = 4;
-            this.ButtonMaps.Text = "Maps";
-            this.ButtonMaps.UseVisualStyleBackColor = true;
-            this.ButtonMaps.Click += new System.EventHandler(this.ButtonMaps_Click);
-            // 
-            // PictureMaps
-            // 
-            this.PictureMaps.Image = ((System.Drawing.Image)(resources.GetObject("PictureMaps.Image")));
-            this.PictureMaps.Location = new System.Drawing.Point(256, 15);
-            this.PictureMaps.Name = "PictureMaps";
-            this.PictureMaps.Size = new System.Drawing.Size(292, 233);
-            this.PictureMaps.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureMaps.TabIndex = 4;
-            this.PictureMaps.TabStop = false;
-            this.PictureMaps.Visible = false;
             // 
             // HomePage
             // 
@@ -1511,6 +1512,9 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.filmPanel1.ResumeLayout(false);
             this.filmPanel1.PerformLayout();
@@ -1527,9 +1531,6 @@
             this.tabPage6.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
