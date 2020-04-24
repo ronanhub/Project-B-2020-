@@ -308,7 +308,6 @@
             this.Controls.Add(this.navigatiePanel);
             this.Name = "Agenda";
             this.Text = "Agenda";
-            this.Load += new System.EventHandler(this.Agenda_Load);
             this.helpPanel1.ResumeLayout(false);
             this.helpPanel1.PerformLayout();
             this.noHelpMainPanel.ResumeLayout(false);
