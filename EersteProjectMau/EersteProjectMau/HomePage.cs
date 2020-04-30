@@ -14,7 +14,6 @@ namespace EersteProjectMau
     {
         private object tabControl;
         Help_On_OFF helpKnop = new Help_On_OFF();
-
         public void Help_Open_Sluit()
         {
             
@@ -285,9 +284,7 @@ namespace EersteProjectMau
 
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-        }
+        
 
         private void homeButton_Click(object sender, EventArgs e)
         {
@@ -298,9 +295,79 @@ namespace EersteProjectMau
 
         private void agendaButton_Click(object sender, EventArgs e)
         {
-            
+            int aantalFilms = 3;
             tabControl1.SelectTab(1);
             tabControl2.SelectTab(1);
+
+            filmPanel = new FlowLayoutPanel();
+            filmPanel.Location = new Point(0,0);
+            Color black = Color.FromName("Black");
+            filmPanel.BackColor = black;
+            filmPanel.Size = new Size(900, 410 * aantalFilms);
+
+
+            tabPage2.Controls.Add(filmPanel);
+
+
+            for (int i = 0; i < aantalFilms; i++)
+            {
+
+                createNewFilm(i);
+
+            }
+        }
+
+        public void createNewFilm(int amountOfFilms)
+        {
+            List<Panel> panels = new List<Panel>();
+            String[] films = { "Dunkirk", "1917", "Op hoop \nvan zegen" };
+
+            Label label1 = new Label();
+            Panel panel = new Panel();
+            PictureBox filmPhoto = new PictureBox();
+            filmPhoto.Location = new Point(500, 50);
+            panel.Controls.Add(filmPhoto);
+            filmPhoto.Size = new Size(400, 600);
+            filmPhoto.LoadAsync(@"C:\palace.jpg");
+            panel.Size = new Size(895, 400);
+            panel.Controls.Add(label1);
+            Color white = Color.FromName("White");
+            panel.BackColor = white;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 35);
+            label1.Location = new Point(70, 50);
+            label1.Text = films[amountOfFilms];
+            panels.Add(panel);
+            filmPanel.Controls.Add(panel);
+
+
+            // Initialize the Panel control.
+            //panels[amountOfFilms].Location = new Point(10, 72 * amountOfFilms);
+            //panels[amountOfFilms].Size = new Size(264, 152);
+            // Set the Borderstyle for the Panel to three-dimensional.
+            //panels[amountOfFilms].BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
+            // Initialize the Label and TextBox controls.
+            //label1.Location = new Point(16, 16);
+
+            //label1.Size = new Size(104, 16);
+            //textBox1.Location = new Point(16, 32);
+            //textBox1.Text = "";
+            //textBox1.Size = new Size(152, 20);
+
+            // Add the Panel control to the form.
+            foreach (Panel newPanel in panels)
+            {
+                //filmPanel.Controls.Add(newPanel);
+            }
+            // Add the Label and TextBox controls to the Panel.
+
+        }
+
+
+        private void Agenda_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -476,7 +543,7 @@ namespace EersteProjectMau
             tabControl1.SelectTab(4);
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
