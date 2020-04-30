@@ -13,7 +13,9 @@ namespace EersteProjectMau
     public partial class HomePage : Form
     {
         // HelpKnop
+        private object tabControl;
         Help_On_OFF helpKnop = new Help_On_OFF();
+        private FlowLayoutPanel filmPanel;
         public void Help_Open_Sluit()
         {
 
