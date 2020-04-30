@@ -160,8 +160,8 @@ namespace EersteProjectMau
         Tuple<int, int>[] locaties = new Tuple<int, int>[] { Vraag_Antwoord_Loc_1.Item3, Vraag_Antwoord_Loc_2.Item3 };
         public void changeHuidig(int xLoc, int yLoc)
         {
-            huidig.Visible = true;
-            huidig.Location = new Point(xLoc, yLoc);
+            //huidig.Visible = true;
+            //huidig.Location = new Point(xLoc, yLoc);
         }
 
 
@@ -203,7 +203,7 @@ namespace EersteProjectMau
 
         public void changeTextbox(string shownAntwoord)
         {
-            richTextBox1.Text = shownAntwoord;
+            antwoorden.Text = shownAntwoord;
         }
 
 
