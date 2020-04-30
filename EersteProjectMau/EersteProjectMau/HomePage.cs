@@ -12,16 +12,19 @@ namespace EersteProjectMau
 {
     public partial class HomePage : Form
     {
-        private object tabControl;
+        // HelpKnop
         Help_On_OFF helpKnop = new Help_On_OFF();
-        private FlowLayoutPanel filmPanel;
         public void Help_Open_Sluit()
         {
-            
+
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabControl1.Size = (tabControl2.Visible == false) ? new Size(770, 310) : new Size(550, 310);
+            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(923, 510);
+            antwoorden.Size = (tabControl2.Visible == false) ? new Size(631, 255) : new Size(331, 455);
+
+            stuurVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
+            stuurVraag2.Visible = (tabControl2.Visible == false) ? true : false;
         }
 
         public Button vindStoel(int nummer)
