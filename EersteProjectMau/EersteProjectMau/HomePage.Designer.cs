@@ -45,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.GrpSignin = new System.Windows.Forms.TabPage();
             this.PictureMaps = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ButtonMaps = new System.Windows.Forms.Button();
@@ -147,12 +147,32 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.Emailbox = new System.Windows.Forms.GroupBox();
+            this.LblTo = new System.Windows.Forms.Label();
+            this.LblCC = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.TxtTo = new System.Windows.Forms.TextBox();
+            this.TxtCC = new System.Windows.Forms.TextBox();
+            this.TxtSubject = new System.Windows.Forms.TextBox();
+            this.TxtMesssege = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TxtUsrname = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.TxtPort = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.TxtSmtp = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.ChkSsl = new System.Windows.Forms.CheckBox();
+            this.BtnSend = new System.Windows.Forms.Button();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.GrpSignin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -166,6 +186,8 @@
             this.tabPage6.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.Emailbox.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // navigatiePanel
@@ -271,7 +293,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.GrpSignin);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPageStoelselectie);
             this.tabControl1.Controls.Add(this.tabPageBetalen);
@@ -314,7 +336,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(556, 282);
+            this.tabPage2.Size = new System.Drawing.Size(923, 484);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -332,18 +354,19 @@
             this.label2.Text = "AGENDA";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // tabPage3
+            // GrpSignin
             // 
-            this.tabPage3.Controls.Add(this.PictureMaps);
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(556, 282);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.GrpSignin.Controls.Add(this.Emailbox);
+            this.GrpSignin.Controls.Add(this.PictureMaps);
+            this.GrpSignin.Controls.Add(this.groupBox1);
+            this.GrpSignin.Controls.Add(this.label3);
+            this.GrpSignin.Location = new System.Drawing.Point(4, 22);
+            this.GrpSignin.Margin = new System.Windows.Forms.Padding(2);
+            this.GrpSignin.Name = "GrpSignin";
+            this.GrpSignin.Size = new System.Drawing.Size(923, 484);
+            this.GrpSignin.TabIndex = 2;
+            this.GrpSignin.Text = "tabPage3";
+            this.GrpSignin.UseVisualStyleBackColor = true;
             // 
             // PictureMaps
             // 
@@ -412,7 +435,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(556, 282);
+            this.tabPage4.Size = new System.Drawing.Size(923, 484);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1433,7 +1456,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(206, 284);
+            this.tabPage5.Size = new System.Drawing.Size(298, 484);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1470,7 +1493,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(206, 284);
+            this.tabPage7.Size = new System.Drawing.Size(298, 484);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1482,10 +1505,192 @@
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage8.Size = new System.Drawing.Size(206, 284);
+            this.tabPage8.Size = new System.Drawing.Size(298, 484);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // Emailbox
+            // 
+            this.Emailbox.BackColor = System.Drawing.Color.DimGray;
+            this.Emailbox.Controls.Add(this.groupBox2);
+            this.Emailbox.Controls.Add(this.TxtMesssege);
+            this.Emailbox.Controls.Add(this.TxtSubject);
+            this.Emailbox.Controls.Add(this.TxtCC);
+            this.Emailbox.Controls.Add(this.TxtTo);
+            this.Emailbox.Controls.Add(this.label19);
+            this.Emailbox.Controls.Add(this.label18);
+            this.Emailbox.Controls.Add(this.LblCC);
+            this.Emailbox.Controls.Add(this.LblTo);
+            this.Emailbox.Location = new System.Drawing.Point(353, 15);
+            this.Emailbox.Name = "Emailbox";
+            this.Emailbox.Size = new System.Drawing.Size(427, 431);
+            this.Emailbox.TabIndex = 5;
+            this.Emailbox.TabStop = false;
+            this.Emailbox.Text = "Stuur Email";
+            // 
+            // LblTo
+            // 
+            this.LblTo.Location = new System.Drawing.Point(0, 16);
+            this.LblTo.Name = "LblTo";
+            this.LblTo.Size = new System.Drawing.Size(62, 23);
+            this.LblTo.TabIndex = 0;
+            this.LblTo.Text = "To :";
+            // 
+            // LblCC
+            // 
+            this.LblCC.Location = new System.Drawing.Point(6, 48);
+            this.LblCC.Name = "LblCC";
+            this.LblCC.Size = new System.Drawing.Size(62, 23);
+            this.LblCC.TabIndex = 1;
+            this.LblCC.Text = "CC :";
+            // 
+            // label18
+            // 
+            this.label18.Location = new System.Drawing.Point(0, 91);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 23);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Subject :";
+            // 
+            // label19
+            // 
+            this.label19.Location = new System.Drawing.Point(6, 150);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(62, 23);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Messege :";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // TxtTo
+            // 
+            this.TxtTo.Location = new System.Drawing.Point(68, 19);
+            this.TxtTo.Name = "TxtTo";
+            this.TxtTo.Size = new System.Drawing.Size(344, 20);
+            this.TxtTo.TabIndex = 4;
+            // 
+            // TxtCC
+            // 
+            this.TxtCC.Location = new System.Drawing.Point(68, 50);
+            this.TxtCC.Name = "TxtCC";
+            this.TxtCC.Size = new System.Drawing.Size(344, 20);
+            this.TxtCC.TabIndex = 5;
+            // 
+            // TxtSubject
+            // 
+            this.TxtSubject.Location = new System.Drawing.Point(68, 91);
+            this.TxtSubject.Name = "TxtSubject";
+            this.TxtSubject.Size = new System.Drawing.Size(344, 20);
+            this.TxtSubject.TabIndex = 6;
+            // 
+            // TxtMesssege
+            // 
+            this.TxtMesssege.Location = new System.Drawing.Point(68, 147);
+            this.TxtMesssege.Multiline = true;
+            this.TxtMesssege.Name = "TxtMesssege";
+            this.TxtMesssege.Size = new System.Drawing.Size(344, 102);
+            this.TxtMesssege.TabIndex = 7;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.BtnSend);
+            this.groupBox2.Controls.Add(this.ChkSsl);
+            this.groupBox2.Controls.Add(this.TxtSmtp);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.TxtPort);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.TxtUsrname);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.TxtPassword);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Location = new System.Drawing.Point(9, 255);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(412, 170);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sign in";
+            // 
+            // TxtPassword
+            // 
+            this.TxtPassword.Location = new System.Drawing.Point(72, 50);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(100, 20);
+            this.TxtPassword.TabIndex = 6;
+            // 
+            // label17
+            // 
+            this.label17.Location = new System.Drawing.Point(6, 47);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(62, 23);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Password :";
+            // 
+            // TxtUsrname
+            // 
+            this.TxtUsrname.Location = new System.Drawing.Point(72, 19);
+            this.TxtUsrname.Name = "TxtUsrname";
+            this.TxtUsrname.Size = new System.Drawing.Size(100, 20);
+            this.TxtUsrname.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.Location = new System.Drawing.Point(4, 16);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(62, 23);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "User name:";
+            // 
+            // TxtPort
+            // 
+            this.TxtPort.Location = new System.Drawing.Point(72, 89);
+            this.TxtPort.Name = "TxtPort";
+            this.TxtPort.Size = new System.Drawing.Size(55, 20);
+            this.TxtPort.TabIndex = 10;
+            this.TxtPort.Text = "587";
+            // 
+            // label21
+            // 
+            this.label21.Location = new System.Drawing.Point(4, 86);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(62, 23);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Port :";
+            // 
+            // TxtSmtp
+            // 
+            this.TxtSmtp.Location = new System.Drawing.Point(207, 83);
+            this.TxtSmtp.Name = "TxtSmtp";
+            this.TxtSmtp.Size = new System.Drawing.Size(150, 20);
+            this.TxtSmtp.TabIndex = 12;
+            this.TxtSmtp.Text = "smtp.gmail.com";
+            // 
+            // label22
+            // 
+            this.label22.Location = new System.Drawing.Point(139, 86);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(62, 23);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Smtp";
+            // 
+            // ChkSsl
+            // 
+            this.ChkSsl.AutoSize = true;
+            this.ChkSsl.Location = new System.Drawing.Point(207, 22);
+            this.ChkSsl.Name = "ChkSsl";
+            this.ChkSsl.Size = new System.Drawing.Size(46, 17);
+            this.ChkSsl.TabIndex = 13;
+            this.ChkSsl.Text = "SSL";
+            this.ChkSsl.UseVisualStyleBackColor = true;
+            // 
+            // BtnSend
+            // 
+            this.BtnSend.Location = new System.Drawing.Point(207, 50);
+            this.BtnSend.Name = "BtnSend";
+            this.BtnSend.Size = new System.Drawing.Size(75, 23);
+            this.BtnSend.TabIndex = 14;
+            this.BtnSend.Text = "Send";
+            this.BtnSend.UseVisualStyleBackColor = true;
+            this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
             // 
             // HomePage
             // 
@@ -1510,8 +1715,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.GrpSignin.ResumeLayout(false);
+            this.GrpSignin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1531,6 +1736,10 @@
             this.tabPage6.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.Emailbox.ResumeLayout(false);
+            this.Emailbox.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1550,7 +1759,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage GrpSignin;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel filmPanel1;
@@ -1652,6 +1861,26 @@
         private System.Windows.Forms.Button ButtonMaps;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox Emailbox;
+        private System.Windows.Forms.Label LblTo;
+        private System.Windows.Forms.TextBox TxtMesssege;
+        private System.Windows.Forms.TextBox TxtSubject;
+        private System.Windows.Forms.TextBox TxtCC;
+        private System.Windows.Forms.TextBox TxtTo;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label LblCC;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox ChkSsl;
+        private System.Windows.Forms.TextBox TxtSmtp;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox TxtPort;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox TxtUsrname;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button BtnSend;
     }
 }
 

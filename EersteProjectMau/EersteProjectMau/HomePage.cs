@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace EersteProjectMau
 {
     public partial class HomePage : Form
     {
+        NetworkCredential login;
+        SmtpClient Client;
+        MailMessage msg;
+
         private object tabControl;
         Help_On_OFF helpKnop = new Help_On_OFF();
 
@@ -228,6 +234,8 @@ namespace EersteProjectMau
                 new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
                 new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.bezet)
             };
+            msg = new MailMessage();
+
             for (int i = 0; i < 48; i++)
             {
                 var stoel = vindStoel(i);
@@ -474,6 +482,56 @@ namespace EersteProjectMau
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(4);
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSend_Click(object sender, EventArgs e)
+        {
+            
+
+            login = new NetworkCredential(TxtUsrname.Text, TxtPassword.Text);
+            Client = new SmtpClient(TxtSmtp.Text);
+            Client.Port = Convert.ToInt32(TxtPort.Text);
+            Client.EnableSsl = ChkSsl.Checked;
+            Client.Credentials = login;
+
+            MailAddress mailAddress = new MailAddress(TxtUsrname.Text.Trim());
+            msg.From = mailAddress;
+
+            msg.To.Add(new MailAddress(TxtTo.Text));
+            if (!string.IsNullOrEmpty(TxtCC.Text))
+            {
+                msg.To.Add(new MailAddress(TxtCC.Text));
+            }
+            msg.Subject = TxtSubject.Text;
+            msg.Body = TxtMesssege.Text;
+            msg.BodyEncoding = Encoding.UTF8;
+            msg.IsBodyHtml = true;
+            msg.Priority = MailPriority.Normal;
+            msg.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+            Client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallBack);
+            string userstate = "Sending . . .";
+            Client.SendAsync(msg, userstate);
+        }
+        private static void SendCompletedCallBack(object sender,AsyncCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                MessageBox.Show(String.Format("{0}Send Cancled.",e.UserState),"Messege",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            if (e.Error != null)
+            {
+                MessageBox.Show(String.Format("{0} {1}", e.UserState, e.Error),"Messege",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Your Messege has been succesfully sent", "Messege", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
