@@ -159,35 +159,37 @@ namespace EersteProjectMau
             }
         }
 
+
+        // FAQ PAGE vragen
+
         Tuple<int, int>[] locaties = new Tuple<int, int>[] { Vraag_Antwoord_Loc_1.Item3, Vraag_Antwoord_Loc_2.Item3 };
         public void changeHuidig(int xLoc, int yLoc)
         {
-            //huidig.Visible = true;
-            //huidig.Location = new Point(xLoc, yLoc);
+
+            huidig1.Visible = true;
+
         }
 
 
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_1 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Hoe zet ik de oven aan?",
-          /* Antwoord */                  "Stap 1: Loop naar de oven" +
-                                          "\n\n" +
-                                          "Stap 2: Kijk naar de oven" +
-                                          "\n\n" +
-                                          "Stap 3: Zoek de 'AAN' knop" +
-                                          "\n\n" +
-                                          "Stap 4: Klik op de 'AAN' knop" +
-                                          "\n\n" +
-                                          "Stap 5: Je oven staat nu aan" +
-                                          "\n\n" +
-                                          "Stap 6: Geniet ervan" +
-                                          "\n\n" +
-                                          "Stap 7: ????" +
-                                          "\n\n" +
-                                          "Stap 8: profit",
-          /* ID */                        Tuple.Create(2, 53));
+          /* Vraag */                    ("Kan ik geld terug krijgen?",
+          /* Antwoord */                  "Nee daar doen wij niet aan.\n"
+
+          /* ID */                        , Tuple.Create(-11, -12));
+
+
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_2 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe sluit ik de applicatie?",
+         /* Antwoord */                   "Stap 1: Breng uw muiswijzer naar het vakje met de kruisje rechtsboven uw scherm." +
+                                          "\n\n" +
+                                          "Stap 2: Klik erop.",
+          /* ID */                         Tuple.Create(-11, 46));
+
+
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_3 = new Tuple<string, string, Tuple<int, int>>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -196,7 +198,87 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                         Tuple.Create(2, 95));
+          /* ID */                         Tuple.Create(-11, 104));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_4 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe verzin ik goede vragen?",
+         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+                                          "\n\n" +
+                                          "Stap 2: Nou?" +
+                                          "\n\n" +
+                                          "Stap 3: ????" +
+                                          "\n\n" +
+                                          "Stap 4: profit",
+          /* ID */                         Tuple.Create(-11, 162));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_5 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe verzin ik goede vragen?",
+         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+                                          "\n\n" +
+                                          "Stap 2: Nou?" +
+                                          "\n\n" +
+                                          "Stap 3: ????" +
+                                          "\n\n" +
+                                          "Stap 4: profit",
+          /* ID */                         Tuple.Create(-11, 220));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_6 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe verzin ik goede vragen?",
+         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+                                          "\n\n" +
+                                          "Stap 2: Nou?" +
+                                          "\n\n" +
+                                          "Stap 3: ????" +
+                                          "\n\n" +
+                                          "Stap 4: profit",
+          /* ID */                         Tuple.Create(-11, 278));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_7 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe verzin ik goede vragen?",
+         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+                                          "\n\n" +
+                                          "Stap 2: Nou?" +
+                                          "\n\n" +
+                                          "Stap 3: ????" +
+                                          "\n\n" +
+                                          "Stap 4: profit",
+          /* ID */                        Tuple.Create(-11, 336));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_8 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe verzin ik goede vragen?",
+         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+                                          "\n\n" +
+                                          "Stap 2: Nou?" +
+                                          "\n\n" +
+                                          "Stap 3: ????" +
+                                          "\n\n" +
+                                          "Stap 4: profit",
+          /* ID */                        Tuple.Create(-11, 394));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_9 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe verzin ik goede vragen?",
+         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+                                          "\n\n" +
+                                          "Stap 2: Nou?" +
+                                          "\n\n" +
+                                          "Stap 3: ????" +
+                                          "\n\n" +
+                                          "Stap 4: profit",
+          /* ID */                        Tuple.Create(-11, 452));
+
+
+
+
+
+        Vragen vraag1 = new Vragen(Vraag_Antwoord_Loc_1.Item1, Vraag_Antwoord_Loc_1.Item2, Vraag_Antwoord_Loc_1.Item3);
+        Vragen vraag2 = new Vragen(Vraag_Antwoord_Loc_2.Item1, Vraag_Antwoord_Loc_2.Item2, Vraag_Antwoord_Loc_2.Item3);
+        Vragen vraag3 = new Vragen(Vraag_Antwoord_Loc_3.Item1, Vraag_Antwoord_Loc_3.Item2, Vraag_Antwoord_Loc_3.Item3);
+        Vragen vraag4 = new Vragen(Vraag_Antwoord_Loc_4.Item1, Vraag_Antwoord_Loc_4.Item2, Vraag_Antwoord_Loc_4.Item3);
+        Vragen vraag5 = new Vragen(Vraag_Antwoord_Loc_5.Item1, Vraag_Antwoord_Loc_5.Item2, Vraag_Antwoord_Loc_5.Item3);
+        Vragen vraag6 = new Vragen(Vraag_Antwoord_Loc_6.Item1, Vraag_Antwoord_Loc_6.Item2, Vraag_Antwoord_Loc_6.Item3);
+        Vragen vraag7 = new Vragen(Vraag_Antwoord_Loc_7.Item1, Vraag_Antwoord_Loc_7.Item2, Vraag_Antwoord_Loc_7.Item3);
+        Vragen vraag8 = new Vragen(Vraag_Antwoord_Loc_8.Item1, Vraag_Antwoord_Loc_8.Item2, Vraag_Antwoord_Loc_8.Item3);
+        Vragen vraag9 = new Vragen(Vraag_Antwoord_Loc_9.Item1, Vraag_Antwoord_Loc_9.Item2, Vraag_Antwoord_Loc_9.Item3);
 
 
 
@@ -209,9 +291,7 @@ namespace EersteProjectMau
         }
 
 
-        Vragen vraag1 = new Vragen(Vraag_Antwoord_Loc_1.Item1, Vraag_Antwoord_Loc_1.Item2, Vraag_Antwoord_Loc_1.Item3);
-        Vragen vraag2 = new Vragen(Vraag_Antwoord_Loc_2.Item1, Vraag_Antwoord_Loc_2.Item2, Vraag_Antwoord_Loc_2.Item3);
-
+       
         public HomePage()
         {
             InitializeComponent();
@@ -251,8 +331,17 @@ namespace EersteProjectMau
             tabControl2.Appearance = TabAppearance.FlatButtons;
             tabControl2.ItemSize = new Size(0, 1);
             tabControl2.SizeMode = TabSizeMode.Fixed;
+
             Vraag1label.Text = vraag1.Vraag;
             Vraag2label.Text = vraag2.Vraag;
+            Vraag3label.Text = vraag3.Vraag;
+            Vraag4label.Text = vraag4.Vraag;
+            Vraag5label.Text = vraag5.Vraag;
+            Vraag6label.Text = vraag6.Vraag;
+            Vraag7label.Text = vraag7.Vraag;
+            Vraag8label.Text = vraag8.Vraag;
+            Vraag9label.Text = vraag9.Vraag;
+            
             this.ActiveControl = label1;
 
         }
@@ -271,7 +360,7 @@ namespace EersteProjectMau
 
         private void faqButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
+            tabControl1.SelectTab(3);
             tabControl2.SelectTab(3);
         }
 
@@ -370,7 +459,13 @@ namespace EersteProjectMau
 
         }
 
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+            
+        }
         private void Agenda_Load(object sender, EventArgs e)
         {
             
@@ -554,6 +649,81 @@ namespace EersteProjectMau
 
         }
 
-       
+        private void stuurVraagHelp_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void stuurVraag2_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void Vraag1label_Click_1(object sender, EventArgs e)
+        {
+            changeTextbox(vraag1.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_1.Item3.Item1, Vraag_Antwoord_Loc_1.Item3.Item2);
+        }
+
+        private void Vraag2label_Click_1(object sender, EventArgs e)
+        {
+            changeTextbox(vraag2.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_2.Item3.Item1, Vraag_Antwoord_Loc_2.Item3.Item2);
+        }
+
+        private void Vraag3label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag3.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_3.Item3.Item1, Vraag_Antwoord_Loc_3.Item3.Item2);
+        }
+
+        private void Vraag4label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag4.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_4.Item3.Item1, Vraag_Antwoord_Loc_4.Item3.Item2);
+        }
+
+        private void Vraag5label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag5.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_5.Item3.Item1, Vraag_Antwoord_Loc_5.Item3.Item2);
+        }
+
+        private void Vraag6label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag6.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_6.Item3.Item1, Vraag_Antwoord_Loc_6.Item3.Item2);
+        }
+
+        private void Vraag7label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag7.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_7.Item3.Item1, Vraag_Antwoord_Loc_7.Item3.Item2);
+        }
+
+        private void Vraag8label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag8.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_8.Item3.Item1, Vraag_Antwoord_Loc_8.Item3.Item2);
+        }
+
+        private void Vraag9label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag9.Antwoord);
+            changeHuidig(Vraag_Antwoord_Loc_9.Item3.Item1, Vraag_Antwoord_Loc_9.Item3.Item2);
+        }
+        
     }
 }

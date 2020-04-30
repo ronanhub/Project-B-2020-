@@ -4183,7 +4183,7 @@
         RCEK4xgi+IpCFKIQhShEIQpRGLdgzP8DZCfufAHL5uYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="hulpFAQ.Text" xml:space="preserve">
+  <data name="helpTextFAQ.Text" xml:space="preserve">
     <value>Hier staan de meest
 gestelde vragen!
 
@@ -4191,14 +4191,15 @@ Klik op een vraag om
 de antwoord op het 
 schermpje hier links te krijgen.
 
-Bij lange antwoorden kunt u door
-het balkje rechts van 
-de antwoorden naar beneden te 
-slepen het hele antwoord zien.
+Bij lange antwoorden kunt u het balkje rechts 
+van naast de antwoorden naar beneden  
+slepen  om het hele antwoord zien.
 
-Staat jouw vraag er niet bij?
 
-</value>
+
+
+
+Staat uw vraag er niet bij?</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
