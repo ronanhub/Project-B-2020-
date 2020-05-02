@@ -427,6 +427,7 @@ namespace EersteProjectMau
         private void buttonBetalen_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+            label18.Text = basisPrijs.ToString();
         }
 
         private void tabPage10_Click(object sender, EventArgs e)
@@ -519,6 +520,39 @@ namespace EersteProjectMau
             checkBox1.Checked = false;
         }
 
-        
+        private void label18_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
+            {
+                tabControl1.SelectTab(7);
+            }
+            else
+            {
+                MessageBox.Show("Select a bank.");
+                tabControl1.SelectTab(6);
+                
+            }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
     }
 }
