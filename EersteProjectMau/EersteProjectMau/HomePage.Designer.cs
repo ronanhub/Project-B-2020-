@@ -56,7 +56,6 @@
             this.ButtonMaps = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.filmPanel1 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -149,10 +148,31 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPageHelp = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Emailbox = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtTo = new System.Windows.Forms.TextBox();
+            this.TxtCC = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TxtSubject = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.TxtMessege = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.TxtUsrname = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.LblPassword = new System.Windows.Forms.Label();
+            this.TxtPort = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.TxtSmtp = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.ChkSsl = new System.Windows.Forms.CheckBox();
+            this.BtnSend = new System.Windows.Forms.Button();
+            this.BtnEmailboxvisible = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -177,6 +197,7 @@
             this.tabPageHelp.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.Emailbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // navigatiePanel
@@ -408,9 +429,11 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label21);
+            this.tabPage3.Controls.Add(this.BtnEmailboxvisible);
+            this.tabPage3.Controls.Add(this.Emailbox);
             this.tabPage3.Controls.Add(this.PictureMaps);
             this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
@@ -440,7 +463,6 @@
             this.groupBox1.Size = new System.Drawing.Size(247, 100);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // ButtonMaps
             // 
@@ -468,17 +490,6 @@
             this.label15.Size = new System.Drawing.Size(174, 23);
             this.label15.TabIndex = 2;
             this.label15.Text = "Telephoon: 06 64589325";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 222);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 26);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "CONTACT";
             // 
             // tabPage4
             // 
@@ -1526,6 +1537,16 @@
             this.tabPageHelp.TabIndex = 1;
             this.tabPageHelp.Text = "tabPageHelp";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 234);
+            this.label2.TabIndex = 3;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPageHelp);
@@ -1562,15 +1583,202 @@
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // Emailbox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 234);
-            this.label2.TabIndex = 3;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.Emailbox.Controls.Add(this.BtnSend);
+            this.Emailbox.Controls.Add(this.ChkSsl);
+            this.Emailbox.Controls.Add(this.TxtSmtp);
+            this.Emailbox.Controls.Add(this.label23);
+            this.Emailbox.Controls.Add(this.TxtPort);
+            this.Emailbox.Controls.Add(this.label22);
+            this.Emailbox.Controls.Add(this.TxtPassword);
+            this.Emailbox.Controls.Add(this.LblPassword);
+            this.Emailbox.Controls.Add(this.TxtUsrname);
+            this.Emailbox.Controls.Add(this.label20);
+            this.Emailbox.Controls.Add(this.TxtMessege);
+            this.Emailbox.Controls.Add(this.label19);
+            this.Emailbox.Controls.Add(this.TxtSubject);
+            this.Emailbox.Controls.Add(this.label18);
+            this.Emailbox.Controls.Add(this.TxtCC);
+            this.Emailbox.Controls.Add(this.label17);
+            this.Emailbox.Controls.Add(this.TxtTo);
+            this.Emailbox.Controls.Add(this.label3);
+            this.Emailbox.Location = new System.Drawing.Point(429, 138);
+            this.Emailbox.Name = "Emailbox";
+            this.Emailbox.Size = new System.Drawing.Size(489, 343);
+            this.Emailbox.TabIndex = 5;
+            this.Emailbox.TabStop = false;
+            this.Emailbox.Text = "Email";
+            this.Emailbox.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "To:";
+            // 
+            // TxtTo
+            // 
+            this.TxtTo.Location = new System.Drawing.Point(80, 30);
+            this.TxtTo.Name = "TxtTo";
+            this.TxtTo.Size = new System.Drawing.Size(392, 20);
+            this.TxtTo.TabIndex = 1;
+            // 
+            // TxtCC
+            // 
+            this.TxtCC.Location = new System.Drawing.Point(80, 56);
+            this.TxtCC.Name = "TxtCC";
+            this.TxtCC.Size = new System.Drawing.Size(392, 20);
+            this.TxtCC.TabIndex = 3;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(7, 56);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(24, 13);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "CC:";
+            // 
+            // TxtSubject
+            // 
+            this.TxtSubject.Location = new System.Drawing.Point(80, 79);
+            this.TxtSubject.Name = "TxtSubject";
+            this.TxtSubject.Size = new System.Drawing.Size(392, 20);
+            this.TxtSubject.TabIndex = 5;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(7, 82);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 13);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Subject:";
+            // 
+            // TxtMessege
+            // 
+            this.TxtMessege.Location = new System.Drawing.Point(80, 105);
+            this.TxtMessege.Multiline = true;
+            this.TxtMessege.Name = "TxtMessege";
+            this.TxtMessege.Size = new System.Drawing.Size(392, 104);
+            this.TxtMessege.TabIndex = 7;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(7, 108);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 13);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Messege";
+            // 
+            // TxtUsrname
+            // 
+            this.TxtUsrname.Location = new System.Drawing.Point(80, 226);
+            this.TxtUsrname.Name = "TxtUsrname";
+            this.TxtUsrname.Size = new System.Drawing.Size(312, 20);
+            this.TxtUsrname.TabIndex = 9;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(7, 226);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(58, 13);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Username:";
+            // 
+            // TxtPassword
+            // 
+            this.TxtPassword.Location = new System.Drawing.Point(80, 252);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(111, 20);
+            this.TxtPassword.TabIndex = 11;
+            // 
+            // LblPassword
+            // 
+            this.LblPassword.AutoSize = true;
+            this.LblPassword.Location = new System.Drawing.Point(7, 252);
+            this.LblPassword.Name = "LblPassword";
+            this.LblPassword.Size = new System.Drawing.Size(56, 13);
+            this.LblPassword.TabIndex = 10;
+            this.LblPassword.Text = "Password:";
+            // 
+            // TxtPort
+            // 
+            this.TxtPort.Location = new System.Drawing.Point(80, 278);
+            this.TxtPort.Name = "TxtPort";
+            this.TxtPort.Size = new System.Drawing.Size(35, 20);
+            this.TxtPort.TabIndex = 13;
+            this.TxtPort.Text = "587";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(7, 278);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 13);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "Port:";
+            // 
+            // TxtSmtp
+            // 
+            this.TxtSmtp.Location = new System.Drawing.Point(159, 281);
+            this.TxtSmtp.Name = "TxtSmtp";
+            this.TxtSmtp.Size = new System.Drawing.Size(88, 20);
+            this.TxtSmtp.TabIndex = 15;
+            this.TxtSmtp.Text = "smtp.gmail.com";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(121, 281);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(32, 13);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "smtp:";
+            // 
+            // ChkSsl
+            // 
+            this.ChkSsl.AutoSize = true;
+            this.ChkSsl.Location = new System.Drawing.Point(206, 255);
+            this.ChkSsl.Name = "ChkSsl";
+            this.ChkSsl.Size = new System.Drawing.Size(46, 17);
+            this.ChkSsl.TabIndex = 16;
+            this.ChkSsl.Text = "SSL";
+            this.ChkSsl.UseVisualStyleBackColor = true;
+            // 
+            // BtnSend
+            // 
+            this.BtnSend.Location = new System.Drawing.Point(308, 255);
+            this.BtnSend.Name = "BtnSend";
+            this.BtnSend.Size = new System.Drawing.Size(75, 23);
+            this.BtnSend.TabIndex = 17;
+            this.BtnSend.Text = "Send";
+            this.BtnSend.UseVisualStyleBackColor = true;
+            this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
+            // 
+            // BtnEmailboxvisible
+            // 
+            this.BtnEmailboxvisible.Location = new System.Drawing.Point(75, 154);
+            this.BtnEmailboxvisible.Name = "BtnEmailboxvisible";
+            this.BtnEmailboxvisible.Size = new System.Drawing.Size(75, 23);
+            this.BtnEmailboxvisible.TabIndex = 6;
+            this.BtnEmailboxvisible.Text = "Stuur email";
+            this.BtnEmailboxvisible.UseVisualStyleBackColor = true;
+            this.BtnEmailboxvisible.Click += new System.EventHandler(this.BtnEmailboxvisible_Click);
+            // 
+            // label21
+            // 
+            this.label21.Location = new System.Drawing.Point(10, 128);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(173, 23);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "WIL JE EN EMAIL STUREN?";
             // 
             // HomePage
             // 
@@ -1600,7 +1808,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.reserveerButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1620,6 +1827,8 @@
             this.tabPageHelp.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            this.Emailbox.ResumeLayout(false);
+            this.Emailbox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1634,7 +1843,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel filmPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Vraag1label;
@@ -1746,6 +1954,27 @@
         private System.Windows.Forms.PictureBox reserveerButton1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox Emailbox;
+        private System.Windows.Forms.Button BtnSend;
+        private System.Windows.Forms.CheckBox ChkSsl;
+        private System.Windows.Forms.TextBox TxtSmtp;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox TxtPort;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.Label LblPassword;
+        private System.Windows.Forms.TextBox TxtUsrname;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox TxtMessege;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox TxtSubject;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox TxtCC;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox TxtTo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button BtnEmailboxvisible;
     }
 }
 
