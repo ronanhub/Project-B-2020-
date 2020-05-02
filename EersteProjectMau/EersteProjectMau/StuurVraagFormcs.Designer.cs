@@ -56,6 +56,7 @@
             this.Email.Size = new System.Drawing.Size(388, 27);
             this.Email.TabIndex = 15;
             this.Email.Text = "Email Adres";
+            
             // 
             // Achternaam
             // 

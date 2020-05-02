@@ -493,22 +493,32 @@ namespace EersteProjectMau
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox1.Checked = false;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-
+            checkBox2.Checked = false;
+            checkBox4.Checked = false;
+            checkBox1.Checked = false;
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox1.Checked = false;
         }
+
+        
     }
 }
