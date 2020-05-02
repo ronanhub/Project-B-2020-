@@ -53,12 +53,24 @@
     <Compile Include="Agenda.Designer.cs">
       <DependentUpon>Agenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help_On_OFF.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nietverbonden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nietverbonden.Designer.cs">
+      <DependentUpon>Nietverbonden.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,12 +80,24 @@
     <Compile Include="StuurVraagFormcs.Designer.cs">
       <DependentUpon>StuurVraagFormcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Verzonden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verzonden.Designer.cs">
+      <DependentUpon>Verzonden.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vraag.cs" />
     <EmbeddedResource Include="Agenda.resx">
       <DependentUpon>Agenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nietverbonden.resx">
+      <DependentUpon>Nietverbonden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="StuurVraagFormcs.resx">
       <DependentUpon>StuurVraagFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verzonden.resx">
+      <DependentUpon>Verzonden.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,6 +130,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SoMPoster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4494c524a5f4629df73fa90fd5c4d03a_confetti-transparent-gif-on-gifer-by-manariel_480-328.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geenverbinding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_true.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_false.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geenrobot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

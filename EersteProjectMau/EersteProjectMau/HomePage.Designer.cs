@@ -46,30 +46,18 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.mapButton = new System.Windows.Forms.PictureBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PictureMaps = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ButtonMaps = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dockedFAQ = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.huidig8 = new System.Windows.Forms.Label();
-            this.huidig9 = new System.Windows.Forms.Label();
-            this.huidig7 = new System.Windows.Forms.Label();
-            this.huidig6 = new System.Windows.Forms.Label();
-            this.huidig5 = new System.Windows.Forms.Label();
-            this.huidig3 = new System.Windows.Forms.Label();
-            this.huidig4 = new System.Windows.Forms.Label();
-            this.huidig2 = new System.Windows.Forms.Label();
             this.Vraag9label = new System.Windows.Forms.Label();
             this.Vraag8label = new System.Windows.Forms.Label();
             this.Vraag7label = new System.Windows.Forms.Label();
             this.Vraag6label = new System.Windows.Forms.Label();
             this.Vraag2label = new System.Windows.Forms.Label();
             this.Vraag5label = new System.Windows.Forms.Label();
-            this.huidig1 = new System.Windows.Forms.Label();
             this.Vraag4label = new System.Windows.Forms.Label();
             this.Vraag1label = new System.Windows.Forms.Label();
             this.Vraag3label = new System.Windows.Forms.Label();
@@ -177,8 +165,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mapButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.dockedFAQ.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -321,7 +309,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label1
             // 
@@ -360,9 +347,9 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.mapButton);
+            this.tabPage3.Controls.Add(this.richTextBox1);
             this.tabPage3.Controls.Add(this.PictureMaps);
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
@@ -371,66 +358,42 @@
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // mapButton
+            // 
+            this.mapButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mapButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mapButton.Image = global::EersteProjectMau.Properties.Resources.kaart;
+            this.mapButton.Location = new System.Drawing.Point(100, 141);
+            this.mapButton.Name = "mapButton";
+            this.mapButton.Size = new System.Drawing.Size(153, 74);
+            this.mapButton.TabIndex = 8;
+            this.mapButton.TabStop = false;
+            this.mapButton.Click += new System.EventHandler(this.mapButton_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(13, 10);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(266, 233);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "Telefoon: 06 64589325\n\nLocatie   : Wijnhaven 107, \n                 3011 WN Rotte" +
+    "rdam\n";
+            // 
             // PictureMaps
             // 
+            this.PictureMaps.Dock = System.Windows.Forms.DockStyle.Right;
             this.PictureMaps.Image = ((System.Drawing.Image)(resources.GetObject("PictureMaps.Image")));
-            this.PictureMaps.Location = new System.Drawing.Point(256, 15);
+            this.PictureMaps.Location = new System.Drawing.Point(351, 0);
             this.PictureMaps.Name = "PictureMaps";
-            this.PictureMaps.Size = new System.Drawing.Size(292, 233);
+            this.PictureMaps.Size = new System.Drawing.Size(572, 484);
             this.PictureMaps.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureMaps.TabIndex = 4;
             this.PictureMaps.TabStop = false;
             this.PictureMaps.Visible = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.ButtonMaps);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(3, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(247, 100);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // ButtonMaps
-            // 
-            this.ButtonMaps.Location = new System.Drawing.Point(72, 55);
-            this.ButtonMaps.Name = "ButtonMaps";
-            this.ButtonMaps.Size = new System.Drawing.Size(69, 23);
-            this.ButtonMaps.TabIndex = 4;
-            this.ButtonMaps.Text = "Maps";
-            this.ButtonMaps.UseVisualStyleBackColor = true;
-            this.ButtonMaps.Click += new System.EventHandler(this.ButtonMaps_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(7, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(227, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Locatie : Wijnhaven 107, 3011 WN Rotterdam";
-            // 
-            // label15
-            // 
-            this.label15.Location = new System.Drawing.Point(6, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(174, 23);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Telephoon: 06 64589325";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 222);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 26);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "CONTACT";
             // 
             // tabPage4
             // 
@@ -460,21 +423,12 @@
             // panel3
             // 
             this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.huidig8);
-            this.panel3.Controls.Add(this.huidig9);
-            this.panel3.Controls.Add(this.huidig7);
-            this.panel3.Controls.Add(this.huidig6);
-            this.panel3.Controls.Add(this.huidig5);
-            this.panel3.Controls.Add(this.huidig3);
-            this.panel3.Controls.Add(this.huidig4);
-            this.panel3.Controls.Add(this.huidig2);
             this.panel3.Controls.Add(this.Vraag9label);
             this.panel3.Controls.Add(this.Vraag8label);
             this.panel3.Controls.Add(this.Vraag7label);
             this.panel3.Controls.Add(this.Vraag6label);
             this.panel3.Controls.Add(this.Vraag2label);
             this.panel3.Controls.Add(this.Vraag5label);
-            this.panel3.Controls.Add(this.huidig1);
             this.panel3.Controls.Add(this.Vraag4label);
             this.panel3.Controls.Add(this.Vraag1label);
             this.panel3.Controls.Add(this.Vraag3label);
@@ -483,110 +437,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(529, 401);
             this.panel3.TabIndex = 13;
-            // 
-            // huidig8
-            // 
-            this.huidig8.AutoSize = true;
-            this.huidig8.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig8.Location = new System.Drawing.Point(-11, 421);
-            this.huidig8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig8.Name = "huidig8";
-            this.huidig8.Size = new System.Drawing.Size(41, 30);
-            this.huidig8.TabIndex = 35;
-            this.huidig8.Text = "4";
-            this.huidig8.Visible = false;
-            // 
-            // huidig9
-            // 
-            this.huidig9.AutoSize = true;
-            this.huidig9.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig9.Location = new System.Drawing.Point(-11, 479);
-            this.huidig9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig9.Name = "huidig9";
-            this.huidig9.Size = new System.Drawing.Size(41, 30);
-            this.huidig9.TabIndex = 35;
-            this.huidig9.Text = "4";
-            this.huidig9.Visible = false;
-            // 
-            // huidig7
-            // 
-            this.huidig7.AutoSize = true;
-            this.huidig7.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig7.Location = new System.Drawing.Point(-11, 366);
-            this.huidig7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig7.Name = "huidig7";
-            this.huidig7.Size = new System.Drawing.Size(41, 30);
-            this.huidig7.TabIndex = 34;
-            this.huidig7.Text = "4";
-            this.huidig7.Visible = false;
-            // 
-            // huidig6
-            // 
-            this.huidig6.AutoSize = true;
-            this.huidig6.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig6.Location = new System.Drawing.Point(-11, 308);
-            this.huidig6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig6.Name = "huidig6";
-            this.huidig6.Size = new System.Drawing.Size(41, 30);
-            this.huidig6.TabIndex = 33;
-            this.huidig6.Text = "4";
-            this.huidig6.Visible = false;
-            // 
-            // huidig5
-            // 
-            this.huidig5.AutoSize = true;
-            this.huidig5.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig5.Location = new System.Drawing.Point(-11, 250);
-            this.huidig5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig5.Name = "huidig5";
-            this.huidig5.Size = new System.Drawing.Size(41, 30);
-            this.huidig5.TabIndex = 32;
-            this.huidig5.Text = "4";
-            this.huidig5.Visible = false;
-            // 
-            // huidig3
-            // 
-            this.huidig3.AutoSize = true;
-            this.huidig3.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig3.Location = new System.Drawing.Point(-11, 134);
-            this.huidig3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig3.Name = "huidig3";
-            this.huidig3.Size = new System.Drawing.Size(41, 30);
-            this.huidig3.TabIndex = 30;
-            this.huidig3.Text = "4";
-            this.huidig3.Visible = false;
-            // 
-            // huidig4
-            // 
-            this.huidig4.AutoSize = true;
-            this.huidig4.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig4.Location = new System.Drawing.Point(-11, 192);
-            this.huidig4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig4.Name = "huidig4";
-            this.huidig4.Size = new System.Drawing.Size(41, 30);
-            this.huidig4.TabIndex = 31;
-            this.huidig4.Text = "4";
-            this.huidig4.Visible = false;
-            // 
-            // huidig2
-            // 
-            this.huidig2.AutoSize = true;
-            this.huidig2.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig2.Location = new System.Drawing.Point(-11, 76);
-            this.huidig2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig2.Name = "huidig2";
-            this.huidig2.Size = new System.Drawing.Size(41, 30);
-            this.huidig2.TabIndex = 29;
-            this.huidig2.Text = "4";
-            this.huidig2.Visible = false;
             // 
             // Vraag9label
             // 
@@ -672,19 +522,6 @@
             this.Vraag5label.Text = "Vraag5";
             this.Vraag5label.Click += new System.EventHandler(this.Vraag5label_Click);
             // 
-            // huidig1
-            // 
-            this.huidig1.AutoSize = true;
-            this.huidig1.Font = new System.Drawing.Font("Webdings", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.huidig1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.huidig1.Location = new System.Drawing.Point(-11, 18);
-            this.huidig1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.huidig1.Name = "huidig1";
-            this.huidig1.Size = new System.Drawing.Size(41, 30);
-            this.huidig1.TabIndex = 21;
-            this.huidig1.Text = "4";
-            this.huidig1.Visible = false;
-            // 
             // Vraag4label
             // 
             this.Vraag4label.AutoSize = true;
@@ -750,7 +587,7 @@
             this.stuurVraag2.Name = "stuurVraag2";
             this.stuurVraag2.Size = new System.Drawing.Size(202, 57);
             this.stuurVraag2.TabIndex = 13;
-            this.stuurVraag2.Text = "Klik hier om je zelf \r\neen vraag te stellen!\r\n";
+            this.stuurVraag2.Text = "Klik hier om zelf \r\neen vraag te stellen!\r\n";
             this.stuurVraag2.Click += new System.EventHandler(this.stuurVraag2_Click);
             // 
             // panel1
@@ -847,7 +684,6 @@
             this.tabPageStoelselectie.TabIndex = 4;
             this.tabPageStoelselectie.Text = "tabPageStoelselectie";
             this.tabPageStoelselectie.UseVisualStyleBackColor = true;
-            this.tabPageStoelselectie.Click += new System.EventHandler(this.tabPage9_Click);
             // 
             // label5
             // 
@@ -1392,7 +1228,6 @@
             this.tabPageBetalen.TabIndex = 5;
             this.tabPageBetalen.Text = "tabPageBetalen";
             this.tabPageBetalen.UseVisualStyleBackColor = true;
-            this.tabPageBetalen.Click += new System.EventHandler(this.tabPage10_Click);
             // 
             // button3
             // 
@@ -1792,7 +1627,7 @@
             this.stuurVraagHelp.Name = "stuurVraagHelp";
             this.stuurVraagHelp.Size = new System.Drawing.Size(202, 57);
             this.stuurVraagHelp.TabIndex = 3;
-            this.stuurVraagHelp.Text = "Klik hier om je zelf \r\neen vraag te stellen!\r\n";
+            this.stuurVraagHelp.Text = "Klik hier om zelf \r\neen vraag te stellen!\r\n";
             this.stuurVraagHelp.Click += new System.EventHandler(this.stuurVraagHelp_Click);
             // 
             // hulpReserveer
@@ -1850,10 +1685,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mapButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.dockedFAQ.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1896,7 +1729,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPageStoelselectie;
         private System.Windows.Forms.Button buttonStoel24;
         private System.Windows.Forms.Button buttonStoel25;
@@ -1974,27 +1806,14 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox PictureMaps;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button ButtonMaps;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel dockedFAQ;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label huidig8;
-        private System.Windows.Forms.Label huidig9;
-        private System.Windows.Forms.Label huidig7;
-        private System.Windows.Forms.Label huidig6;
-        private System.Windows.Forms.Label huidig5;
-        private System.Windows.Forms.Label huidig3;
-        private System.Windows.Forms.Label huidig4;
-        private System.Windows.Forms.Label huidig2;
         private System.Windows.Forms.Label Vraag9label;
         private System.Windows.Forms.Label Vraag8label;
         private System.Windows.Forms.Label Vraag7label;
         private System.Windows.Forms.Label Vraag6label;
         private System.Windows.Forms.Label Vraag2label;
         private System.Windows.Forms.Label Vraag5label;
-        private System.Windows.Forms.Label huidig1;
         private System.Windows.Forms.Label Vraag4label;
         private System.Windows.Forms.Label Vraag1label;
         private System.Windows.Forms.Label Vraag3label;
@@ -2021,6 +1840,8 @@
         private System.Windows.Forms.TabPage hulpReserveer;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.PictureBox mapButton;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

@@ -63,6 +63,77 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4494c524a5f4629df73fa90fd5c4d03a_confetti_transparent_gif_on_gifer_by_manariel_480_328 {
+            get {
+                object obj = ResourceManager.GetObject("4494c524a5f4629df73fa90fd5c4d03a_confetti-transparent-gif-on-gifer-by-manariel_48" +
+                        "0-328", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap geenrobot {
+            get {
+                object obj = ResourceManager.GetObject("geenrobot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap geenverbinding {
+            get {
+                object obj = ResourceManager.GetObject("geenverbinding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inbox {
+            get {
+                object obj = ResourceManager.GetObject("inbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kaart {
+            get {
+                object obj = ResourceManager.GetObject("kaart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap send_false {
+            get {
+                object obj = ResourceManager.GetObject("send_false", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap send_true {
+            get {
+                object obj = ResourceManager.GetObject("send_true", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SoMPoster {
             get {
                 object obj = ResourceManager.GetObject("SoMPoster", resourceCulture);

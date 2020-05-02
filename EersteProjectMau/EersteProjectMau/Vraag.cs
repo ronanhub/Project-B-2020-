@@ -9,6 +9,7 @@ namespace EersteProjectMau
     public class Vragen
     {
         private string _vraag;
+       
 
         public string Vraag
         {
@@ -39,13 +40,13 @@ namespace EersteProjectMau
         }
 
         public Tuple<int, int> Loc;
-        public Vragen(string Vraag, string Antwoord, Tuple<int, int> Loc)
+        public Vragen(string Vraag, string Antwoord, bool Huidige)
         {
             this.Clicked = true;
 
             this.Vraag = Vraag;
             this.Antwoord = Antwoord;
-            this.Loc = Loc;
+            this.Huidige = Huidige;
         }
 
 
@@ -78,6 +79,22 @@ namespace EersteProjectMau
                 _color = value;
             }
         }
+
+        private bool _huidig;
+
+        public bool Huidige
+        {
+            get
+            {
+                return _huidig;
+            }
+            set
+            {
+                _huidig = value;
+            }
+        }
+
+
 
         public void Turn_ON_or_OFF()
         {

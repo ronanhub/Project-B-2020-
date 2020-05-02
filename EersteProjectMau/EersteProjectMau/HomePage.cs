@@ -13,9 +13,9 @@ namespace EersteProjectMau
     public partial class HomePage : Form
     {
         // HelpKnop
-        private object tabControl;
-        Help_On_OFF helpKnop = new Help_On_OFF();
         private FlowLayoutPanel filmPanel;
+
+        Help_On_OFF helpKnop = new Help_On_OFF();
         public void Help_Open_Sluit()
         {
 
@@ -28,6 +28,11 @@ namespace EersteProjectMau
             stuurVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
             stuurVraag2.Visible = (tabControl2.Visible == false) ? true : false;
         }
+        private void openHelp_Click_1(object sender, EventArgs e)
+        {
+            Help_Open_Sluit();
+        }
+
 
         public Button vindStoel(int nummer)
         {
@@ -160,36 +165,54 @@ namespace EersteProjectMau
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        
         // FAQ PAGE vragen
 
-        Tuple<int, int>[] locaties = new Tuple<int, int>[] { Vraag_Antwoord_Loc_1.Item3, Vraag_Antwoord_Loc_2.Item3 };
-        public void changeHuidig(int xLoc, int yLoc)
-        {
-
-            huidig1.Visible = true;
-
-        }
+        
 
 
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_1 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Kan ik geld terug krijgen?",
-          /* Antwoord */                  "Nee daar doen wij niet aan.\n"
-
-          /* ID */                        , Tuple.Create(-11, -12));
-
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_1 = new Tuple<string, string, bool>
+           /* Vraag */                    ("Kan ik geld terug krijgen?",
+          /* Antwoord */                  "Nee daar doen wij niet aan.\n",
+                                           false);
 
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_2 = new Tuple<string, string, Tuple<int, int>>
+
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_2 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe sluit ik de applicatie?",
          /* Antwoord */                   "Stap 1: Breng uw muiswijzer naar het vakje met de kruisje rechtsboven uw scherm." +
                                           "\n\n" +
                                           "Stap 2: Klik erop.",
-          /* ID */                         Tuple.Create(-11, 46));
+          /* ID */                         false);
 
 
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_3 = new Tuple<string, string, Tuple<int, int>>
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_3 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -198,9 +221,9 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                         Tuple.Create(-11, 104));
+          /* ID */                        false);
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_4 = new Tuple<string, string, Tuple<int, int>>
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_4 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -209,9 +232,9 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                         Tuple.Create(-11, 162));
+          /* ID */                        false);
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_5 = new Tuple<string, string, Tuple<int, int>>
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_5 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -220,9 +243,9 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                         Tuple.Create(-11, 220));
+          /* ID */                        false);
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_6 = new Tuple<string, string, Tuple<int, int>>
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_6 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -231,9 +254,9 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                         Tuple.Create(-11, 278));
+          /* ID */                        false);
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_7 = new Tuple<string, string, Tuple<int, int>>
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_7 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -242,9 +265,9 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                        Tuple.Create(-11, 336));
+          /* ID */                        false);
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_8 = new Tuple<string, string, Tuple<int, int>>
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_8 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -253,9 +276,9 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                        Tuple.Create(-11, 394));
+          /* ID */                        false);
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_9 = new Tuple<string, string, Tuple<int, int>>
+        static Tuple<string, string, bool> Vraag_Antwoord_Loc_9 = new Tuple<string, string, bool>
          /* Vraag */                      ("Hoe verzin ik goede vragen?",
          /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
                                           "\n\n" +
@@ -264,7 +287,7 @@ namespace EersteProjectMau
                                           "Stap 3: ????" +
                                           "\n\n" +
                                           "Stap 4: profit",
-          /* ID */                        Tuple.Create(-11, 452));
+          /* ID */                        false);
 
 
 
@@ -282,7 +305,17 @@ namespace EersteProjectMau
 
 
 
+        
 
+        public void changeHuidig(bool deze)
+        {
+
+           //for (int i = 0; i < 9; i++)
+            //{
+            //    huidiglijst[i].
+           // }
+            
+        }
 
 
         public void changeTextbox(string shownAntwoord)
@@ -290,8 +323,12 @@ namespace EersteProjectMau
             antwoorden.Text = shownAntwoord;
         }
 
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-       
+
+
+
+
         public HomePage()
         {
             InitializeComponent();
@@ -323,6 +360,8 @@ namespace EersteProjectMau
         }
 
 
+
+
         private void homePage_Load(object sender, EventArgs e)
         {
             tabControl1.Appearance = TabAppearance.FlatButtons;
@@ -346,44 +385,32 @@ namespace EersteProjectMau
 
         }
 
-
-        private void sluitHelp_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        private void openHelp_Click_1(object sender, EventArgs e)
-        {
-            Help_Open_Sluit();
-        }
-
-        private void faqButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(3);
-            tabControl2.SelectTab(3);
-        }
-
-        private void noHelpFaqPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void faq_header_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVIGATIE NAVIGATIE NAVIGATIE NAVIGATIE NAVIGATIE NAVIGATIE NAVIGATIE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            
+
             tabControl1.SelectTab(0);
             tabControl2.SelectTab(0);
         }
@@ -395,7 +422,7 @@ namespace EersteProjectMau
             tabControl2.SelectTab(1);
 
             filmPanel = new FlowLayoutPanel();
-            filmPanel.Location = new Point(0,0);
+            filmPanel.Location = new Point(0, 0);
             Color black = Color.FromName("Black");
             filmPanel.BackColor = black;
             filmPanel.Size = new Size(900, 410 * aantalFilms);
@@ -406,11 +433,66 @@ namespace EersteProjectMau
 
             for (int i = 0; i < aantalFilms; i++)
             {
-
                 createNewFilm(i);
-
             }
         }
+
+        private void contactButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(2);
+            tabControl2.SelectTab(2);
+        }
+
+        private void faqButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(3);
+            tabControl2.SelectTab(3);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 
         public void createNewFilm(int amountOfFilms)
         {
@@ -459,93 +541,25 @@ namespace EersteProjectMau
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(4);
-            
-        }
-        private void Agenda_Load(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void contactButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(2);
-            tabControl2.SelectTab(2);
-        }
 
-        private void helpPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void Vraag1label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag1.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_1.Item3.Item1, Vraag_Antwoord_Loc_1.Item3.Item2);
-        }
 
-        private void Vraag2label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag2.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_2.Item3.Item1, Vraag_Antwoord_Loc_2.Item3.Item2);
-        }
 
-        private void hulpFAQ_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void stuurVraag_Click(object sender, EventArgs e)
-        {
-            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
-            stuurvraag.Location = this.Location;
-            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
-            stuurvraag.Show();
-        }
 
-        private void filmPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void helpFAQ_Paint(object sender, PaintEventArgs e)
-        {
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-        }
-
-        private void tabPage9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonStoel00_Click(object sender, EventArgs e)
         {
@@ -597,57 +611,47 @@ namespace EersteProjectMau
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
         }
 
-        private void tabPage10_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
 
-        }
 
-        private void textBox1_Validating(object sender, CancelEventArgs e)
-        {
 
-        }
 
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(5);
-        }
 
-        private void ButtonMaps_Click(object sender, EventArgs e)
-        {
-            if (PictureMaps.Visible== false)
-            {
-                PictureMaps.Visible = true;
-            }
-            else
-            {
-                PictureMaps.Visible = false;
-            }
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(4);
-        }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         private void stuurVraagHelp_Click(object sender, EventArgs e)
         {
@@ -670,60 +674,89 @@ namespace EersteProjectMau
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
         }
-
+        
+        //#########################################################################
         private void Vraag1label_Click_1(object sender, EventArgs e)
         {
             changeTextbox(vraag1.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_1.Item3.Item1, Vraag_Antwoord_Loc_1.Item3.Item2);
         }
 
         private void Vraag2label_Click_1(object sender, EventArgs e)
         {
             changeTextbox(vraag2.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_2.Item3.Item1, Vraag_Antwoord_Loc_2.Item3.Item2);
         }
 
         private void Vraag3label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag3.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_3.Item3.Item1, Vraag_Antwoord_Loc_3.Item3.Item2);
         }
 
         private void Vraag4label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag4.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_4.Item3.Item1, Vraag_Antwoord_Loc_4.Item3.Item2);
         }
 
         private void Vraag5label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag5.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_5.Item3.Item1, Vraag_Antwoord_Loc_5.Item3.Item2);
         }
 
         private void Vraag6label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag6.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_6.Item3.Item1, Vraag_Antwoord_Loc_6.Item3.Item2);
         }
 
         private void Vraag7label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag7.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_7.Item3.Item1, Vraag_Antwoord_Loc_7.Item3.Item2);
         }
 
         private void Vraag8label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag8.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_8.Item3.Item1, Vraag_Antwoord_Loc_8.Item3.Item2);
         }
 
         private void Vraag9label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag9.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_9.Item3.Item1, Vraag_Antwoord_Loc_9.Item3.Item2);
         }
-        
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void ButtonMaps_Click(object sender, EventArgs e)
+        {
+            if (PictureMaps.Visible == false)
+            {
+                PictureMaps.Visible = true;
+            }
+            else
+            {
+                PictureMaps.Visible = false;
+            }
+        }
+        private void mapButton_Click(object sender, EventArgs e)
+        {
+            if (PictureMaps.Visible == false)
+            {
+                PictureMaps.Visible = true;
+            }
+            else
+            {
+                PictureMaps.Visible = false;
+            }
+        }
+
     }
 }

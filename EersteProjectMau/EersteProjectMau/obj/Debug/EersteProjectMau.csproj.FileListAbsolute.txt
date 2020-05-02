@@ -72,3 +72,6 @@ E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\Ee
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Email.resources
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
