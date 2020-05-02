@@ -563,7 +563,7 @@ namespace EersteProjectMau
         private void button8_Click_1(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
-            MessageBox.Show("Betaling is gelukt.");
+            MessageBox.Show("Betaling is gelukt."); 
         }
     }
 }
