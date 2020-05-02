@@ -104,5 +104,17 @@
   <ItemGroup>
     <None Include="Resources\SoMPoster.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ideal-logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abn-amro-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abn-amro-2845076444.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
