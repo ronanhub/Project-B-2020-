@@ -63,9 +63,29 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _12YaSPoster {
+            get {
+                object obj = ResourceManager.GetObject("12YaSPoster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agendaButton {
             get {
                 object obj = ResourceManager.GetObject("agendaButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CalmGrey {
+            get {
+                object obj = ResourceManager.GetObject("CalmGrey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap homeButton {
             get {
                 object obj = ResourceManager.GetObject("homeButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reserveerButton {
+            get {
+                object obj = ResourceManager.GetObject("reserveerButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

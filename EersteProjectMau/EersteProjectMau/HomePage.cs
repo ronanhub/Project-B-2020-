@@ -552,5 +552,10 @@ namespace EersteProjectMau
             tabControl1.SelectTab(3);
             tabControl2.SelectTab(3);
         }
+
+        private void reserveerButton1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+        }
     }
 }
