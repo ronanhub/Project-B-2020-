@@ -161,6 +161,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -1682,6 +1688,12 @@
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.label23);
+            this.tabPage10.Controls.Add(this.textBox8);
+            this.tabPage10.Controls.Add(this.textBox7);
+            this.tabPage10.Controls.Add(this.label22);
+            this.tabPage10.Controls.Add(this.label21);
+            this.tabPage10.Controls.Add(this.button8);
             this.tabPage10.Controls.Add(this.button7);
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Name = "tabPage10";
@@ -1716,13 +1728,72 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(263, 424);
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(183, 387);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(217, 96);
             this.button7.TabIndex = 0;
-            this.button7.Text = "button7";
+            this.button7.Text = "Vorige";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(758, 387);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(217, 96);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Betalen";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(152, 184);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(248, 36);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Rekeningnummer";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(228, 236);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(172, 36);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Pasnummer";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(406, 184);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(341, 36);
+            this.textBox7.TabIndex = 4;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(406, 236);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(341, 36);
+            this.textBox8.TabIndex = 5;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(384, 18);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(379, 69);
+            this.label23.TabIndex = 56;
+            this.label23.Text = "Betaalpagina";
             // 
             // HomePage
             // 
@@ -1773,6 +1844,7 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1908,6 +1980,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button button8;
     }
 }
 
