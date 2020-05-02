@@ -264,12 +264,7 @@ namespace EersteProjectMau
             Help_Open_Sluit();
         }
 
-        private void faqButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(3);
-        }
-
+  
         private void noHelpFaqPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -287,36 +282,8 @@ namespace EersteProjectMau
 
         
 
-        private void homeButton_Click(object sender, EventArgs e)
-        {
-            
-            tabControl1.SelectTab(0);
-            tabControl2.SelectTab(0);
-        }
 
-        private void agendaButton_Click(object sender, EventArgs e)
-        {
-            int aantalFilms = 3;
-            tabControl1.SelectTab(1);
-            tabControl2.SelectTab(1);
-
-            filmPanel = new FlowLayoutPanel();
-            filmPanel.Location = new Point(0,0);
-            Color black = Color.FromName("Black");
-            filmPanel.BackColor = black;
-            filmPanel.Size = new Size(900, 410 * aantalFilms);
-
-
-            tabPage2.Controls.Add(filmPanel);
-
-
-            for (int i = 0; i < aantalFilms; i++)
-            {
-
-                createNewFilm(i);
-
-            }
-        }
+       
 
         public void createNewFilm(int amountOfFilms)
         {
@@ -376,12 +343,7 @@ namespace EersteProjectMau
 
         }
 
-        private void contactButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(2);
-            tabControl2.SelectTab(2);
-        }
-
+      
         private void helpPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -549,6 +511,46 @@ namespace EersteProjectMau
 
         }
 
-       
+        private void homeButton1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
+        }
+
+        private void agendaButton1_Click(object sender, EventArgs e)
+        {
+            int aantalFilms = 3;
+            tabControl1.SelectTab(1);
+            tabControl2.SelectTab(1);
+
+            filmPanel = new FlowLayoutPanel();
+            filmPanel.Location = new Point(0, 0);
+            Color black = Color.FromName("Black");
+            filmPanel.BackColor = black;
+            filmPanel.Size = new Size(900, 410 * aantalFilms);
+
+
+            tabPage2.Controls.Add(filmPanel);
+
+
+            for (int i = 0; i < aantalFilms; i++)
+            {
+
+                createNewFilm(i);
+
+            }
+        }
+
+        private void contactButton1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(2);
+            tabControl2.SelectTab(2);
+        }
+
+        private void faqButton1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(3);
+            tabControl2.SelectTab(3);
+        }
     }
 }
