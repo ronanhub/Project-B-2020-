@@ -4209,4 +4209,24 @@ Staat jouw vraag er niet bij?
 
 </value>
   </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Klik op "AGENDA" bovenin om naar een
+overzicht te gaan van alle films die er in
+de toekomst zullen draaien in onze
+bioscoop.
+
+Klik op "CONTACT" bovenin om naar
+de pagina  te gaan waar een overzicht
+is van de contactgegeven zoals e-mail
+en telefoonnummer van onze bioscoop.
+
+Klik op "FAQ" bovenin  om naar de
+pagina te  gaan waar veelgestelde
+vragen staan  over onze applicatie en
+de bioscoop.
+
+Klik op "Reserveer Tickets" onderin
+de pagina om Tickets te reserveren
+voor deze film!"</value>
+  </data>
 </root>

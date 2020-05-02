@@ -21,7 +21,7 @@ namespace EersteProjectMau
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabControl1.Size = (tabControl2.Visible == false) ? new Size(770, 310) : new Size(550, 310);
+            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1241, 484) : new Size(923, 484);
         }
 
         public Button vindStoel(int nummer)

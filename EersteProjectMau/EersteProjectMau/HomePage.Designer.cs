@@ -33,12 +33,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.navigatiePanel = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.faqButton1 = new System.Windows.Forms.PictureBox();
             this.contactButton1 = new System.Windows.Forms.PictureBox();
             this.agendaButton1 = new System.Windows.Forms.PictureBox();
             this.homeButton1 = new System.Windows.Forms.PictureBox();
             this.openHelp = new System.Windows.Forms.Button();
-            this.searchBar = new System.Windows.Forms.TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.homePage1 = new System.Windows.Forms.TabPage();
@@ -148,10 +148,11 @@
             this.hulpFAQ = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPageHelp = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -173,7 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.helpFAQ.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.tabPageHelp.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.SuspendLayout();
@@ -181,6 +182,7 @@
             // navigatiePanel
             // 
             this.navigatiePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.navigatiePanel.Controls.Add(this.textBox7);
             this.navigatiePanel.Controls.Add(this.faqButton1);
             this.navigatiePanel.Controls.Add(this.contactButton1);
             this.navigatiePanel.Controls.Add(this.agendaButton1);
@@ -190,6 +192,15 @@
             this.navigatiePanel.Name = "navigatiePanel";
             this.navigatiePanel.Size = new System.Drawing.Size(1241, 30);
             this.navigatiePanel.TabIndex = 3;
+            // 
+            // textBox7
+            // 
+            this.textBox7.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox7.Location = new System.Drawing.Point(935, 5);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(160, 20);
+            this.textBox7.TabIndex = 14;
+            this.textBox7.Text = "Zoeken...";
             // 
             // faqButton1
             // 
@@ -259,16 +270,6 @@
             this.openHelp.UseVisualStyleBackColor = false;
             this.openHelp.Click += new System.EventHandler(this.openHelp_Click_1);
             // 
-            // searchBar
-            // 
-            this.searchBar.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.searchBar.Location = new System.Drawing.Point(1093, 65);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(160, 20);
-            this.searchBar.TabIndex = 4;
-            this.searchBar.Text = "Typ hier wat u zoekt...";
-            this.searchBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // logoBox
             // 
             this.logoBox.BackColor = System.Drawing.Color.Transparent;
@@ -318,6 +319,7 @@
             // 
             // reserveerButton1
             // 
+            this.reserveerButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reserveerButton1.Image = global::EersteProjectMau.Properties.Resources.reserveerButton;
             this.reserveerButton1.Location = new System.Drawing.Point(685, 382);
             this.reserveerButton1.Name = "reserveerButton1";
@@ -1510,22 +1512,23 @@
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // tabPageHelp
             // 
-            this.tabPage6.Controls.Add(this.hulpLabel1);
-            this.tabPage6.Controls.Add(this.huidigePaginaLabel1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Size = new System.Drawing.Size(298, 484);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "tabPage6";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabPageHelp.BackColor = System.Drawing.Color.White;
+            this.tabPageHelp.Controls.Add(this.label2);
+            this.tabPageHelp.Controls.Add(this.hulpLabel1);
+            this.tabPageHelp.Controls.Add(this.huidigePaginaLabel1);
+            this.tabPageHelp.Location = new System.Drawing.Point(4, 22);
+            this.tabPageHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageHelp.Name = "tabPageHelp";
+            this.tabPageHelp.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageHelp.Size = new System.Drawing.Size(298, 484);
+            this.tabPageHelp.TabIndex = 1;
+            this.tabPageHelp.Text = "tabPageHelp";
             // 
             // tabControl2
             // 
-            this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Controls.Add(this.tabPageHelp);
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
@@ -1559,6 +1562,16 @@
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 234);
+            this.label2.TabIndex = 3;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1566,16 +1579,16 @@
             this.BackColor = System.Drawing.Color.Ivory;
             this.BackgroundImage = global::EersteProjectMau.Properties.Resources.CalmGrey;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1001, 647);
+            this.ClientSize = new System.Drawing.Size(1284, 647);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.navigatiePanel);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.searchBar);
             this.Controls.Add(this.logoBox);
             this.Name = "HomePage";
             this.Text = " ";
             this.Load += new System.EventHandler(this.homePage_Load);
             this.navigatiePanel.ResumeLayout(false);
+            this.navigatiePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaButton1)).EndInit();
@@ -1603,18 +1616,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.helpFAQ.ResumeLayout(false);
             this.helpFAQ.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.tabPageHelp.ResumeLayout(false);
+            this.tabPageHelp.PerformLayout();
             this.tabControl2.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Panel navigatiePanel;
-        private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.PictureBox logoBox;
         private System.Windows.Forms.Button openHelp;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1638,7 +1649,7 @@
         private System.Windows.Forms.Label hulpFAQ;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPageHelp;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
@@ -1733,6 +1744,8 @@
         private System.Windows.Forms.Label labelTitel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox reserveerButton1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label2;
     }
 }
 
