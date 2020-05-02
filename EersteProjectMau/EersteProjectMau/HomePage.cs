@@ -485,40 +485,5 @@ namespace EersteProjectMau
         {
 
         }
-
-        private void tabPage9_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = checkBox2.Checked = checkBox3.Checked = checkBox4.Checked = false;
-            checkBox2.Checked = true;
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = checkBox2.Checked = checkBox3.Checked = checkBox4.Checked = false;
-            checkBox1.Checked = true;
-        }
-
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = checkBox2.Checked = checkBox3.Checked = checkBox4.Checked = false;
-            checkBox3.Checked = true;
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = checkBox2.Checked = checkBox3.Checked = checkBox4.Checked = false;
-            checkBox4.Checked = true;
-        }
-
-        private void HomePage_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

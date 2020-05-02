@@ -71,4 +71,3 @@ E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\Ee
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
-C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
