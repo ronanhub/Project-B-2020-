@@ -88,6 +88,7 @@
     <EmbeddedResource Include="StuurVraagFormcs.resx">
       <DependentUpon>StuurVraagFormcs.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Data\12YearsASlave.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,5 +126,6 @@
   <ItemGroup>
     <None Include="Resources\reserveerButton.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

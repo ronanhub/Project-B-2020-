@@ -93,3 +93,4 @@ C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMa
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
