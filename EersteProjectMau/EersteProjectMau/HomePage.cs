@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace EersteProjectMau
 {
     public partial class HomePage : Form
     {
+        NetworkCredential login;
+        SmtpClient Client;
+        MailMessage msg;
+
+
         private object tabControl;
         Help_On_OFF helpKnop = new Help_On_OFF();
         private FlowLayoutPanel filmPanel;
@@ -235,6 +242,8 @@ namespace EersteProjectMau
                 updatePrijs(stoel);
             }
             basisPrijs = 0.0f;
+
+            msg = new MailMessage();
         }
 
 
@@ -556,6 +565,61 @@ namespace EersteProjectMau
         private void reserveerButton1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(4);
+        }
+
+        private void BtnSend_Click(object sender, EventArgs e)
+        {
+            login = new NetworkCredential(TxtUsrname.Text, TxtPassword.Text);
+            Client = new SmtpClient(TxtSmtp.Text);
+            Client.Port = Convert.ToInt32(TxtPort.Text);
+            Client.EnableSsl = ChkSsl.Checked;
+            Client.Credentials = login;
+
+            MailAddress mailAddress = new MailAddress(TxtUsrname.Text.Trim());
+            msg.From = mailAddress;
+
+            msg.To.Add(new MailAddress(TxtTo.Text));
+            if (!string.IsNullOrEmpty(TxtCC.Text))
+            {
+                msg.To.Add(new MailAddress(TxtCC.Text));
+            }
+            msg.Subject = TxtSubject.Text;
+            msg.Body = TxtMessege.Text;
+            msg.BodyEncoding = Encoding.UTF8;
+            msg.IsBodyHtml = true;
+            msg.Priority = MailPriority.Normal;
+            msg.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+            Client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallBack);
+            string userstate = "Sending . . .";
+            Client.SendAsync(msg, userstate);
+
+            Emailbox.Visible = false;
+
+        }
+
+        private static void SendCompletedCallBack(object sender, AsyncCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                MessageBox.Show(String.Format("{0}Send Cancled.", e.UserState), "Messege", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (e.Error != null)
+            {
+                MessageBox.Show(String.Format("{0} {1}", e.UserState, e.Error), "Messege", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Your Messege has been succesfully sent", "Messege", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BtnEmailboxvisible_Click(object sender, EventArgs e)
+        {
+            if(Emailbox.Visible == false)
+            {
+                Emailbox.Visible = true;
+            }
         }
     }
 }
