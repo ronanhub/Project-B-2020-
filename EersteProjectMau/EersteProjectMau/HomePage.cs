@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.IO;
 
 namespace EersteProjectMau
 {
@@ -62,7 +63,7 @@ namespace EersteProjectMau
             //return this.Controls["buttonStoel" + nummerString] as Button;
         }
 
-        public List<Tuple<float, status>> stoelGrid;
+        public List<Tuple<float, status, string>> stoelGrid;
         public float basisPrijs;
         public string kortingsCode;
         public float totaalPrijs;
@@ -78,7 +79,7 @@ namespace EersteProjectMau
             Color kleur;
             string nummerString = button.Name.Substring(startIndex: 11, length: 2);
             Int32.TryParse(nummerString, out nummer);
-
+            
             switch (stoelGrid[nummer].Item2)
             {
                 case status.vrij:
@@ -289,31 +290,112 @@ namespace EersteProjectMau
 
 
 
+        public List<Tuple<float, status, string>> loadFilmStoelen(string filmNaam)
+        {
+            List<Tuple<float, status, string>> lijst = new List<Tuple<float, status, string>>();
 
+            if (File.Exists(filmNaam + ".csv"))
+            {
+                string[] data = File.ReadAllLines(filmNaam + ".csv");
+                List<Tuple<int, float, status, string>> stoelStringSeperated;
 
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@ START OF THE PROGRAM @@@@@@@@@@ START OF THE PROGRAM @@@@@@@@@@@@@@@@@@@@@ START OF THE PROGRAM @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                for (int l = 1; l < data.Length; l++)
+                {
+                    string[] items = data[l].Split(';');
+                    int stoelNummer;
+                    float stoelPrijs;
+                    status stoelStatus;
+                    string stoelKoper;
+
+                    Int32.TryParse(items[0], out stoelNummer);
+                    stoelPrijs = float.Parse(items[1]);
+                    switch (items[2].ToLower())
+                    {
+                        case "vrij":
+                            stoelStatus = status.vrij;
+                            break;
+                        case "bezet":
+                            stoelStatus = status.bezet;
+                            break;
+                        case "keuze":
+                            stoelStatus = status.bezet;
+                            break;
+                        default:
+                            stoelStatus = status.vrij;
+                            break;
+                    }
+                    stoelKoper = items[3];
+
+                    Tuple<float, status, string> newTuple = new Tuple<float, status, string>(stoelPrijs, stoelStatus, stoelKoper);
+                    lijst.Add(newTuple);
+                }
+            }
+            else
+            {
+                lijst = new List<Tuple<float, status, string>> {
+                new Tuple<float,status,string>(10.8f,status.vrij,""), new Tuple<float,status,string>(10.000f,status.vrij,""), new Tuple<float,status,string>(10.0000f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.10f,status.vrij,""), new Tuple<float,status,string>(11.1f,status.vrij,""), new Tuple<float,status,string>(11.12f,status.vrij,""), new Tuple<float,status,string>(11.10f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,"")
+                };
+            }    
+            return lijst;
+        }
+
+        public void saveFilmStoelen(string filmNaam, List<Tuple<float, status, string>> stoelLijst, string klantnaam)
+        {
+
+            List<string> Data = new List<string>();
+            Data.Add("Stoel;Prijs;Status;Klant");
+
+            for(int l = 0;l< stoelLijst.Count;l++)
+            {
+                if (stoelLijst[l].Item2 == status.keuze)
+                {
+                    Data.Add((l).ToString() + ";" + stoelLijst[l].Item1.ToString() + ";" + status.bezet.ToString() + ";" + klantnaam);
+                }
+                else
+                {
+                    Data.Add((l).ToString() + ";" + stoelLijst[l].Item1.ToString() + ";" + stoelLijst[l].Item2.ToString() + ";" + stoelLijst[l].Item3);
+                }
+            }
+
+            File.WriteAllLines(filmNaam+".csv",Data);
+        }
+
         public HomePage()
         {
 
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
-            stoelGrid = new List<Tuple<float, status>> {
-                new Tuple<float,status>(10.8f,status.vrij), new Tuple<float,status>(10.000f,status.vrij), new Tuple<float,status>(10.0000f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.10f,status.vrij), new Tuple<float,status>(11.1f,status.bezet), new Tuple<float,status>(11.12f,status.vrij), new Tuple<float,status>(11.10f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+            stoelGrid = loadFilmStoelen("12YearsASlave");/*new List<Tuple<float, status, string>> {
+                new Tuple<float,status,string>(10.8f,status.vrij,""), new Tuple<float,status,string>(10.000f,status.vrij,""), new Tuple<float,status,string>(10.0000f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.10f,status.vrij,""), new Tuple<float,status,string>(11.1f,status.bezet,"klantnaam"), new Tuple<float,status,string>(11.12f,status.vrij,""), new Tuple<float,status,string>(11.10f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
 
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.0f,status.bezet), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.bezet,"klantnaam"), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.bezet,"klantnaam"), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
 
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
 
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.bezet)
-            };
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.bezet,"klantnaam"), new Tuple<float,status,string>(10.0f,status.bezet,"klantnaam")
+            };*/
             for (int i = 0; i < 48; i++)
             {
                 var stoel = vindStoel(i);
@@ -437,13 +519,13 @@ namespace EersteProjectMau
                 case status.vrij:
                     {
                         stoelStatus = status.keuze;
-                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
+                        stoelGrid[nummer] = new Tuple<float,status,string>(stoelGrid[nummer].Item1, stoelStatus, "");
                         break;
                     }
                 case status.keuze:
                     {
                         stoelStatus = status.vrij;
-                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
+                        stoelGrid[nummer] = new Tuple<float,status,string>(stoelGrid[nummer].Item1, stoelStatus, "");
                         break;
                     }
             }
@@ -463,6 +545,7 @@ namespace EersteProjectMau
 
         private void buttonBetalen_Click(object sender, EventArgs e)
         {
+            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
         }
 

@@ -115,6 +115,7 @@
     <EmbeddedResource Include="Verzonden.resx">
       <DependentUpon>Verzonden.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Data\12YearsASlave.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
