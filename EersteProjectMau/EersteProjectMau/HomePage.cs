@@ -8,28 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Net;
-using System.Net.Mail;
 
 namespace EersteProjectMau
 {
     public partial class HomePage : Form
     {
-        NetworkCredential login;
-        SmtpClient Client;
-        MailMessage msg;
-
-
         private object tabControl;
         Help_On_OFF helpKnop = new Help_On_OFF();
-        private FlowLayoutPanel filmPanel;
+
         public void Help_Open_Sluit()
         {
 
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1241, 484) : new Size(923, 484);
+            tabControl1.Size = (tabControl2.Visible == false) ? new Size(770, 310) : new Size(550, 310);
         }
 
         public Button vindStoel(int nummer)
@@ -277,8 +270,6 @@ namespace EersteProjectMau
                 updatePrijs(stoel);
             }
             basisPrijs = 0.0f;
-
-            msg = new MailMessage();
         }
 
 
@@ -308,7 +299,12 @@ namespace EersteProjectMau
             Help_Open_Sluit();
         }
 
-  
+        private void faqButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(3);
+        }
+
         private void noHelpFaqPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -324,62 +320,22 @@ namespace EersteProjectMau
 
         }
 
-        
-
-
-       
-
-        public void createNewFilm(int amountOfFilms)
+        private void tabPage2_Click(object sender, EventArgs e)
         {
-            List<Panel> panels = new List<Panel>();
-            String[] films = { "Dunkirk", "1917", "Op hoop \nvan zegen" };
-
-            Label label1 = new Label();
-            Panel panel = new Panel();
-            PictureBox filmPhoto = new PictureBox();
-            filmPhoto.Location = new Point(500, 50);
-            panel.Controls.Add(filmPhoto);
-            filmPhoto.Size = new Size(400, 600);
-            filmPhoto.LoadAsync(@"C:\palace.jpg");
-            panel.Size = new Size(895, 400);
-            panel.Controls.Add(label1);
-            Color white = Color.FromName("White");
-            panel.BackColor = white;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 35);
-            label1.Location = new Point(70, 50);
-            label1.Text = films[amountOfFilms];
-            panels.Add(panel);
-            filmPanel.Controls.Add(panel);
-
-
-            // Initialize the Panel control.
-            //panels[amountOfFilms].Location = new Point(10, 72 * amountOfFilms);
-            //panels[amountOfFilms].Size = new Size(264, 152);
-            // Set the Borderstyle for the Panel to three-dimensional.
-            //panels[amountOfFilms].BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-
-            // Initialize the Label and TextBox controls.
-            //label1.Location = new Point(16, 16);
-
-            //label1.Size = new Size(104, 16);
-            //textBox1.Location = new Point(16, 32);
-            //textBox1.Text = "";
-            //textBox1.Size = new Size(152, 20);
-
-            // Add the Panel control to the form.
-            foreach (Panel newPanel in panels)
-            {
-                //filmPanel.Controls.Add(newPanel);
-            }
-            // Add the Label and TextBox controls to the Panel.
-
         }
 
-
-        private void Agenda_Load(object sender, EventArgs e)
+        private void homeButton_Click(object sender, EventArgs e)
         {
             
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
+        }
+
+        private void agendaButton_Click(object sender, EventArgs e)
+        {
+            
+            tabControl1.SelectTab(1);
+            tabControl2.SelectTab(1);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -387,7 +343,12 @@ namespace EersteProjectMau
 
         }
 
-      
+        private void contactButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(2);
+            tabControl2.SelectTab(2);
+        }
+
         private void helpPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -550,111 +511,9 @@ namespace EersteProjectMau
             tabControl1.SelectTab(4);
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void homeButton1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(0);
-            tabControl2.SelectTab(0);
-        }
-
-        private void agendaButton1_Click(object sender, EventArgs e)
-        {
-            int aantalFilms = 3;
-            tabControl1.SelectTab(1);
-            tabControl2.SelectTab(1);
-
-            filmPanel = new FlowLayoutPanel();
-            filmPanel.Location = new Point(0, 0);
-            Color black = Color.FromName("Black");
-            filmPanel.BackColor = black;
-            filmPanel.Size = new Size(900, 410 * aantalFilms);
-
-
-            tabPage2.Controls.Add(filmPanel);
-
-
-            for (int i = 0; i < aantalFilms; i++)
-            {
-
-                createNewFilm(i);
-
-            }
-        }
-
-        private void contactButton1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(2);
-            tabControl2.SelectTab(2);
-        }
-
-        private void faqButton1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(3);
-            tabControl2.SelectTab(3);
-        }
-
-        private void reserveerButton1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(4);
-        }
-
-        private void BtnSend_Click(object sender, EventArgs e)
-        {
-            login = new NetworkCredential(TxtUsrname.Text, TxtPassword.Text);
-            Client = new SmtpClient(TxtSmtp.Text);
-            Client.Port = Convert.ToInt32(TxtPort.Text);
-            Client.EnableSsl = ChkSsl.Checked;
-            Client.Credentials = login;
-
-            MailAddress mailAddress = new MailAddress(TxtUsrname.Text.Trim());
-            msg.From = mailAddress;
-
-            msg.To.Add(new MailAddress(TxtTo.Text));
-            if (!string.IsNullOrEmpty(TxtCC.Text))
-            {
-                msg.To.Add(new MailAddress(TxtCC.Text));
-            }
-            msg.Subject = TxtSubject.Text;
-            msg.Body = TxtMessege.Text;
-            msg.BodyEncoding = Encoding.UTF8;
-            msg.IsBodyHtml = true;
-            msg.Priority = MailPriority.Normal;
-            msg.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-            Client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallBack);
-            string userstate = "Sending . . .";
-            Client.SendAsync(msg, userstate);
-
-            Emailbox.Visible = false;
-
-        }
-
-        private static void SendCompletedCallBack(object sender, AsyncCompletedEventArgs e)
-        {
-            if (e.Cancelled)
-            {
-                MessageBox.Show(String.Format("{0}Send Cancled.", e.UserState), "Messege", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            if (e.Error != null)
-            {
-                MessageBox.Show(String.Format("{0} {1}", e.UserState, e.Error), "Messege", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else
-            {
-                MessageBox.Show("Your Messege has been succesfully sent", "Messege", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void BtnEmailboxvisible_Click(object sender, EventArgs e)
-        {
-            if(Emailbox.Visible == false)
-            {
-                Emailbox.Visible = true;
-            }
         }
     }
 }

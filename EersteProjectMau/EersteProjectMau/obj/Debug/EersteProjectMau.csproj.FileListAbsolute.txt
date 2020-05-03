@@ -72,25 +72,3 @@ E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\Ee
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
 C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.StuurVraagFormcs.resources
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.StuurVraagFormcs.resources
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
-C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
