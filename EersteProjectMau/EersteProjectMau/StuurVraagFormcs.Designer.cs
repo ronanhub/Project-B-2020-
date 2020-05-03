@@ -50,11 +50,11 @@
             this.stuurVraagHulp.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stuurVraagHulp.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuurVraagHulp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.stuurVraagHulp.Location = new System.Drawing.Point(523, 18);
-            this.stuurVraagHulp.Margin = new System.Windows.Forms.Padding(4);
+            this.stuurVraagHulp.Location = new System.Drawing.Point(697, 22);
+            this.stuurVraagHulp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.stuurVraagHulp.Name = "stuurVraagHulp";
             this.stuurVraagHulp.ReadOnly = true;
-            this.stuurVraagHulp.Size = new System.Drawing.Size(533, 464);
+            this.stuurVraagHulp.Size = new System.Drawing.Size(709, 570);
             this.stuurVraagHulp.TabIndex = 29;
             this.stuurVraagHulp.Text = resources.GetString("stuurVraagHulp.Text");
             // 
@@ -62,10 +62,10 @@
             // 
             this.Onderwerp.BackColor = System.Drawing.Color.White;
             this.Onderwerp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Onderwerp.Location = new System.Drawing.Point(11, 143);
-            this.Onderwerp.Margin = new System.Windows.Forms.Padding(2);
+            this.Onderwerp.Location = new System.Drawing.Point(15, 176);
+            this.Onderwerp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Onderwerp.Name = "Onderwerp";
-            this.Onderwerp.Size = new System.Drawing.Size(473, 32);
+            this.Onderwerp.Size = new System.Drawing.Size(629, 38);
             this.Onderwerp.TabIndex = 28;
             this.Onderwerp.Text = "Onderwerp";
             this.Onderwerp.Click += new System.EventHandler(this.Onderwerp_Click);
@@ -77,10 +77,10 @@
             this.validaterings.BackColor = System.Drawing.Color.White;
             this.validaterings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.validaterings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.validaterings.Location = new System.Drawing.Point(215, 423);
-            this.validaterings.Margin = new System.Windows.Forms.Padding(2);
+            this.validaterings.Location = new System.Drawing.Point(287, 521);
+            this.validaterings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.validaterings.Name = "validaterings";
-            this.validaterings.Size = new System.Drawing.Size(33, 32);
+            this.validaterings.Size = new System.Drawing.Size(44, 39);
             this.validaterings.TabIndex = 21;
             this.validaterings.UseVisualStyleBackColor = false;
             this.validaterings.Click += new System.EventHandler(this.validaterings_Click);
@@ -89,10 +89,10 @@
             // 
             this.Eigenvraag.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eigenvraag.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.Eigenvraag.Location = new System.Drawing.Point(11, 202);
-            this.Eigenvraag.Margin = new System.Windows.Forms.Padding(2);
+            this.Eigenvraag.Location = new System.Drawing.Point(15, 249);
+            this.Eigenvraag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Eigenvraag.Name = "Eigenvraag";
-            this.Eigenvraag.Size = new System.Drawing.Size(473, 160);
+            this.Eigenvraag.Size = new System.Drawing.Size(629, 196);
             this.Eigenvraag.TabIndex = 26;
             this.Eigenvraag.Text = "Uw vraag";
             this.Eigenvraag.Click += new System.EventHandler(this.Eigenvraag_Click);
@@ -102,10 +102,10 @@
             // Email
             // 
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(11, 83);
-            this.Email.Margin = new System.Windows.Forms.Padding(2);
+            this.Email.Location = new System.Drawing.Point(15, 102);
+            this.Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(473, 32);
+            this.Email.Size = new System.Drawing.Size(629, 38);
             this.Email.TabIndex = 25;
             this.Email.Text = "Email Adres";
             this.Email.Click += new System.EventHandler(this.Email_Click);
@@ -115,10 +115,10 @@
             // Achternaam
             // 
             this.Achternaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Achternaam.Location = new System.Drawing.Point(265, 25);
-            this.Achternaam.Margin = new System.Windows.Forms.Padding(2);
+            this.Achternaam.Location = new System.Drawing.Point(353, 31);
+            this.Achternaam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Achternaam.Name = "Achternaam";
-            this.Achternaam.Size = new System.Drawing.Size(219, 32);
+            this.Achternaam.Size = new System.Drawing.Size(291, 38);
             this.Achternaam.TabIndex = 24;
             this.Achternaam.Text = "Achternaam";
             this.Achternaam.Click += new System.EventHandler(this.Achternaam_Click);
@@ -130,10 +130,10 @@
             this.Voornaam.BackColor = System.Drawing.Color.White;
             this.Voornaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Voornaam.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.Voornaam.Location = new System.Drawing.Point(11, 25);
-            this.Voornaam.Margin = new System.Windows.Forms.Padding(2);
+            this.Voornaam.Location = new System.Drawing.Point(15, 31);
+            this.Voornaam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Voornaam.Name = "Voornaam";
-            this.Voornaam.Size = new System.Drawing.Size(224, 32);
+            this.Voornaam.Size = new System.Drawing.Size(297, 38);
             this.Voornaam.TabIndex = 23;
             this.Voornaam.Text = "Voornaam";
             this.Voornaam.Click += new System.EventHandler(this.Voornaam_Click);
@@ -144,10 +144,10 @@
             // 
             this.Verstuur.Enabled = false;
             this.Verstuur.Image = global::EersteProjectMau.Properties.Resources.send_false;
-            this.Verstuur.Location = new System.Drawing.Point(11, 396);
-            this.Verstuur.Margin = new System.Windows.Forms.Padding(2);
+            this.Verstuur.Location = new System.Drawing.Point(15, 487);
+            this.Verstuur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Verstuur.Name = "Verstuur";
-            this.Verstuur.Size = new System.Drawing.Size(167, 86);
+            this.Verstuur.Size = new System.Drawing.Size(223, 106);
             this.Verstuur.TabIndex = 22;
             this.Verstuur.UseVisualStyleBackColor = true;
             this.Verstuur.Click += new System.EventHandler(this.Verstuur_Click);
@@ -155,10 +155,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EersteProjectMau.Properties.Resources.geenrobot;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 397);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(276, 489);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(277, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(369, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -170,10 +170,10 @@
             // 
             // StuurVraagFormcs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1078, 518);
+            this.ClientSize = new System.Drawing.Size(1437, 638);
             this.Controls.Add(this.stuurVraagHulp);
             this.Controls.Add(this.Onderwerp);
             this.Controls.Add(this.validaterings);
@@ -183,7 +183,7 @@
             this.Controls.Add(this.Voornaam);
             this.Controls.Add(this.Verstuur);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StuurVraagFormcs";
             this.Text = "StuurVraagFormcs";
             this.Load += new System.EventHandler(this.StuurVraagFormcs_Load);

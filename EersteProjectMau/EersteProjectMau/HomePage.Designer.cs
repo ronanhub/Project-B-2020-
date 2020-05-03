@@ -51,12 +51,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.contactemail = new System.Windows.Forms.Label();
+            this.contactemailknop = new System.Windows.Forms.Button();
             this.mapButton = new System.Windows.Forms.PictureBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PictureMaps = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dockedFAQ = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.vragenPaneel = new System.Windows.Forms.Panel();
             this.Vraag9label = new System.Windows.Forms.Label();
             this.Vraag8label = new System.Windows.Forms.Label();
             this.Vraag7label = new System.Windows.Forms.Label();
@@ -68,7 +70,7 @@
             this.Vraag3label = new System.Windows.Forms.Label();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.stuurVraag2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.faqsplitter = new System.Windows.Forms.Panel();
             this.FAQHeader = new System.Windows.Forms.Label();
             this.antwoorden = new System.Windows.Forms.RichTextBox();
             this.tabPageStoelselectie = new System.Windows.Forms.TabPage();
@@ -158,8 +160,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.helpTextFAQ = new System.Windows.Forms.Label();
             this.stuurVraagHelp = new System.Windows.Forms.Label();
-            this.contactemailknop = new System.Windows.Forms.Button();
-            this.contactemail = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -175,7 +175,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.dockedFAQ.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.vragenPaneel.SuspendLayout();
             this.tabPageStoelselectie.SuspendLayout();
             this.tabPageBetalen.SuspendLayout();
             this.tabPage9.SuspendLayout();
@@ -428,6 +428,30 @@
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // contactemail
+            // 
+            this.contactemail.AutoSize = true;
+            this.contactemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactemail.Location = new System.Drawing.Point(9, 357);
+            this.contactemail.Name = "contactemail";
+            this.contactemail.Size = new System.Drawing.Size(301, 48);
+            this.contactemail.TabIndex = 13;
+            this.contactemail.Text = "Wilt u liever een email sturen?\r\nKlik dan op de knop hier beneden.";
+            // 
+            // contactemailknop
+            // 
+            this.contactemailknop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.contactemailknop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contactemailknop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.contactemailknop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactemailknop.Location = new System.Drawing.Point(13, 420);
+            this.contactemailknop.Name = "contactemailknop";
+            this.contactemailknop.Size = new System.Drawing.Size(297, 33);
+            this.contactemailknop.TabIndex = 12;
+            this.contactemailknop.Text = "Stuur email";
+            this.contactemailknop.UseVisualStyleBackColor = false;
+            this.contactemailknop.Click += new System.EventHandler(this.contactemailknop_Click);
+            // 
             // mapButton
             // 
             this.mapButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -479,9 +503,10 @@
             // dockedFAQ
             // 
             this.dockedFAQ.BackColor = System.Drawing.Color.Ivory;
-            this.dockedFAQ.Controls.Add(this.panel3);
+            this.dockedFAQ.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dockedFAQ.Controls.Add(this.vragenPaneel);
             this.dockedFAQ.Controls.Add(this.stuurVraag2);
-            this.dockedFAQ.Controls.Add(this.panel1);
+            this.dockedFAQ.Controls.Add(this.faqsplitter);
             this.dockedFAQ.Controls.Add(this.FAQHeader);
             this.dockedFAQ.Controls.Add(this.antwoorden);
             this.dockedFAQ.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -490,23 +515,23 @@
             this.dockedFAQ.Size = new System.Drawing.Size(923, 484);
             this.dockedFAQ.TabIndex = 9;
             // 
-            // panel3
+            // vragenPaneel
             // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.Vraag9label);
-            this.panel3.Controls.Add(this.Vraag8label);
-            this.panel3.Controls.Add(this.Vraag7label);
-            this.panel3.Controls.Add(this.Vraag6label);
-            this.panel3.Controls.Add(this.Vraag2label);
-            this.panel3.Controls.Add(this.Vraag5label);
-            this.panel3.Controls.Add(this.Vraag4label);
-            this.panel3.Controls.Add(this.Vraag1label);
-            this.panel3.Controls.Add(this.Vraag3label);
-            this.panel3.Controls.Add(this.domainUpDown1);
-            this.panel3.Location = new System.Drawing.Point(13, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(529, 401);
-            this.panel3.TabIndex = 13;
+            this.vragenPaneel.AutoScroll = true;
+            this.vragenPaneel.Controls.Add(this.Vraag9label);
+            this.vragenPaneel.Controls.Add(this.Vraag8label);
+            this.vragenPaneel.Controls.Add(this.Vraag7label);
+            this.vragenPaneel.Controls.Add(this.Vraag6label);
+            this.vragenPaneel.Controls.Add(this.Vraag2label);
+            this.vragenPaneel.Controls.Add(this.Vraag5label);
+            this.vragenPaneel.Controls.Add(this.Vraag4label);
+            this.vragenPaneel.Controls.Add(this.Vraag1label);
+            this.vragenPaneel.Controls.Add(this.Vraag3label);
+            this.vragenPaneel.Controls.Add(this.domainUpDown1);
+            this.vragenPaneel.Location = new System.Drawing.Point(13, 58);
+            this.vragenPaneel.Name = "vragenPaneel";
+            this.vragenPaneel.Size = new System.Drawing.Size(529, 401);
+            this.vragenPaneel.TabIndex = 13;
             // 
             // Vraag9label
             // 
@@ -520,6 +545,7 @@
             this.Vraag9label.Size = new System.Drawing.Size(101, 31);
             this.Vraag9label.TabIndex = 28;
             this.Vraag9label.Text = "Vraag9";
+            this.Vraag9label.Click += new System.EventHandler(this.Vraag9label_Click);
             // 
             // Vraag8label
             // 
@@ -533,6 +559,7 @@
             this.Vraag8label.Size = new System.Drawing.Size(101, 31);
             this.Vraag8label.TabIndex = 27;
             this.Vraag8label.Text = "Vraag8";
+            this.Vraag8label.Click += new System.EventHandler(this.Vraag8label_Click);
             // 
             // Vraag7label
             // 
@@ -546,6 +573,7 @@
             this.Vraag7label.Size = new System.Drawing.Size(101, 31);
             this.Vraag7label.TabIndex = 26;
             this.Vraag7label.Text = "Vraag7";
+            this.Vraag7label.Click += new System.EventHandler(this.Vraag7label_Click);
             // 
             // Vraag6label
             // 
@@ -559,6 +587,7 @@
             this.Vraag6label.Size = new System.Drawing.Size(101, 31);
             this.Vraag6label.TabIndex = 25;
             this.Vraag6label.Text = "Vraag6";
+            this.Vraag6label.Click += new System.EventHandler(this.Vraag6label_Click);
             // 
             // Vraag2label
             // 
@@ -572,6 +601,7 @@
             this.Vraag2label.Size = new System.Drawing.Size(101, 31);
             this.Vraag2label.TabIndex = 20;
             this.Vraag2label.Text = "Vraag2";
+            this.Vraag2label.Click += new System.EventHandler(this.Vraag2label_Click);
             // 
             // Vraag5label
             // 
@@ -585,6 +615,7 @@
             this.Vraag5label.Size = new System.Drawing.Size(101, 31);
             this.Vraag5label.TabIndex = 24;
             this.Vraag5label.Text = "Vraag5";
+            this.Vraag5label.Click += new System.EventHandler(this.Vraag5label_Click);
             // 
             // Vraag4label
             // 
@@ -598,6 +629,7 @@
             this.Vraag4label.Size = new System.Drawing.Size(101, 31);
             this.Vraag4label.TabIndex = 23;
             this.Vraag4label.Text = "Vraag4";
+            this.Vraag4label.Click += new System.EventHandler(this.Vraag4label_Click);
             // 
             // Vraag1label
             // 
@@ -612,6 +644,7 @@
             this.Vraag1label.Size = new System.Drawing.Size(101, 31);
             this.Vraag1label.TabIndex = 19;
             this.Vraag1label.Text = "Vraag1";
+            this.Vraag1label.Click += new System.EventHandler(this.Vraag1label_Click);
             // 
             // Vraag3label
             // 
@@ -625,6 +658,7 @@
             this.Vraag3label.Size = new System.Drawing.Size(101, 31);
             this.Vraag3label.TabIndex = 22;
             this.Vraag3label.Text = "Vraag3\r\n";
+            this.Vraag3label.Click += new System.EventHandler(this.Vraag3label_Click);
             // 
             // domainUpDown1
             // 
@@ -649,16 +683,17 @@
             this.stuurVraag2.Size = new System.Drawing.Size(202, 57);
             this.stuurVraag2.TabIndex = 13;
             this.stuurVraag2.Text = "Klik hier om zelf \r\neen vraag te stellen!\r\n";
+            this.stuurVraag2.Visible = false;
             this.stuurVraag2.Click += new System.EventHandler(this.stuurVraag2_Click);
             // 
-            // panel1
+            // faqsplitter
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(552, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(4, 455);
-            this.panel1.TabIndex = 6;
+            this.faqsplitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.faqsplitter.Location = new System.Drawing.Point(552, 15);
+            this.faqsplitter.Margin = new System.Windows.Forms.Padding(2);
+            this.faqsplitter.Name = "faqsplitter";
+            this.faqsplitter.Size = new System.Drawing.Size(4, 455);
+            this.faqsplitter.TabIndex = 6;
             // 
             // FAQHeader
             // 
@@ -1612,6 +1647,8 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.BackColor = System.Drawing.Color.Ivory;
+            this.tabPage8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage8.Controls.Add(this.label4);
             this.tabPage8.Controls.Add(this.helpTextFAQ);
             this.tabPage8.Controls.Add(this.stuurVraagHelp);
@@ -1622,7 +1659,6 @@
             this.tabPage8.Size = new System.Drawing.Size(298, 484);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "tabPage8";
-            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -1659,30 +1695,6 @@
             this.stuurVraagHelp.Text = "Klik hier om zelf \r\neen vraag te stellen!\r\n";
             this.stuurVraagHelp.Click += new System.EventHandler(this.stuurVraagHelp_Click);
             // 
-            // contactemailknop
-            // 
-            this.contactemailknop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contactemailknop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contactemailknop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.contactemailknop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactemailknop.Location = new System.Drawing.Point(13, 420);
-            this.contactemailknop.Name = "contactemailknop";
-            this.contactemailknop.Size = new System.Drawing.Size(297, 33);
-            this.contactemailknop.TabIndex = 12;
-            this.contactemailknop.Text = "Stuur email";
-            this.contactemailknop.UseVisualStyleBackColor = false;
-            this.contactemailknop.Click += new System.EventHandler(this.contactemailknop_Click);
-            // 
-            // contactemail
-            // 
-            this.contactemail.AutoSize = true;
-            this.contactemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactemail.Location = new System.Drawing.Point(9, 357);
-            this.contactemail.Name = "contactemail";
-            this.contactemail.Size = new System.Drawing.Size(301, 48);
-            this.contactemail.TabIndex = 13;
-            this.contactemail.Text = "Wilt u liever een email sturen?\r\nKlik dan op de knop hier beneden.";
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1716,8 +1728,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.dockedFAQ.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.vragenPaneel.ResumeLayout(false);
+            this.vragenPaneel.PerformLayout();
             this.tabPageStoelselectie.ResumeLayout(false);
             this.tabPageStoelselectie.PerformLayout();
             this.tabPageBetalen.ResumeLayout(false);
@@ -1839,7 +1851,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel dockedFAQ;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel vragenPaneel;
         private System.Windows.Forms.Label Vraag9label;
         private System.Windows.Forms.Label Vraag8label;
         private System.Windows.Forms.Label Vraag7label;
@@ -1851,7 +1863,7 @@
         private System.Windows.Forms.Label Vraag3label;
         private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Label stuurVraag2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel faqsplitter;
         private System.Windows.Forms.Label FAQHeader;
         private System.Windows.Forms.RichTextBox antwoorden;
         private System.Windows.Forms.Label label4;
