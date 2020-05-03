@@ -98,3 +98,6 @@ C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMa
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
 C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
+C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
+C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
+C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources

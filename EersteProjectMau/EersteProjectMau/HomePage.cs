@@ -289,7 +289,7 @@ namespace EersteProjectMau
         Vragen vraag9 = new Vragen(Vraag_Antwoord_Loc_9.Item1, Vraag_Antwoord_Loc_9.Item2, Vraag_Antwoord_Loc_9.Item3);
 
 
-
+        
         public List<Tuple<float, status, string>> loadFilmStoelen(string filmNaam)
         {
             List<Tuple<float, status, string>> lijst = new List<Tuple<float, status, string>>();
@@ -374,6 +374,7 @@ namespace EersteProjectMau
             File.WriteAllLines(filmNaam+".csv",Data);
         }
 
+        //@@@@@@@@@@@@@@@@@@@ HET PROGRAMMA BEGNINT HIER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public HomePage()
         {
 
