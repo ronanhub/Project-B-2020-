@@ -713,6 +713,9 @@ namespace EersteProjectMau
             stuurvraag.Show();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
+        }
     }
 }

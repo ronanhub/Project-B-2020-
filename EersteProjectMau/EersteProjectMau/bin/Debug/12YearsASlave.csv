@@ -42,8 +42,8 @@ Stoel;Prijs;Status;Klant
 40;11;vrij;
 41;11;vrij;
 42;11;vrij;
-43;11;vrij;
-44;10;vrij;
+43;11;bezet;NieuweKlant
+44;10;bezet;NieuweKlant
 45;10;vrij;
 46;10;vrij;
 47;10;vrij;
