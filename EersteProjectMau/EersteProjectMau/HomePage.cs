@@ -250,7 +250,7 @@ namespace EersteProjectMau
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_7 = new Tuple<string, string, Tuple<int, int>>
           /* Vraag */                    ("Is het eten en drinken gratis?",
-          /* Antwoord */                  "In je dromen.",
+          /* Antwoord */                  "In uw dromen.",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_8 = new Tuple<string, string, Tuple<int, int>>
