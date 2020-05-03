@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace EersteProjectMau
 {
@@ -18,7 +17,7 @@ namespace EersteProjectMau
 
         public void Help_Open_Sluit()
         {
-
+            
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
@@ -42,7 +41,7 @@ namespace EersteProjectMau
             //return this.Controls["buttonStoel" + nummerString] as Button;
         }
 
-        public List<zitPlaats> stoelGrid;
+        public List<Tuple<float, status>> stoelGrid;
         public float basisPrijs;
         public string kortingsCode;
         public float totaalPrijs;
@@ -59,7 +58,7 @@ namespace EersteProjectMau
             string nummerString = button.Name.Substring(startIndex: 11, length: 2);
             Int32.TryParse(nummerString, out nummer);
 
-            switch (stoelGrid[nummer].seatStatus)
+            switch (stoelGrid[nummer].Item2)
             {
                 case status.vrij:
                     {
@@ -93,16 +92,16 @@ namespace EersteProjectMau
             string nummerString = button.Name.Substring(startIndex: 11, length: 2);
             Int32.TryParse(nummerString, out nummer);
 
-            button.Text = "€" + prijstString(stoelGrid[nummer].seatPrijs * checkKortingscode(textBoxKorting.Text));//(stoelGrid[nummer].Item1*checkKortingscode(textBoxKorting.Text)).ToString();
+            button.Text = "€" + prijstString(stoelGrid[nummer].Item1 * checkKortingscode(textBoxKorting.Text));//(stoelGrid[nummer].Item1*checkKortingscode(textBoxKorting.Text)).ToString();
         }
         public void updatePrijs()
         {
             basisPrijs = 0.0f;
             for (int i = 0; i < 48; i++)
             {
-                if (stoelGrid[i].seatStatus == status.keuze)
+                if (stoelGrid[i].Item2 == status.keuze)
                 {
-                    basisPrijs += stoelGrid[i].seatPrijs;
+                    basisPrijs += stoelGrid[i].Item1;
                 }
             }
             totaalPrijs = checkKortingscode(textBoxKorting.Text) * basisPrijs;
@@ -208,61 +207,27 @@ namespace EersteProjectMau
         Vragen vraag1 = new Vragen(Vraag_Antwoord_Loc_1.Item1, Vraag_Antwoord_Loc_1.Item2, Vraag_Antwoord_Loc_1.Item3);
         Vragen vraag2 = new Vragen(Vraag_Antwoord_Loc_2.Item1, Vraag_Antwoord_Loc_2.Item2, Vraag_Antwoord_Loc_2.Item3);
 
-        public class zitPlaats
-        {
-            public float seatPrijs;
-            public status seatStatus;
-            public zitPlaats(float SeatPrijs, status SeatStatus)
-            {
-                seatPrijs = SeatPrijs;
-                seatStatus = SeatStatus;
-            }
-        }
-        public class stoelGridClass
-        {
-            List<zitPlaats> stoelGrid;
-
-            public stoelGridClass(List<zitPlaats> StoelGrid)
-            {
-                stoelGrid = StoelGrid;
-            }
-        }
-
-        public List<zitPlaats> laadStoelGrid(string fileName)
-        {
-            string JsonString = File.ReadAllText(fileName);
-            var resultList = new List<zitPlaats> { };
-            return resultList;
-        }
-        public void saveStoelGrid(string fileName, List<zitPlaats> stoelGrid)
-        {
-            json = new JsonConvert();
-            stoelGridClass Grid = new stoelGridClass(stoelGrid);
-            string JsonString = json
-            var resultList = new List<zitPlaats> { };
-        }
-
         public HomePage()
         {
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
-            stoelGrid = laadStoelGrid("TestFile.txt");/*new List<zitPlaats> {
-                new zitPlaats(10.8f,status.vrij), new zitPlaats(10.000f,status.vrij), new zitPlaats(10.0000f,status.vrij), new zitPlaats(10.0f,status.vrij),
-                new zitPlaats(11.10f,status.vrij), new zitPlaats(11.1f,status.bezet), new zitPlaats(11.12f,status.vrij), new zitPlaats(11.10f,status.vrij),
-                new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij),
+            stoelGrid = new List<Tuple<float, status>> {
+                new Tuple<float,status>(10.8f,status.vrij), new Tuple<float,status>(10.000f,status.vrij), new Tuple<float,status>(10.0000f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.10f,status.vrij), new Tuple<float,status>(11.1f,status.bezet), new Tuple<float,status>(11.12f,status.vrij), new Tuple<float,status>(11.10f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
 
-                new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.bezet), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij),
-                new zitPlaats(11.0f,status.bezet), new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij),
-                new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.0f,status.bezet), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
 
-                new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij),
-                new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij),
-                new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
 
-                new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij),
-                new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij), new zitPlaats(11.0f,status.vrij),
-                new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.vrij), new zitPlaats(10.0f,status.bezet), new zitPlaats(10.0f,status.bezet)
-            };*/
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
+                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.bezet)
+            };
             for (int i = 0; i < 48; i++)
             {
                 var stoel = vindStoel(i);
@@ -428,20 +393,20 @@ namespace EersteProjectMau
             MessageBox.Show("click op stoel "+stoel.Item1.ToString()+" - "+stoel.Item2.ToString());*/
 
             //verkrijg de huidige stoelstatus
-            status stoelStatus = stoelGrid[nummer].seatStatus;
+            status stoelStatus = stoelGrid[nummer].Item2;
 
             switch (stoelStatus)
             {
                 case status.vrij:
                     {
                         stoelStatus = status.keuze;
-                        stoelGrid[nummer] = new zitPlaats(stoelGrid[nummer].seatPrijs, stoelStatus);
+                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
                         break;
                     }
                 case status.keuze:
                     {
                         stoelStatus = status.vrij;
-                        stoelGrid[nummer] = new zitPlaats(stoelGrid[nummer].seatPrijs, stoelStatus);
+                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
                         break;
                     }
             }
