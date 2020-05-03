@@ -154,13 +154,7 @@ namespace EersteProjectMau
             }
         }
 
-        Tuple<int, int>[] locaties = new Tuple<int, int>[] { Vraag_Antwoord_Loc_1.Item3, Vraag_Antwoord_Loc_2.Item3 };
-        public void changeHuidig(int xLoc, int yLoc)
-        {
-            huidig.Visible = true;
-            huidig.Location = new Point(xLoc, yLoc);
-        }
-
+        
 
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_1 = new Tuple<string, string, Tuple<int, int>>
@@ -200,7 +194,7 @@ namespace EersteProjectMau
 
         public void changeTextbox(string shownAntwoord)
         {
-            richTextBox1.Text = shownAntwoord;
+            antwoorden.Text = shownAntwoord;
         }
 
 
@@ -357,13 +351,13 @@ namespace EersteProjectMau
         private void Vraag1label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag1.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_1.Item3.Item1, Vraag_Antwoord_Loc_1.Item3.Item2);
+            
         }
 
         private void Vraag2label_Click(object sender, EventArgs e)
         {
             changeTextbox(vraag2.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_2.Item3.Item1, Vraag_Antwoord_Loc_2.Item3.Item2);
+           
         }
 
         private void hulpFAQ_Click(object sender, EventArgs e)
@@ -556,6 +550,79 @@ namespace EersteProjectMau
         private void reserveerButton1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(4);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void stuurVraagHelp_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void stuurVraag2_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void mapButton_Click(object sender, EventArgs e)
+        {
+            if (PictureMaps.Visible == false)
+            {
+                PictureMaps.Visible = true;
+            }
+            else
+            {
+                PictureMaps.Visible = false;
+            }
+        }
+
+        private void contactemailknop_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
         }
     }
 }
