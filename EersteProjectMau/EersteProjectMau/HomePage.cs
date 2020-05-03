@@ -692,16 +692,7 @@ namespace EersteProjectMau
                 PictureMaps.Visible = false;
             }
         }
-        private void contactemailknop_Click(object sender, EventArgs e)
-        {
-            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
-            stuurvraag.Text = "Verstuur je vraag";
-
-
-            stuurvraag.Location = this.Location;
-            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
-            stuurvraag.Show();
-        }
+      
 
     
 
@@ -814,6 +805,39 @@ namespace EersteProjectMau
             {
                 textBoxZoeken1.Text = "";
             }
+        }
+
+        private void buttonZelfVraag1_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void buttonStelZelfVraagg1_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void buttonStuurMail1_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
         }
     }
 }

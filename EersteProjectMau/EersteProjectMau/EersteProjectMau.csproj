@@ -195,5 +195,11 @@
   <ItemGroup>
     <None Include="Resources\volgendeButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zelfVraagButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stuurMailButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
