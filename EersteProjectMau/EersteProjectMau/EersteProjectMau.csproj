@@ -60,13 +60,36 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nietverbonden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nietverbonden.Designer.cs">
+      <DependentUpon>Nietverbonden.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="properEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="properEmail.Designer.cs">
+      <DependentUpon>properEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StuurVraagFormcs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StuurVraagFormcs.Designer.cs">
       <DependentUpon>StuurVraagFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verzonden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verzonden.Designer.cs">
+      <DependentUpon>Verzonden.cs</DependentUpon>
     </Compile>
     <Compile Include="Vraag.cs" />
     <EmbeddedResource Include="Agenda.resx">
@@ -75,19 +98,24 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nietverbonden.resx">
+      <DependentUpon>Nietverbonden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="properEmail.resx">
+      <DependentUpon>properEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="StuurVraagFormcs.resx">
       <DependentUpon>StuurVraagFormcs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Verzonden.resx">
+      <DependentUpon>Verzonden.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data\12YearsASlave.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,6 +152,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reserveerButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geenrobot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_false.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_true.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4494c524a5f4629df73fa90fd5c4d03a_confetti-transparent-gif-on-gifer-by-manariel_480-328.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geenverbinding.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Red_X.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66215659-vink-teken-element-groen-vinkje-op-een-witte-achtergrond-eenvoudig-merk-grafisch-ontwerp-ok-toets-te.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vinkje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VIKJJe.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
