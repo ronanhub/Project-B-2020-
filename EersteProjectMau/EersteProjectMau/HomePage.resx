@@ -4192,6 +4192,24 @@ ontmoet hij een Canadees (Brad Pitt) die zijn leven voorgoed verandert.</value>
         RCEK4xgi+IpCFKIQhShEIQpRGLdgzP8DZCfufAHL5uYAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="helpTextFAQ.Text" xml:space="preserve">
+    <value>Hier staan de meest
+gestelde vragen!
+
+Klik op een vraag om
+de antwoord op het 
+schermpje hier links te krijgen.
+
+Bij lange antwoorden kunt u het balkje rechts 
+van naast de antwoorden naar beneden  
+slepen  om het hele antwoord zien.
+
+
+
+
+
+Staat uw vraag er niet bij?</value>
+  </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Klik op "AGENDA" bovenin om naar een
 overzicht te gaan van alle films die er in
@@ -4211,23 +4229,5 @@ de bioscoop.
 Klik op "Reserveer Tickets" onderin
 de pagina om Tickets te reserveren
 voor deze film!"</value>
-  </data>
-  <data name="helpTextFAQ.Text" xml:space="preserve">
-    <value>Hier staan de meest
-gestelde vragen!
-
-Klik op een vraag om
-de antwoord op het 
-schermpje hier links te krijgen.
-
-Bij lange antwoorden kunt u het balkje rechts 
-van naast de antwoorden naar beneden  
-slepen  om het hele antwoord zien.
-
-
-
-
-
-Staat uw vraag er niet bij?</value>
   </data>
 </root>

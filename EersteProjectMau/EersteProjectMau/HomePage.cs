@@ -14,14 +14,13 @@ namespace EersteProjectMau
 {
     public partial class HomePage : Form
     {
-        NetworkCredential login;
-        SmtpClient Client;
         MailMessage msg;
-
-
-        private object tabControl;
-        Help_On_OFF helpKnop = new Help_On_OFF();
         private FlowLayoutPanel filmPanel;
+
+
+
+
+        Help_On_OFF helpKnop = new Help_On_OFF();
         public void Help_Open_Sluit()
         {
             
@@ -40,6 +39,12 @@ namespace EersteProjectMau
             stuurVraag2.Visible = (tabControl2.Visible == false) ? true : false;
         }
 
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RESERVEREN RESERVEREN RESERVEREN RESERVEREN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public Button vindStoel(int nummer)
         {
             string nummerString;
@@ -170,8 +175,20 @@ namespace EersteProjectMau
             }
         }
 
-        
 
+
+
+
+
+
+
+
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@FAQFAQFAQFAQFAQFAQFAQFAQFAQFAQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_1 = new Tuple<string, string, Tuple<int, int>>
           /* Vraag */                    ("Hoe kom ik bij de bioscoop?",
@@ -238,7 +255,7 @@ namespace EersteProjectMau
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_8 = new Tuple<string, string, Tuple<int, int>>
          /* Vraag */                      ("Iphone of android?",
-         /* Antwoord */                   "Mandroid >>>>> saaIphone",
+         /* Antwoord */                   "Mandroid >>>>> saaiphone",
           /* ID */                         Tuple.Create(2, 95));
 
 
@@ -269,9 +286,15 @@ namespace EersteProjectMau
         Vragen vraag7 = new Vragen(Vraag_Antwoord_Loc_7.Item1, Vraag_Antwoord_Loc_7.Item2, Vraag_Antwoord_Loc_7.Item3);
         Vragen vraag8 = new Vragen(Vraag_Antwoord_Loc_8.Item1, Vraag_Antwoord_Loc_8.Item2, Vraag_Antwoord_Loc_8.Item3);
         Vragen vraag9 = new Vragen(Vraag_Antwoord_Loc_9.Item1, Vraag_Antwoord_Loc_9.Item2, Vraag_Antwoord_Loc_9.Item3);
-       
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@ START OF THE PROGRAM @@@@@@@@@@ START OF THE PROGRAM @@@@@@@@@@@@@@@@@@@@@ START OF THE PROGRAM @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public HomePage()
         {
+
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
             stoelGrid = new List<Tuple<float, status>> {
@@ -300,6 +323,8 @@ namespace EersteProjectMau
             basisPrijs = 0.0f;
 
             msg = new MailMessage();
+
+
         }
 
 
@@ -326,38 +351,18 @@ namespace EersteProjectMau
 
         }
 
-
-        private void sluitHelp_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
         private void openHelp_Click_1(object sender, EventArgs e)
         {
             Help_Open_Sluit();
         }
 
-  
-        private void noHelpFaqPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void faq_header_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
 
 
-       
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ AGENDA AGENDA AGENDA AGENDA @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 
         public void createNewFilm(int amountOfFilms)
         {
@@ -407,116 +412,10 @@ namespace EersteProjectMau
         }
 
 
-        private void Agenda_Load(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-      
-        private void helpPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Vraag1label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag1.Antwoord);
-            
-        }
-
-        private void Vraag2label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag2.Antwoord);
-           
-        }
-
-        private void Vraag3label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag3.Antwoord);
-        }
-
-        private void Vraag4label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag4.Antwoord);
-        }
-
-        private void Vraag5label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag5.Antwoord);
-        }
-
-        private void Vraag6label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag6.Antwoord);
-        }
-
-        private void Vraag7label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag7.Antwoord);
-        }
-
-        private void Vraag8label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag8.Antwoord);
-        }
-
-        private void Vraag9label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag9.Antwoord);
-        }
-        private void hulpFAQ_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void stuurVraag_Click(object sender, EventArgs e)
-        {
-            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
-            stuurvraag.Location = this.Location;
-            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
-            stuurvraag.Show();
-        }
-
-        private void filmPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void helpFAQ_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabPage9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@RESERVEREN RESERVEREN RESERVEREN RESERVEREN@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void buttonStoel00_Click(object sender, EventArgs e)
         {
             Tuple<int, int> stoel;
@@ -567,58 +466,11 @@ namespace EersteProjectMau
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
         }
 
-        private void tabPage10_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(5);
-        }
-
-        private void ButtonMaps_Click(object sender, EventArgs e)
-        {
-            if (PictureMaps.Visible== false)
-            {
-                PictureMaps.Visible = true;
-            }
-            else
-            {
-                PictureMaps.Visible = false;
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(4);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVIGATIE NAVIGATIE NAVIGATIE NAVIGATIE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void homeButton1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
@@ -638,7 +490,7 @@ namespace EersteProjectMau
             filmPanel.Size = new Size(900, 410 * aantalFilms);
 
 
-            tabPage2.Controls.Add(filmPanel);
+            agendaPage.Controls.Add(filmPanel);
 
 
             for (int i = 0; i < aantalFilms; i++)
@@ -648,49 +500,73 @@ namespace EersteProjectMau
 
             }
         }
-
         private void contactButton1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(2);
             tabControl2.SelectTab(2);
         }
-
         private void faqButton1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(3);
             tabControl2.SelectTab(3);
         }
-
         private void reserveerButton1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+            tabControl2.SelectTab(5);
+        }
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
         }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FAQ FAQ FAQ FAQ FAQ FAQ FAQ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private void Vraag1label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag1.Antwoord);
+        }
+        private void Vraag2label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag2.Antwoord);
+        }
+        private void Vraag3label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag3.Antwoord);
+        }
+        private void Vraag4label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag4.Antwoord);
+        }
+        private void Vraag5label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag5.Antwoord);
+        }
+        private void Vraag6label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag6.Antwoord);
+        }
+        private void Vraag7label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag7.Antwoord);
+        }
+        private void Vraag8label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag8.Antwoord);
+        }
+        private void Vraag9label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag9.Antwoord);
+        }
 
 
 
@@ -704,7 +580,6 @@ namespace EersteProjectMau
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
         }
-
         private void stuurVraag2_Click(object sender, EventArgs e)
         {
             StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
@@ -716,6 +591,22 @@ namespace EersteProjectMau
             stuurvraag.Show();
         }
 
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ CONTACT CONTACT CONTACT CONTACT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private void ButtonMaps_Click(object sender, EventArgs e)
+        {
+            if (PictureMaps.Visible == false)
+            {
+                PictureMaps.Visible = true;
+            }
+            else
+            {
+                PictureMaps.Visible = false;
+            }
+        }
         private void mapButton_Click(object sender, EventArgs e)
         {
             if (PictureMaps.Visible == false)
@@ -727,7 +618,6 @@ namespace EersteProjectMau
                 PictureMaps.Visible = false;
             }
         }
-
         private void contactemailknop_Click(object sender, EventArgs e)
         {
             StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
