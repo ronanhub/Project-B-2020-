@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace EersteProjectMau
 {
     public partial class HomePage : Form
     {
+        NetworkCredential login;
+        SmtpClient Client;
+        MailMessage msg;
+
+
         private object tabControl;
         Help_On_OFF helpKnop = new Help_On_OFF();
         private FlowLayoutPanel filmPanel;
@@ -291,6 +298,8 @@ namespace EersteProjectMau
                 updatePrijs(stoel);
             }
             basisPrijs = 0.0f;
+
+            msg = new MailMessage();
         }
 
 
