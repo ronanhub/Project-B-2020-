@@ -544,13 +544,7 @@ namespace EersteProjectMau
             }
         }
 
-        private void buttonBetalen_Click(object sender, EventArgs e)
-        {
-            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            label18.Text = basisPrijs.ToString();
-        }
-
+   
 
 
 
@@ -605,13 +599,7 @@ namespace EersteProjectMau
             tabControl1.SelectTab(5);
             tabControl2.SelectTab(5);
         }
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-            tabControl2.SelectTab(6);
-            label6.Text = basisPrijs.ToString();
-        }
-
+      
 
 
 
@@ -715,44 +703,13 @@ namespace EersteProjectMau
             stuurvraag.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
-            {
-                tabControl1.SelectTab(7);
-            }
-            else
-            {
-                MessageBox.Show("Select a bank.");
-                tabControl1.SelectTab(6);
-            }
-        }
+    
 
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(0);
-            MessageBox.Show("Betaling is gelukt.");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(5);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-        }
 
         private void betalingKlaar_Click(object sender, EventArgs e)
         {
@@ -785,6 +742,78 @@ namespace EersteProjectMau
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
+        }
+
+        private void buttonBetalen1_Click(object sender, EventArgs e)
+        {
+            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+            labelbedragBetaal1.Text = basisPrijs.ToString();
+        }
+
+        private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
+        }
+
+        private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+            labelBedrag1.Text = basisPrijs.ToString();
+        }
+
+        private void buttonVorigeBank1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+        }
+
+        private void buttonVolgendeBank1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
+            {
+                tabControl1.SelectTab(7);
+            }
+            else
+            {
+                MessageBox.Show("Select a bank.");
+                tabControl1.SelectTab(6);
+            }
+        }
+
+        private void buttonBetalenFinal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            MessageBox.Show("Betaling is gelukt.");
+        }
+
+        private void buttonVorigeFinal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
+
+        private void textboxMaand1_TextChanged(object sender, EventArgs e)
+        {
+            if (textboxMaand1.Text == "Maand")
+            {
+                textboxMaand1.Text = "";
+            }
+        }
+
+        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxJaar1.Text == "Jaar")
+            {
+                textBoxJaar1.Text = "";
+            }
+        }
+
+        private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxZoeken1.Text == "Zoeken...")
+            {
+                textBoxZoeken1.Text = "";
+            }
         }
     }
 }
