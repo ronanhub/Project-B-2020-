@@ -548,6 +548,7 @@ namespace EersteProjectMau
         {
             saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+            label18.Text = basisPrijs.ToString();
         }
 
 
@@ -608,6 +609,7 @@ namespace EersteProjectMau
         {
             tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
+            label6.Text = basisPrijs.ToString();
         }
 
 
@@ -716,6 +718,73 @@ namespace EersteProjectMau
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
+            {
+                tabControl1.SelectTab(7);
+            }
+            else
+            {
+                MessageBox.Show("Select a bank.");
+                tabControl1.SelectTab(6);
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            MessageBox.Show("Betaling is gelukt.");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
+
+        private void betalingKlaar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
         }
     }
 }
