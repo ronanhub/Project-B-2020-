@@ -7,23 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+using System.IO;
 
 namespace EersteProjectMau
 {
     public partial class HomePage : Form
     {
-        private object tabControl;
-        Help_On_OFF helpKnop = new Help_On_OFF();
+        MailMessage msg;
         private FlowLayoutPanel filmPanel;
+
+
+
+
+        Help_On_OFF helpKnop = new Help_On_OFF();
         public void Help_Open_Sluit()
         {
             
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabControl1.Size = (tabControl2.Visible == false) ? new Size(770, 310) : new Size(550, 310);
+            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(923, 510);
+
+            vragenPaneel.Size = (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
+            faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15); 
+
+            antwoorden.Location = (tabControl2.Visible == false) ? new Point(677, 12) : new Point(577, 12);
+            antwoorden.Size = (tabControl2.Visible == false) ? new Size(531, 375) : new Size(331, 455);
+
+            stuurVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
+            stuurVraag2.Visible = (tabControl2.Visible == false) ? true : false;
         }
 
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RESERVEREN RESERVEREN RESERVEREN RESERVEREN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public Button vindStoel(int nummer)
         {
             string nummerString;
@@ -41,7 +63,7 @@ namespace EersteProjectMau
             //return this.Controls["buttonStoel" + nummerString] as Button;
         }
 
-        public List<Tuple<float, status>> stoelGrid;
+        public List<Tuple<float, status, string>> stoelGrid;
         public float basisPrijs;
         public string kortingsCode;
         public float totaalPrijs;
@@ -57,7 +79,7 @@ namespace EersteProjectMau
             Color kleur;
             string nummerString = button.Name.Substring(startIndex: 11, length: 2);
             Int32.TryParse(nummerString, out nummer);
-
+            
             switch (stoelGrid[nummer].Item2)
             {
                 case status.vrij:
@@ -154,16 +176,56 @@ namespace EersteProjectMau
             }
         }
 
-        Tuple<int, int>[] locaties = new Tuple<int, int>[] { Vraag_Antwoord_Loc_1.Item3, Vraag_Antwoord_Loc_2.Item3 };
-        public void changeHuidig(int xLoc, int yLoc)
-        {
-            huidig.Visible = true;
-            huidig.Location = new Point(xLoc, yLoc);
-        }
 
 
+
+
+
+
+
+
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@FAQFAQFAQFAQFAQFAQFAQFAQFAQFAQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_1 = new Tuple<string, string, Tuple<int, int>>
+          /* Vraag */                    ("Hoe kom ik bij de bioscoop?",
+          /* Antwoord */                  "Stap 1: Druk op contact knop in het menu." +
+                                          "\n\n" +
+                                          "Stap 2: Druk op de kaart knop." +
+                                          "\n\n" +
+                                          "Stap 3: Ga naar het adres toe" +
+                                          "\n\n" +
+                                          "Stap 4: ????" +
+                                          "\n\n" +
+                                          "Stap 5: profit",
+          /* ID */                        Tuple.Create(2, 53));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_2 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Hoe verzin ik goede vragen?",
+         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+                                          "\n\n" +
+                                          "Stap 2: Nou?" +
+                                          "\n\n" +
+                                          "Stap 3: ????" +
+                                          "\n\n" +
+                                          "Stap 4: profit",
+          /* ID */                         Tuple.Create(2, 95));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_3 = new Tuple<string, string, Tuple<int, int>>
+          /* Vraag */                    ("Kan ik geld terug krijgen?",
+          /* Antwoord */                  "Nee.",
+          /* ID */                        Tuple.Create(2, 53));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_4 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Mag ik een ticket 2x gebruiken?",
+         /* Antwoord */                   "Tickets groeien niet aan de bomen",
+          /* ID */                         Tuple.Create(2, 95));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_5 = new Tuple<string, string, Tuple<int, int>>
           /* Vraag */                    ("Hoe zet ik de oven aan?",
           /* Antwoord */                  "Stap 1: Loop naar de oven" +
                                           "\n\n" +
@@ -182,11 +244,27 @@ namespace EersteProjectMau
                                           "Stap 8: profit",
           /* ID */                        Tuple.Create(2, 53));
 
-        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_2 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Hoe verzin ik goede vragen?",
-         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_6 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Is het mogelijk om senioren korting te krijgen?",
+         /* Antwoord */                   "Ben je serieus?",
+          /* ID */                         Tuple.Create(2, 95));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_7 = new Tuple<string, string, Tuple<int, int>>
+          /* Vraag */                    ("Is het eten en drinken gratis?",
+          /* Antwoord */                  "In uw dromen.",
+          /* ID */                        Tuple.Create(2, 53));
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_8 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Iphone of android?",
+         /* Antwoord */                   "Mandroid >>>>> saaiphone",
+          /* ID */                         Tuple.Create(2, 95));
+
+
+        static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_9 = new Tuple<string, string, Tuple<int, int>>
+         /* Vraag */                      ("Mijn vraag 9?",
+         /* Antwoord */                   "Stap 1: ASDASDSDASD?" +
                                           "\n\n" +
-                                          "Stap 2: Nou?" +
+                                          "Stap 2: ADSSADASD?" +
                                           "\n\n" +
                                           "Stap 3: ????" +
                                           "\n\n" +
@@ -194,40 +272,131 @@ namespace EersteProjectMau
           /* ID */                         Tuple.Create(2, 95));
 
 
-
-
-
-
         public void changeTextbox(string shownAntwoord)
         {
-            richTextBox1.Text = shownAntwoord;
+            antwoorden.Text = shownAntwoord;
         }
 
 
         Vragen vraag1 = new Vragen(Vraag_Antwoord_Loc_1.Item1, Vraag_Antwoord_Loc_1.Item2, Vraag_Antwoord_Loc_1.Item3);
         Vragen vraag2 = new Vragen(Vraag_Antwoord_Loc_2.Item1, Vraag_Antwoord_Loc_2.Item2, Vraag_Antwoord_Loc_2.Item3);
+        Vragen vraag3 = new Vragen(Vraag_Antwoord_Loc_3.Item1, Vraag_Antwoord_Loc_3.Item2, Vraag_Antwoord_Loc_3.Item3);
+        Vragen vraag4 = new Vragen(Vraag_Antwoord_Loc_4.Item1, Vraag_Antwoord_Loc_4.Item2, Vraag_Antwoord_Loc_4.Item3);
+        Vragen vraag5 = new Vragen(Vraag_Antwoord_Loc_5.Item1, Vraag_Antwoord_Loc_5.Item2, Vraag_Antwoord_Loc_5.Item3);
+        Vragen vraag6 = new Vragen(Vraag_Antwoord_Loc_6.Item1, Vraag_Antwoord_Loc_6.Item2, Vraag_Antwoord_Loc_6.Item3);
+        Vragen vraag7 = new Vragen(Vraag_Antwoord_Loc_7.Item1, Vraag_Antwoord_Loc_7.Item2, Vraag_Antwoord_Loc_7.Item3);
+        Vragen vraag8 = new Vragen(Vraag_Antwoord_Loc_8.Item1, Vraag_Antwoord_Loc_8.Item2, Vraag_Antwoord_Loc_8.Item3);
+        Vragen vraag9 = new Vragen(Vraag_Antwoord_Loc_9.Item1, Vraag_Antwoord_Loc_9.Item2, Vraag_Antwoord_Loc_9.Item3);
 
+
+        
+        public List<Tuple<float, status, string>> loadFilmStoelen(string filmNaam)
+        {
+            List<Tuple<float, status, string>> lijst = new List<Tuple<float, status, string>>();
+
+            if (File.Exists(filmNaam + ".csv"))
+            {
+                string[] data = File.ReadAllLines(filmNaam + ".csv");
+                List<Tuple<int, float, status, string>> stoelStringSeperated;
+
+                for (int l = 1; l < data.Length; l++)
+                {
+                    string[] items = data[l].Split(';');
+                    int stoelNummer;
+                    float stoelPrijs;
+                    status stoelStatus;
+                    string stoelKoper;
+
+                    Int32.TryParse(items[0], out stoelNummer);
+                    stoelPrijs = float.Parse(items[1]);
+                    switch (items[2].ToLower())
+                    {
+                        case "vrij":
+                            stoelStatus = status.vrij;
+                            break;
+                        case "bezet":
+                            stoelStatus = status.bezet;
+                            break;
+                        case "keuze":
+                            stoelStatus = status.bezet;
+                            break;
+                        default:
+                            stoelStatus = status.vrij;
+                            break;
+                    }
+                    stoelKoper = items[3];
+
+                    Tuple<float, status, string> newTuple = new Tuple<float, status, string>(stoelPrijs, stoelStatus, stoelKoper);
+                    lijst.Add(newTuple);
+                }
+            }
+            else
+            {
+                lijst = new List<Tuple<float, status, string>> {
+                new Tuple<float,status,string>(10.8f,status.vrij,""), new Tuple<float,status,string>(10.000f,status.vrij,""), new Tuple<float,status,string>(10.0000f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.10f,status.vrij,""), new Tuple<float,status,string>(11.1f,status.vrij,""), new Tuple<float,status,string>(11.12f,status.vrij,""), new Tuple<float,status,string>(11.10f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,"")
+                };
+            }    
+            return lijst;
+        }
+
+        public void saveFilmStoelen(string filmNaam, List<Tuple<float, status, string>> stoelLijst, string klantnaam)
+        {
+
+            List<string> Data = new List<string>();
+            Data.Add("Stoel;Prijs;Status;Klant");
+
+            for(int l = 0;l< stoelLijst.Count;l++)
+            {
+                if (stoelLijst[l].Item2 == status.keuze)
+                {
+                    Data.Add((l).ToString() + ";" + stoelLijst[l].Item1.ToString() + ";" + status.bezet.ToString() + ";" + klantnaam);
+                }
+                else
+                {
+                    Data.Add((l).ToString() + ";" + stoelLijst[l].Item1.ToString() + ";" + stoelLijst[l].Item2.ToString() + ";" + stoelLijst[l].Item3);
+                }
+            }
+
+            File.WriteAllLines(filmNaam+".csv",Data);
+        }
+
+        //@@@@@@@@@@@@@@@@@@@ HET PROGRAMMA BEGNINT HIER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public HomePage()
         {
+
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
-            stoelGrid = new List<Tuple<float, status>> {
-                new Tuple<float,status>(10.8f,status.vrij), new Tuple<float,status>(10.000f,status.vrij), new Tuple<float,status>(10.0000f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.10f,status.vrij), new Tuple<float,status>(11.1f,status.bezet), new Tuple<float,status>(11.12f,status.vrij), new Tuple<float,status>(11.10f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+            stoelGrid = loadFilmStoelen("12YearsASlave");/*new List<Tuple<float, status, string>> {
+                new Tuple<float,status,string>(10.8f,status.vrij,""), new Tuple<float,status,string>(10.000f,status.vrij,""), new Tuple<float,status,string>(10.0000f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.10f,status.vrij,""), new Tuple<float,status,string>(11.1f,status.bezet,"klantnaam"), new Tuple<float,status,string>(11.12f,status.vrij,""), new Tuple<float,status,string>(11.10f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
 
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.0f,status.bezet), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.bezet,"klantnaam"), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.bezet,"klantnaam"), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
 
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
 
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij),
-                new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij), new Tuple<float,status>(11.0f,status.vrij),
-                new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.vrij), new Tuple<float,status>(10.0f,status.bezet), new Tuple<float,status>(10.0f,status.bezet)
-            };
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
+                new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
+                new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.bezet,"klantnaam"), new Tuple<float,status,string>(10.0f,status.bezet,"klantnaam")
+            };*/
             for (int i = 0; i < 48; i++)
             {
                 var stoel = vindStoel(i);
@@ -235,6 +404,10 @@ namespace EersteProjectMau
                 updatePrijs(stoel);
             }
             basisPrijs = 0.0f;
+
+            msg = new MailMessage();
+
+
         }
 
 
@@ -246,77 +419,33 @@ namespace EersteProjectMau
             tabControl2.Appearance = TabAppearance.FlatButtons;
             tabControl2.ItemSize = new Size(0, 1);
             tabControl2.SizeMode = TabSizeMode.Fixed;
+
             Vraag1label.Text = vraag1.Vraag;
             Vraag2label.Text = vraag2.Vraag;
+            Vraag3label.Text = vraag3.Vraag;
+            Vraag4label.Text = vraag4.Vraag;
+            Vraag5label.Text = vraag5.Vraag;
+            Vraag6label.Text = vraag6.Vraag;
+            Vraag7label.Text = vraag7.Vraag;
+            Vraag8label.Text = vraag8.Vraag;
+            Vraag9label.Text = vraag9.Vraag;
+
             this.ActiveControl = label1;
 
         }
-
-
-        private void sluitHelp_Click(object sender, EventArgs e)
-        {
-            
-        }
-
 
         private void openHelp_Click_1(object sender, EventArgs e)
         {
             Help_Open_Sluit();
         }
 
-        private void faqButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(3);
-        }
-
-        private void noHelpFaqPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void faq_header_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void homeButton_Click(object sender, EventArgs e)
-        {
-            
-            tabControl1.SelectTab(0);
-            tabControl2.SelectTab(0);
-        }
-
-        private void agendaButton_Click(object sender, EventArgs e)
-        {
-            int aantalFilms = 3;
-            tabControl1.SelectTab(1);
-            tabControl2.SelectTab(1);
-
-            filmPanel = new FlowLayoutPanel();
-            filmPanel.Location = new Point(0,0);
-            Color black = Color.FromName("Black");
-            filmPanel.BackColor = black;
-            filmPanel.Size = new Size(900, 410 * aantalFilms);
 
 
-            tabPage2.Controls.Add(filmPanel);
 
 
-            for (int i = 0; i < aantalFilms; i++)
-            {
 
-                createNewFilm(i);
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ AGENDA AGENDA AGENDA AGENDA @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-            }
-        }
 
         public void createNewFilm(int amountOfFilms)
         {
@@ -366,87 +495,10 @@ namespace EersteProjectMau
         }
 
 
-        private void Agenda_Load(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void contactButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(2);
-            tabControl2.SelectTab(2);
-        }
-
-        private void helpPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Vraag1label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag1.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_1.Item3.Item1, Vraag_Antwoord_Loc_1.Item3.Item2);
-        }
-
-        private void Vraag2label_Click(object sender, EventArgs e)
-        {
-            changeTextbox(vraag2.Antwoord);
-            changeHuidig(Vraag_Antwoord_Loc_2.Item3.Item1, Vraag_Antwoord_Loc_2.Item3.Item2);
-        }
-
-        private void hulpFAQ_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void stuurVraag_Click(object sender, EventArgs e)
-        {
-            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
-            stuurvraag.Location = this.Location;
-            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
-            stuurvraag.Show();
-        }
-
-        private void filmPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void helpFAQ_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabPage9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@RESERVEREN RESERVEREN RESERVEREN RESERVEREN@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void buttonStoel00_Click(object sender, EventArgs e)
         {
             Tuple<int, int> stoel;
@@ -468,13 +520,13 @@ namespace EersteProjectMau
                 case status.vrij:
                     {
                         stoelStatus = status.keuze;
-                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
+                        stoelGrid[nummer] = new Tuple<float,status,string>(stoelGrid[nummer].Item1, stoelStatus, "");
                         break;
                     }
                 case status.keuze:
                     {
                         stoelStatus = status.vrij;
-                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
+                        stoelGrid[nummer] = new Tuple<float,status,string>(stoelGrid[nummer].Item1, stoelStatus, "");
                         break;
                     }
             }
@@ -492,44 +544,135 @@ namespace EersteProjectMau
             }
         }
 
-        private void buttonBetalen_Click(object sender, EventArgs e)
+   
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVIGATIE NAVIGATIE NAVIGATIE NAVIGATIE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private void homeButton1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
         }
 
-        private void tabPage10_Click(object sender, EventArgs e)
+        private void agendaButton1_Click(object sender, EventArgs e)
         {
+            int aantalFilms = 3;
+            tabControl1.SelectTab(1);
+            tabControl2.SelectTab(1);
 
+            filmPanel = new FlowLayoutPanel();
+            filmPanel.Location = new Point(0, 0);
+            Color black = Color.FromName("Black");
+            filmPanel.BackColor = black;
+            filmPanel.Size = new Size(900, 410 * aantalFilms);
+
+
+            agendaPage.Controls.Add(filmPanel);
+
+
+            for (int i = 0; i < aantalFilms; i++)
+            {
+
+                createNewFilm(i);
+
+            }
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void contactButton1_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(2);
+            tabControl2.SelectTab(2);
         }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void faqButton1_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(3);
+            tabControl2.SelectTab(3);
         }
-
-        private void textBox1_Validating(object sender, CancelEventArgs e)
+        private void reserveerButton1_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
         }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(5);
+            tabControl2.SelectTab(5);
+        }
+      
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FAQ FAQ FAQ FAQ FAQ FAQ FAQ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        private void Vraag1label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag1.Antwoord);
+        }
+        private void Vraag2label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag2.Antwoord);
+        }
+        private void Vraag3label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag3.Antwoord);
+        }
+        private void Vraag4label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag4.Antwoord);
+        }
+        private void Vraag5label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag5.Antwoord);
+        }
+        private void Vraag6label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag6.Antwoord);
+        }
+        private void Vraag7label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag7.Antwoord);
+        }
+        private void Vraag8label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag8.Antwoord);
+        }
+        private void Vraag9label_Click(object sender, EventArgs e)
+        {
+            changeTextbox(vraag9.Antwoord);
         }
 
+
+
+        private void stuurVraagHelp_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+        private void stuurVraag2_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+
+
+
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ CONTACT CONTACT CONTACT CONTACT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void ButtonMaps_Click(object sender, EventArgs e)
         {
-            if (PictureMaps.Visible== false)
+            if (PictureMaps.Visible == false)
             {
                 PictureMaps.Visible = true;
             }
@@ -538,17 +681,163 @@ namespace EersteProjectMau
                 PictureMaps.Visible = false;
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void mapButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
+            if (PictureMaps.Visible == false)
+            {
+                PictureMaps.Visible = true;
+            }
+            else
+            {
+                PictureMaps.Visible = false;
+            }
+        }
+      
+
+    
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+
+        private void betalingKlaar_Click(object sender, EventArgs e)
         {
 
         }
 
-       
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+        }
+
+        private void buttonBetalen1_Click(object sender, EventArgs e)
+        {
+            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+            labelbedragBetaal1.Text = basisPrijs.ToString();
+        }
+
+        private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
+        }
+
+        private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+            labelBedrag1.Text = basisPrijs.ToString();
+        }
+
+        private void buttonVorigeBank1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+        }
+
+        private void buttonVolgendeBank1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
+            {
+                tabControl1.SelectTab(7);
+            }
+            else
+            {
+                MessageBox.Show("Select a bank.");
+                tabControl1.SelectTab(6);
+            }
+        }
+
+        private void buttonBetalenFinal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            MessageBox.Show("Betaling is gelukt.");
+        }
+
+        private void buttonVorigeFinal1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
+
+        private void textboxMaand1_TextChanged(object sender, EventArgs e)
+        {
+            if (textboxMaand1.Text == "Maand")
+            {
+                textboxMaand1.Text = "";
+            }
+        }
+
+        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxJaar1.Text == "Jaar")
+            {
+                textBoxJaar1.Text = "";
+            }
+        }
+
+        private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxZoeken1.Text == "Zoeken...")
+            {
+                textBoxZoeken1.Text = "";
+            }
+        }
+
+        private void buttonZelfVraag1_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void buttonStelZelfVraagg1_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void buttonStuurMail1_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
     }
 }

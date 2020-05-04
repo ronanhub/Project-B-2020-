@@ -117,22 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="stuurVraagHulp.Text" xml:space="preserve">
-    <value>Stap 1.      Vul uw gegevens in.
-
-Stap 2.      Vul het onderwerp van uw 
-                 vraag in.
-
-Stap 3.      Schrijf uw vraag in "Uw vraag".
-
-Stap 4.      Bevestig dat u geen               
-                 robot bent door te klikken
-                 op het vakje links van
-                 "ik ben geen robot".
-
-Stap 5.      Verstuur uw vraag.</value>
-  </data>
-  <metadata name="errorProviderEmail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
