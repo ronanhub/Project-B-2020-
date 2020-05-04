@@ -2036,6 +2036,7 @@
             this.label4.Size = new System.Drawing.Size(150, 30);
             this.label4.TabIndex = 12;
             this.label4.Text = "Hulp nodig?...";
+            
             // 
             // helpTextFAQ
             // 

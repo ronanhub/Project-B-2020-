@@ -451,22 +451,47 @@ namespace EersteProjectMau
         {
             List<Panel> panels = new List<Panel>();
             String[] films = { "Dunkirk", "1917", "Op hoop \nvan zegen" };
-
+            String[] filmdesc = { 
+                "Dunkirk start als honderdduizenden Britse en \ngeallieerde soldaten omsingeld zijn door vijandelijke \ntroepen. Gevangen op het strand met hun rug naar de zee \nstaan ze voor een onmogelijke situatie als de vijand \ndichterbij komt.",
+            "Van Oscar®winnende regisseur Sam Mendes \n(Skyfall, Spectre, American Beauty) komt \neen meeslepend oorlogsdrama over de \nEerste Wereldoorlog; 1917.",
+                "Op hoop van zegen is een film uit 1986, gebaseerd \nop het gelijknamige sociaal-kritische toneelstuk \nvan Herman Heijermans uit 1900. De film gaat over de \nzware omstandigheden van de vissers en hun families \ndie slechts instrumenten waren in de handen van op winst \nbeluste reders." };
+            String[] fotoArray = {@"C:\Dunkirk_Clean.jpg", @"C:\1917_clean.jpeg", @"C:\ohvz.jpg" };
+            Button reserveerbutton = new Button();
             Label label1 = new Label();
+            Label label2 = new Label();
+            Label label3 = new Label();
             Panel panel = new Panel();
             PictureBox filmPhoto = new PictureBox();
-            filmPhoto.Location = new Point(500, 50);
+            filmPhoto.Location = new Point(600, 20);
             panel.Controls.Add(filmPhoto);
-            filmPhoto.Size = new Size(400, 600);
-            filmPhoto.LoadAsync(@"C:\palace.jpg");
+            filmPhoto.Size = new Size(250, 300);
+            filmPhoto.LoadAsync(fotoArray[amountOfFilms]);
             panel.Size = new Size(895, 400);
             panel.Controls.Add(label1);
+            panel.Controls.Add(label2);
+            panel.Controls.Add(label3);
+            panel.Controls.Add(reserveerbutton);
             Color white = Color.FromName("White");
             panel.BackColor = white;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 35);
             label1.Location = new Point(70, 50);
             label1.Text = films[amountOfFilms];
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 15);
+            if (amountOfFilms != 2)
+            {
+                label2.Location = new Point(80, 120);
+            } else
+            {
+                label2.Location = new Point(80, 160);
+            }
+            label2.Text = filmdesc[amountOfFilms];
+            label2.Size = new Size(300, 400);
+            reserveerbutton.Location = new Point(625, 330);
+            reserveerbutton.Size = new Size(200, 50);
+            reserveerbutton.Text = "Reserveer nu!";
+            reserveerbutton.Click += new EventHandler(reserveerbutton_Click);
             panels.Add(panel);
             filmPanel.Controls.Add(panel);
 
@@ -494,7 +519,11 @@ namespace EersteProjectMau
 
         }
 
-
+        private void reserveerbutton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+        }
 
 
 
@@ -839,5 +868,7 @@ namespace EersteProjectMau
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
         }
+
+        
     }
 }
