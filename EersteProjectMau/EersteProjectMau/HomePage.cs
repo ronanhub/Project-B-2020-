@@ -451,47 +451,22 @@ namespace EersteProjectMau
         {
             List<Panel> panels = new List<Panel>();
             String[] films = { "Dunkirk", "1917", "Op hoop \nvan zegen" };
-            String[] filmdesc = { 
-                "Dunkirk start als honderdduizenden Britse en \ngeallieerde soldaten omsingeld zijn door vijandelijke \ntroepen. Gevangen op het strand met hun rug naar de zee \nstaan ze voor een onmogelijke situatie als de vijand \ndichterbij komt.",
-            "Van Oscar®winnende regisseur Sam Mendes \n(Skyfall, Spectre, American Beauty) komt \neen meeslepend oorlogsdrama over de \nEerste Wereldoorlog; 1917.",
-                "Op hoop van zegen is een film uit 1986, gebaseerd \nop het gelijknamige sociaal-kritische toneelstuk \nvan Herman Heijermans uit 1900. De film gaat over de \nzware omstandigheden van de vissers en hun families \ndie slechts instrumenten waren in de handen van op winst \nbeluste reders." };
-            String[] fotoArray = {@"C:\Dunkirk_Clean.jpg", @"C:\1917_clean.jpeg", @"C:\ohvz.jpg" };
-            Button reserveerbutton = new Button();
+
             Label label1 = new Label();
-            Label label2 = new Label();
-            Label label3 = new Label();
             Panel panel = new Panel();
             PictureBox filmPhoto = new PictureBox();
-            filmPhoto.Location = new Point(600, 20);
+            filmPhoto.Location = new Point(500, 50);
             panel.Controls.Add(filmPhoto);
-            filmPhoto.Size = new Size(250, 300);
-            filmPhoto.LoadAsync(fotoArray[amountOfFilms]);
+            filmPhoto.Size = new Size(400, 600);
+            filmPhoto.LoadAsync(@"C:\palace.jpg");
             panel.Size = new Size(895, 400);
             panel.Controls.Add(label1);
-            panel.Controls.Add(label2);
-            panel.Controls.Add(label3);
-            panel.Controls.Add(reserveerbutton);
             Color white = Color.FromName("White");
             panel.BackColor = white;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 35);
             label1.Location = new Point(70, 50);
             label1.Text = films[amountOfFilms];
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 15);
-            if (amountOfFilms != 2)
-            {
-                label2.Location = new Point(80, 120);
-            } else
-            {
-                label2.Location = new Point(80, 160);
-            }
-            label2.Text = filmdesc[amountOfFilms];
-            label2.Size = new Size(300, 400);
-            reserveerbutton.Location = new Point(625, 330);
-            reserveerbutton.Size = new Size(200, 50);
-            reserveerbutton.Text = "Reserveer nu!";
-            reserveerbutton.Click += new EventHandler(reserveerbutton_Click);
             panels.Add(panel);
             filmPanel.Controls.Add(panel);
 
@@ -519,11 +494,7 @@ namespace EersteProjectMau
 
         }
 
-        private void reserveerbutton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(4);
-        }
+
 
 
 
@@ -573,7 +544,13 @@ namespace EersteProjectMau
             }
         }
 
-   
+        private void buttonBetalen_Click(object sender, EventArgs e)
+        {
+            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+            label18.Text = basisPrijs.ToString();
+        }
+
 
 
 
@@ -628,7 +605,13 @@ namespace EersteProjectMau
             tabControl1.SelectTab(5);
             tabControl2.SelectTab(5);
         }
-      
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+            label6.Text = basisPrijs.ToString();
+        }
+
 
 
 
@@ -721,15 +704,55 @@ namespace EersteProjectMau
                 PictureMaps.Visible = false;
             }
         }
-      
+        private void contactemailknop_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
 
-    
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
+            {
+                tabControl1.SelectTab(7);
+            }
+            else
+            {
+                MessageBox.Show("Select a bank.");
+                tabControl1.SelectTab(6);
+            }
+        }
 
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            MessageBox.Show("Betaling is gelukt.");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
 
         private void betalingKlaar_Click(object sender, EventArgs e)
         {
@@ -763,112 +786,5 @@ namespace EersteProjectMau
             checkBox2.Checked = false;
             checkBox3.Checked = false;
         }
-
-        private void buttonBetalen1_Click(object sender, EventArgs e)
-        {
-            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            labelbedragBetaal1.Text = basisPrijs.ToString();
-        }
-
-        private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
-        }
-
-        private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-            tabControl2.SelectTab(6);
-            labelBedrag1.Text = basisPrijs.ToString();
-        }
-
-        private void buttonVorigeBank1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(5);
-        }
-
-        private void buttonVolgendeBank1_Click(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
-            {
-                tabControl1.SelectTab(7);
-            }
-            else
-            {
-                MessageBox.Show("Select a bank.");
-                tabControl1.SelectTab(6);
-            }
-        }
-
-        private void buttonBetalenFinal1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(0);
-            MessageBox.Show("Betaling is gelukt.");
-        }
-
-        private void buttonVorigeFinal1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-        }
-
-        private void textboxMaand1_TextChanged(object sender, EventArgs e)
-        {
-            if (textboxMaand1.Text == "Maand")
-            {
-                textboxMaand1.Text = "";
-            }
-        }
-
-        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxJaar1.Text == "Jaar")
-            {
-                textBoxJaar1.Text = "";
-            }
-        }
-
-        private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxZoeken1.Text == "Zoeken...")
-            {
-                textBoxZoeken1.Text = "";
-            }
-        }
-
-        private void buttonZelfVraag1_Click(object sender, EventArgs e)
-        {
-            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
-            stuurvraag.Text = "Verstuur je vraag";
-
-
-            stuurvraag.Location = this.Location;
-            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
-            stuurvraag.Show();
-        }
-
-        private void buttonStelZelfVraagg1_Click(object sender, EventArgs e)
-        {
-            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
-            stuurvraag.Text = "Verstuur je vraag";
-
-
-            stuurvraag.Location = this.Location;
-            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
-            stuurvraag.Show();
-        }
-
-        private void buttonStuurMail1_Click(object sender, EventArgs e)
-        {
-            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
-            stuurvraag.Text = "Verstuur je vraag";
-
-
-            stuurvraag.Location = this.Location;
-            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
-            stuurvraag.Show();
-        }
-
-        
     }
 }
