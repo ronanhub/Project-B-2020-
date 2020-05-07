@@ -489,7 +489,7 @@
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(353, 286);
+            this.richTextBox1.Size = new System.Drawing.Size(353, 160);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "Telefoon: 06 64589325\n\nLocatie   : Wijnhaven 107, \n                 3011 WN Rotte" +
     "rdam\n";
