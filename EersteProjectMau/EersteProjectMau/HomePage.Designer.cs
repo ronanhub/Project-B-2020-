@@ -53,7 +53,6 @@
             this.contactPage = new System.Windows.Forms.TabPage();
             this.contactemail = new System.Windows.Forms.Label();
             this.contactemailknop = new System.Windows.Forms.Button();
-            this.mapButton = new System.Windows.Forms.PictureBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PictureMaps = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -147,6 +146,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.betalingKlaar = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
@@ -180,8 +181,6 @@
             this.huidigePaginaLabel1 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.BetalingAf = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -193,7 +192,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.reserveerButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contactPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mapButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.FaqPage.SuspendLayout();
@@ -447,7 +445,6 @@
             // 
             this.contactPage.Controls.Add(this.contactemail);
             this.contactPage.Controls.Add(this.contactemailknop);
-            this.contactPage.Controls.Add(this.mapButton);
             this.contactPage.Controls.Add(this.richTextBox1);
             this.contactPage.Controls.Add(this.PictureMaps);
             this.contactPage.Location = new System.Drawing.Point(4, 25);
@@ -484,19 +481,6 @@
             this.contactemailknop.UseVisualStyleBackColor = false;
             this.contactemailknop.Click += new System.EventHandler(this.contactemailknop_Click);
             // 
-            // mapButton
-            // 
-            this.mapButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.mapButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mapButton.Image = global::EersteProjectMau.Properties.Resources.kaart;
-            this.mapButton.Location = new System.Drawing.Point(124, 174);
-            this.mapButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mapButton.Name = "mapButton";
-            this.mapButton.Size = new System.Drawing.Size(203, 90);
-            this.mapButton.TabIndex = 11;
-            this.mapButton.TabStop = false;
-            this.mapButton.Click += new System.EventHandler(this.mapButton_Click);
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.Moccasin;
@@ -521,7 +505,6 @@
             this.PictureMaps.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureMaps.TabIndex = 9;
             this.PictureMaps.TabStop = false;
-            this.PictureMaps.Visible = false;
             // 
             // tabPage4
             // 
@@ -1626,6 +1609,26 @@
             this.betalingKlaar.UseVisualStyleBackColor = true;
             this.betalingKlaar.Click += new System.EventHandler(this.betalingKlaar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(797, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 32);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "label6";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(658, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 32);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "Bedrag:  €";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -1999,26 +2002,6 @@
             this.BetalingAf.Text = "BetalingAf";
             this.BetalingAf.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(658, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 32);
-            this.label3.TabIndex = 69;
-            this.label3.Text = "Bedrag:  €";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(797, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 32);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "label6";
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2050,7 +2033,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contactPage.ResumeLayout(false);
             this.contactPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mapButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.FaqPage.ResumeLayout(false);
@@ -2186,7 +2168,6 @@
         private System.Windows.Forms.Label FAQHeader;
         private System.Windows.Forms.RichTextBox antwoorden;
         private System.Windows.Forms.TabPage contactPage;
-        private System.Windows.Forms.PictureBox mapButton;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.PictureBox PictureMaps;
         private System.Windows.Forms.Label contactemail;
