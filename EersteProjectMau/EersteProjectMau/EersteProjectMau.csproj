@@ -104,5 +104,59 @@
   <ItemGroup>
     <None Include="Resources\SoMPoster.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agendaButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contactButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faqButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12YaSPoster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalmGrey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserveerButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geenrobot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_false.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_true.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4494c524a5f4629df73fa90fd5c4d03a_confetti-transparent-gif-on-gifer-by-manariel_480-328.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geenverbinding.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kaart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Red_X.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66215659-vink-teken-element-groen-vinkje-op-een-witte-achtergrond-eenvoudig-merk-grafisch-ontwerp-ok-toets-te.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vinkje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VIKJJe.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

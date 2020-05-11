@@ -366,6 +366,9 @@ namespace EersteProjectMau
         }
 
 
+
+
+
         private void Agenda_Load(object sender, EventArgs e)
         {
             
@@ -373,6 +376,24 @@ namespace EersteProjectMau
 
         private void label2_Click(object sender, EventArgs e)
         {
+            updatePrijs();
+            for (int i = 0; i < 48; i++)
+            {
+                var stoel = vindStoel(i);
+                updatePrijs(stoel);
+            }
+        }
+
+        private void buttonBetalen_Click(object sender, EventArgs e)
+        {
+            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+            label18.Text = basisPrijs.ToString();
+        }
+
+
+
+
 
         }
 
@@ -384,6 +405,16 @@ namespace EersteProjectMau
 
         private void helpPanel1_Paint(object sender, PaintEventArgs e)
         {
+            tabControl1.SelectTab(5);
+            tabControl2.SelectTab(5);
+        }
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+            label6.Text = basisPrijs.ToString();
+        }
+
 
         }
 
@@ -419,117 +450,7 @@ namespace EersteProjectMau
 
         private void filmPanel1_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void helpFAQ_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabPage9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonStoel00_Click(object sender, EventArgs e)
-        {
-            Tuple<int, int> stoel;
-            int nummer;
-            Button senderButton = sender as Button;
-
-            //krijg het stoelnummer uit de naam van de button
-            string nummerString = senderButton.Name.Substring(startIndex: 11, length: 2);
-            //verander dit stoelnummer naar een int
-            Int32.TryParse(nummerString, out nummer);
-            /*stoel = stoelLocatie(nummer,12);
-            MessageBox.Show("click op stoel "+stoel.Item1.ToString()+" - "+stoel.Item2.ToString());*/
-
-            //verkrijg de huidige stoelstatus
-            status stoelStatus = stoelGrid[nummer].Item2;
-
-            switch (stoelStatus)
-            {
-                case status.vrij:
-                    {
-                        stoelStatus = status.keuze;
-                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
-                        break;
-                    }
-                case status.keuze:
-                    {
-                        stoelStatus = status.vrij;
-                        stoelGrid[nummer] = new Tuple<float, status>(stoelGrid[nummer].Item1, stoelStatus);
-                        break;
-                    }
-            }
-            updateKleur(senderButton);
-            updatePrijs();
-        }
-
-        private void textBoxKorting_TextChanged(object sender, EventArgs e)
-        {
-            updatePrijs();
-            for (int i = 0; i < 48; i++)
-            {
-                var stoel = vindStoel(i);
-                updatePrijs(stoel);
-            }
-        }
-
-        private void buttonBetalen_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-        }
-
-        private void tabPage10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(5);
-        }
-
-        private void ButtonMaps_Click(object sender, EventArgs e)
-        {
-            if (PictureMaps.Visible== false)
+            if (PictureMaps.Visible == false)
             {
                 PictureMaps.Visible = true;
             }
@@ -538,17 +459,89 @@ namespace EersteProjectMau
                 PictureMaps.Visible = false;
             }
         }
+        private void mapButton_Click(object sender, EventArgs e)
+        {
+            if (PictureMaps.Visible == false)
+            {
+                PictureMaps.Visible = true;
+            }
+            else
+            {
+                PictureMaps.Visible = false;
+            }
+        }
+        private void contactemailknop_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }
 
-       
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(5);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+        }
+
+        private void betalingKlaar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox4.Checked = false;
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+        }
     }
 }
