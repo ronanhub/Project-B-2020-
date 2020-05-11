@@ -28,17 +28,6 @@ C:\Users\kerem\Desktop\School\Projecten\Project B\EersteProjectMau\EersteProject
 C:\Users\kerem\Desktop\School\Projecten\Project B\EersteProjectMau\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 C:\Users\kerem\Desktop\School\Projecten\Project B\EersteProjectMau\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
 C:\Users\kerem\Desktop\School\Projecten\Project B\EersteProjectMau\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.StuurVraagFormcs.resources
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.StuurVraagFormcs.resources
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.CoreCompileInputs.cache
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
-C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
 C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
 C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
 C:\Users\santa\OneDrive\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
@@ -82,10 +71,21 @@ C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau
 C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
 C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.StuurVraagFormcs.resources
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.CoreCompileInputs.cache
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
 C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
@@ -105,3 +105,6 @@ C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\Eerste
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
