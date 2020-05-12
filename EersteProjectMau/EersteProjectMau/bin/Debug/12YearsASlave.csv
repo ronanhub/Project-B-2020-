@@ -7,8 +7,8 @@ Stoel;Prijs;Status;Klant
 5;11,1;vrij;
 6;11,12;bezet;NieuweKlant
 7;11,1;bezet;NieuweKlant
-8;10;vrij;
-9;10;vrij;
+8;10;bezet;NieuweKlant
+9;10;bezet;NieuweKlant
 10;10;vrij;
 11;10;vrij;
 12;10;vrij;
