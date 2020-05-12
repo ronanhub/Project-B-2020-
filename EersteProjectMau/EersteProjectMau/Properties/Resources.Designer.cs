@@ -93,6 +93,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1917_clean {
+            get {
+                object obj = ResourceManager.GetObject("1917_clean", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4494c524a5f4629df73fa90fd5c4d03a_confetti_transparent_gif_on_gifer_by_manariel_480_328 {
             get {
                 object obj = ResourceManager.GetObject("4494c524a5f4629df73fa90fd5c4d03a_confetti-transparent-gif-on-gifer-by-manariel_48" +
@@ -166,6 +176,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dunkirk_Clean {
+            get {
+                object obj = ResourceManager.GetObject("Dunkirk_Clean", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap faqButton {
             get {
                 object obj = ResourceManager.GetObject("faqButton", resourceCulture);
@@ -219,6 +239,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap kaart {
             get {
                 object obj = ResourceManager.GetObject("kaart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ohvz {
+            get {
+                object obj = ResourceManager.GetObject("ohvz", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

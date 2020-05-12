@@ -127,11 +127,14 @@
   <data name="1200px-Red_X.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200px-Red_X.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stuurMailButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stuurMailButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="send_true" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\send_true.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="volgendeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\volgendeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="geenrobot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\geenrobot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CalmGrey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CalmGrey.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +142,8 @@
   <data name="SoMPoster" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SoMPoster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agendaButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agendaButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="12YaSPoster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12YaSPoster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contactButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contactButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +154,8 @@
   <data name="66215659-vink-teken-element-groen-vinkje-op-een-witte-achtergrond-eenvoudig-merk-grafisch-ontwerp-ok-toets-te" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\66215659-vink-teken-element-groen-vinkje-op-een-witte-achtergrond-eenvoudig-merk-grafisch-ontwerp-ok-toets-te.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="faqButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\faqButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zelfVraagButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zelfVraagButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="betalenButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\betalenButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,17 +166,17 @@
   <data name="inbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inbox.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="send_true" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send_true.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vorigeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vorigeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="geenrobot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\geenrobot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1200px-Red_X1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200px-Red_X.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zelfVraagButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zelfVraagButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vorigeButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vorigeButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agendaButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agendaButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="send_false" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\send_false.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,10 +187,16 @@
   <data name="reserveerButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reserveerButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="12YaSPoster" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12YaSPoster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="faqButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\faqButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stuurMailButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stuurMailButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1917_clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1917_clean.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dunkirk_Clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dunkirk_Clean.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ohvz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ohvz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

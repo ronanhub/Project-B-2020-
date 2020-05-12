@@ -447,7 +447,7 @@ namespace EersteProjectMau
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ AGENDA AGENDA AGENDA AGENDA @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
-        public void createNewFilm(int amountOfFilms)
+        /*public void createNewFilm(int amountOfFilms)
         {
             List<Panel> panels = new List<Panel>();
             String[] films = { "Dunkirk", "1917", "Op hoop \nvan zegen" };
@@ -516,8 +516,9 @@ namespace EersteProjectMau
                 //filmPanel.Controls.Add(newPanel);
             }
             // Add the Label and TextBox controls to the Panel.
-
-        }
+            
+        }*/
+        
 
         private void reserveerbutton_Click(object sender, EventArgs e)
         {
@@ -590,7 +591,7 @@ namespace EersteProjectMau
             int aantalFilms = 3;
             tabControl1.SelectTab(1);
             tabControl2.SelectTab(1);
-
+            /*
             filmPanel = new FlowLayoutPanel();
             filmPanel.Location = new Point(0, 0);
             Color black = Color.FromName("Black");
@@ -604,9 +605,9 @@ namespace EersteProjectMau
             for (int i = 0; i < aantalFilms; i++)
             {
 
-                createNewFilm(i);
+                //createNewFilm(i);
 
-            }
+            }*/
         }
         private void contactButton1_Click(object sender, EventArgs e)
         {
@@ -869,6 +870,21 @@ namespace EersteProjectMau
             stuurvraag.Show();
         }
 
-        
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
+            stuurvraag.Text = "Verstuur je vraag";
+
+
+            stuurvraag.Location = this.Location;
+            stuurvraag.StartPosition = FormStartPosition.CenterScreen;
+            stuurvraag.Show();
+        }
     }
 }
