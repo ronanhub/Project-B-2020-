@@ -63,6 +63,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1200px_Red_X_svg {
+            get {
+                object obj = ResourceManager.GetObject("1200px-Red_X.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1200px_Red_X1 {
             get {
                 object obj = ResourceManager.GetObject("1200px-Red_X1", resourceCulture);
@@ -94,6 +104,17 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _66215659_vink_teken_element_groen_vinkje_op_een_witte_achtergrond_eenvoudig_merk_grafisch_ontwerp_ok_toets_te {
+            get {
+                object obj = ResourceManager.GetObject("66215659-vink-teken-element-groen-vinkje-op-een-witte-achtergrond-eenvoudig-merk-" +
+                        "grafisch-ontwerp-ok-toets-te", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _66215659_vink_teken_element_groen_vinkje_op_een_witte_achtergrond_eenvoudig_merk_grafisch_ontwerp_ok_toets_te1 {
             get {
                 object obj = ResourceManager.GetObject("66215659-vink-teken-element-groen-vinkje-op-een-witte-achtergrond-eenvoudig-merk-" +
@@ -108,26 +129,6 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap agendaButton {
             get {
                 object obj = ResourceManager.GetObject("agendaButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap betalenButton {
-            get {
-                object obj = ResourceManager.GetObject("betalenButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap betalenButton {
-            get {
-                object obj = ResourceManager.GetObject("betalenButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -241,8 +242,6 @@ namespace EersteProjectMau.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-<<<<<<< HEAD
-=======
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -253,49 +252,5 @@ namespace EersteProjectMau.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap stuurMailButton {
-            get {
-                object obj = ResourceManager.GetObject("stuurMailButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap volgendeButton {
-            get {
-                object obj = ResourceManager.GetObject("volgendeButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap vorigeButton {
-            get {
-                object obj = ResourceManager.GetObject("vorigeButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap zelfVraagButton {
-            get {
-                object obj = ResourceManager.GetObject("zelfVraagButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-<<<<<<< HEAD
->>>>>>> a70d3ac6b6e8b9599df93631db6fcc0eecac94b4
-=======
->>>>>>> a70d3ac6b6e8b9599df93631db6fcc0eecac94b4
     }
 }
