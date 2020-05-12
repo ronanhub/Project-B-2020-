@@ -105,6 +105,9 @@ C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\Eerste
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
+C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
+C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
+C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
