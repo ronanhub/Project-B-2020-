@@ -90,6 +90,8 @@
             this.faqsplitter = new System.Windows.Forms.Panel();
             this.antwoorden = new System.Windows.Forms.RichTextBox();
             this.tabPageStoelselectie = new System.Windows.Forms.TabPage();
+            this.labelStoelSelectieFilmDatum = new System.Windows.Forms.Label();
+            this.labelStoelSelectieFilmTitel = new System.Windows.Forms.Label();
             this.buttonBetalen1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxKorting = new System.Windows.Forms.TextBox();
@@ -213,8 +215,8 @@
             this.huidigePaginaLabel1 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.BetalingAf = new System.Windows.Forms.TabPage();
-            this.labelStoelSelectieFilmTitel = new System.Windows.Forms.Label();
-            this.labelStoelSelectieFilmDatum = new System.Windows.Forms.Label();
+            this.labelReserveerHelpTitel = new System.Windows.Forms.Label();
+            this.labelReserveerHelpText = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -259,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonVorigeFinal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag1)).BeginInit();
+            this.ReserveerHelp.SuspendLayout();
             this.FaqHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStelZelfVraagg1)).BeginInit();
             this.AgendaHelp.SuspendLayout();
@@ -1038,6 +1041,28 @@
             this.tabPageStoelselectie.Size = new System.Drawing.Size(923, 484);
             this.tabPageStoelselectie.TabIndex = 4;
             this.tabPageStoelselectie.Text = "tabPageStoelselectie";
+            // 
+            // labelStoelSelectieFilmDatum
+            // 
+            this.labelStoelSelectieFilmDatum.AutoSize = true;
+            this.labelStoelSelectieFilmDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStoelSelectieFilmDatum.Location = new System.Drawing.Point(133, 70);
+            this.labelStoelSelectieFilmDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStoelSelectieFilmDatum.Name = "labelStoelSelectieFilmDatum";
+            this.labelStoelSelectieFilmDatum.Size = new System.Drawing.Size(245, 26);
+            this.labelStoelSelectieFilmDatum.TabIndex = 105;
+            this.labelStoelSelectieFilmDatum.Text = "Stoelselectie Filmdatum";
+            // 
+            // labelStoelSelectieFilmTitel
+            // 
+            this.labelStoelSelectieFilmTitel.AutoSize = true;
+            this.labelStoelSelectieFilmTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStoelSelectieFilmTitel.Location = new System.Drawing.Point(133, 44);
+            this.labelStoelSelectieFilmTitel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStoelSelectieFilmTitel.Name = "labelStoelSelectieFilmTitel";
+            this.labelStoelSelectieFilmTitel.Size = new System.Drawing.Size(218, 26);
+            this.labelStoelSelectieFilmTitel.TabIndex = 104;
+            this.labelStoelSelectieFilmTitel.Text = "Stoelselectie Filmtitel";
             // 
             // buttonBetalen1
             // 
@@ -2215,6 +2240,8 @@
             // ReserveerHelp
             // 
             this.ReserveerHelp.BackColor = System.Drawing.Color.White;
+            this.ReserveerHelp.Controls.Add(this.labelReserveerHelpTitel);
+            this.ReserveerHelp.Controls.Add(this.labelReserveerHelpText);
             this.ReserveerHelp.Location = new System.Drawing.Point(4, 22);
             this.ReserveerHelp.Margin = new System.Windows.Forms.Padding(2);
             this.ReserveerHelp.Name = "ReserveerHelp";
@@ -2409,27 +2436,27 @@
             this.BetalingAf.Text = "BetalingAf";
             this.BetalingAf.UseVisualStyleBackColor = true;
             // 
-            // labelStoelSelectieFilmTitel
+            // labelReserveerHelpTitel
             // 
-            this.labelStoelSelectieFilmTitel.AutoSize = true;
-            this.labelStoelSelectieFilmTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStoelSelectieFilmTitel.Location = new System.Drawing.Point(133, 44);
-            this.labelStoelSelectieFilmTitel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelStoelSelectieFilmTitel.Name = "labelStoelSelectieFilmTitel";
-            this.labelStoelSelectieFilmTitel.Size = new System.Drawing.Size(218, 26);
-            this.labelStoelSelectieFilmTitel.TabIndex = 104;
-            this.labelStoelSelectieFilmTitel.Text = "Stoelselectie Filmtitel";
+            this.labelReserveerHelpTitel.AutoSize = true;
+            this.labelReserveerHelpTitel.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReserveerHelpTitel.Location = new System.Drawing.Point(8, 13);
+            this.labelReserveerHelpTitel.Name = "labelReserveerHelpTitel";
+            this.labelReserveerHelpTitel.Size = new System.Drawing.Size(150, 30);
+            this.labelReserveerHelpTitel.TabIndex = 14;
+            this.labelReserveerHelpTitel.Text = "Hulp nodig?...";
             // 
-            // labelStoelSelectieFilmDatum
+            // labelReserveerHelpText
             // 
-            this.labelStoelSelectieFilmDatum.AutoSize = true;
-            this.labelStoelSelectieFilmDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStoelSelectieFilmDatum.Location = new System.Drawing.Point(133, 70);
-            this.labelStoelSelectieFilmDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelStoelSelectieFilmDatum.Name = "labelStoelSelectieFilmDatum";
-            this.labelStoelSelectieFilmDatum.Size = new System.Drawing.Size(245, 26);
-            this.labelStoelSelectieFilmDatum.TabIndex = 105;
-            this.labelStoelSelectieFilmDatum.Text = "Stoelselectie Filmdatum";
+            this.labelReserveerHelpText.BackColor = System.Drawing.Color.Transparent;
+            this.labelReserveerHelpText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReserveerHelpText.Location = new System.Drawing.Point(8, 51);
+            this.labelReserveerHelpText.Name = "labelReserveerHelpText";
+            this.labelReserveerHelpText.Size = new System.Drawing.Size(245, 356);
+            this.labelReserveerHelpText.TabIndex = 13;
+            this.labelReserveerHelpText.Text = "Hier kunt u selecteren welke stoelen u wilt.\r\n\r\nU kunt een stoel selecteren door " +
+    "erop te klikken.\r\n\r\nGrijze stoelen zijn beschikbaar\r\n\r\nOranje stolen zijn bezet\r" +
+    "\n\r\nGroene stoelen zijn door U gekozen";
             // 
             // HomePage
             // 
@@ -2502,6 +2529,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonVorigeFinal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag1)).EndInit();
+            this.ReserveerHelp.ResumeLayout(false);
+            this.ReserveerHelp.PerformLayout();
             this.FaqHelp.ResumeLayout(false);
             this.FaqHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStelZelfVraagg1)).EndInit();
@@ -2699,6 +2728,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label labelStoelSelectieFilmTitel;
         private System.Windows.Forms.Label labelStoelSelectieFilmDatum;
+        private System.Windows.Forms.Label labelReserveerHelpTitel;
+        private System.Windows.Forms.Label labelReserveerHelpText;
     }
 }
 
