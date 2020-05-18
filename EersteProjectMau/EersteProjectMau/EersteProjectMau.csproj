@@ -186,5 +186,29 @@
   <ItemGroup>
     <None Include="Resources\VIKJJe.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\betalenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vorigeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volgendeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zelfVraagButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stuurMailButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1917_clean.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dunkirk_Clean.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ohvz.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
