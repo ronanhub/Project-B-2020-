@@ -33,7 +33,7 @@ Stoel;Prijs;Status;Klant
 31;11;bezet;NieuweKlant
 32;10;bezet;NieuweKlant
 33;10;bezet;NieuweKlant
-34;10;vrij;
+34;10;bezet;NieuweKlant
 35;10;vrij;
 36;10;vrij;
 37;10;vrij;
@@ -45,5 +45,5 @@ Stoel;Prijs;Status;Klant
 43;11;bezet;NieuweKlant
 44;10;bezet;NieuweKlant
 45;10;bezet;NieuweKlant
-46;10;vrij;
+46;10;bezet;NieuweKlant
 47;10;vrij;
