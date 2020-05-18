@@ -673,6 +673,8 @@ namespace EersteProjectMau
                 updatePrijs(stoel);
             }
             basisPrijs = 0.0f;
+            labelStoelSelectieFilmTitel.Text = nieuweFilm.titel;
+            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.ToString();
         }
 
 

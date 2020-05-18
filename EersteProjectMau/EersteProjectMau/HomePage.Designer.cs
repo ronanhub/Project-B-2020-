@@ -213,6 +213,8 @@
             this.huidigePaginaLabel1 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.BetalingAf = new System.Windows.Forms.TabPage();
+            this.labelStoelSelectieFilmTitel = new System.Windows.Forms.Label();
+            this.labelStoelSelectieFilmDatum = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -976,6 +978,8 @@
             // 
             this.tabPageStoelselectie.AutoScroll = true;
             this.tabPageStoelselectie.BackColor = System.Drawing.Color.White;
+            this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmDatum);
+            this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmTitel);
             this.tabPageStoelselectie.Controls.Add(this.buttonBetalen1);
             this.tabPageStoelselectie.Controls.Add(this.label5);
             this.tabPageStoelselectie.Controls.Add(this.textBoxKorting);
@@ -2405,6 +2409,28 @@
             this.BetalingAf.Text = "BetalingAf";
             this.BetalingAf.UseVisualStyleBackColor = true;
             // 
+            // labelStoelSelectieFilmTitel
+            // 
+            this.labelStoelSelectieFilmTitel.AutoSize = true;
+            this.labelStoelSelectieFilmTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStoelSelectieFilmTitel.Location = new System.Drawing.Point(133, 44);
+            this.labelStoelSelectieFilmTitel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStoelSelectieFilmTitel.Name = "labelStoelSelectieFilmTitel";
+            this.labelStoelSelectieFilmTitel.Size = new System.Drawing.Size(218, 26);
+            this.labelStoelSelectieFilmTitel.TabIndex = 104;
+            this.labelStoelSelectieFilmTitel.Text = "Stoelselectie Filmtitel";
+            // 
+            // labelStoelSelectieFilmDatum
+            // 
+            this.labelStoelSelectieFilmDatum.AutoSize = true;
+            this.labelStoelSelectieFilmDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStoelSelectieFilmDatum.Location = new System.Drawing.Point(133, 70);
+            this.labelStoelSelectieFilmDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStoelSelectieFilmDatum.Name = "labelStoelSelectieFilmDatum";
+            this.labelStoelSelectieFilmDatum.Size = new System.Drawing.Size(245, 26);
+            this.labelStoelSelectieFilmDatum.TabIndex = 105;
+            this.labelStoelSelectieFilmDatum.Text = "Stoelselectie Filmdatum";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2671,6 +2697,8 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label labelStoelSelectieFilmTitel;
+        private System.Windows.Forms.Label labelStoelSelectieFilmDatum;
     }
 }
 
