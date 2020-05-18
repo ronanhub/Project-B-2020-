@@ -289,14 +289,31 @@ namespace EersteProjectMau
         Vragen vraag9 = new Vragen(Vraag_Antwoord_Loc_9.Item1, Vraag_Antwoord_Loc_9.Item2, Vraag_Antwoord_Loc_9.Item3);
 
 
-        
-        public List<Tuple<float, status, string>> loadFilmStoelen(string filmNaam)
+
+        public string fileStringMaker(string filmTitel, DateTime tijdstip, bool addExtension = false)
+        {
+            string returnString;
+
+            string titelString = filmTitel.Replace(" ", "").ToLower();
+            string datumString = tijdstip.Date.ToShortDateString();
+            string tijdString = tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
+
+            returnString = titelString + "_" + datumString + "_" + tijdString;
+            if (addExtension)
+            {
+                returnString = returnString + ".csv";
+            }
+
+            return returnString;
+        }
+
+        public List<Tuple<float, status, string>> loadFilmStoelen(string filmNaam, DateTime tijdstip)
         {
             List<Tuple<float, status, string>> lijst = new List<Tuple<float, status, string>>();
 
-            if (File.Exists(filmNaam + ".csv"))
+            if (File.Exists(fileStringMaker(filmNaam, tijdstip, true)))
             {
-                string[] data = File.ReadAllLines(filmNaam + ".csv");
+                string[] data = File.ReadAllLines(fileStringMaker(filmNaam, tijdstip, true));
                 List<Tuple<int, float, status, string>> stoelStringSeperated;
 
                 for (int l = 1; l < data.Length; l++)
@@ -353,7 +370,7 @@ namespace EersteProjectMau
             return lijst;
         }
 
-        public void saveFilmStoelen(string filmNaam, List<Tuple<float, status, string>> stoelLijst, string klantnaam)
+        public void saveFilmStoelen(string filmNaam, DateTime tijdstip, List<Tuple<float, status, string>> stoelLijst, string klantnaam)
         {
 
             List<string> Data = new List<string>();
@@ -371,7 +388,7 @@ namespace EersteProjectMau
                 }
             }
 
-            File.WriteAllLines(filmNaam+".csv",Data);
+            File.WriteAllLines(fileStringMaker(filmNaam, tijdstip, true), Data);
         }
 
         //@@@@@@@@@@@@@@@@@@@ HET PROGRAMMA BEGNINT HIER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -380,7 +397,7 @@ namespace EersteProjectMau
 
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
-            stoelGrid = loadFilmStoelen("12YearsASlave");/*new List<Tuple<float, status, string>> {
+            stoelGrid = loadFilmStoelen("12YearsASlave", new DateTime(2020, 2, 21, 16, 30, 0));/*new List<Tuple<float, status, string>> {
                 new Tuple<float,status,string>(10.8f,status.vrij,""), new Tuple<float,status,string>(10.000f,status.vrij,""), new Tuple<float,status,string>(10.0000f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
                 new Tuple<float,status,string>(11.10f,status.vrij,""), new Tuple<float,status,string>(11.1f,status.bezet,"klantnaam"), new Tuple<float,status,string>(11.12f,status.vrij,""), new Tuple<float,status,string>(11.10f,status.vrij,""),
                 new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
@@ -767,9 +784,9 @@ namespace EersteProjectMau
 
         private void buttonBetalen1_Click(object sender, EventArgs e)
         {
-            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
+            saveFilmStoelen("12YearsASlave", new DateTime(2020, 2, 21, 16, 30, 0), stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            labelbedragBetaal1.Text = basisPrijs.ToString();
+            labelbedragBetaal1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
@@ -781,7 +798,7 @@ namespace EersteProjectMau
         {
             tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
-            labelBedrag1.Text = basisPrijs.ToString();
+            labelBedrag1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBank1_Click(object sender, EventArgs e)
