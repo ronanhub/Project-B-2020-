@@ -67,6 +67,18 @@ namespace EersteProjectMau
         public float basisPrijs;
         public string kortingsCode;
         public float totaalPrijs;
+
+        public class film
+        {
+            public string titel;
+            public DateTime datum;
+            public film(string filmTitel, DateTime filmDatum)
+            {
+                titel = filmTitel;
+                datum = filmDatum;
+            }
+        }
+        public film huidigeFilm;
         public enum status
         {
             vrij = 0,
@@ -397,7 +409,7 @@ namespace EersteProjectMau
 
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
-            stoelGrid = loadFilmStoelen("12YearsASlave", new DateTime(2020, 2, 21, 16, 30, 0));/*new List<Tuple<float, status, string>> {
+            stoelGrid = loadFilmStoelen("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));/*new List<Tuple<float, status, string>> {
                 new Tuple<float,status,string>(10.8f,status.vrij,""), new Tuple<float,status,string>(10.000f,status.vrij,""), new Tuple<float,status,string>(10.0000f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
                 new Tuple<float,status,string>(11.10f,status.vrij,""), new Tuple<float,status,string>(11.1f,status.bezet,"klantnaam"), new Tuple<float,status,string>(11.12f,status.vrij,""), new Tuple<float,status,string>(11.10f,status.vrij,""),
                 new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
@@ -638,8 +650,8 @@ namespace EersteProjectMau
         }
         private void reserveerButton1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(4);
+            film nieuweFilm = new film("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));
+            naarStoelSelectie(nieuweFilm);
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -647,7 +659,21 @@ namespace EersteProjectMau
             tabControl2.SelectTab(5);
         }
       
+        public void naarStoelSelectie(film nieuweFilm)
+        {
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+            huidigeFilm = nieuweFilm;
+            stoelGrid = loadFilmStoelen(nieuweFilm.titel, nieuweFilm.datum);
 
+            for (int i = 0; i < 48; i++)
+            {
+                var stoel = vindStoel(i);
+                updateKleur(stoel);
+                updatePrijs(stoel);
+            }
+            basisPrijs = 0.0f;
+        }
 
 
 
@@ -784,7 +810,7 @@ namespace EersteProjectMau
 
         private void buttonBetalen1_Click(object sender, EventArgs e)
         {
-            saveFilmStoelen("12YearsASlave", new DateTime(2020, 2, 21, 16, 30, 0), stoelGrid, "NieuweKlant");
+            saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
             labelbedragBetaal1.Text = totaalPrijs.ToString();
         }
@@ -889,8 +915,8 @@ namespace EersteProjectMau
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(4);
+            film nieuweFilm = new film("Dunkirk", new DateTime(2020, 2, 28, 16, 30, 0));
+            naarStoelSelectie(nieuweFilm);
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
