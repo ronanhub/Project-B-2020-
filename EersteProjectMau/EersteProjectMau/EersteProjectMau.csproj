@@ -210,5 +210,14 @@
   <ItemGroup>
     <None Include="Resources\ohvz.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa-logo-4E989827A8-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8b621e808e7466ba0a9cbb909922e747.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ikbengeenrobot.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -782,6 +782,7 @@ namespace EersteProjectMau
             tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
             labelBedrag1.Text = basisPrijs.ToString();
+
         }
 
         private void buttonVorigeBank1_Click(object sender, EventArgs e)
@@ -885,6 +886,28 @@ namespace EersteProjectMau
             stuurvraag.Location = this.Location;
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BetaalGegevens_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buttonBetalenFinal1.Enabled = true;
+            button1.BackColor = Color.Lime;
+            buttonBetalenFinal1.BackColor = Color.Lime;
         }
     }
 }
