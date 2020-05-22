@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+using EersteProjectMau.Properties;
 
 namespace EersteProjectMau
 {
@@ -17,7 +18,7 @@ namespace EersteProjectMau
     {
         MailMessage msg;
         private FlowLayoutPanel filmPanel;
-
+        int kaartvalue = 5;
 
 
 
@@ -28,7 +29,7 @@ namespace EersteProjectMau
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(923, 510);
+            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(930, 510);
 
             vragenPaneel.Size = (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
             faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15); 
@@ -36,8 +37,12 @@ namespace EersteProjectMau
             antwoorden.Location = (tabControl2.Visible == false) ? new Point(677, 12) : new Point(577, 12);
             antwoorden.Size = (tabControl2.Visible == false) ? new Size(531, 375) : new Size(331, 455);
 
-            stuurVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
-            stuurVraag2.Visible = (tabControl2.Visible == false) ? true : false;
+            kaartPanel.Size = (tabControl2.Visible == false) ? new Size(927, 494) : new Size(627, 494);
+            
+            buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
+            buttonZelfVraag2.Visible = (tabControl2.Visible == false) ? true : false;
+
+
         }
 
 
@@ -411,6 +416,16 @@ namespace EersteProjectMau
         }
 
 
+        Image ZoomPicture(Image img, Size size)
+        {
+            Bitmap bm = new Bitmap(img, Convert.ToInt32(img.Width * size.Width / 5), Convert.ToInt32(img.Height * size.Height / 5));
+            Graphics gpu = Graphics.FromImage(bm);
+            gpu.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            return bm;
+        }
+
+        PictureBox org;
+
         private void homePage_Load(object sender, EventArgs e)
         {
             tabControl1.Appearance = TabAppearance.FlatButtons;
@@ -431,6 +446,12 @@ namespace EersteProjectMau
             Vraag9label.Text = vraag9.Vraag;
 
             this.ActiveControl = label1;
+
+
+            this.DoubleBuffered = true;
+            org = new PictureBox();
+            org.Image = kaartBox.Image;
+            kaartBox.Image = ZoomPicture(org.Image, new Size(5, 5));
 
         }
 
@@ -700,28 +721,7 @@ namespace EersteProjectMau
 
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ CONTACT CONTACT CONTACT CONTACT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        private void ButtonMaps_Click(object sender, EventArgs e)
-        {
-            if (PictureMaps.Visible == false)
-            {
-                PictureMaps.Visible = true;
-            }
-            else
-            {
-                PictureMaps.Visible = false;
-            }
-        }
-        private void mapButton_Click(object sender, EventArgs e)
-        {
-            if (PictureMaps.Visible == false)
-            {
-                PictureMaps.Visible = true;
-            }
-            else
-            {
-                PictureMaps.Visible = false;
-            }
-        }
+        
       
 
     
@@ -837,7 +837,7 @@ namespace EersteProjectMau
             }
         }
 
-        private void buttonZelfVraag1_Click(object sender, EventArgs e)
+        private void buttonZelfVraag2_Click(object sender, EventArgs e)
         {
             StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
             stuurvraag.Text = "Verstuur je vraag";
@@ -847,6 +847,7 @@ namespace EersteProjectMau
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
         }
+        
 
         private void buttonStelZelfVraagg1_Click(object sender, EventArgs e)
         {
@@ -885,6 +886,37 @@ namespace EersteProjectMau
             stuurvraag.Location = this.Location;
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
+        }
+
+        private void plus_Click(object sender, EventArgs e)
+        {
+
+            kaartvalue += 1;
+            if (kaartvalue != 0)
+            {
+                kaartBox.Image = null;
+                kaartBox.Image = ZoomPicture(org.Image, new Size(kaartvalue, kaartvalue));
+            }
+        }
+
+        private void min_Click(object sender, EventArgs e)
+        {
+            
+            if (kaartvalue > 5)
+            {
+                kaartvalue -= 1;
+                if (kaartvalue != 0)
+                {
+                    kaartBox.Image = null;
+                    kaartBox.Image = ZoomPicture(org.Image, new Size(kaartvalue, kaartvalue));
+                }
+            }
+            
+        }
+
+        private void kaartBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

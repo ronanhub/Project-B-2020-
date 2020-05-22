@@ -210,5 +210,32 @@
   <ItemGroup>
     <None Include="Resources\ohvz.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mappp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mappppp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
