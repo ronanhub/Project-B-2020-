@@ -243,6 +243,8 @@
             this.label36 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label37 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -2433,6 +2435,9 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(183, 36);
             this.textBox11.TabIndex = 116;
+            this.textBox11.Text = "Jaar";
+            this.textBox11.Click += new System.EventHandler(this.textBox11_Click);
+            this.textBox11.Leave += new System.EventHandler(this.textBox11_Leave);
             // 
             // textBox10
             // 
@@ -2452,6 +2457,10 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(182, 36);
             this.textBox9.TabIndex = 114;
+            this.textBox9.Text = "Maand";
+            this.textBox9.Click += new System.EventHandler(this.textBox9_Click);
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.textBox9.Leave += new System.EventHandler(this.textBox9_Leave);
             // 
             // textBox8
             // 
@@ -2529,6 +2538,8 @@
             // 
             // BetalenHelp
             // 
+            this.BetalenHelp.Controls.Add(this.label46);
+            this.BetalenHelp.Controls.Add(this.label45);
             this.BetalenHelp.Controls.Add(this.label44);
             this.BetalenHelp.Controls.Add(this.label43);
             this.BetalenHelp.Controls.Add(this.label42);
@@ -2548,7 +2559,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(39, 298);
+            this.label44.Location = new System.Drawing.Point(21, 442);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(124, 17);
             this.label44.TabIndex = 6;
@@ -2557,7 +2568,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(21, 260);
+            this.label43.Location = new System.Drawing.Point(6, 406);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(364, 17);
             this.label43.TabIndex = 5;
@@ -2866,6 +2877,24 @@
             this.label37.Size = new System.Drawing.Size(36, 17);
             this.label37.TabIndex = 0;
             this.label37.Text = "tab4";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(21, 285);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(294, 17);
+            this.label45.TabIndex = 7;
+            this.label45.Text = "Omdat in de tekst vakken staan voorbeelden.";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(6, 249);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(308, 17);
+            this.label46.TabIndex = 8;
+            this.label46.Text = "Hoezo staan er al gegevens in de tekstvakken?";
             // 
             // HomePage
             // 
@@ -3178,6 +3207,8 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
     }
 }
 

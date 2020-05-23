@@ -790,7 +790,7 @@ namespace EersteProjectMau
         private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
         {
             
-            if ((textBox1.Text == "" || textBox1.Text == "Voorbeeld@gmail.com")|| (textBox2.Text == "" || textBox2.Text == "Voornaam") || (textBox3.Text == "" || textBox3.Text == "Achternaam") || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || comboBox1.Text == "")
+            if ((textBox1.Text == "" || textBox1.Text == "Voorbeeld@gmail.com")|| (textBox2.Text == "" || textBox2.Text == "Voornaam") || (textBox3.Text == "" || textBox3.Text == "Achternaam") || (textBox4.Text == "" || textBox4.Text == "Wijnhaven 107" )|| (textBox5.Text == "" || textBox5.Text == "0000 AA" )|| textBox6.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("Voer al uw gegevens in.");
                 tabControl1.SelectTab(5);
@@ -841,6 +841,7 @@ namespace EersteProjectMau
         private void buttonVorigeFinal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
         }
 
 /*        private void textboxMaand1_TextChanged(object sender, EventArgs e)
@@ -990,9 +991,16 @@ namespace EersteProjectMau
 
         private void button5_Click(object sender, EventArgs e)
         {
-            button3.Enabled = true;
-            button1.BackColor = Color.Lime;
-            button3.BackColor = Color.Lime;
+            if(textBox7.Text == "" || textBox8.Text == "" || textBox9.Text == "" || textBox10.Text == "" || textBox11.Text == "")
+            {
+                MessageBox.Show("Vul alle gegevens in");
+            }
+            else
+            {
+                button3.Enabled = true;
+                button3.BackColor = Color.Lime;
+            }
+            
             
         }
 
@@ -1006,6 +1014,7 @@ namespace EersteProjectMau
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
@@ -1179,6 +1188,43 @@ namespace EersteProjectMau
             if (textBox6.Text == "Nederland")
             {
                 textBox6.Text = "";
+            }
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+            textBox9.ForeColor = Color.Black;
+        }
+
+        private void textBox9_Click(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "Maand")
+            {
+                textBox9.Text = "";
+            }
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+            if (textBox9.Text == "")
+            {
+                textBox9.Text = "Maand";
+            }
+        }
+
+        private void textBox11_Click(object sender, EventArgs e)
+        {
+            if (textBox11.Text == "Jaar")
+            {
+                textBox11.Text = "";
+            }
+        }
+
+        private void textBox11_Leave(object sender, EventArgs e)
+        {
+            if (textBox11.Text == "")
+            {
+                textBox11.Text = "Jaar";
             }
         }
     }
