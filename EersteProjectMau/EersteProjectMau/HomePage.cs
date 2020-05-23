@@ -770,6 +770,7 @@ namespace EersteProjectMau
             saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
             labelbedragBetaal1.Text = basisPrijs.ToString();
+            tabControl2.SelectTab(5);
         }
 
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
@@ -795,12 +796,19 @@ namespace EersteProjectMau
             if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
             {
                 tabControl1.SelectTab(7);
+                tabControl2.SelectTab(7);
             }
-            else
+            else if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == false)
             {
                 MessageBox.Show("Select a bank.");
                 tabControl1.SelectTab(6);
             }
+            else if (checkBox5.Checked == true || checkBox6.Checked == true)
+            {
+                tabControl1.SelectTab(8);
+                tabControl2.SelectTab(8);
+            }
+
         }
 
         private void buttonBetalenFinal1_Click(object sender, EventArgs e)
@@ -814,7 +822,7 @@ namespace EersteProjectMau
             tabControl1.SelectTab(6);
         }
 
-        private void textboxMaand1_TextChanged(object sender, EventArgs e)
+/*        private void textboxMaand1_TextChanged(object sender, EventArgs e)
         {
             if (textboxMaand1.Text == "Maand")
             {
@@ -828,7 +836,7 @@ namespace EersteProjectMau
             {
                 textBoxJaar1.Text = "";
             }
-        }
+        }*/
 
         private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
         {
@@ -908,6 +916,60 @@ namespace EersteProjectMau
             buttonBetalenFinal1.Enabled = true;
             button1.BackColor = Color.Lime;
             buttonBetalenFinal1.BackColor = Color.Lime;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            MessageBox.Show("Betaling is gelukt.");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            button3.Enabled = true;
+            button1.BackColor = Color.Lime;
+            button3.BackColor = Color.Lime;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            MessageBox.Show("Betaling is gelukt.");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
         }
     }
 }

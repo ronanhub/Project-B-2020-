@@ -2,8 +2,8 @@ Stoel;Prijs;Status;Klant
 0;10,8;vrij;
 1;10;vrij;
 2;10;vrij;
-3;10;vrij;
-4;11,1;vrij;
+3;10;bezet;NieuweKlant
+4;11,1;bezet;NieuweKlant
 5;11,1;vrij;
 6;11,12;bezet;NieuweKlant
 7;11,1;bezet;NieuweKlant
@@ -40,7 +40,7 @@ Stoel;Prijs;Status;Klant
 38;10;vrij;
 39;10;vrij;
 40;11;vrij;
-41;11;vrij;
+41;11;bezet;NieuweKlant
 42;11;bezet;NieuweKlant
 43;11;bezet;NieuweKlant
 44;10;bezet;NieuweKlant
