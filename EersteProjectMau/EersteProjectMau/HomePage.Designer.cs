@@ -1959,6 +1959,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
+            this.checkBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox6.Location = new System.Drawing.Point(1027, 328);
             this.checkBox6.Name = "checkBox6";
@@ -1971,6 +1972,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
+            this.checkBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.Location = new System.Drawing.Point(856, 330);
             this.checkBox5.Name = "checkBox5";
@@ -2003,6 +2005,7 @@
             // 
             // pictureBox14
             // 
+            this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox14.Image = global::EersteProjectMau.Properties.Resources._8b621e808e7466ba0a9cbb909922e747;
             this.pictureBox14.Location = new System.Drawing.Point(1035, 164);
             this.pictureBox14.Name = "pictureBox14";
@@ -2010,9 +2013,11 @@
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 74;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // pictureBox13
             // 
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox13.Image = global::EersteProjectMau.Properties.Resources.visa_logo_4E989827A8_seeklogo_com;
             this.pictureBox13.Location = new System.Drawing.Point(837, 164);
             this.pictureBox13.Name = "pictureBox13";
@@ -2020,6 +2025,7 @@
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 73;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // buttonVolgendeBank1
             // 
@@ -2069,6 +2075,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(420, 164);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -2077,6 +2084,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 68;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label20
             // 
@@ -2146,6 +2154,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(624, 164);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -2154,9 +2163,11 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 61;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(230, 164);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2165,9 +2176,11 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 58;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(28, 164);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -2176,6 +2189,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 57;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // BetaalGegevens
             // 
@@ -2214,6 +2228,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(551, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 42);
@@ -2284,6 +2299,7 @@
             // 
             // buttonVorigeFinal1
             // 
+            this.buttonVorigeFinal1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVorigeFinal1.Image = global::EersteProjectMau.Properties.Resources.vorigeButton;
             this.buttonVorigeFinal1.Location = new System.Drawing.Point(112, 465);
             this.buttonVorigeFinal1.Margin = new System.Windows.Forms.Padding(1);
@@ -2296,6 +2312,7 @@
             // 
             // buttonBetalenFinal1
             // 
+            this.buttonBetalenFinal1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBetalenFinal1.Enabled = false;
             this.buttonBetalenFinal1.Image = global::EersteProjectMau.Properties.Resources.betalenButton;
             this.buttonBetalenFinal1.Location = new System.Drawing.Point(617, 447);
@@ -2375,6 +2392,7 @@
             // 
             // button5
             // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Location = new System.Drawing.Point(596, 342);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(48, 42);
@@ -2396,6 +2414,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(786, 447);
@@ -2408,6 +2427,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(347, 447);
             this.button2.Name = "button2";
@@ -2429,7 +2449,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(798, 208);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
@@ -2451,7 +2471,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(573, 208);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";

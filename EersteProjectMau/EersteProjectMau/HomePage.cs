@@ -1227,5 +1227,35 @@ namespace EersteProjectMau
                 textBox11.Text = "Jaar";
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            checkBox4.Checked = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            checkBox3.Checked = true;
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            checkBox1.Checked = true;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            checkBox2.Checked = true;
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            checkBox5.Checked = true;
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            checkBox6.Checked = true;
+        }
     }
 }
