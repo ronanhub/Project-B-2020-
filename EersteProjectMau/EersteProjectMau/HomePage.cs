@@ -674,7 +674,7 @@ namespace EersteProjectMau
             }
             basisPrijs = 0.0f;
             labelStoelSelectieFilmTitel.Text = nieuweFilm.titel;
-            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.ToString();
+            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.Hour.ToString()+":"+ nieuweFilm.datum.Minute.ToString();//tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
         }
 
 
