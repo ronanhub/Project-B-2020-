@@ -237,5 +237,17 @@
   <ItemGroup>
     <None Include="Resources\map4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abn balk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ing balk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabo balk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sns balk.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

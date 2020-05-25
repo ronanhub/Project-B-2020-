@@ -136,6 +136,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abn_balk {
+            get {
+                object obj = ResourceManager.GetObject("abn balk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agendaButton {
             get {
                 object obj = ResourceManager.GetObject("agendaButton", resourceCulture);
@@ -159,6 +169,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap CalmGrey {
             get {
                 object obj = ResourceManager.GetObject("CalmGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CalmGrey1 {
+            get {
+                object obj = ResourceManager.GetObject("CalmGrey1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -229,6 +249,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap inbox {
             get {
                 object obj = ResourceManager.GetObject("inbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ing_balk {
+            get {
+                object obj = ResourceManager.GetObject("ing balk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +386,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rabo_balk {
+            get {
+                object obj = ResourceManager.GetObject("rabo balk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reserveerButton {
             get {
                 object obj = ResourceManager.GetObject("reserveerButton", resourceCulture);
@@ -379,6 +419,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap send_true {
             get {
                 object obj = ResourceManager.GetObject("send_true", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sns_balk {
+            get {
+                object obj = ResourceManager.GetObject("sns balk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

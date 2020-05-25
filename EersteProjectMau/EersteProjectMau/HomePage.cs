@@ -19,7 +19,7 @@ namespace EersteProjectMau
         MailMessage msg;
         private FlowLayoutPanel filmPanel;
         int kaartvalue = 5;
-
+        Image betaalkBalkImage;
 
 
         Help_On_OFF helpKnop = new Help_On_OFF();
@@ -34,15 +34,21 @@ namespace EersteProjectMau
             vragenPaneel.Size = (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
             faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15); 
 
-            antwoorden.Location = (tabControl2.Visible == false) ? new Point(677, 12) : new Point(577, 12);
+            antwoorden.Location = (tabControl2.Visible == false) ? new Point(675, 53) : new Point(575, 53);
+            huidigeVraag.Location = (tabControl2.Visible == false) ? new Point(669, 15) : new Point(569, 15);
             antwoorden.Size = (tabControl2.Visible == false) ? new Size(531, 375) : new Size(331, 455);
 
             kaartPanel.Size = (tabControl2.Visible == false) ? new Size(927, 494) : new Size(627, 494);
-            
+
+            homePoster.Size = (tabControl2.Visible == false) ? new Size(320, 479) : new Size(215, 311);
+            reserveerButtonHome.Location = (tabControl2.Visible == false) ? new Point(680, 400) : new Point(703, 380);
+            imdbHome.Location = (tabControl2.Visible == false) ? new Point(687, 450) : new Point(687, 330);
+            imdbHome.Font = (tabControl2.Visible == false) ? new Font(imdbHome.Font.FontFamily, 27): new Font(imdbHome.Font.FontFamily, 16);
+            imdbHome.Location = (tabControl2.Visible == false) ? new Point(875, 450) : new Point(687, 330);
+            homePoster.Location = (tabControl2.Visible == false) ? new Point(880, 5) : new Point(692, 5);
+
             buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
             buttonZelfVraag2.Visible = (tabControl2.Visible == false) ? true : false;
-
-
         }
 
 
@@ -106,12 +112,12 @@ namespace EersteProjectMau
                     }
                 case status.keuze:
                     {
-                        kleur = System.Drawing.Color.Green;
+                        kleur = System.Drawing.Color.LimeGreen;
                         break;
                     }
                 case status.bezet:
                     {
-                        kleur = System.Drawing.Color.OrangeRed;
+                        kleur = System.Drawing.Color.Tomato;
                         break;
                     }
                 default:
@@ -209,89 +215,58 @@ namespace EersteProjectMau
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@FAQFAQFAQFAQFAQFAQFAQFAQFAQFAQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_1 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Hoe kom ik bij de bioscoop?",
-          /* Antwoord */                  "Stap 1: Druk op contact knop in het menu." +
-                                          "\n\n" +
-                                          "Stap 2: Druk op de kaart knop." +
-                                          "\n\n" +
-                                          "Stap 3: Ga naar het adres toe" +
-                                          "\n\n" +
-                                          "Stap 4: ????" +
-                                          "\n\n" +
-                                          "Stap 5: profit",
+          /* Vraag */                    ("Waar is de bioscoop?",
+          /* Antwoord */                  "Het adres ziet u als u op de 'Contact' knop klikt",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_2 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Hoe verzin ik goede vragen?",
-         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
-                                          "\n\n" +
-                                          "Stap 2: Nou?" +
-                                          "\n\n" +
-                                          "Stap 3: ????" +
-                                          "\n\n" +
-                                          "Stap 4: profit",
+         /* Vraag */                      ("Zijn de wc's gratis?",
+         /* Antwoord */                   "Ja",
           /* ID */                         Tuple.Create(2, 95));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_3 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Kan ik geld terug krijgen?",
-          /* Antwoord */                  "Nee.",
+          /* Vraag */                    ("Kan ik mijn ticket ruilen voor een andere film?",
+          /* Antwoord */                  "Nee helaas.",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_4 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Mag ik een ticket 2x gebruiken?",
-         /* Antwoord */                   "Tickets groeien niet aan de bomen",
+         /* Vraag */                      ("Is het mogelijk om een hele zaal te huren?",
+         /* Antwoord */                   "Daarvoor moet u speciaal contact opnemen met ons via ons telefoonnummer 0645186589",
           /* ID */                         Tuple.Create(2, 95));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_5 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Hoe zet ik de oven aan?",
-          /* Antwoord */                  "Stap 1: Loop naar de oven" +
-                                          "\n\n" +
-                                          "Stap 2: Kijk naar de oven" +
-                                          "\n\n" +
-                                          "Stap 3: Zoek de 'AAN' knop" +
-                                          "\n\n" +
-                                          "Stap 4: Klik op de 'AAN' knop" +
-                                          "\n\n" +
-                                          "Stap 5: Je oven staat nu aan" +
-                                          "\n\n" +
-                                          "Stap 6: Geniet ervan" +
-                                          "\n\n" +
-                                          "Stap 7: ????" +
-                                          "\n\n" +
-                                          "Stap 8: profit",
+          /* Vraag */                    ("Zijn er pauzes midden in de film?",
+          /* Antwoord */                  "Ja, om de 45 minuten houden we een pauze van 15 minuten",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_6 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Is het mogelijk om senioren korting te krijgen?",
-         /* Antwoord */                   "Ben je serieus?",
+         /* Vraag */                      ("Mag een niet-senior meekomen?",
+         /* Antwoord */                   "Ja zeker!",
           /* ID */                         Tuple.Create(2, 95));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_7 = new Tuple<string, string, Tuple<int, int>>
           /* Vraag */                    ("Is het eten en drinken gratis?",
-          /* Antwoord */                  "In uw dromen.",
+          /* Antwoord */                  "Nee helaas, de klant moet daarvoor betalen",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_8 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Iphone of android?",
-         /* Antwoord */                   "Mandroid >>>>> saaiphone",
+         /* Vraag */                      ("Hoe gebruik ik de kortingscode?",
+         /* Antwoord */                   "Dat zult u zien tijdens het betaalproces",
           /* ID */                         Tuple.Create(2, 95));
 
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_9 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Mijn vraag 9?",
-         /* Antwoord */                   "Stap 1: ASDASDSDASD?" +
+         /* Vraag */                      ("Hoe kan ik contact opnemen?",
+         /* Antwoord */                   "Stap 1: Druk op 'Contact'" +
                                           "\n\n" +
-                                          "Stap 2: ADSSADASD?" +
-                                          "\n\n" +
-                                          "Stap 3: ????" +
-                                          "\n\n" +
-                                          "Stap 4: profit",
+                                          "Stap 2: Hier kunt u kiezen uit verschillende manieren van contact opnemen met ons",
           /* ID */                         Tuple.Create(2, 95));
 
 
-        public void changeTextbox(string shownAntwoord)
+        public void changeTextbox(string shownAntwoord, string shownVraag)
         {
             antwoorden.Text = shownAntwoord;
+            huidigeVraag.Text = shownVraag;
         }
 
 
@@ -304,6 +279,7 @@ namespace EersteProjectMau
         Vragen vraag7 = new Vragen(Vraag_Antwoord_Loc_7.Item1, Vraag_Antwoord_Loc_7.Item2, Vraag_Antwoord_Loc_7.Item3);
         Vragen vraag8 = new Vragen(Vraag_Antwoord_Loc_8.Item1, Vraag_Antwoord_Loc_8.Item2, Vraag_Antwoord_Loc_8.Item3);
         Vragen vraag9 = new Vragen(Vraag_Antwoord_Loc_9.Item1, Vraag_Antwoord_Loc_9.Item2, Vraag_Antwoord_Loc_9.Item3);
+        //Label huidigeVraagBovenAntwoord = new Label();
 
 
 
@@ -703,39 +679,39 @@ namespace EersteProjectMau
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FAQ FAQ FAQ FAQ FAQ FAQ FAQ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void Vraag1label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag1.Antwoord);
+            changeTextbox(vraag1.Antwoord,vraag1.Vraag);
         }
         private void Vraag2label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag2.Antwoord);
+            changeTextbox(vraag2.Antwoord, vraag2.Vraag);
         }
         private void Vraag3label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag3.Antwoord);
+            changeTextbox(vraag3.Antwoord, vraag3.Vraag);
         }
         private void Vraag4label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag4.Antwoord);
+            changeTextbox(vraag4.Antwoord, vraag4.Vraag);
         }
         private void Vraag5label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag5.Antwoord);
+            changeTextbox(vraag5.Antwoord, vraag5.Vraag);
         }
         private void Vraag6label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag6.Antwoord);
+            changeTextbox(vraag6.Antwoord, vraag6.Vraag);
         }
         private void Vraag7label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag7.Antwoord);
+            changeTextbox(vraag7.Antwoord, vraag7.Vraag);
         }
         private void Vraag8label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag8.Antwoord);
+            changeTextbox(vraag8.Antwoord, vraag8.Vraag);
         }
         private void Vraag9label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag9.Antwoord);
+            changeTextbox(vraag9.Antwoord, vraag9.Vraag);
         }
 
 
@@ -765,49 +741,41 @@ namespace EersteProjectMau
 
 
 
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ CONTACT CONTACT CONTACT CONTACT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ BETALEN BETALEN BETALEN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         
-      
 
-    
 
-        private void label6_Click(object sender, EventArgs e)
+
+        private void abnCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            ingCheck.Checked = false;
+            snsCheck.Checked = false;
+            raboCheck.Checked = false;
+            betaalBalk.Image = Resources.abn_balk;
         }
 
-
-        private void betalingKlaar_Click(object sender, EventArgs e)
+        private void ingCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            abnCheck.Checked = false;
+            snsCheck.Checked = false;
+            raboCheck.Checked = false;
+            betaalBalk.Image = Resources.ing_balk;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void snsCheck_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
+            abnCheck.Checked = false;
+            ingCheck.Checked = false;
+            raboCheck.Checked = false;
+            betaalBalk.Image = Resources.sns_balk;
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void raboCheck_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox1.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox4.Checked = false;
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
+            abnCheck.Checked = false;
+            ingCheck.Checked = false;
+            snsCheck.Checked = false;
+            betaalBalk.Image = Resources.rabo_balk;
         }
 
         private void buttonBetalen1_Click(object sender, EventArgs e)
@@ -836,14 +804,13 @@ namespace EersteProjectMau
 
         private void buttonVolgendeBank1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
+            if (abnCheck.Checked == true || ingCheck.Checked == true || snsCheck.Checked == true || raboCheck.Checked == true)
             {
                 tabControl1.SelectTab(7);
             }
             else
             {
-                MessageBox.Show("Select a bank.");
-                tabControl1.SelectTab(6);
+                MessageBox.Show("Kies een bank.");
             }
         }
 
@@ -858,22 +825,9 @@ namespace EersteProjectMau
             tabControl1.SelectTab(6);
         }
 
-        private void textboxMaand1_TextChanged(object sender, EventArgs e)
-        {
-            if (textboxMaand1.Text == "Maand")
-            {
-                textboxMaand1.Text = "";
-            }
-        }
+        
 
-        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxJaar1.Text == "Jaar")
-            {
-                textBoxJaar1.Text = "";
-            }
-        }
-
+        
         private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
         {
             if (textBoxZoeken1.Text == "Zoeken...")
@@ -959,9 +913,65 @@ namespace EersteProjectMau
             
         }
 
-        private void kaartBox_Click(object sender, EventArgs e)
+
+
+
+        private void button1_Click(object sender, EventArgs e)
         {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(7);
+            tabControl2.SelectTab(7);
+        }
+
+
+
+
+        private void textboxMaand1_Click(object sender, EventArgs e)
+        {
+            if (textboxMaand1.Text == "Maand")
+            {
+                textboxMaand1.Text = "";
+            }
+        }
+        private void textBoxJaar1_Click(object sender, EventArgs e)
+        {
+            if (textBoxJaar1.Text == "Jaar")
+            {
+                textBoxJaar1.Text = "";
+            }
+        }
+
+        private void textboxMaand1_Leave(object sender, EventArgs e)
+        {
+            if (textboxMaand1.Text == "")
+            {
+                textboxMaand1.Text = "Maand";
+                textboxMaand1.ForeColor = Color.DarkGray;
+            }
+        }
+        private void textBoxJaar1_Leave(object sender, EventArgs e)
+        {
+            if (textBoxJaar1.Text == "")
+            {
+                textBoxJaar1.Text = "Jaar";
+                textBoxJaar1.ForeColor = Color.DarkGray;
+            }
+        }
+        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
+        {
+            textBoxJaar1.ForeColor = Color.Black;
 
         }
+        private void textboxMaand1_TextChanged(object sender, EventArgs e)
+        {
+            textboxMaand1.ForeColor = Color.Black;
+        }
+
+        
     }
 }
