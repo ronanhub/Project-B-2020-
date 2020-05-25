@@ -784,29 +784,23 @@ namespace EersteProjectMau
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox5.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
             checkBox4.Checked = false;
-            checkBox6.Checked = false;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             checkBox1.Checked = false;
-            checkBox5.Checked = false;
             checkBox3.Checked = false;
             checkBox4.Checked = false;
-            checkBox6.Checked = false;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             checkBox1.Checked = false;
             checkBox2.Checked = false;
-            checkBox5.Checked = false;
             checkBox4.Checked = false;
-            checkBox6.Checked = false;
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
@@ -814,46 +808,30 @@ namespace EersteProjectMau
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
-            checkBox5.Checked = false;
-            checkBox6.Checked = false;
         }
 
         private void buttonBetalen1_Click(object sender, EventArgs e)
         {
             saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            labelbedragBetaal1.Text = basisPrijs.ToString();
-            tabControl2.SelectTab(5);
+            labelbedragBetaal1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
-            tabControl2.SelectTab(4);
         }
 
         private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
         {
-            
-            if ((textBox1.Text == "" || textBox1.Text == "Voorbeeld@gmail.com")|| (textBox2.Text == "" || textBox2.Text == "Voornaam") || (textBox3.Text == "" || textBox3.Text == "Achternaam") || (textBox4.Text == "" || textBox4.Text == "Wijnhaven 107" )|| (textBox5.Text == "" || textBox5.Text == "0000 AA" )|| textBox6.Text == "" || comboBox1.Text == "")
-            {
-                MessageBox.Show("Voer al uw gegevens in.");
-                tabControl1.SelectTab(5);
-                tabControl2.SelectTab(5);
-            }
-            else
-            {
-                tabControl1.SelectTab(6);
-                tabControl2.SelectTab(6);
-                labelBedrag1.Text = basisPrijs.ToString();
-            }
-
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+            labelBedrag1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBank1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(5);
-            tabControl2.SelectTab(5);
         }
 
         private void buttonVolgendeBank1_Click(object sender, EventArgs e)
@@ -861,35 +839,26 @@ namespace EersteProjectMau
             if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
             {
                 tabControl1.SelectTab(7);
-                tabControl2.SelectTab(7);
             }
-            else if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false && checkBox5.Checked == false && checkBox6.Checked == false)
+            else
             {
                 MessageBox.Show("Select a bank.");
                 tabControl1.SelectTab(6);
             }
-            else if (checkBox5.Checked == true || checkBox6.Checked == true)
-            {
-                tabControl1.SelectTab(8);
-                tabControl2.SelectTab(8);
-            }
-
         }
 
         private void buttonBetalenFinal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
             MessageBox.Show("Betaling is gelukt.");
-            tabControl2.SelectTab(0);
         }
 
         private void buttonVorigeFinal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(6);
-            tabControl2.SelectTab(6);
         }
 
-/*        private void textboxMaand1_TextChanged(object sender, EventArgs e)
+        private void textboxMaand1_TextChanged(object sender, EventArgs e)
         {
             if (textboxMaand1.Text == "Maand")
             {
@@ -903,7 +872,7 @@ namespace EersteProjectMau
             {
                 textBoxJaar1.Text = "";
             }
-        }*/
+        }
 
         private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
         {
@@ -961,346 +930,6 @@ namespace EersteProjectMau
             stuurvraag.Location = this.Location;
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            comboBox1.ForeColor = Color.Black;
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BetaalGegevens_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            if (textBoxNaam1.Text == "" || textBoxRekeningnummer1.Text == "" || textboxPasnummer1.Text == "")
-            {
-                MessageBox.Show("Vul alle gegevens in.");
-            }
-            else
-            {
-                buttonBetalenFinal1.Enabled = true;
-                button1.BackColor = Color.Lime;
-                buttonBetalenFinal1.BackColor = Color.Lime;
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            textBox1.ForeColor = Color.Black;
-
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-            checkBox6.Checked = false;
-        }
-
-        private void pictureBox17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox18_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(0);
-            MessageBox.Show("Betaling is gelukt.");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if(textBox7.Text == "" || textBox8.Text == "" || textBox9.Text == "" || textBox10.Text == "" || textBox11.Text == "")
-            {
-                MessageBox.Show("Vul alle gegevens in");
-            }
-            else
-            {
-                button3.Enabled = true;
-                button3.BackColor = Color.Lime;
-            }
-            
-            
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(0);
-            MessageBox.Show("Betaling is gelukt.");
-            tabControl2.SelectTab(0);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-            tabControl2.SelectTab(6);
-        }
-
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-            checkBox5.Checked = false;
-        }
-
-        private void textboxPasnummer1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar))
-            {
-
-            }
-            else
-            {
-                e.Handled = e.KeyChar != (char)Keys.Back;
-            }
-        }
-
-        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar))
-            {
-
-            }
-            else
-            {
-                e.Handled = e.KeyChar != (char)Keys.Back;
-            }
-        }
-
-
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "Voorbeeld@gmail.com")
-            {
-                textBox1.Text = "";
-            }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            textBox2.ForeColor = Color.Black;
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            textBox3.ForeColor = Color.Black;
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            textBox4.ForeColor = Color.Black;
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-            textBox5.ForeColor = Color.Black;
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            textBox6.ForeColor = Color.Black;
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "")
-            {
-                textBox1.Text = "Voorbeeld@gmail.com";
-
-            }
-
-        }
-
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            if (textBox2.Text == "Voornaam")
-            {
-                textBox2.Text = "";
-            }
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            if (textBox2.Text == "")
-            {
-                textBox2.Text = "Voornaam";
-            }
-        }
-
-        private void textBox3_Click(object sender, EventArgs e)
-        {
-            if (textBox3.Text == "Achternaam")
-            {
-                textBox3.Text = "";
-            }
-        }
-
-        private void textBox3_Leave(object sender, EventArgs e)
-        {
-            if (textBox3.Text == "")
-            {
-                textBox3.Text = "Achternaam";
-            }
-        }
-
-        private void textBox4_Click(object sender, EventArgs e)
-        {
-            if (textBox4.Text == "Wijnhaven 107")
-            {
-                textBox4.Text = "";
-            }
-        }
-
-        private void textBox4_Leave(object sender, EventArgs e)
-        {
-            if (textBox4.Text == "")
-            {
-                textBox4.Text = "Wijnhaven 107";
-            }
-        }
-
-        private void textBox5_Click(object sender, EventArgs e)
-        {
-            if (textBox5.Text == "0000 AA")
-            {
-                textBox5.Text = "";
-            }
-        }
-
-        private void textBox5_Leave(object sender, EventArgs e)
-        {
-            if (textBox5.Text == "")
-            {
-                textBox5.Text = "0000 AA";
-            }
-        }
-
-        private void textBox6_Click(object sender, EventArgs e)
-        {
-            if (textBox6.Text == "Rotterdam")
-            {
-                textBox6.Text = "";
-            }
-        }
-
-        private void textBox6_Leave(object sender, EventArgs e)
-        {
-            if (textBox6.Text == "")
-            {
-                textBox6.Text = "Rotterdam";
-            }
-        }
-
-
-        private void comboBox1_Leave(object sender, EventArgs e)
-        {
-            if (textBox6.Text == "")
-            {
-                textBox6.Text = "Nederland";
-            }
-        }
-
-        private void comboBox1_Click(object sender, EventArgs e)
-        {
-            if (textBox6.Text == "Nederland")
-            {
-                textBox6.Text = "";
-            }
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-            textBox9.ForeColor = Color.Black;
-        }
-
-        private void textBox9_Click(object sender, EventArgs e)
-        {
-            if (textBox9.Text == "Maand")
-            {
-                textBox9.Text = "";
-            }
-        }
-
-        private void textBox9_Leave(object sender, EventArgs e)
-        {
-            if (textBox9.Text == "")
-            {
-                textBox9.Text = "Maand";
-            }
-        }
-
-        private void textBox11_Click(object sender, EventArgs e)
-        {
-            if (textBox11.Text == "Jaar")
-            {
-                textBox11.Text = "";
-            }
-        }
-
-        private void textBox11_Leave(object sender, EventArgs e)
-        {
-            if (textBox11.Text == "")
-            {
-                textBox11.Text = "Jaar";
-            }
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            checkBox4.Checked = true;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            checkBox3.Checked = true;
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            checkBox1.Checked = true;
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            checkBox2.Checked = true;
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            checkBox5.Checked = true;
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-            checkBox6.Checked = true;
         }
     }
 }
