@@ -136,6 +136,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8b621e808e7466ba0a9cbb909922e747 {
+            get {
+                object obj = ResourceManager.GetObject("8b621e808e7466ba0a9cbb909922e747", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agendaButton {
             get {
                 object obj = ResourceManager.GetObject("agendaButton", resourceCulture);
@@ -226,6 +236,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ikbengeenrobot {
+            get {
+                object obj = ResourceManager.GetObject("ikbengeenrobot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap inbox {
             get {
                 object obj = ResourceManager.GetObject("inbox", resourceCulture);
@@ -299,6 +319,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap stuurMailButton {
             get {
                 object obj = ResourceManager.GetObject("stuurMailButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visa_logo_4E989827A8_seeklogo_com {
+            get {
+                object obj = ResourceManager.GetObject("visa-logo-4E989827A8-seeklogo.com", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
