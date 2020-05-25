@@ -287,7 +287,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonVorigeFinal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag1)).BeginInit();
             this.ReserveerHelp.SuspendLayout();
             this.FaqHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStelZelfVraagg1)).BeginInit();
@@ -2640,7 +2639,6 @@
             this.BetaalGegevens.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonVorigeFinal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag1)).EndInit();
             this.ReserveerHelp.ResumeLayout(false);
             this.ReserveerHelp.PerformLayout();
             this.FaqHelp.ResumeLayout(false);
