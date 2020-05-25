@@ -713,14 +713,14 @@ namespace EersteProjectMau
         }
         private void mapButton_Click(object sender, EventArgs e)
         {
-            if (PictureMaps.Visible == false)
+           /* if (PictureMaps.Visible == false)
             {
                 PictureMaps.Visible = true;
             }
             else
             {
                 PictureMaps.Visible = false;
-            }
+            }*/
         }
       
 
@@ -885,6 +885,11 @@ namespace EersteProjectMau
             stuurvraag.Location = this.Location;
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
