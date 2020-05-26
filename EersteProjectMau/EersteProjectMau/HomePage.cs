@@ -973,5 +973,16 @@ namespace EersteProjectMau
         }
 
         
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+        }
     }
 }
