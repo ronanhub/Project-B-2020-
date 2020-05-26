@@ -971,7 +971,5 @@ namespace EersteProjectMau
         {
             textboxMaand1.ForeColor = Color.Black;
         }
-
-        
     }
 }
