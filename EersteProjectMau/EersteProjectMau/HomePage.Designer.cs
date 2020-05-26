@@ -199,6 +199,8 @@
             this.buttonZelfVraag1 = new System.Windows.Forms.PictureBox();
             this.BetalenHelp = new System.Windows.Forms.TabPage();
             this.ReserveerHelp = new System.Windows.Forms.TabPage();
+            this.labelReserveerHelpTitel = new System.Windows.Forms.Label();
+            this.labelReserveerHelpText = new System.Windows.Forms.Label();
             this.FaqHelp = new System.Windows.Forms.TabPage();
             this.buttonStelZelfVraagg1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -215,8 +217,7 @@
             this.huidigePaginaLabel1 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.BetalingAf = new System.Windows.Forms.TabPage();
-            this.labelReserveerHelpTitel = new System.Windows.Forms.Label();
-            this.labelReserveerHelpText = new System.Windows.Forms.Label();
+            this.buttonApplyKortingCode = new System.Windows.Forms.Button();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -981,6 +982,7 @@
             // 
             this.tabPageStoelselectie.AutoScroll = true;
             this.tabPageStoelselectie.BackColor = System.Drawing.Color.White;
+            this.tabPageStoelselectie.Controls.Add(this.buttonApplyKortingCode);
             this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmDatum);
             this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmTitel);
             this.tabPageStoelselectie.Controls.Add(this.buttonBetalen1);
@@ -1080,7 +1082,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(711, 343);
+            this.label5.Location = new System.Drawing.Point(711, 329);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 102;
@@ -1088,7 +1090,7 @@
             // 
             // textBoxKorting
             // 
-            this.textBoxKorting.Location = new System.Drawing.Point(711, 360);
+            this.textBoxKorting.Location = new System.Drawing.Point(711, 346);
             this.textBoxKorting.Name = "textBoxKorting";
             this.textBoxKorting.Size = new System.Drawing.Size(125, 20);
             this.textBoxKorting.TabIndex = 101;
@@ -2250,6 +2252,28 @@
             this.ReserveerHelp.TabIndex = 4;
             this.ReserveerHelp.Text = "ReserveerHelp";
             // 
+            // labelReserveerHelpTitel
+            // 
+            this.labelReserveerHelpTitel.AutoSize = true;
+            this.labelReserveerHelpTitel.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReserveerHelpTitel.Location = new System.Drawing.Point(8, 13);
+            this.labelReserveerHelpTitel.Name = "labelReserveerHelpTitel";
+            this.labelReserveerHelpTitel.Size = new System.Drawing.Size(150, 30);
+            this.labelReserveerHelpTitel.TabIndex = 14;
+            this.labelReserveerHelpTitel.Text = "Hulp nodig?...";
+            // 
+            // labelReserveerHelpText
+            // 
+            this.labelReserveerHelpText.BackColor = System.Drawing.Color.Transparent;
+            this.labelReserveerHelpText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReserveerHelpText.Location = new System.Drawing.Point(8, 51);
+            this.labelReserveerHelpText.Name = "labelReserveerHelpText";
+            this.labelReserveerHelpText.Size = new System.Drawing.Size(245, 356);
+            this.labelReserveerHelpText.TabIndex = 13;
+            this.labelReserveerHelpText.Text = "Hier kunt u selecteren welke stoelen u wilt.\r\n\r\nU kunt een stoel selecteren door " +
+    "erop te klikken.\r\n\r\nGrijze stoelen zijn beschikbaar\r\n\r\nOranje stolen zijn bezet\r" +
+    "\n\r\nGroene stoelen zijn door U gekozen";
+            // 
             // FaqHelp
             // 
             this.FaqHelp.BackColor = System.Drawing.Color.White;
@@ -2436,27 +2460,15 @@
             this.BetalingAf.Text = "BetalingAf";
             this.BetalingAf.UseVisualStyleBackColor = true;
             // 
-            // labelReserveerHelpTitel
+            // buttonApplyKortingCode
             // 
-            this.labelReserveerHelpTitel.AutoSize = true;
-            this.labelReserveerHelpTitel.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReserveerHelpTitel.Location = new System.Drawing.Point(8, 13);
-            this.labelReserveerHelpTitel.Name = "labelReserveerHelpTitel";
-            this.labelReserveerHelpTitel.Size = new System.Drawing.Size(150, 30);
-            this.labelReserveerHelpTitel.TabIndex = 14;
-            this.labelReserveerHelpTitel.Text = "Hulp nodig?...";
-            // 
-            // labelReserveerHelpText
-            // 
-            this.labelReserveerHelpText.BackColor = System.Drawing.Color.Transparent;
-            this.labelReserveerHelpText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReserveerHelpText.Location = new System.Drawing.Point(8, 51);
-            this.labelReserveerHelpText.Name = "labelReserveerHelpText";
-            this.labelReserveerHelpText.Size = new System.Drawing.Size(245, 356);
-            this.labelReserveerHelpText.TabIndex = 13;
-            this.labelReserveerHelpText.Text = "Hier kunt u selecteren welke stoelen u wilt.\r\n\r\nU kunt een stoel selecteren door " +
-    "erop te klikken.\r\n\r\nGrijze stoelen zijn beschikbaar\r\n\r\nOranje stolen zijn bezet\r" +
-    "\n\r\nGroene stoelen zijn door U gekozen";
+            this.buttonApplyKortingCode.Location = new System.Drawing.Point(711, 368);
+            this.buttonApplyKortingCode.Name = "buttonApplyKortingCode";
+            this.buttonApplyKortingCode.Size = new System.Drawing.Size(75, 23);
+            this.buttonApplyKortingCode.TabIndex = 106;
+            this.buttonApplyKortingCode.Text = "Activeer";
+            this.buttonApplyKortingCode.UseVisualStyleBackColor = true;
+            this.buttonApplyKortingCode.Click += new System.EventHandler(this.buttonApplyKortingCode_Click);
             // 
             // HomePage
             // 
@@ -2730,6 +2742,7 @@
         private System.Windows.Forms.Label labelStoelSelectieFilmDatum;
         private System.Windows.Forms.Label labelReserveerHelpTitel;
         private System.Windows.Forms.Label labelReserveerHelpText;
+        private System.Windows.Forms.Button buttonApplyKortingCode;
     }
 }
 

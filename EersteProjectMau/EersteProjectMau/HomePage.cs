@@ -595,12 +595,6 @@ namespace EersteProjectMau
 
         private void textBoxKorting_TextChanged(object sender, EventArgs e)
         {
-            updatePrijs();
-            for (int i = 0; i < 48; i++)
-            {
-                var stoel = vindStoel(i);
-                updatePrijs(stoel);
-            }
         }
 
    
@@ -930,6 +924,16 @@ namespace EersteProjectMau
             stuurvraag.Location = this.Location;
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
+        }
+
+        private void buttonApplyKortingCode_Click(object sender, EventArgs e)
+        {
+            updatePrijs();
+            for (int i = 0; i < 48; i++)
+            {
+                var stoel = vindStoel(i);
+                updatePrijs(stoel);
+            }
         }
     }
 }
