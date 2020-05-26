@@ -226,7 +226,6 @@
             this.AgendaHelp = new System.Windows.Forms.TabPage();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.HomeHelp = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -234,12 +233,6 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.BetalingAf = new System.Windows.Forms.TabPage();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -543,8 +536,6 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label28);
-            this.panel4.Controls.Add(this.label30);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Controls.Add(this.pictureBox11);
             this.panel4.Controls.Add(this.label22);
@@ -578,10 +569,10 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(23, 26);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(379, 50);
+            this.label22.Size = new System.Drawing.Size(445, 55);
             this.label22.TabIndex = 4;
             this.label22.Text = "Op hoop van zegen";
             // 
@@ -599,8 +590,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label32);
-            this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox9);
             this.panel3.Controls.Add(this.label21);
@@ -620,7 +609,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox9
             // 
@@ -635,10 +623,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(23, 26);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 50);
+            this.label21.Size = new System.Drawing.Size(132, 55);
             this.label21.TabIndex = 4;
             this.label21.Text = "1917";
             // 
@@ -657,8 +645,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label31);
-            this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label18);
@@ -2700,65 +2686,17 @@
             this.BetalingAf.Text = "BetalingAf";
             this.BetalingAf.UseVisualStyleBackColor = true;
             // 
-            // label27
+            // logoBox
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(15, 244);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(117, 16);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Genre: oorlogsfilm";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(30, 235);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(117, 16);
-            this.label29.TabIndex = 8;
-            this.label29.Text = "Genre: oorlogsfilm";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(29, 283);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(153, 16);
-            this.label30.TabIndex = 8;
-            this.label30.Text = "Genre: drama/romantiek";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(16, 275);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(219, 13);
-            this.label31.TabIndex = 6;
-            this.label31.Text = "Cast: Harry Styles, Cillian Murphy, Tom Hardy";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(33, 276);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(427, 13);
-            this.label32.TabIndex = 9;
-            this.label32.Text = "Cast: Georgy MacKay, Dean-Charles Chapman, Richard Madden, Benedict Cumberbatch";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(33, 317);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(336, 13);
-            this.label28.TabIndex = 9;
-            this.label28.Text = "Cast: Kitty Courbois, Danny de Munk, Renée Soutendijk, Huub Stapel";
+            this.logoBox.BackColor = System.Drawing.Color.Transparent;
+            this.logoBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.logoBox.Image = ((System.Drawing.Image)(resources.GetObject("logoBox.Image")));
+            this.logoBox.Location = new System.Drawing.Point(400, 7);
+            this.logoBox.Name = "logoBox";
+            this.logoBox.Size = new System.Drawing.Size(504, 78);
+            this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoBox.TabIndex = 9;
+            this.logoBox.TabStop = false;
             // 
             // HomePage
             // 
@@ -3052,12 +2990,6 @@
         private System.Windows.Forms.TextBox betaalEmail;
         private System.Windows.Forms.PictureBox buttonVolgendeBetaal1;
         private System.Windows.Forms.PictureBox buttonVorigeBetaal1;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label27;
     }
 }
 
