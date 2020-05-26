@@ -7048,51 +7048,6 @@ onmogelijke situatie als de vijand dichterbij komt.</value>
         g/hh/wBDN/5IXX/xugDyD9qD4peDvG/gHT9N8Max9uvYtTjuHj+yzRYjEUqk5dAOrLxnPNAH/9k=
 </value>
   </data>
-  <data name="helpTextFAQ.Text" xml:space="preserve">
-    <value>Hier staan de meest
-gestelde vragen!
-
-Klik op een vraag om
-de antwoord op het 
-schermpje hier links te krijgen.
-
-Bij lange antwoorden kunt u het balkje rechts 
-van naast de antwoorden naar beneden  
-slepen  om het hele antwoord zien.
-
-
-
-
-
-Staat uw vraag er niet bij?</value>
-  </data>
-  <data name="label26.Text" xml:space="preserve">
-    <value>Op deze pagina kunt u een film uitkiezen. 
-
-Ga door de lijst totdat u een film ziet 
-die u graag wilt zien. 
-
-Gevonden? 
-
-Klik dan op de grote gele reserveerknop!
-
-Als u zelf nog een vraag heeft kunt u die
-stellen via onderstaande knop.</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Klik op "AGENDA" bovenin om naar een overzicht te gaan van alle films 
-die er in de toekomst zullen draaien in onze bioscoop.
-
-Klik op "CONTACT" bovenin om naar de pagina  te gaan waar een
-overzicht is van de contactgegeven zoals e-mail en telefoonnummer van onze bioscoop.
-
-Klik op "FAQ" bovenin om over de bioscoop
-veel gestelde vragen te zien of om zelf een vraag te stellen.
-
-Klik op "Reserveer Tickets" onderin
-de pagina om Tickets te reserveren
-voor deze film!"</value>
-  </data>
   <data name="logoBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAACDQAAAHfCAYAAAClTxpbAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
@@ -9107,5 +9062,50 @@ voor deze film!"</value>
         0ySVHxpjjDHGGGOMMcYYY4wxxhhjjDHGNEnlh8YYY4wxxhhjjDHGGGOMMcYYY4wxzRH+1/8AjkzAGyLT
         vJEAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="helpTextFAQ.Text" xml:space="preserve">
+    <value>Hier staan de meest
+gestelde vragen!
+
+Klik op een vraag om
+de antwoord op het 
+schermpje hier links te krijgen.
+
+Bij lange antwoorden kunt u het balkje rechts 
+van naast de antwoorden naar beneden  
+slepen  om het hele antwoord zien.
+
+
+
+
+
+Staat uw vraag er niet bij?</value>
+  </data>
+  <data name="agendaHelpText.Text" xml:space="preserve">
+    <value>Op deze pagina kunt u een film uitkiezen. 
+
+Ga door de lijst totdat u een film ziet 
+die u graag wilt zien. 
+
+Gevonden? 
+
+Klik dan op de grote gele reserveerknop!
+
+Als u zelf nog een vraag heeft kunt u die
+stellen via onderstaande knop.</value>
+  </data>
+  <data name="homeHulp.Text" xml:space="preserve">
+    <value>Klik op "AGENDA" bovenin om naar een overzicht te gaan van alle films 
+die er in de toekomst zullen draaien in onze bioscoop.
+
+Klik op "CONTACT" bovenin om naar de pagina  te gaan waar een
+overzicht is van de contactgegeven zoals e-mail en telefoonnummer van onze bioscoop.
+
+Klik op "FAQ" bovenin om over de bioscoop
+veel gestelde vragen te zien of om zelf een vraag te stellen.
+
+Klik op "Reserveer Tickets" onderin
+de pagina om Tickets te reserveren
+voor deze film!"</value>
   </data>
 </root>
