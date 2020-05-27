@@ -136,9 +136,9 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8b621e808e7466ba0a9cbb909922e747 {
+        internal static System.Drawing.Bitmap abn_balk {
             get {
-                object obj = ResourceManager.GetObject("8b621e808e7466ba0a9cbb909922e747", resourceCulture);
+                object obj = ResourceManager.GetObject("abn balk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -169,6 +169,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap CalmGrey {
             get {
                 object obj = ResourceManager.GetObject("CalmGrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CalmGrey1 {
+            get {
+                object obj = ResourceManager.GetObject("CalmGrey1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,9 +246,9 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ikbengeenrobot {
+        internal static System.Drawing.Bitmap inbox {
             get {
-                object obj = ResourceManager.GetObject("ikbengeenrobot", resourceCulture);
+                object obj = ResourceManager.GetObject("inbox", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,9 +256,9 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap inbox {
+        internal static System.Drawing.Bitmap ing_balk {
             get {
-                object obj = ResourceManager.GetObject("inbox", resourceCulture);
+                object obj = ResourceManager.GetObject("ing balk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,9 +276,119 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap map {
+            get {
+                object obj = ResourceManager.GetObject("map", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map1 {
+            get {
+                object obj = ResourceManager.GetObject("map1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map2 {
+            get {
+                object obj = ResourceManager.GetObject("map2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map3 {
+            get {
+                object obj = ResourceManager.GetObject("map3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map4 {
+            get {
+                object obj = ResourceManager.GetObject("map4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mapp {
+            get {
+                object obj = ResourceManager.GetObject("mapp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mappp {
+            get {
+                object obj = ResourceManager.GetObject("mappp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mappppp {
+            get {
+                object obj = ResourceManager.GetObject("mappppp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minus {
+            get {
+                object obj = ResourceManager.GetObject("minus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ohvz {
             get {
                 object obj = ResourceManager.GetObject("ohvz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus {
+            get {
+                object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rabo_balk {
+            get {
+                object obj = ResourceManager.GetObject("rabo balk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +426,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sns_balk {
+            get {
+                object obj = ResourceManager.GetObject("sns balk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SoMPoster {
             get {
                 object obj = ResourceManager.GetObject("SoMPoster", resourceCulture);
@@ -326,9 +456,9 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap visa_logo_4E989827A8_seeklogo_com {
+        internal static System.Drawing.Bitmap stuurMailButton1 {
             get {
-                object obj = ResourceManager.GetObject("visa-logo-4E989827A8-seeklogo.com", resourceCulture);
+                object obj = ResourceManager.GetObject("stuurMailButton1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

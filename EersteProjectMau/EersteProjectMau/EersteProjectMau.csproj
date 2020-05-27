@@ -211,13 +211,43 @@
     <None Include="Resources\ohvz.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\visa-logo-4E989827A8-seeklogo.com.png" />
+    <None Include="Resources\map.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\8b621e808e7466ba0a9cbb909922e747.png" />
+    <None Include="Resources\map2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ikbengeenrobot.png" />
+    <None Include="Resources\map3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mappp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mappppp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abn balk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ing balk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabo balk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sns balk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
