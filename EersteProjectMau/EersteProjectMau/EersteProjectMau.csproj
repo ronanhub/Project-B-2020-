@@ -53,6 +53,12 @@
     <Compile Include="Agenda.Designer.cs">
       <DependentUpon>Agenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="selecteerBankMelding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selecteerBankMelding.Designer.cs">
+      <DependentUpon>selecteerBankMelding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help_On_OFF.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,9 @@
     <Compile Include="Vraag.cs" />
     <EmbeddedResource Include="Agenda.resx">
       <DependentUpon>Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selecteerBankMelding.resx">
+      <DependentUpon>selecteerBankMelding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
