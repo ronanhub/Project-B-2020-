@@ -21,6 +21,7 @@ namespace EersteProjectMau
         int kaartvalue = 5;
         Image betaalkBalkImage;
 
+        selecteerBankMelding melding;
 
         Help_On_OFF helpKnop = new Help_On_OFF();
         public void Help_Open_Sluit()
@@ -778,7 +779,7 @@ namespace EersteProjectMau
 
         private void buttonBetalen1_Click(object sender, EventArgs e)
         {
-            saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
+            //saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
             labelbedragBetaal1.Text = totaalPrijs.ToString();
         }
@@ -809,7 +810,17 @@ namespace EersteProjectMau
             else
             {
                 //MessageBox.Show("Kies een bank.");
-                labelKiesEenBankMelding.Text = "Selecteer uw bank voordat u verder gaat.";
+                //labelKiesEenBankMelding.Text = "Selecteer uw bank voordat u verder gaat.";
+                if (melding == null)
+                {
+                    melding = new selecteerBankMelding();
+                }
+                else
+                {
+                    melding.Close();
+                    melding = new selecteerBankMelding();
+                }
+                melding.Show();
             }
         }
 
@@ -817,6 +828,7 @@ namespace EersteProjectMau
         {
             tabControl1.SelectTab(0);
             MessageBox.Show("Betaling is gelukt.");
+            saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, betaalEmail.Text);
         }
 
         private void buttonVorigeFinal1_Click(object sender, EventArgs e)
