@@ -592,12 +592,6 @@ namespace EersteProjectMau
 
         private void textBoxKorting_TextChanged(object sender, EventArgs e)
         {
-            updatePrijs();
-            for (int i = 0; i < 48; i++)
-            {
-                var stoel = vindStoel(i);
-                updatePrijs(stoel);
-            }
         }
 
    
@@ -671,7 +665,7 @@ namespace EersteProjectMau
             }
             basisPrijs = 0.0f;
             labelStoelSelectieFilmTitel.Text = nieuweFilm.titel;
-            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.ToString();
+            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.Hour.ToString()+":"+ nieuweFilm.datum.Minute.ToString();//tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
         }
 
 
@@ -970,6 +964,14 @@ namespace EersteProjectMau
         private void textboxMaand1_TextChanged(object sender, EventArgs e)
         {
             textboxMaand1.ForeColor = Color.Black;
+        private void buttonApplyKortingCode_Click(object sender, EventArgs e)
+        {
+            updatePrijs();
+            for (int i = 0; i < 48; i++)
+            {
+                var stoel = vindStoel(i);
+                updatePrijs(stoel);
+            }
         }
     }
 }

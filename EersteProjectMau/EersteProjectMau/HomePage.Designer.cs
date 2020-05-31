@@ -234,6 +234,8 @@
             this.homeHulp = new System.Windows.Forms.Label();
             this.homeHelpHeader = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.BetalingAf = new System.Windows.Forms.TabPage();
+            this.buttonApplyKortingCode = new System.Windows.Forms.Button();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -1075,6 +1077,7 @@
             this.tabPageStoelselectie.Controls.Add(this.filmDatumRes);
             this.tabPageStoelselectie.Controls.Add(this.filmTitelRes);
             this.tabPageStoelselectie.Controls.Add(this.panel5);
+            this.tabPageStoelselectie.Controls.Add(this.buttonApplyKortingCode);
             this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmDatum);
             this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmTitel);
             this.tabPageStoelselectie.Controls.Add(this.kortingLabel);
@@ -1210,6 +1213,29 @@
             // 
             this.textBoxKorting.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKorting.Location = new System.Drawing.Point(360, 381);
+            this.buttonBetalen1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBetalen1.Image = global::EersteProjectMau.Properties.Resources.betalenButton;
+            this.buttonBetalen1.Location = new System.Drawing.Point(711, 419);
+            this.buttonBetalen1.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonBetalen1.Name = "buttonBetalen1";
+            this.buttonBetalen1.Size = new System.Drawing.Size(169, 57);
+            this.buttonBetalen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonBetalen1.TabIndex = 103;
+            this.buttonBetalen1.TabStop = false;
+            this.buttonBetalen1.Click += new System.EventHandler(this.buttonBetalen1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(711, 329);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.TabIndex = 102;
+            this.label5.Text = "Kortingscode:";
+            // 
+            // textBoxKorting
+            // 
+            this.textBoxKorting.Location = new System.Drawing.Point(711, 346);
             this.textBoxKorting.Name = "textBoxKorting";
             this.textBoxKorting.Size = new System.Drawing.Size(125, 40);
             this.textBoxKorting.TabIndex = 101;
@@ -2547,6 +2573,13 @@
             this.labelReserveerHelpTitel.Location = new System.Drawing.Point(8, 13);
             this.labelReserveerHelpTitel.Name = "labelReserveerHelpTitel";
             this.labelReserveerHelpTitel.Size = new System.Drawing.Size(177, 32);
+            // labelReserveerHelpTitel
+            // 
+            this.labelReserveerHelpTitel.AutoSize = true;
+            this.labelReserveerHelpTitel.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReserveerHelpTitel.Location = new System.Drawing.Point(8, 13);
+            this.labelReserveerHelpTitel.Name = "labelReserveerHelpTitel";
+            this.labelReserveerHelpTitel.Size = new System.Drawing.Size(150, 30);
             this.labelReserveerHelpTitel.TabIndex = 14;
             this.labelReserveerHelpTitel.Text = "Hulp nodig?...";
             // 
@@ -2710,6 +2743,27 @@
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(306, 510);
             this.tabControl2.TabIndex = 3;
+            // 
+            // BetalingAf
+            // 
+            this.BetalingAf.Location = new System.Drawing.Point(4, 22);
+            this.BetalingAf.Margin = new System.Windows.Forms.Padding(2);
+            this.BetalingAf.Name = "BetalingAf";
+            this.BetalingAf.Padding = new System.Windows.Forms.Padding(2);
+            this.BetalingAf.Size = new System.Drawing.Size(298, 484);
+            this.BetalingAf.TabIndex = 6;
+            this.BetalingAf.Text = "BetalingAf";
+            this.BetalingAf.UseVisualStyleBackColor = true;
+            // 
+            // buttonApplyKortingCode
+            // 
+            this.buttonApplyKortingCode.Location = new System.Drawing.Point(711, 368);
+            this.buttonApplyKortingCode.Name = "buttonApplyKortingCode";
+            this.buttonApplyKortingCode.Size = new System.Drawing.Size(75, 23);
+            this.buttonApplyKortingCode.TabIndex = 106;
+            this.buttonApplyKortingCode.Text = "Activeer";
+            this.buttonApplyKortingCode.UseVisualStyleBackColor = true;
+            this.buttonApplyKortingCode.Click += new System.EventHandler(this.buttonApplyKortingCode_Click);
             // 
             // HomePage
             // 
@@ -3004,6 +3058,7 @@
         private System.Windows.Forms.Label homeHulp;
         private System.Windows.Forms.Label homeHelpHeader;
         private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.Button buttonApplyKortingCode;
     }
 }
 
