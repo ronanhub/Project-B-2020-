@@ -665,7 +665,7 @@ namespace EersteProjectMau
             }
             basisPrijs = 0.0f;
             labelStoelSelectieFilmTitel.Text = nieuweFilm.titel;
-            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.Hour.ToString()+":"+ nieuweFilm.datum.Minute.ToString();//tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
+            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.Day.ToString()+"/"+nieuweFilm.datum.Month.ToString()+"  "+nieuweFilm.datum.Hour.ToString()+":"+ nieuweFilm.datum.Minute.ToString();//tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
         }
 
 
@@ -746,6 +746,7 @@ namespace EersteProjectMau
             snsCheck.Checked = false;
             raboCheck.Checked = false;
             betaalBalk.Image = Resources.abn_balk;
+            labelKiesEenBankMelding.Text = "";
         }
 
         private void ingCheck_CheckedChanged(object sender, EventArgs e)
@@ -754,6 +755,7 @@ namespace EersteProjectMau
             snsCheck.Checked = false;
             raboCheck.Checked = false;
             betaalBalk.Image = Resources.ing_balk;
+            labelKiesEenBankMelding.Text = "";
         }
 
         private void snsCheck_CheckedChanged(object sender, EventArgs e)
@@ -762,6 +764,7 @@ namespace EersteProjectMau
             ingCheck.Checked = false;
             raboCheck.Checked = false;
             betaalBalk.Image = Resources.sns_balk;
+            labelKiesEenBankMelding.Text = "";
         }
 
         private void raboCheck_CheckedChanged(object sender, EventArgs e)
@@ -770,6 +773,7 @@ namespace EersteProjectMau
             ingCheck.Checked = false;
             snsCheck.Checked = false;
             betaalBalk.Image = Resources.rabo_balk;
+            labelKiesEenBankMelding.Text = "";
         }
 
         private void buttonBetalen1_Click(object sender, EventArgs e)
@@ -804,7 +808,8 @@ namespace EersteProjectMau
             }
             else
             {
-                MessageBox.Show("Kies een bank.");
+                //MessageBox.Show("Kies een bank.");
+                labelKiesEenBankMelding.Text = "Selecteer uw bank voordat u verder gaat.";
             }
         }
 
@@ -964,6 +969,8 @@ namespace EersteProjectMau
         private void textboxMaand1_TextChanged(object sender, EventArgs e)
         {
             textboxMaand1.ForeColor = Color.Black;
+        }
+
         private void buttonApplyKortingCode_Click(object sender, EventArgs e)
         {
             updatePrijs();

@@ -117,32 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="labelBeschrijving1.Text" xml:space="preserve">
-    <value>12 Years a Slave is gebaseerd op het verhaal van Solomon Northup
-(Chiwetel Ejiofor). Hij leefde in de 19e eeuw, voorafgaand aan de
-Amerikaanse burgeroorlog, als vrijezwarte man met zijn gezin in New
-York. Dan wordt Solomon ontvoerd en verkocht als slaaf in het zuiden.
-Hij vecht om niet alleen te overleven, maar ook zijn waardigheid te
-behouden. Als slaaf wordt hij geconfronteerd met de verschrikkelijke
-wreedheid van een slaveneigenaar (Michael Fassbender) en onverwachte
-vriendelijkheid. Na 12 jaar ontmoet hij een Canadees (Brad Pitt) die zijn
-leven voorgoed verandert.</value>
-  </data>
-  <data name="label23.Text" xml:space="preserve">
-    <value>Op hoop van zegen is een film uit 1986, gebaseerd 
-op het gelijknamige sociaal-kritische toneelstuk 
-van Herman Heijermans uit 1900. De film gaat over de 
-zware omstandigheden van de vissers en hun families 
-die slechts instrumenten waren in de handen van op 
-winst beluste reders.</value>
-  </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>Dunkirk start als honderdduizenden Britse en 
-geallieerde soldaten omsingeld zijn door 
-vijandelijke troepen. Gevangen op het strand 
-met hun rug naar de zee staan ze voor een 
-onmogelijke situatie als de vijand dichterbij komt.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -7047,6 +7021,32 @@ onmogelijke situatie als de vijand dichterbij komt.</value>
         N/5IXX/xugA/4aD+GH/Qzf8Akhdf/G6AD/hoP4Yf9DN/5IXX/wAboAP+Gg/hh/0M3/khdf8AxugA/wCG
         g/hh/wBDN/5IXX/xugDyD9qD4peDvG/gHT9N8Max9uvYtTjuHj+yzRYjEUqk5dAOrLxnPNAH/9k=
 </value>
+  </data>
+  <data name="labelBeschrijving1.Text" xml:space="preserve">
+    <value>12 Years a Slave is gebaseerd op het verhaal van Solomon Northup
+(Chiwetel Ejiofor). Hij leefde in de 19e eeuw, voorafgaand aan de
+Amerikaanse burgeroorlog, als vrijezwarte man met zijn gezin in New
+York. Dan wordt Solomon ontvoerd en verkocht als slaaf in het zuiden.
+Hij vecht om niet alleen te overleven, maar ook zijn waardigheid te
+behouden. Als slaaf wordt hij geconfronteerd met de verschrikkelijke
+wreedheid van een slaveneigenaar (Michael Fassbender) en onverwachte
+vriendelijkheid. Na 12 jaar ontmoet hij een Canadees (Brad Pitt) die zijn
+leven voorgoed verandert.</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Op hoop van zegen is een film uit 1986, gebaseerd 
+op het gelijknamige sociaal-kritische toneelstuk 
+van Herman Heijermans uit 1900. De film gaat over de 
+zware omstandigheden van de vissers en hun families 
+die slechts instrumenten waren in de handen van op 
+winst beluste reders.</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Dunkirk start als honderdduizenden Britse en 
+geallieerde soldaten omsingeld zijn door 
+vijandelijke troepen. Gevangen op het strand 
+met hun rug naar de zee staan ze voor een 
+onmogelijke situatie als de vijand dichterbij komt.</value>
   </data>
   <data name="logoBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
