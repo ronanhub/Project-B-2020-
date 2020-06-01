@@ -10,7 +10,7 @@ Stoel;Prijs;Status;Klant
 8;10;vrij;
 9;10;vrij;
 10;10;vrij;
-11;10;vrij;
+11;10;bezet;NieuweKlant
 12;10;vrij;
 13;10;vrij;
 14;10;vrij;
@@ -22,7 +22,7 @@ Stoel;Prijs;Status;Klant
 20;10;vrij;
 21;10;vrij;
 22;10;vrij;
-23;10;vrij;
+23;10;bezet;NieuweKlant
 24;10;vrij;
 25;10;vrij;
 26;10;vrij;
@@ -30,8 +30,8 @@ Stoel;Prijs;Status;Klant
 28;11;vrij;
 29;11;vrij;
 30;11;vrij;
-31;11;bezet;test@mail.com
-32;10;bezet;test@mail.com
+31;11;vrij;
+32;10;vrij;
 33;10;vrij;
 34;10;vrij;
 35;10;vrij;

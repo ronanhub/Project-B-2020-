@@ -111,19 +111,7 @@ C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
 E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerBankMelding.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.StuurVraagFormcs.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.CoreCompileInputs.cache
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
-C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\Data\12YearsASlave.csv
+C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.resx
+C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.cs
+C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.Designer.cs
