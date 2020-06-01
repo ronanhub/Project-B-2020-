@@ -239,6 +239,9 @@
             this.homeHulp = new System.Windows.Forms.Label();
             this.homeHelpHeader = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.ContactpaginaHelp2 = new System.Windows.Forms.Label();
+            this.ContactPagHelp1 = new System.Windows.Forms.Label();
+            this.ContactPagHelp0 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
@@ -291,6 +294,7 @@
             this.ReserveerHelp.SuspendLayout();
             this.FaqHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStelZelfVraagg1)).BeginInit();
+            this.ContactHelp.SuspendLayout();
             this.AgendaHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.HomeHelp.SuspendLayout();
@@ -2682,6 +2686,9 @@
             // ContactHelp
             // 
             this.ContactHelp.BackColor = System.Drawing.Color.White;
+            this.ContactHelp.Controls.Add(this.ContactPagHelp0);
+            this.ContactHelp.Controls.Add(this.ContactPagHelp1);
+            this.ContactHelp.Controls.Add(this.ContactpaginaHelp2);
             this.ContactHelp.Location = new System.Drawing.Point(4, 22);
             this.ContactHelp.Margin = new System.Windows.Forms.Padding(2);
             this.ContactHelp.Name = "ContactHelp";
@@ -2782,6 +2789,36 @@
             this.tabControl2.Size = new System.Drawing.Size(306, 510);
             this.tabControl2.TabIndex = 3;
             // 
+            // ContactpaginaHelp2
+            // 
+            this.ContactpaginaHelp2.AutoSize = true;
+            this.ContactpaginaHelp2.Font = new System.Drawing.Font("Malgun Gothic", 10.75F);
+            this.ContactpaginaHelp2.Location = new System.Drawing.Point(6, 112);
+            this.ContactpaginaHelp2.Name = "ContactpaginaHelp2";
+            this.ContactpaginaHelp2.Size = new System.Drawing.Size(202, 360);
+            this.ContactpaginaHelp2.TabIndex = 5;
+            this.ContactpaginaHelp2.Text = resources.GetString("ContactpaginaHelp2.Text");
+            // 
+            // ContactPagHelp1
+            // 
+            this.ContactPagHelp1.AutoSize = true;
+            this.ContactPagHelp1.Font = new System.Drawing.Font("Malgun Gothic", 15.75F);
+            this.ContactPagHelp1.Location = new System.Drawing.Point(3, 52);
+            this.ContactPagHelp1.Name = "ContactPagHelp1";
+            this.ContactPagHelp1.Size = new System.Drawing.Size(216, 60);
+            this.ContactPagHelp1.TabIndex = 6;
+            this.ContactPagHelp1.Text = ". . . U bent nu op de \r\nCONTACT pagina.";
+            // 
+            // ContactPagHelp0
+            // 
+            this.ContactPagHelp0.AutoSize = true;
+            this.ContactPagHelp0.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactPagHelp0.Location = new System.Drawing.Point(6, 13);
+            this.ContactPagHelp0.Name = "ContactPagHelp0";
+            this.ContactPagHelp0.Size = new System.Drawing.Size(150, 30);
+            this.ContactPagHelp0.TabIndex = 7;
+            this.ContactPagHelp0.Text = "Hulp nodig?...";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2866,6 +2903,8 @@
             this.FaqHelp.ResumeLayout(false);
             this.FaqHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStelZelfVraagg1)).EndInit();
+            this.ContactHelp.ResumeLayout(false);
+            this.ContactHelp.PerformLayout();
             this.AgendaHelp.ResumeLayout(false);
             this.AgendaHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -3084,6 +3123,9 @@
         private System.Windows.Forms.PictureBox sluitKruisButton;
         private System.Windows.Forms.PictureBox openPlusButton;
         private System.Windows.Forms.PictureBox schermPicture1;
+        private System.Windows.Forms.Label ContactPagHelp0;
+        private System.Windows.Forms.Label ContactPagHelp1;
+        private System.Windows.Forms.Label ContactpaginaHelp2;
     }
 }
 

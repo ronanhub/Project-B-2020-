@@ -115,3 +115,10 @@ C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau
 C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.resx
 C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.cs
 C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.Designer.cs
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.resx
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.cs
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.Designer.cs
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\Data\12YearsASlave.csv
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
+C:\Users\Jordy\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
