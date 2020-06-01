@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+using EersteProjectMau.Properties;
 
 namespace EersteProjectMau
 {
@@ -17,8 +18,8 @@ namespace EersteProjectMau
     {
         MailMessage msg;
         private FlowLayoutPanel filmPanel;
-
-
+        int kaartvalue = 5;
+        Image betaalkBalkImage;
 
 
         Help_On_OFF helpKnop = new Help_On_OFF();
@@ -28,16 +29,24 @@ namespace EersteProjectMau
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(923, 510);
+            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(930, 510);
 
             vragenPaneel.Size = (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
             faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15); 
 
-            antwoorden.Location = (tabControl2.Visible == false) ? new Point(677, 12) : new Point(577, 12);
+            antwoorden.Location = (tabControl2.Visible == false) ? new Point(675, 53) : new Point(575, 53);
+            huidigeVraag.Location = (tabControl2.Visible == false) ? new Point(669, 15) : new Point(569, 15);
             antwoorden.Size = (tabControl2.Visible == false) ? new Size(531, 375) : new Size(331, 455);
 
-            stuurVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
-            stuurVraag2.Visible = (tabControl2.Visible == false) ? true : false;
+            kaartPanel.Size = (tabControl2.Visible == false) ? new Size(927, 494) : new Size(627, 494);
+
+            homePoster.Size = (tabControl2.Visible == false) ? new Size(320, 479) : new Size(215, 311);
+            reserveerButtonHome.Location = (tabControl2.Visible == false) ? new Point(680, 400) : new Point(703, 380);
+           
+            homePoster.Location = (tabControl2.Visible == false) ? new Point(880, 5) : new Point(692, 5);
+
+            buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
+            buttonZelfVraag2.Visible = (tabControl2.Visible == false) ? true : false;
         }
 
 
@@ -67,6 +76,18 @@ namespace EersteProjectMau
         public float basisPrijs;
         public string kortingsCode;
         public float totaalPrijs;
+
+        public class film
+        {
+            public string titel;
+            public DateTime datum;
+            public film(string filmTitel, DateTime filmDatum)
+            {
+                titel = filmTitel;
+                datum = filmDatum;
+            }
+        }
+        public film huidigeFilm;
         public enum status
         {
             vrij = 0,
@@ -89,12 +110,12 @@ namespace EersteProjectMau
                     }
                 case status.keuze:
                     {
-                        kleur = System.Drawing.Color.Green;
+                        kleur = System.Drawing.Color.LimeGreen;
                         break;
                     }
                 case status.bezet:
                     {
-                        kleur = System.Drawing.Color.OrangeRed;
+                        kleur = System.Drawing.Color.Tomato;
                         break;
                     }
                 default:
@@ -192,89 +213,58 @@ namespace EersteProjectMau
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@FAQFAQFAQFAQFAQFAQFAQFAQFAQFAQ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_1 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Hoe kom ik bij de bioscoop?",
-          /* Antwoord */                  "Stap 1: Druk op contact knop in het menu." +
-                                          "\n\n" +
-                                          "Stap 2: Druk op de kaart knop." +
-                                          "\n\n" +
-                                          "Stap 3: Ga naar het adres toe" +
-                                          "\n\n" +
-                                          "Stap 4: ????" +
-                                          "\n\n" +
-                                          "Stap 5: profit",
+          /* Vraag */                    ("Waar is de bioscoop?",
+          /* Antwoord */                  "Het adres ziet u als u op de 'Contact' knop klikt",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_2 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Hoe verzin ik goede vragen?",
-         /* Antwoord */                   "Stap 1: Wat maakt een vraag goed?" +
-                                          "\n\n" +
-                                          "Stap 2: Nou?" +
-                                          "\n\n" +
-                                          "Stap 3: ????" +
-                                          "\n\n" +
-                                          "Stap 4: profit",
+         /* Vraag */                      ("Zijn de wc's gratis?",
+         /* Antwoord */                   "Ja",
           /* ID */                         Tuple.Create(2, 95));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_3 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Kan ik geld terug krijgen?",
-          /* Antwoord */                  "Nee.",
+          /* Vraag */                    ("Kan ik mijn ticket ruilen voor een andere film?",
+          /* Antwoord */                  "Nee helaas.",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_4 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Mag ik een ticket 2x gebruiken?",
-         /* Antwoord */                   "Tickets groeien niet aan de bomen",
+         /* Vraag */                      ("Is het mogelijk om een hele zaal te huren?",
+         /* Antwoord */                   "Daarvoor moet u speciaal contact opnemen met ons via ons telefoonnummer 0645186589",
           /* ID */                         Tuple.Create(2, 95));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_5 = new Tuple<string, string, Tuple<int, int>>
-          /* Vraag */                    ("Hoe zet ik de oven aan?",
-          /* Antwoord */                  "Stap 1: Loop naar de oven" +
-                                          "\n\n" +
-                                          "Stap 2: Kijk naar de oven" +
-                                          "\n\n" +
-                                          "Stap 3: Zoek de 'AAN' knop" +
-                                          "\n\n" +
-                                          "Stap 4: Klik op de 'AAN' knop" +
-                                          "\n\n" +
-                                          "Stap 5: Je oven staat nu aan" +
-                                          "\n\n" +
-                                          "Stap 6: Geniet ervan" +
-                                          "\n\n" +
-                                          "Stap 7: ????" +
-                                          "\n\n" +
-                                          "Stap 8: profit",
+          /* Vraag */                    ("Zijn er pauzes midden in de film?",
+          /* Antwoord */                  "Ja, om de 45 minuten houden we een pauze van 15 minuten",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_6 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Is het mogelijk om senioren korting te krijgen?",
-         /* Antwoord */                   "Ben je serieus?",
+         /* Vraag */                      ("Mag een niet-senior meekomen?",
+         /* Antwoord */                   "Ja zeker!",
           /* ID */                         Tuple.Create(2, 95));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_7 = new Tuple<string, string, Tuple<int, int>>
           /* Vraag */                    ("Is het eten en drinken gratis?",
-          /* Antwoord */                  "In uw dromen.",
+          /* Antwoord */                  "Nee helaas, de klant moet daarvoor betalen",
           /* ID */                        Tuple.Create(2, 53));
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_8 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Iphone of android?",
-         /* Antwoord */                   "Mandroid >>>>> saaiphone",
+         /* Vraag */                      ("Hoe gebruik ik de kortingscode?",
+         /* Antwoord */                   "Dat zult u zien tijdens het betaalproces",
           /* ID */                         Tuple.Create(2, 95));
 
 
         static Tuple<string, string, Tuple<int, int>> Vraag_Antwoord_Loc_9 = new Tuple<string, string, Tuple<int, int>>
-         /* Vraag */                      ("Mijn vraag 9?",
-         /* Antwoord */                   "Stap 1: ASDASDSDASD?" +
+         /* Vraag */                      ("Hoe kan ik contact opnemen?",
+         /* Antwoord */                   "Stap 1: Druk op 'Contact'" +
                                           "\n\n" +
-                                          "Stap 2: ADSSADASD?" +
-                                          "\n\n" +
-                                          "Stap 3: ????" +
-                                          "\n\n" +
-                                          "Stap 4: profit",
+                                          "Stap 2: Hier kunt u kiezen uit verschillende manieren van contact opnemen met ons",
           /* ID */                         Tuple.Create(2, 95));
 
 
-        public void changeTextbox(string shownAntwoord)
+        public void changeTextbox(string shownAntwoord, string shownVraag)
         {
             antwoorden.Text = shownAntwoord;
+            huidigeVraag.Text = shownVraag;
         }
 
 
@@ -287,16 +277,34 @@ namespace EersteProjectMau
         Vragen vraag7 = new Vragen(Vraag_Antwoord_Loc_7.Item1, Vraag_Antwoord_Loc_7.Item2, Vraag_Antwoord_Loc_7.Item3);
         Vragen vraag8 = new Vragen(Vraag_Antwoord_Loc_8.Item1, Vraag_Antwoord_Loc_8.Item2, Vraag_Antwoord_Loc_8.Item3);
         Vragen vraag9 = new Vragen(Vraag_Antwoord_Loc_9.Item1, Vraag_Antwoord_Loc_9.Item2, Vraag_Antwoord_Loc_9.Item3);
+        //Label huidigeVraagBovenAntwoord = new Label();
 
 
-        
-        public List<Tuple<float, status, string>> loadFilmStoelen(string filmNaam)
+
+        public string fileStringMaker(string filmTitel, DateTime tijdstip, bool addExtension = false)
+        {
+            string returnString;
+
+            string titelString = filmTitel.Replace(" ", "").ToLower();
+            string datumString = tijdstip.Date.ToShortDateString();
+            string tijdString = tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
+
+            returnString = titelString + "_" + datumString + "_" + tijdString;
+            if (addExtension)
+            {
+                returnString = returnString + ".csv";
+            }
+
+            return returnString;
+        }
+
+        public List<Tuple<float, status, string>> loadFilmStoelen(string filmNaam, DateTime tijdstip)
         {
             List<Tuple<float, status, string>> lijst = new List<Tuple<float, status, string>>();
 
-            if (File.Exists(filmNaam + ".csv"))
+            if (File.Exists(fileStringMaker(filmNaam, tijdstip, true)))
             {
-                string[] data = File.ReadAllLines(filmNaam + ".csv");
+                string[] data = File.ReadAllLines(fileStringMaker(filmNaam, tijdstip, true));
                 List<Tuple<int, float, status, string>> stoelStringSeperated;
 
                 for (int l = 1; l < data.Length; l++)
@@ -353,7 +361,7 @@ namespace EersteProjectMau
             return lijst;
         }
 
-        public void saveFilmStoelen(string filmNaam, List<Tuple<float, status, string>> stoelLijst, string klantnaam)
+        public void saveFilmStoelen(string filmNaam, DateTime tijdstip, List<Tuple<float, status, string>> stoelLijst, string klantnaam)
         {
 
             List<string> Data = new List<string>();
@@ -371,7 +379,7 @@ namespace EersteProjectMau
                 }
             }
 
-            File.WriteAllLines(filmNaam+".csv",Data);
+            File.WriteAllLines(fileStringMaker(filmNaam, tijdstip, true), Data);
         }
 
         //@@@@@@@@@@@@@@@@@@@ HET PROGRAMMA BEGNINT HIER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -380,7 +388,7 @@ namespace EersteProjectMau
 
             InitializeComponent();
             //het maken van de stoelgrid met prijzen en status van stoel
-            stoelGrid = loadFilmStoelen("12YearsASlave");/*new List<Tuple<float, status, string>> {
+            stoelGrid = loadFilmStoelen("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));/*new List<Tuple<float, status, string>> {
                 new Tuple<float,status,string>(10.8f,status.vrij,""), new Tuple<float,status,string>(10.000f,status.vrij,""), new Tuple<float,status,string>(10.0000f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
                 new Tuple<float,status,string>(11.10f,status.vrij,""), new Tuple<float,status,string>(11.1f,status.bezet,"klantnaam"), new Tuple<float,status,string>(11.12f,status.vrij,""), new Tuple<float,status,string>(11.10f,status.vrij,""),
                 new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""),
@@ -411,6 +419,16 @@ namespace EersteProjectMau
         }
 
 
+        Image ZoomPicture(Image img, Size size)
+        {
+            Bitmap bm = new Bitmap(img, Convert.ToInt32(img.Width * size.Width / 5), Convert.ToInt32(img.Height * size.Height / 5));
+            Graphics gpu = Graphics.FromImage(bm);
+            gpu.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            return bm;
+        }
+
+        PictureBox org;
+
         private void homePage_Load(object sender, EventArgs e)
         {
             tabControl1.Appearance = TabAppearance.FlatButtons;
@@ -430,7 +448,13 @@ namespace EersteProjectMau
             Vraag8label.Text = vraag8.Vraag;
             Vraag9label.Text = vraag9.Vraag;
 
-            this.ActiveControl = label1;
+            this.ActiveControl = homeTitel;
+
+
+            this.DoubleBuffered = true;
+            org = new PictureBox();
+            org.Image = kaartBox.Image;
+            kaartBox.Image = ZoomPicture(org.Image, new Size(5, 5));
 
         }
 
@@ -621,8 +645,8 @@ namespace EersteProjectMau
         }
         private void reserveerButton1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(4);
+            film nieuweFilm = new film("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));
+            naarStoelSelectie(nieuweFilm);
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -630,46 +654,62 @@ namespace EersteProjectMau
             tabControl2.SelectTab(5);
         }
       
+        public void naarStoelSelectie(film nieuweFilm)
+        {
+            tabControl1.SelectTab(4);
+            tabControl2.SelectTab(4);
+            huidigeFilm = nieuweFilm;
+            stoelGrid = loadFilmStoelen(nieuweFilm.titel, nieuweFilm.datum);
 
+            for (int i = 0; i < 48; i++)
+            {
+                var stoel = vindStoel(i);
+                updateKleur(stoel);
+                updatePrijs(stoel);
+            }
+            basisPrijs = 0.0f;
+            labelStoelSelectieFilmTitel.Text = nieuweFilm.titel;
+            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.ToString();
+        }
 
 
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FAQ FAQ FAQ FAQ FAQ FAQ FAQ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void Vraag1label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag1.Antwoord);
+            changeTextbox(vraag1.Antwoord,vraag1.Vraag);
         }
         private void Vraag2label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag2.Antwoord);
+            changeTextbox(vraag2.Antwoord, vraag2.Vraag);
         }
         private void Vraag3label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag3.Antwoord);
+            changeTextbox(vraag3.Antwoord, vraag3.Vraag);
         }
         private void Vraag4label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag4.Antwoord);
+            changeTextbox(vraag4.Antwoord, vraag4.Vraag);
         }
         private void Vraag5label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag5.Antwoord);
+            changeTextbox(vraag5.Antwoord, vraag5.Vraag);
         }
         private void Vraag6label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag6.Antwoord);
+            changeTextbox(vraag6.Antwoord, vraag6.Vraag);
         }
         private void Vraag7label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag7.Antwoord);
+            changeTextbox(vraag7.Antwoord, vraag7.Vraag);
         }
         private void Vraag8label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag8.Antwoord);
+            changeTextbox(vraag8.Antwoord, vraag8.Vraag);
         }
         private void Vraag9label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag9.Antwoord);
+            changeTextbox(vraag9.Antwoord, vraag9.Vraag);
         }
 
 
@@ -699,77 +739,48 @@ namespace EersteProjectMau
 
 
 
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ CONTACT CONTACT CONTACT CONTACT @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        private void ButtonMaps_Click(object sender, EventArgs e)
-        {
-            if (PictureMaps.Visible == false)
-            {
-                PictureMaps.Visible = true;
-            }
-            else
-            {
-                PictureMaps.Visible = false;
-            }
-        }
-        private void mapButton_Click(object sender, EventArgs e)
-        {
-           /* if (PictureMaps.Visible == false)
-            {
-                PictureMaps.Visible = true;
-            }
-            else
-            {
-                PictureMaps.Visible = false;
-            }*/
-        }
-      
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ BETALEN BETALEN BETALEN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        
 
-    
 
-        private void label6_Click(object sender, EventArgs e)
+
+        private void abnCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            ingCheck.Checked = false;
+            snsCheck.Checked = false;
+            raboCheck.Checked = false;
+            betaalBalk.Image = Resources.abn_balk;
         }
 
-
-        private void betalingKlaar_Click(object sender, EventArgs e)
+        private void ingCheck_CheckedChanged(object sender, EventArgs e)
         {
-
+            abnCheck.Checked = false;
+            snsCheck.Checked = false;
+            raboCheck.Checked = false;
+            betaalBalk.Image = Resources.ing_balk;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void snsCheck_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
+            abnCheck.Checked = false;
+            ingCheck.Checked = false;
+            raboCheck.Checked = false;
+            betaalBalk.Image = Resources.sns_balk;
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void raboCheck_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox1.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox4.Checked = false;
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
+            abnCheck.Checked = false;
+            ingCheck.Checked = false;
+            snsCheck.Checked = false;
+            betaalBalk.Image = Resources.rabo_balk;
         }
 
         private void buttonBetalen1_Click(object sender, EventArgs e)
         {
-            saveFilmStoelen("12YearsASlave", stoelGrid, "NieuweKlant");
+            saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            labelbedragBetaal1.Text = basisPrijs.ToString();
+            labelbedragBetaal1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
@@ -781,7 +792,7 @@ namespace EersteProjectMau
         {
             tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
-            labelBedrag1.Text = basisPrijs.ToString();
+            labelBedrag1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBank1_Click(object sender, EventArgs e)
@@ -791,14 +802,13 @@ namespace EersteProjectMau
 
         private void buttonVolgendeBank1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true)
+            if (abnCheck.Checked == true || ingCheck.Checked == true || snsCheck.Checked == true || raboCheck.Checked == true)
             {
                 tabControl1.SelectTab(7);
             }
             else
             {
-                MessageBox.Show("Select a bank.");
-                tabControl1.SelectTab(6);
+                MessageBox.Show("Kies een bank.");
             }
         }
 
@@ -813,22 +823,9 @@ namespace EersteProjectMau
             tabControl1.SelectTab(6);
         }
 
-        private void textboxMaand1_TextChanged(object sender, EventArgs e)
-        {
-            if (textboxMaand1.Text == "Maand")
-            {
-                textboxMaand1.Text = "";
-            }
-        }
+        
 
-        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxJaar1.Text == "Jaar")
-            {
-                textBoxJaar1.Text = "";
-            }
-        }
-
+        
         private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
         {
             if (textBoxZoeken1.Text == "Zoeken...")
@@ -837,7 +834,7 @@ namespace EersteProjectMau
             }
         }
 
-        private void buttonZelfVraag1_Click(object sender, EventArgs e)
+        private void buttonZelfVraag2_Click(object sender, EventArgs e)
         {
             StuurVraagFormcs stuurvraag = new StuurVraagFormcs();
             stuurvraag.Text = "Verstuur je vraag";
@@ -847,6 +844,7 @@ namespace EersteProjectMau
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
         }
+        
 
         private void buttonStelZelfVraagg1_Click(object sender, EventArgs e)
         {
@@ -872,8 +870,8 @@ namespace EersteProjectMau
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
-            tabControl2.SelectTab(4);
+            film nieuweFilm = new film("Dunkirk", new DateTime(2020, 2, 28, 16, 30, 0));
+            naarStoelSelectie(nieuweFilm);
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -887,9 +885,109 @@ namespace EersteProjectMau
             stuurvraag.Show();
         }
 
-        private void label28_Click(object sender, EventArgs e)
+        private void plus_Click(object sender, EventArgs e)
         {
 
+            kaartvalue += 1;
+            if (kaartvalue != 0)
+            {
+                kaartBox.Image = null;
+                kaartBox.Image = ZoomPicture(org.Image, new Size(kaartvalue, kaartvalue));
+            }
+        }
+
+        private void min_Click(object sender, EventArgs e)
+        {
+            
+            if (kaartvalue > 5)
+            {
+                kaartvalue -= 1;
+                if (kaartvalue != 0)
+                {
+                    kaartBox.Image = null;
+                    kaartBox.Image = ZoomPicture(org.Image, new Size(kaartvalue, kaartvalue));
+                }
+            }
+            
+        }
+
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(7);
+            tabControl2.SelectTab(7);
+        }
+
+
+
+
+        private void textboxMaand1_Click(object sender, EventArgs e)
+        {
+            if (textboxMaand1.Text == "Maand")
+            {
+                textboxMaand1.Text = "";
+            }
+        }
+        private void textBoxJaar1_Click(object sender, EventArgs e)
+        {
+            if (textBoxJaar1.Text == "Jaar")
+            {
+                textBoxJaar1.Text = "";
+            }
+        }
+
+        private void textboxMaand1_Leave(object sender, EventArgs e)
+        {
+            if (textboxMaand1.Text == "")
+            {
+                textboxMaand1.Text = "Maand";
+                textboxMaand1.ForeColor = Color.DarkGray;
+            }
+        }
+        private void textBoxJaar1_Leave(object sender, EventArgs e)
+        {
+            if (textBoxJaar1.Text == "")
+            {
+                textBoxJaar1.Text = "Jaar";
+                textBoxJaar1.ForeColor = Color.DarkGray;
+            }
+        }
+        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
+        {
+            textBoxJaar1.ForeColor = Color.Black;
+
+        }
+        private void textboxMaand1_TextChanged(object sender, EventArgs e)
+        {
+            textboxMaand1.ForeColor = Color.Black;
+        }
+
+        private void meerFilmsButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
+        }
+
+        private void sluitKruisButton_Click(object sender, EventArgs e)
+        {
+            Help_Open_Sluit();
+            sluitKruisButton.Visible = false;
+            openPlusButton.Visible = true;
+        }
+
+        private void openPlusButton_Click(object sender, EventArgs e)
+        {
+           Help_Open_Sluit();
+           openPlusButton.Visible = false;
+           sluitKruisButton.Visible = true;
         }
     }
 }

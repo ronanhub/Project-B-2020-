@@ -33,24 +33,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.navigatiePanel = new System.Windows.Forms.Panel();
+            this.openPlusButton = new System.Windows.Forms.PictureBox();
+            this.sluitKruisButton = new System.Windows.Forms.PictureBox();
             this.textBoxZoeken1 = new System.Windows.Forms.TextBox();
             this.faqButton1 = new System.Windows.Forms.PictureBox();
             this.contactButton1 = new System.Windows.Forms.PictureBox();
             this.agendaButton1 = new System.Windows.Forms.PictureBox();
             this.homeButton1 = new System.Windows.Forms.PictureBox();
             this.openHelp = new System.Windows.Forms.Button();
-            this.logoBox = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.homePage1 = new System.Windows.Forms.TabPage();
-            this.reserveerButton1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelScore1 = new System.Windows.Forms.Label();
+            this.meerFilmsButton = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.homeBeschrijving = new System.Windows.Forms.Label();
+            this.reserveerButtonHome = new System.Windows.Forms.PictureBox();
+            this.homePoster = new System.Windows.Forms.PictureBox();
             this.labelCast1 = new System.Windows.Forms.Label();
             this.labelBeschrijving1 = new System.Windows.Forms.Label();
             this.labelTitel1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.homeTitel = new System.Windows.Forms.Label();
             this.agendaPage = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.agendaHeader = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -68,11 +72,19 @@
             this.label15 = new System.Windows.Forms.Label();
             this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
             this.contactPage = new System.Windows.Forms.TabPage();
+            this.contactHeader = new System.Windows.Forms.Label();
+            this.kaarttext2 = new System.Windows.Forms.Label();
+            this.kaarttext1 = new System.Windows.Forms.Label();
+            this.kaartPanel = new System.Windows.Forms.Panel();
+            this.kaartBox = new System.Windows.Forms.PictureBox();
+            this.contactInfo = new System.Windows.Forms.RichTextBox();
+            this.plus = new System.Windows.Forms.Button();
+            this.min = new System.Windows.Forms.Button();
             this.buttonStuurMail1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.PictureMaps = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.FaqPage = new System.Windows.Forms.Panel();
+            this.huidigeVraag = new System.Windows.Forms.Label();
+            this.buttonZelfVraag2 = new System.Windows.Forms.PictureBox();
             this.FAQHeader = new System.Windows.Forms.Label();
             this.vragenPaneel = new System.Windows.Forms.Panel();
             this.Vraag9label = new System.Windows.Forms.Label();
@@ -85,12 +97,17 @@
             this.Vraag1label = new System.Windows.Forms.Label();
             this.Vraag3label = new System.Windows.Forms.Label();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
-            this.stuurVraag2 = new System.Windows.Forms.Label();
             this.faqsplitter = new System.Windows.Forms.Panel();
             this.antwoorden = new System.Windows.Forms.RichTextBox();
             this.tabPageStoelselectie = new System.Windows.Forms.TabPage();
-            this.buttonBetalen1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.schermPicture1 = new System.Windows.Forms.PictureBox();
+            this.resHeader = new System.Windows.Forms.Label();
+            this.filmDatumRes = new System.Windows.Forms.Label();
+            this.filmTitelRes = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.labelStoelSelectieFilmDatum = new System.Windows.Forms.Label();
+            this.labelStoelSelectieFilmTitel = new System.Windows.Forms.Label();
+            this.kortingLabel = new System.Windows.Forms.Label();
             this.textBoxKorting = new System.Windows.Forms.TextBox();
             this.labelPrijs = new System.Windows.Forms.Label();
             this.buttonStoel24 = new System.Windows.Forms.Button();
@@ -141,43 +158,47 @@
             this.buttonStoel14 = new System.Windows.Forms.Button();
             this.buttonStoel12 = new System.Windows.Forms.Button();
             this.buttonStoel13 = new System.Windows.Forms.Button();
+            this.buttonBetalen1 = new System.Windows.Forms.PictureBox();
             this.tabPageBetalen = new System.Windows.Forms.TabPage();
+            this.bedragBetaal2 = new System.Windows.Forms.Label();
             this.labelbedragBetaal1 = new System.Windows.Forms.Label();
-            this.buttonVolgendeBetaal1 = new System.Windows.Forms.PictureBox();
-            this.buttonVorigeBetaal1 = new System.Windows.Forms.PictureBox();
             this.labelbedraggBetaal1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.landBetaal = new System.Windows.Forms.Label();
+            this.betaalPlaats = new System.Windows.Forms.TextBox();
+            this.betaalPostcode = new System.Windows.Forms.TextBox();
+            this.betaalAdres = new System.Windows.Forms.TextBox();
+            this.betaalAchternaam = new System.Windows.Forms.TextBox();
+            this.betaalLand = new System.Windows.Forms.ComboBox();
+            this.plaatsLabel = new System.Windows.Forms.Label();
+            this.postcodeBetaal = new System.Windows.Forms.Label();
+            this.adresBetaal = new System.Windows.Forms.Label();
+            this.achternaamBetaal = new System.Windows.Forms.Label();
+            this.emailBetaal = new System.Windows.Forms.Label();
+            this.voornaamBetaal = new System.Windows.Forms.Label();
+            this.betaalVoornaam = new System.Windows.Forms.TextBox();
+            this.betaalEmail = new System.Windows.Forms.TextBox();
+            this.buttonVolgendeBetaal1 = new System.Windows.Forms.PictureBox();
+            this.buttonVorigeBetaal1 = new System.Windows.Forms.PictureBox();
             this.betalingKlaar = new System.Windows.Forms.TabPage();
             this.buttonVolgendeBank1 = new System.Windows.Forms.PictureBox();
             this.buttonVorigeBank1 = new System.Windows.Forms.PictureBox();
             this.labelBedrag1 = new System.Windows.Forms.Label();
             this.labelBedragg1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.raboCheck = new System.Windows.Forms.CheckBox();
+            this.snsCheck = new System.Windows.Forms.CheckBox();
+            this.ingCheck = new System.Windows.Forms.CheckBox();
+            this.abnCheck = new System.Windows.Forms.CheckBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.BetaalGegevens = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelBetaal1 = new System.Windows.Forms.Label();
+            this.betaalBalk = new System.Windows.Forms.PictureBox();
+            this.Getal3 = new System.Windows.Forms.Label();
+            this.Bedrag3 = new System.Windows.Forms.Label();
             this.textBoxControleNummer1 = new System.Windows.Forms.TextBox();
             this.labelControlenummer1 = new System.Windows.Forms.Label();
             this.textBoxJaar1 = new System.Windows.Forms.TextBox();
@@ -185,47 +206,51 @@
             this.textBoxRekeningnummer1 = new System.Windows.Forms.TextBox();
             this.textBoxNaam1 = new System.Windows.Forms.TextBox();
             this.labelVervaldatum1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.buttonVorigeFinal1 = new System.Windows.Forms.PictureBox();
-            this.buttonBetalenFinal1 = new System.Windows.Forms.PictureBox();
-            this.labelBetaal1 = new System.Windows.Forms.Label();
+            this.labelKaarthouder = new System.Windows.Forms.Label();
             this.textboxMaand1 = new System.Windows.Forms.TextBox();
             this.textboxPasnummer1 = new System.Windows.Forms.TextBox();
             this.labelPasnummer1 = new System.Windows.Forms.Label();
             this.labelRekeningnummer1 = new System.Windows.Forms.Label();
-            this.buttonZelfVraag1 = new System.Windows.Forms.PictureBox();
+            this.buttonVorigeFinal1 = new System.Windows.Forms.PictureBox();
+            this.buttonBetalenFinal1 = new System.Windows.Forms.PictureBox();
+            this.logoBox = new System.Windows.Forms.PictureBox();
+            this.BetalingAf = new System.Windows.Forms.TabPage();
             this.BetalenHelp = new System.Windows.Forms.TabPage();
             this.ReserveerHelp = new System.Windows.Forms.TabPage();
+            this.stoelLegenda = new System.Windows.Forms.Label();
+            this.greenButtonHelp = new System.Windows.Forms.Button();
+            this.redButtonHelp = new System.Windows.Forms.Button();
+            this.grayButtonHelp = new System.Windows.Forms.Button();
+            this.groeneStoelHelp = new System.Windows.Forms.Label();
+            this.oranjeStoelHelp = new System.Windows.Forms.Label();
+            this.grijzeStoelHelp = new System.Windows.Forms.Label();
+            this.labelReserveerHelpTitel = new System.Windows.Forms.Label();
+            this.labelReserveerHelpText = new System.Windows.Forms.Label();
             this.FaqHelp = new System.Windows.Forms.TabPage();
             this.buttonStelZelfVraagg1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.faqHelpHeader = new System.Windows.Forms.Label();
             this.helpTextFAQ = new System.Windows.Forms.Label();
             this.ContactHelp = new System.Windows.Forms.TabPage();
             this.AgendaHelp = new System.Windows.Forms.TabPage();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.agendaHelpText = new System.Windows.Forms.Label();
+            this.agendaHelpHeader = new System.Windows.Forms.Label();
             this.HomeHelp = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.hulpLabel1 = new System.Windows.Forms.Label();
-            this.huidigePaginaLabel1 = new System.Windows.Forms.Label();
+            this.homeHulp = new System.Windows.Forms.Label();
+            this.homeHelpHeader = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.BetalingAf = new System.Windows.Forms.TabPage();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.homePage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reserveerButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meerFilmsButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reserveerButtonHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homePoster)).BeginInit();
             this.agendaPage.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -238,12 +263,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contactPage.SuspendLayout();
+            this.kaartPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kaartBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStuurMail1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.FaqPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag2)).BeginInit();
             this.vragenPaneel.SuspendLayout();
             this.tabPageStoelselectie.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.schermPicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalen1)).BeginInit();
             this.tabPageBetalen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonVolgendeBetaal1)).BeginInit();
@@ -256,12 +284,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.BetaalGegevens.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.betaalBalk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonVorigeFinal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
+            this.ReserveerHelp.SuspendLayout();
             this.FaqHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStelZelfVraagg1)).BeginInit();
-            this.ContactHelp.SuspendLayout();
             this.AgendaHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.HomeHelp.SuspendLayout();
@@ -271,6 +300,8 @@
             // navigatiePanel
             // 
             this.navigatiePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.navigatiePanel.Controls.Add(this.openPlusButton);
+            this.navigatiePanel.Controls.Add(this.sluitKruisButton);
             this.navigatiePanel.Controls.Add(this.textBoxZoeken1);
             this.navigatiePanel.Controls.Add(this.faqButton1);
             this.navigatiePanel.Controls.Add(this.contactButton1);
@@ -281,6 +312,31 @@
             this.navigatiePanel.Name = "navigatiePanel";
             this.navigatiePanel.Size = new System.Drawing.Size(1241, 30);
             this.navigatiePanel.TabIndex = 3;
+            // 
+            // openPlusButton
+            // 
+            this.openPlusButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openPlusButton.Image = global::EersteProjectMau.Properties.Resources.openHelp;
+            this.openPlusButton.Location = new System.Drawing.Point(1207, 4);
+            this.openPlusButton.Name = "openPlusButton";
+            this.openPlusButton.Size = new System.Drawing.Size(23, 22);
+            this.openPlusButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.openPlusButton.TabIndex = 16;
+            this.openPlusButton.TabStop = false;
+            this.openPlusButton.Visible = false;
+            this.openPlusButton.Click += new System.EventHandler(this.openPlusButton_Click);
+            // 
+            // sluitKruisButton
+            // 
+            this.sluitKruisButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sluitKruisButton.Image = global::EersteProjectMau.Properties.Resources.kruisHelp;
+            this.sluitKruisButton.Location = new System.Drawing.Point(1207, 4);
+            this.sluitKruisButton.Name = "sluitKruisButton";
+            this.sluitKruisButton.Size = new System.Drawing.Size(23, 22);
+            this.sluitKruisButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.sluitKruisButton.TabIndex = 15;
+            this.sluitKruisButton.TabStop = false;
+            this.sluitKruisButton.Click += new System.EventHandler(this.sluitKruisButton_Click);
             // 
             // textBoxZoeken1
             // 
@@ -352,25 +408,13 @@
             // 
             this.openHelp.BackColor = System.Drawing.Color.White;
             this.openHelp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openHelp.Location = new System.Drawing.Point(1158, 4);
+            this.openHelp.Location = new System.Drawing.Point(1128, 4);
             this.openHelp.Name = "openHelp";
             this.openHelp.Size = new System.Drawing.Size(79, 22);
             this.openHelp.TabIndex = 9;
             this.openHelp.Text = "SLUIT HELP";
             this.openHelp.UseVisualStyleBackColor = false;
             this.openHelp.Click += new System.EventHandler(this.openHelp_Click_1);
-            // 
-            // logoBox
-            // 
-            this.logoBox.BackColor = System.Drawing.Color.Transparent;
-            this.logoBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.logoBox.Image = ((System.Drawing.Image)(resources.GetObject("logoBox.Image")));
-            this.logoBox.Location = new System.Drawing.Point(400, 7);
-            this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(504, 78);
-            this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoBox.TabIndex = 9;
-            this.logoBox.TabStop = false;
             // 
             // tabControl1
             // 
@@ -392,13 +436,15 @@
             // homePage1
             // 
             this.homePage1.BackColor = System.Drawing.Color.White;
-            this.homePage1.Controls.Add(this.reserveerButton1);
-            this.homePage1.Controls.Add(this.pictureBox1);
-            this.homePage1.Controls.Add(this.labelScore1);
+            this.homePage1.Controls.Add(this.meerFilmsButton);
+            this.homePage1.Controls.Add(this.label1);
+            this.homePage1.Controls.Add(this.homeBeschrijving);
+            this.homePage1.Controls.Add(this.reserveerButtonHome);
+            this.homePage1.Controls.Add(this.homePoster);
             this.homePage1.Controls.Add(this.labelCast1);
             this.homePage1.Controls.Add(this.labelBeschrijving1);
             this.homePage1.Controls.Add(this.labelTitel1);
-            this.homePage1.Controls.Add(this.label1);
+            this.homePage1.Controls.Add(this.homeTitel);
             this.homePage1.Location = new System.Drawing.Point(4, 22);
             this.homePage1.Margin = new System.Windows.Forms.Padding(2);
             this.homePage1.Name = "homePage1";
@@ -407,58 +453,82 @@
             this.homePage1.TabIndex = 0;
             this.homePage1.Text = "homePage1";
             // 
-            // reserveerButton1
+            // meerFilmsButton
             // 
-            this.reserveerButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reserveerButton1.Image = global::EersteProjectMau.Properties.Resources.reserveerButton;
-            this.reserveerButton1.Location = new System.Drawing.Point(703, 430);
-            this.reserveerButton1.Name = "reserveerButton1";
-            this.reserveerButton1.Size = new System.Drawing.Size(184, 50);
-            this.reserveerButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.reserveerButton1.TabIndex = 6;
-            this.reserveerButton1.TabStop = false;
-            this.reserveerButton1.Click += new System.EventHandler(this.reserveerButton1_Click);
+            this.meerFilmsButton.Image = global::EersteProjectMau.Properties.Resources.meerFilmsKnop;
+            this.meerFilmsButton.Location = new System.Drawing.Point(23, 453);
+            this.meerFilmsButton.Name = "meerFilmsButton";
+            this.meerFilmsButton.Size = new System.Drawing.Size(376, 32);
+            this.meerFilmsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.meerFilmsButton.TabIndex = 9;
+            this.meerFilmsButton.TabStop = false;
+            this.meerFilmsButton.Click += new System.EventHandler(this.meerFilmsButton_Click);
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.Image = global::EersteProjectMau.Properties.Resources._12YaSPoster;
-            this.pictureBox1.Location = new System.Drawing.Point(704, 153);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 271);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(491, 207);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 40);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "De film van deze maand!\r\n(Donderdag 18 juni om 15:00)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelScore1
+            // homeBeschrijving
             // 
-            this.labelScore1.AutoSize = true;
-            this.labelScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore1.Location = new System.Drawing.Point(579, 407);
-            this.labelScore1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.labelScore1.Name = "labelScore1";
-            this.labelScore1.Size = new System.Drawing.Size(121, 16);
-            this.labelScore1.TabIndex = 4;
-            this.labelScore1.Text = "IMDB Score: 8,1/10";
+            this.homeBeschrijving.AutoSize = true;
+            this.homeBeschrijving.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeBeschrijving.Location = new System.Drawing.Point(19, 63);
+            this.homeBeschrijving.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.homeBeschrijving.Name = "homeBeschrijving";
+            this.homeBeschrijving.Size = new System.Drawing.Size(880, 100);
+            this.homeBeschrijving.TabIndex = 7;
+            this.homeBeschrijving.Text = resources.GetString("homeBeschrijving.Text");
+            // 
+            // reserveerButtonHome
+            // 
+            this.reserveerButtonHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reserveerButtonHome.Image = global::EersteProjectMau.Properties.Resources.reserveerButton;
+            this.reserveerButtonHome.Location = new System.Drawing.Point(536, 413);
+            this.reserveerButtonHome.Name = "reserveerButtonHome";
+            this.reserveerButtonHome.Size = new System.Drawing.Size(184, 50);
+            this.reserveerButtonHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reserveerButtonHome.TabIndex = 6;
+            this.reserveerButtonHome.TabStop = false;
+            this.reserveerButtonHome.Click += new System.EventHandler(this.reserveerButton1_Click);
+            // 
+            // homePoster
+            // 
+            this.homePoster.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.homePoster.Image = global::EersteProjectMau.Properties.Resources._12YaSPoster;
+            this.homePoster.Location = new System.Drawing.Point(726, 204);
+            this.homePoster.Name = "homePoster";
+            this.homePoster.Size = new System.Drawing.Size(179, 259);
+            this.homePoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homePoster.TabIndex = 5;
+            this.homePoster.TabStop = false;
             // 
             // labelCast1
             // 
             this.labelCast1.AutoSize = true;
-            this.labelCast1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCast1.Location = new System.Drawing.Point(32, 405);
+            this.labelCast1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCast1.Location = new System.Drawing.Point(20, 413);
             this.labelCast1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelCast1.Name = "labelCast1";
-            this.labelCast1.Size = new System.Drawing.Size(419, 16);
+            this.labelCast1.Size = new System.Drawing.Size(468, 36);
             this.labelCast1.TabIndex = 3;
-            this.labelCast1.Text = "Cast: Chiwetel Ejiofor, Michael Kenneth Williams, Michael Fassbender";
+            this.labelCast1.Text = "Cast: Chiwetel Ejiofor, Michael Kenneth Williams, Michael Fassbender\r\nGenre: Dram" +
+    "a, historie";
             // 
             // labelBeschrijving1
             // 
             this.labelBeschrijving1.AutoSize = true;
-            this.labelBeschrijving1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBeschrijving1.Location = new System.Drawing.Point(32, 158);
+            this.labelBeschrijving1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBeschrijving1.Location = new System.Drawing.Point(19, 264);
             this.labelBeschrijving1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelBeschrijving1.Name = "labelBeschrijving1";
-            this.labelBeschrijving1.Size = new System.Drawing.Size(654, 225);
+            this.labelBeschrijving1.Size = new System.Drawing.Size(703, 120);
             this.labelBeschrijving1.TabIndex = 2;
             this.labelBeschrijving1.Text = resources.GetString("labelBeschrijving1.Text");
             // 
@@ -466,28 +536,27 @@
             // 
             this.labelTitel1.AutoSize = true;
             this.labelTitel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitel1.Location = new System.Drawing.Point(30, 96);
+            this.labelTitel1.Location = new System.Drawing.Point(17, 204);
             this.labelTitel1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelTitel1.Name = "labelTitel1";
             this.labelTitel1.Size = new System.Drawing.Size(330, 31);
             this.labelTitel1.TabIndex = 1;
             this.labelTitel1.Text = "12 Years A Slave (2013)";
             // 
-            // label1
+            // homeTitel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HOME";
+            this.homeTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeTitel.Location = new System.Drawing.Point(16, 10);
+            this.homeTitel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.homeTitel.Name = "homeTitel";
+            this.homeTitel.Size = new System.Drawing.Size(489, 49);
+            this.homeTitel.TabIndex = 0;
+            this.homeTitel.Text = "Welkom bij Ashelys Cinema!";
             // 
             // agendaPage
             // 
             this.agendaPage.AutoScroll = true;
-            this.agendaPage.BackColor = System.Drawing.Color.White;
+            this.agendaPage.BackColor = System.Drawing.Color.DarkGray;
             this.agendaPage.Controls.Add(this.panel1);
             this.agendaPage.Controls.Add(this.domainUpDown2);
             this.agendaPage.Location = new System.Drawing.Point(4, 22);
@@ -502,13 +571,27 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.agendaHeader);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(918, 1277);
+            this.panel1.Size = new System.Drawing.Size(904, 1277);
             this.panel1.TabIndex = 0;
+            // 
+            // agendaHeader
+            // 
+            this.agendaHeader.AutoSize = true;
+            this.agendaHeader.BackColor = System.Drawing.Color.DarkGray;
+            this.agendaHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agendaHeader.ForeColor = System.Drawing.Color.Yellow;
+            this.agendaHeader.Location = new System.Drawing.Point(343, 22);
+            this.agendaHeader.Name = "agendaHeader";
+            this.agendaHeader.Size = new System.Drawing.Size(191, 55);
+            this.agendaHeader.TabIndex = 9;
+            this.agendaHeader.Text = "Agenda";
             // 
             // panel4
             // 
@@ -518,13 +601,14 @@
             this.panel4.Controls.Add(this.pictureBox11);
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.label23);
-            this.panel4.Location = new System.Drawing.Point(3, 785);
+            this.panel4.Location = new System.Drawing.Point(5, 862);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(885, 388);
             this.panel4.TabIndex = 8;
             // 
             // pictureBox10
             // 
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Image = global::EersteProjectMau.Properties.Resources.reserveerButton;
             this.pictureBox10.Location = new System.Drawing.Point(607, 316);
             this.pictureBox10.Name = "pictureBox10";
@@ -546,10 +630,10 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(23, 26);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(379, 50);
+            this.label22.Size = new System.Drawing.Size(445, 55);
             this.label22.TabIndex = 4;
             this.label22.Text = "Op hoop van zegen";
             // 
@@ -571,13 +655,14 @@
             this.panel3.Controls.Add(this.pictureBox9);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.label19);
-            this.panel3.Location = new System.Drawing.Point(3, 391);
+            this.panel3.Location = new System.Drawing.Point(5, 468);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(885, 388);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::EersteProjectMau.Properties.Resources.reserveerButton;
             this.pictureBox8.Location = new System.Drawing.Point(607, 316);
             this.pictureBox8.Name = "pictureBox8";
@@ -599,10 +684,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(23, 26);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 50);
+            this.label21.Size = new System.Drawing.Size(132, 55);
             this.label21.TabIndex = 4;
             this.label21.Text = "1917";
             // 
@@ -625,13 +710,14 @@
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(5, 80);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(885, 382);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::EersteProjectMau.Properties.Resources.reserveerButton;
             this.pictureBox5.Location = new System.Drawing.Point(607, 312);
             this.pictureBox5.Name = "pictureBox5";
@@ -664,10 +750,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(9, 22);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(192, 50);
+            this.label15.Size = new System.Drawing.Size(187, 55);
             this.label15.TabIndex = 0;
             this.label15.Text = "Dunkirk";
             // 
@@ -676,18 +762,21 @@
             this.domainUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 150F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.domainUpDown2.Location = new System.Drawing.Point(17, 1382);
             this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(120, 234);
+            this.domainUpDown2.Size = new System.Drawing.Size(50, 234);
             this.domainUpDown2.TabIndex = 0;
-            this.domainUpDown2.Text = "domainUpDown2";
             this.domainUpDown2.Visible = false;
             // 
             // contactPage
             // 
             this.contactPage.BackColor = System.Drawing.Color.White;
-            this.contactPage.Controls.Add(this.label30);
+            this.contactPage.Controls.Add(this.contactHeader);
+            this.contactPage.Controls.Add(this.kaarttext2);
+            this.contactPage.Controls.Add(this.kaarttext1);
+            this.contactPage.Controls.Add(this.kaartPanel);
+            this.contactPage.Controls.Add(this.contactInfo);
+            this.contactPage.Controls.Add(this.plus);
+            this.contactPage.Controls.Add(this.min);
             this.contactPage.Controls.Add(this.buttonStuurMail1);
-            this.contactPage.Controls.Add(this.richTextBox1);
-            this.contactPage.Controls.Add(this.PictureMaps);
             this.contactPage.Location = new System.Drawing.Point(4, 22);
             this.contactPage.Margin = new System.Windows.Forms.Padding(2);
             this.contactPage.Name = "contactPage";
@@ -695,42 +784,105 @@
             this.contactPage.TabIndex = 2;
             this.contactPage.Text = "contactPage";
             // 
+            // contactHeader
+            // 
+            this.contactHeader.AutoSize = true;
+            this.contactHeader.BackColor = System.Drawing.Color.White;
+            this.contactHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactHeader.ForeColor = System.Drawing.Color.Black;
+            this.contactHeader.Location = new System.Drawing.Point(15, 13);
+            this.contactHeader.Name = "contactHeader";
+            this.contactHeader.Size = new System.Drawing.Size(190, 55);
+            this.contactHeader.TabIndex = 22;
+            this.contactHeader.Text = "Contact";
+            // 
+            // kaarttext2
+            // 
+            this.kaarttext2.AutoSize = true;
+            this.kaarttext2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kaarttext2.Location = new System.Drawing.Point(20, 340);
+            this.kaarttext2.Name = "kaarttext2";
+            this.kaarttext2.Size = new System.Drawing.Size(160, 25);
+            this.kaarttext2.TabIndex = 21;
+            this.kaarttext2.Text = "Kaart vergroten";
+            // 
+            // kaarttext1
+            // 
+            this.kaarttext1.AutoSize = true;
+            this.kaarttext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kaarttext1.Location = new System.Drawing.Point(20, 240);
+            this.kaarttext1.Name = "kaarttext1";
+            this.kaarttext1.Size = new System.Drawing.Size(168, 25);
+            this.kaarttext1.TabIndex = 20;
+            this.kaarttext1.Text = "Kaart verkleinen";
+            // 
+            // kaartPanel
+            // 
+            this.kaartPanel.AutoScroll = true;
+            this.kaartPanel.Controls.Add(this.kaartBox);
+            this.kaartPanel.Location = new System.Drawing.Point(293, 3);
+            this.kaartPanel.Name = "kaartPanel";
+            this.kaartPanel.Size = new System.Drawing.Size(627, 494);
+            this.kaartPanel.TabIndex = 19;
+            // 
+            // kaartBox
+            // 
+            this.kaartBox.Image = global::EersteProjectMau.Properties.Resources.map4;
+            this.kaartBox.Location = new System.Drawing.Point(1, 1);
+            this.kaartBox.Name = "kaartBox";
+            this.kaartBox.Size = new System.Drawing.Size(1000, 600);
+            this.kaartBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.kaartBox.TabIndex = 17;
+            this.kaartBox.TabStop = false;
+            // 
+            // contactInfo
+            // 
+            this.contactInfo.BackColor = System.Drawing.Color.LemonChiffon;
+            this.contactInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contactInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactInfo.Location = new System.Drawing.Point(4, 85);
+            this.contactInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.contactInfo.Name = "contactInfo";
+            this.contactInfo.ReadOnly = true;
+            this.contactInfo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.contactInfo.Size = new System.Drawing.Size(278, 119);
+            this.contactInfo.TabIndex = 10;
+            this.contactInfo.Text = "Telefoon : 06 64589325\nAdres      : Wijnhaven 107, \n                   3011 WN \n " +
+    "                  Rotterdam\n";
+            // 
+            // plus
+            // 
+            this.plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plus.Image = global::EersteProjectMau.Properties.Resources.plus;
+            this.plus.Location = new System.Drawing.Point(196, 311);
+            this.plus.Name = "plus";
+            this.plus.Size = new System.Drawing.Size(86, 82);
+            this.plus.TabIndex = 18;
+            this.plus.UseVisualStyleBackColor = true;
+            this.plus.Click += new System.EventHandler(this.plus_Click);
+            // 
+            // min
+            // 
+            this.min.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.min.Image = global::EersteProjectMau.Properties.Resources.minus;
+            this.min.Location = new System.Drawing.Point(196, 211);
+            this.min.Name = "min";
+            this.min.Size = new System.Drawing.Size(86, 82);
+            this.min.TabIndex = 17;
+            this.min.UseVisualStyleBackColor = true;
+            this.min.Click += new System.EventHandler(this.min_Click);
+            // 
             // buttonStuurMail1
             // 
             this.buttonStuurMail1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStuurMail1.Image = global::EersteProjectMau.Properties.Resources.stuurMailButton;
-            this.buttonStuurMail1.Location = new System.Drawing.Point(13, 393);
+            this.buttonStuurMail1.Image = global::EersteProjectMau.Properties.Resources.stuurMailButton1;
+            this.buttonStuurMail1.Location = new System.Drawing.Point(13, 420);
             this.buttonStuurMail1.Name = "buttonStuurMail1";
-            this.buttonStuurMail1.Size = new System.Drawing.Size(304, 73);
+            this.buttonStuurMail1.Size = new System.Drawing.Size(269, 62);
             this.buttonStuurMail1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonStuurMail1.TabIndex = 14;
             this.buttonStuurMail1.TabStop = false;
             this.buttonStuurMail1.Click += new System.EventHandler(this.buttonStuurMail1_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.LightGray;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(13, 220);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(304, 147);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "\n     Telefoon : 06 64589325\n\n     Locatie    : Wijnhaven 107, \n                 " +
-    "      3011 WN Rotterdam\n";
-            // 
-            // PictureMaps
-            // 
-            this.PictureMaps.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PictureMaps.Image = ((System.Drawing.Image)(resources.GetObject("PictureMaps.Image")));
-            this.PictureMaps.Location = new System.Drawing.Point(384, 0);
-            this.PictureMaps.Name = "PictureMaps";
-            this.PictureMaps.Size = new System.Drawing.Size(539, 484);
-            this.PictureMaps.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureMaps.TabIndex = 9;
-            this.PictureMaps.TabStop = false;
             // 
             // tabPage4
             // 
@@ -745,10 +897,12 @@
             // 
             // FaqPage
             // 
+            this.FaqPage.AutoScroll = true;
             this.FaqPage.BackColor = System.Drawing.Color.White;
+            this.FaqPage.Controls.Add(this.huidigeVraag);
+            this.FaqPage.Controls.Add(this.buttonZelfVraag2);
             this.FaqPage.Controls.Add(this.FAQHeader);
             this.FaqPage.Controls.Add(this.vragenPaneel);
-            this.FaqPage.Controls.Add(this.stuurVraag2);
             this.FaqPage.Controls.Add(this.faqsplitter);
             this.FaqPage.Controls.Add(this.antwoorden);
             this.FaqPage.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -758,14 +912,42 @@
             this.FaqPage.Size = new System.Drawing.Size(923, 484);
             this.FaqPage.TabIndex = 9;
             // 
+            // huidigeVraag
+            // 
+            this.huidigeVraag.AutoSize = true;
+            this.huidigeVraag.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.huidigeVraag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.huidigeVraag.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.huidigeVraag.ForeColor = System.Drawing.Color.Goldenrod;
+            this.huidigeVraag.Location = new System.Drawing.Point(569, 15);
+            this.huidigeVraag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.huidigeVraag.Name = "huidigeVraag";
+            this.huidigeVraag.Size = new System.Drawing.Size(185, 31);
+            this.huidigeVraag.TabIndex = 58;
+            this.huidigeVraag.Text = "Huidige Vraag";
+            // 
+            // buttonZelfVraag2
+            // 
+            this.buttonZelfVraag2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonZelfVraag2.Image = global::EersteProjectMau.Properties.Resources.zelfVraagButton;
+            this.buttonZelfVraag2.Location = new System.Drawing.Point(630, 405);
+            this.buttonZelfVraag2.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonZelfVraag2.Name = "buttonZelfVraag2";
+            this.buttonZelfVraag2.Size = new System.Drawing.Size(220, 70);
+            this.buttonZelfVraag2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonZelfVraag2.TabIndex = 57;
+            this.buttonZelfVraag2.TabStop = false;
+            this.buttonZelfVraag2.Visible = false;
+            this.buttonZelfVraag2.Click += new System.EventHandler(this.buttonZelfVraag2_Click);
+            // 
             // FAQHeader
             // 
             this.FAQHeader.AutoSize = true;
-            this.FAQHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FAQHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FAQHeader.Location = new System.Drawing.Point(13, 8);
             this.FAQHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FAQHeader.Name = "FAQHeader";
-            this.FAQHeader.Size = new System.Drawing.Size(376, 44);
+            this.FAQHeader.Size = new System.Drawing.Size(476, 55);
             this.FAQHeader.TabIndex = 55;
             this.FAQHeader.Text = "Veel gestelde vragen";
             // 
@@ -782,9 +964,9 @@
             this.vragenPaneel.Controls.Add(this.Vraag1label);
             this.vragenPaneel.Controls.Add(this.Vraag3label);
             this.vragenPaneel.Controls.Add(this.domainUpDown1);
-            this.vragenPaneel.Location = new System.Drawing.Point(13, 58);
+            this.vragenPaneel.Location = new System.Drawing.Point(13, 66);
             this.vragenPaneel.Name = "vragenPaneel";
-            this.vragenPaneel.Size = new System.Drawing.Size(529, 401);
+            this.vragenPaneel.Size = new System.Drawing.Size(529, 393);
             this.vragenPaneel.TabIndex = 13;
             // 
             // Vraag9label
@@ -792,7 +974,7 @@
             this.Vraag9label.AutoSize = true;
             this.Vraag9label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag9label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag9label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag9label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag9label.Location = new System.Drawing.Point(25, 479);
             this.Vraag9label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag9label.Name = "Vraag9label";
@@ -806,7 +988,7 @@
             this.Vraag8label.AutoSize = true;
             this.Vraag8label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag8label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag8label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag8label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag8label.Location = new System.Drawing.Point(25, 421);
             this.Vraag8label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag8label.Name = "Vraag8label";
@@ -820,7 +1002,7 @@
             this.Vraag7label.AutoSize = true;
             this.Vraag7label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag7label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag7label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag7label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag7label.Location = new System.Drawing.Point(25, 363);
             this.Vraag7label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag7label.Name = "Vraag7label";
@@ -834,7 +1016,7 @@
             this.Vraag6label.AutoSize = true;
             this.Vraag6label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag6label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag6label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag6label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag6label.Location = new System.Drawing.Point(25, 305);
             this.Vraag6label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag6label.Name = "Vraag6label";
@@ -848,7 +1030,7 @@
             this.Vraag2label.AutoSize = true;
             this.Vraag2label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag2label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag2label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag2label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag2label.Location = new System.Drawing.Point(25, 73);
             this.Vraag2label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag2label.Name = "Vraag2label";
@@ -862,7 +1044,7 @@
             this.Vraag5label.AutoSize = true;
             this.Vraag5label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag5label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag5label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag5label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag5label.Location = new System.Drawing.Point(25, 247);
             this.Vraag5label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag5label.Name = "Vraag5label";
@@ -876,7 +1058,7 @@
             this.Vraag4label.AutoSize = true;
             this.Vraag4label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag4label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag4label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag4label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag4label.Location = new System.Drawing.Point(25, 189);
             this.Vraag4label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag4label.Name = "Vraag4label";
@@ -891,7 +1073,7 @@
             this.Vraag1label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag1label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Vraag1label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag1label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag1label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag1label.Location = new System.Drawing.Point(25, 15);
             this.Vraag1label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag1label.Name = "Vraag1label";
@@ -905,7 +1087,7 @@
             this.Vraag3label.AutoSize = true;
             this.Vraag3label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Vraag3label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vraag3label.ForeColor = System.Drawing.Color.Gold;
+            this.Vraag3label.ForeColor = System.Drawing.Color.Goldenrod;
             this.Vraag3label.Location = new System.Drawing.Point(25, 131);
             this.Vraag3label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Vraag3label.Name = "Vraag3label";
@@ -919,26 +1101,9 @@
             this.domainUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.domainUpDown1.Location = new System.Drawing.Point(0, 635);
             this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(260, 116);
+            this.domainUpDown1.Size = new System.Drawing.Size(134, 116);
             this.domainUpDown1.TabIndex = 2;
-            this.domainUpDown1.Text = "niet aanraken";
             this.domainUpDown1.Visible = false;
-            // 
-            // stuurVraag2
-            // 
-            this.stuurVraag2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.stuurVraag2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stuurVraag2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stuurVraag2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stuurVraag2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.stuurVraag2.Location = new System.Drawing.Point(638, 402);
-            this.stuurVraag2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.stuurVraag2.Name = "stuurVraag2";
-            this.stuurVraag2.Size = new System.Drawing.Size(202, 57);
-            this.stuurVraag2.TabIndex = 13;
-            this.stuurVraag2.Text = "Klik hier om zelf \r\neen vraag te stellen!\r\n";
-            this.stuurVraag2.Visible = false;
-            this.stuurVraag2.Click += new System.EventHandler(this.stuurVraag2_Click);
             // 
             // faqsplitter
             // 
@@ -953,12 +1118,12 @@
             // 
             this.antwoorden.BackColor = System.Drawing.Color.White;
             this.antwoorden.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.antwoorden.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.antwoorden.Location = new System.Drawing.Point(577, 12);
+            this.antwoorden.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.antwoorden.Location = new System.Drawing.Point(575, 53);
             this.antwoorden.Margin = new System.Windows.Forms.Padding(2);
             this.antwoorden.Name = "antwoorden";
             this.antwoorden.ReadOnly = true;
-            this.antwoorden.Size = new System.Drawing.Size(331, 388);
+            this.antwoorden.Size = new System.Drawing.Size(331, 349);
             this.antwoorden.TabIndex = 3;
             this.antwoorden.Text = "Dit is de Textvak waar de antwoorden op de vragen staan\n";
             // 
@@ -966,8 +1131,14 @@
             // 
             this.tabPageStoelselectie.AutoScroll = true;
             this.tabPageStoelselectie.BackColor = System.Drawing.Color.White;
-            this.tabPageStoelselectie.Controls.Add(this.buttonBetalen1);
-            this.tabPageStoelselectie.Controls.Add(this.label5);
+            this.tabPageStoelselectie.Controls.Add(this.schermPicture1);
+            this.tabPageStoelselectie.Controls.Add(this.resHeader);
+            this.tabPageStoelselectie.Controls.Add(this.filmDatumRes);
+            this.tabPageStoelselectie.Controls.Add(this.filmTitelRes);
+            this.tabPageStoelselectie.Controls.Add(this.panel5);
+            this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmDatum);
+            this.tabPageStoelselectie.Controls.Add(this.labelStoelSelectieFilmTitel);
+            this.tabPageStoelselectie.Controls.Add(this.kortingLabel);
             this.tabPageStoelselectie.Controls.Add(this.textBoxKorting);
             this.tabPageStoelselectie.Controls.Add(this.labelPrijs);
             this.tabPageStoelselectie.Controls.Add(this.buttonStoel24);
@@ -1018,6 +1189,7 @@
             this.tabPageStoelselectie.Controls.Add(this.buttonStoel14);
             this.tabPageStoelselectie.Controls.Add(this.buttonStoel12);
             this.tabPageStoelselectie.Controls.Add(this.buttonStoel13);
+            this.tabPageStoelselectie.Controls.Add(this.buttonBetalen1);
             this.tabPageStoelselectie.Location = new System.Drawing.Point(4, 22);
             this.tabPageStoelselectie.Name = "tabPageStoelselectie";
             this.tabPageStoelselectie.Padding = new System.Windows.Forms.Padding(3);
@@ -1025,49 +1197,110 @@
             this.tabPageStoelselectie.TabIndex = 4;
             this.tabPageStoelselectie.Text = "tabPageStoelselectie";
             // 
-            // buttonBetalen1
+            // schermPicture1
             // 
-            this.buttonBetalen1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBetalen1.Image = global::EersteProjectMau.Properties.Resources.betalenButton;
-            this.buttonBetalen1.Location = new System.Drawing.Point(711, 419);
-            this.buttonBetalen1.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonBetalen1.Name = "buttonBetalen1";
-            this.buttonBetalen1.Size = new System.Drawing.Size(169, 57);
-            this.buttonBetalen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.buttonBetalen1.TabIndex = 103;
-            this.buttonBetalen1.TabStop = false;
-            this.buttonBetalen1.Click += new System.EventHandler(this.buttonBetalen1_Click);
+            this.schermPicture1.Image = global::EersteProjectMau.Properties.Resources.bioscoopschermImg;
+            this.schermPicture1.Location = new System.Drawing.Point(272, 337);
+            this.schermPicture1.Name = "schermPicture1";
+            this.schermPicture1.Size = new System.Drawing.Size(352, 38);
+            this.schermPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.schermPicture1.TabIndex = 109;
+            this.schermPicture1.TabStop = false;
             // 
-            // label5
+            // resHeader
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(711, 343);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 102;
-            this.label5.Text = "Kortingscode:";
+            this.resHeader.AutoSize = true;
+            this.resHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resHeader.Location = new System.Drawing.Point(8, 20);
+            this.resHeader.Name = "resHeader";
+            this.resHeader.Size = new System.Drawing.Size(260, 55);
+            this.resHeader.TabIndex = 108;
+            this.resHeader.Text = "Reserveer ";
+            // 
+            // filmDatumRes
+            // 
+            this.filmDatumRes.AutoSize = true;
+            this.filmDatumRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filmDatumRes.Location = new System.Drawing.Point(418, 70);
+            this.filmDatumRes.Name = "filmDatumRes";
+            this.filmDatumRes.Size = new System.Drawing.Size(121, 37);
+            this.filmDatumRes.TabIndex = 107;
+            this.filmDatumRes.Text = "Datum:";
+            // 
+            // filmTitelRes
+            // 
+            this.filmTitelRes.AutoSize = true;
+            this.filmTitelRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filmTitelRes.Location = new System.Drawing.Point(418, 29);
+            this.filmTitelRes.Name = "filmTitelRes";
+            this.filmTitelRes.Size = new System.Drawing.Size(87, 37);
+            this.filmTitelRes.TabIndex = 0;
+            this.filmTitelRes.Text = "Film:";
+            // 
+            // panel5
+            // 
+            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel5.Location = new System.Drawing.Point(797, 72);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(100, 43);
+            this.panel5.TabIndex = 106;
+            // 
+            // labelStoelSelectieFilmDatum
+            // 
+            this.labelStoelSelectieFilmDatum.AutoSize = true;
+            this.labelStoelSelectieFilmDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStoelSelectieFilmDatum.Location = new System.Drawing.Point(542, 70);
+            this.labelStoelSelectieFilmDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStoelSelectieFilmDatum.Name = "labelStoelSelectieFilmDatum";
+            this.labelStoelSelectieFilmDatum.Size = new System.Drawing.Size(355, 37);
+            this.labelStoelSelectieFilmDatum.TabIndex = 105;
+            this.labelStoelSelectieFilmDatum.Text = "Stoelselectie Filmdatum";
+            // 
+            // labelStoelSelectieFilmTitel
+            // 
+            this.labelStoelSelectieFilmTitel.AutoSize = true;
+            this.labelStoelSelectieFilmTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStoelSelectieFilmTitel.Location = new System.Drawing.Point(542, 29);
+            this.labelStoelSelectieFilmTitel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStoelSelectieFilmTitel.Name = "labelStoelSelectieFilmTitel";
+            this.labelStoelSelectieFilmTitel.Size = new System.Drawing.Size(314, 37);
+            this.labelStoelSelectieFilmTitel.TabIndex = 104;
+            this.labelStoelSelectieFilmTitel.Text = "Stoelselectie Filmtitel";
+            // 
+            // kortingLabel
+            // 
+            this.kortingLabel.AutoSize = true;
+            this.kortingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kortingLabel.Location = new System.Drawing.Point(150, 380);
+            this.kortingLabel.Name = "kortingLabel";
+            this.kortingLabel.Size = new System.Drawing.Size(193, 33);
+            this.kortingLabel.TabIndex = 102;
+            this.kortingLabel.Text = "Kortingscode:";
             // 
             // textBoxKorting
             // 
-            this.textBoxKorting.Location = new System.Drawing.Point(711, 360);
+            this.textBoxKorting.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKorting.Location = new System.Drawing.Point(360, 381);
             this.textBoxKorting.Name = "textBoxKorting";
-            this.textBoxKorting.Size = new System.Drawing.Size(125, 20);
+            this.textBoxKorting.Size = new System.Drawing.Size(125, 40);
             this.textBoxKorting.TabIndex = 101;
             this.textBoxKorting.TextChanged += new System.EventHandler(this.textBoxKorting_TextChanged);
             // 
             // labelPrijs
             // 
             this.labelPrijs.AutoSize = true;
-            this.labelPrijs.Location = new System.Drawing.Point(711, 394);
+            this.labelPrijs.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrijs.Location = new System.Drawing.Point(595, 380);
             this.labelPrijs.Name = "labelPrijs";
-            this.labelPrijs.Size = new System.Drawing.Size(52, 13);
+            this.labelPrijs.Size = new System.Drawing.Size(136, 33);
             this.labelPrijs.TabIndex = 100;
             this.labelPrijs.Text = "Totaal: € ";
             // 
             // buttonStoel24
             // 
             this.buttonStoel24.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel24.Location = new System.Drawing.Point(150, 223);
+            this.buttonStoel24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel24.Location = new System.Drawing.Point(142, 225);
             this.buttonStoel24.Name = "buttonStoel24";
             this.buttonStoel24.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel24.TabIndex = 98;
@@ -1077,7 +1310,8 @@
             // buttonStoel25
             // 
             this.buttonStoel25.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel25.Location = new System.Drawing.Point(201, 223);
+            this.buttonStoel25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel25.Location = new System.Drawing.Point(193, 225);
             this.buttonStoel25.Name = "buttonStoel25";
             this.buttonStoel25.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel25.TabIndex = 75;
@@ -1087,7 +1321,8 @@
             // buttonStoel26
             // 
             this.buttonStoel26.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel26.Location = new System.Drawing.Point(252, 223);
+            this.buttonStoel26.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel26.Location = new System.Drawing.Point(244, 225);
             this.buttonStoel26.Name = "buttonStoel26";
             this.buttonStoel26.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel26.TabIndex = 76;
@@ -1097,7 +1332,8 @@
             // buttonStoel47
             // 
             this.buttonStoel47.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel47.Location = new System.Drawing.Point(711, 274);
+            this.buttonStoel47.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel47.Location = new System.Drawing.Point(703, 276);
             this.buttonStoel47.Name = "buttonStoel47";
             this.buttonStoel47.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel47.TabIndex = 97;
@@ -1107,7 +1343,8 @@
             // buttonStoel27
             // 
             this.buttonStoel27.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel27.Location = new System.Drawing.Point(303, 223);
+            this.buttonStoel27.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel27.Location = new System.Drawing.Point(295, 225);
             this.buttonStoel27.Name = "buttonStoel27";
             this.buttonStoel27.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel27.TabIndex = 77;
@@ -1117,7 +1354,8 @@
             // buttonStoel46
             // 
             this.buttonStoel46.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel46.Location = new System.Drawing.Point(660, 274);
+            this.buttonStoel46.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel46.Location = new System.Drawing.Point(652, 276);
             this.buttonStoel46.Name = "buttonStoel46";
             this.buttonStoel46.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel46.TabIndex = 96;
@@ -1127,7 +1365,8 @@
             // buttonStoel28
             // 
             this.buttonStoel28.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel28.Location = new System.Drawing.Point(354, 223);
+            this.buttonStoel28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel28.Location = new System.Drawing.Point(346, 225);
             this.buttonStoel28.Name = "buttonStoel28";
             this.buttonStoel28.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel28.TabIndex = 78;
@@ -1137,7 +1376,8 @@
             // buttonStoel45
             // 
             this.buttonStoel45.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel45.Location = new System.Drawing.Point(609, 274);
+            this.buttonStoel45.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel45.Location = new System.Drawing.Point(601, 276);
             this.buttonStoel45.Name = "buttonStoel45";
             this.buttonStoel45.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel45.TabIndex = 95;
@@ -1147,7 +1387,8 @@
             // buttonStoel29
             // 
             this.buttonStoel29.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel29.Location = new System.Drawing.Point(405, 223);
+            this.buttonStoel29.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel29.Location = new System.Drawing.Point(397, 225);
             this.buttonStoel29.Name = "buttonStoel29";
             this.buttonStoel29.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel29.TabIndex = 79;
@@ -1157,7 +1398,8 @@
             // buttonStoel44
             // 
             this.buttonStoel44.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel44.Location = new System.Drawing.Point(558, 274);
+            this.buttonStoel44.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel44.Location = new System.Drawing.Point(550, 276);
             this.buttonStoel44.Name = "buttonStoel44";
             this.buttonStoel44.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel44.TabIndex = 94;
@@ -1167,7 +1409,8 @@
             // buttonStoel30
             // 
             this.buttonStoel30.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel30.Location = new System.Drawing.Point(456, 223);
+            this.buttonStoel30.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel30.Location = new System.Drawing.Point(448, 225);
             this.buttonStoel30.Name = "buttonStoel30";
             this.buttonStoel30.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel30.TabIndex = 80;
@@ -1177,7 +1420,8 @@
             // buttonStoel43
             // 
             this.buttonStoel43.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel43.Location = new System.Drawing.Point(507, 274);
+            this.buttonStoel43.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel43.Location = new System.Drawing.Point(499, 276);
             this.buttonStoel43.Name = "buttonStoel43";
             this.buttonStoel43.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel43.TabIndex = 93;
@@ -1187,7 +1431,8 @@
             // buttonStoel31
             // 
             this.buttonStoel31.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel31.Location = new System.Drawing.Point(507, 223);
+            this.buttonStoel31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel31.Location = new System.Drawing.Point(499, 225);
             this.buttonStoel31.Name = "buttonStoel31";
             this.buttonStoel31.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel31.TabIndex = 81;
@@ -1197,7 +1442,8 @@
             // buttonStoel42
             // 
             this.buttonStoel42.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel42.Location = new System.Drawing.Point(456, 274);
+            this.buttonStoel42.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel42.Location = new System.Drawing.Point(448, 276);
             this.buttonStoel42.Name = "buttonStoel42";
             this.buttonStoel42.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel42.TabIndex = 92;
@@ -1207,7 +1453,8 @@
             // buttonStoel32
             // 
             this.buttonStoel32.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel32.Location = new System.Drawing.Point(558, 223);
+            this.buttonStoel32.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel32.Location = new System.Drawing.Point(550, 225);
             this.buttonStoel32.Name = "buttonStoel32";
             this.buttonStoel32.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel32.TabIndex = 82;
@@ -1217,7 +1464,8 @@
             // buttonStoel41
             // 
             this.buttonStoel41.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel41.Location = new System.Drawing.Point(405, 274);
+            this.buttonStoel41.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel41.Location = new System.Drawing.Point(397, 276);
             this.buttonStoel41.Name = "buttonStoel41";
             this.buttonStoel41.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel41.TabIndex = 91;
@@ -1227,7 +1475,8 @@
             // buttonStoel33
             // 
             this.buttonStoel33.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel33.Location = new System.Drawing.Point(609, 223);
+            this.buttonStoel33.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel33.Location = new System.Drawing.Point(601, 225);
             this.buttonStoel33.Name = "buttonStoel33";
             this.buttonStoel33.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel33.TabIndex = 83;
@@ -1237,7 +1486,8 @@
             // buttonStoel40
             // 
             this.buttonStoel40.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel40.Location = new System.Drawing.Point(354, 274);
+            this.buttonStoel40.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel40.Location = new System.Drawing.Point(346, 276);
             this.buttonStoel40.Name = "buttonStoel40";
             this.buttonStoel40.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel40.TabIndex = 90;
@@ -1247,7 +1497,8 @@
             // buttonStoel34
             // 
             this.buttonStoel34.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel34.Location = new System.Drawing.Point(660, 223);
+            this.buttonStoel34.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel34.Location = new System.Drawing.Point(652, 225);
             this.buttonStoel34.Name = "buttonStoel34";
             this.buttonStoel34.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel34.TabIndex = 84;
@@ -1257,7 +1508,8 @@
             // buttonStoel39
             // 
             this.buttonStoel39.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel39.Location = new System.Drawing.Point(303, 274);
+            this.buttonStoel39.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel39.Location = new System.Drawing.Point(295, 276);
             this.buttonStoel39.Name = "buttonStoel39";
             this.buttonStoel39.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel39.TabIndex = 89;
@@ -1267,7 +1519,8 @@
             // buttonStoel35
             // 
             this.buttonStoel35.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel35.Location = new System.Drawing.Point(711, 223);
+            this.buttonStoel35.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel35.Location = new System.Drawing.Point(703, 225);
             this.buttonStoel35.Name = "buttonStoel35";
             this.buttonStoel35.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel35.TabIndex = 85;
@@ -1277,7 +1530,8 @@
             // buttonStoel38
             // 
             this.buttonStoel38.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel38.Location = new System.Drawing.Point(252, 274);
+            this.buttonStoel38.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel38.Location = new System.Drawing.Point(244, 276);
             this.buttonStoel38.Name = "buttonStoel38";
             this.buttonStoel38.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel38.TabIndex = 88;
@@ -1287,7 +1541,8 @@
             // buttonStoel36
             // 
             this.buttonStoel36.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel36.Location = new System.Drawing.Point(150, 274);
+            this.buttonStoel36.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel36.Location = new System.Drawing.Point(142, 276);
             this.buttonStoel36.Name = "buttonStoel36";
             this.buttonStoel36.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel36.TabIndex = 86;
@@ -1297,7 +1552,8 @@
             // buttonStoel37
             // 
             this.buttonStoel37.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel37.Location = new System.Drawing.Point(201, 274);
+            this.buttonStoel37.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel37.Location = new System.Drawing.Point(193, 276);
             this.buttonStoel37.Name = "buttonStoel37";
             this.buttonStoel37.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel37.TabIndex = 87;
@@ -1307,7 +1563,8 @@
             // buttonStoel00
             // 
             this.buttonStoel00.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel00.Location = new System.Drawing.Point(150, 121);
+            this.buttonStoel00.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel00.Location = new System.Drawing.Point(142, 123);
             this.buttonStoel00.Name = "buttonStoel00";
             this.buttonStoel00.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel00.TabIndex = 74;
@@ -1317,7 +1574,8 @@
             // buttonStoel01
             // 
             this.buttonStoel01.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel01.Location = new System.Drawing.Point(201, 121);
+            this.buttonStoel01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel01.Location = new System.Drawing.Point(193, 123);
             this.buttonStoel01.Name = "buttonStoel01";
             this.buttonStoel01.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel01.TabIndex = 51;
@@ -1327,7 +1585,8 @@
             // buttonStoel02
             // 
             this.buttonStoel02.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel02.Location = new System.Drawing.Point(252, 121);
+            this.buttonStoel02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel02.Location = new System.Drawing.Point(244, 123);
             this.buttonStoel02.Name = "buttonStoel02";
             this.buttonStoel02.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel02.TabIndex = 52;
@@ -1337,7 +1596,8 @@
             // buttonStoel23
             // 
             this.buttonStoel23.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel23.Location = new System.Drawing.Point(711, 172);
+            this.buttonStoel23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel23.Location = new System.Drawing.Point(703, 174);
             this.buttonStoel23.Name = "buttonStoel23";
             this.buttonStoel23.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel23.TabIndex = 73;
@@ -1347,7 +1607,8 @@
             // buttonStoel03
             // 
             this.buttonStoel03.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel03.Location = new System.Drawing.Point(303, 121);
+            this.buttonStoel03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel03.Location = new System.Drawing.Point(295, 123);
             this.buttonStoel03.Name = "buttonStoel03";
             this.buttonStoel03.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel03.TabIndex = 53;
@@ -1357,7 +1618,8 @@
             // buttonStoel22
             // 
             this.buttonStoel22.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel22.Location = new System.Drawing.Point(660, 172);
+            this.buttonStoel22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel22.Location = new System.Drawing.Point(652, 174);
             this.buttonStoel22.Name = "buttonStoel22";
             this.buttonStoel22.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel22.TabIndex = 72;
@@ -1367,7 +1629,8 @@
             // buttonStoel04
             // 
             this.buttonStoel04.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel04.Location = new System.Drawing.Point(354, 121);
+            this.buttonStoel04.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel04.Location = new System.Drawing.Point(346, 123);
             this.buttonStoel04.Name = "buttonStoel04";
             this.buttonStoel04.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel04.TabIndex = 54;
@@ -1377,7 +1640,8 @@
             // buttonStoel21
             // 
             this.buttonStoel21.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel21.Location = new System.Drawing.Point(609, 172);
+            this.buttonStoel21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel21.Location = new System.Drawing.Point(601, 174);
             this.buttonStoel21.Name = "buttonStoel21";
             this.buttonStoel21.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel21.TabIndex = 71;
@@ -1387,7 +1651,8 @@
             // buttonStoel05
             // 
             this.buttonStoel05.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel05.Location = new System.Drawing.Point(405, 121);
+            this.buttonStoel05.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel05.Location = new System.Drawing.Point(397, 123);
             this.buttonStoel05.Name = "buttonStoel05";
             this.buttonStoel05.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel05.TabIndex = 55;
@@ -1397,7 +1662,8 @@
             // buttonStoel20
             // 
             this.buttonStoel20.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel20.Location = new System.Drawing.Point(558, 172);
+            this.buttonStoel20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel20.Location = new System.Drawing.Point(550, 174);
             this.buttonStoel20.Name = "buttonStoel20";
             this.buttonStoel20.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel20.TabIndex = 70;
@@ -1407,7 +1673,8 @@
             // buttonStoel06
             // 
             this.buttonStoel06.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel06.Location = new System.Drawing.Point(456, 121);
+            this.buttonStoel06.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel06.Location = new System.Drawing.Point(448, 123);
             this.buttonStoel06.Name = "buttonStoel06";
             this.buttonStoel06.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel06.TabIndex = 56;
@@ -1417,7 +1684,8 @@
             // buttonStoel19
             // 
             this.buttonStoel19.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel19.Location = new System.Drawing.Point(507, 172);
+            this.buttonStoel19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel19.Location = new System.Drawing.Point(499, 174);
             this.buttonStoel19.Name = "buttonStoel19";
             this.buttonStoel19.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel19.TabIndex = 69;
@@ -1427,7 +1695,8 @@
             // buttonStoel07
             // 
             this.buttonStoel07.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel07.Location = new System.Drawing.Point(507, 121);
+            this.buttonStoel07.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel07.Location = new System.Drawing.Point(499, 123);
             this.buttonStoel07.Name = "buttonStoel07";
             this.buttonStoel07.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel07.TabIndex = 57;
@@ -1437,7 +1706,8 @@
             // buttonStoel18
             // 
             this.buttonStoel18.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel18.Location = new System.Drawing.Point(456, 172);
+            this.buttonStoel18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel18.Location = new System.Drawing.Point(448, 174);
             this.buttonStoel18.Name = "buttonStoel18";
             this.buttonStoel18.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel18.TabIndex = 68;
@@ -1447,7 +1717,8 @@
             // buttonStoel08
             // 
             this.buttonStoel08.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel08.Location = new System.Drawing.Point(558, 121);
+            this.buttonStoel08.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel08.Location = new System.Drawing.Point(550, 123);
             this.buttonStoel08.Name = "buttonStoel08";
             this.buttonStoel08.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel08.TabIndex = 58;
@@ -1457,7 +1728,8 @@
             // buttonStoel17
             // 
             this.buttonStoel17.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel17.Location = new System.Drawing.Point(405, 172);
+            this.buttonStoel17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel17.Location = new System.Drawing.Point(397, 174);
             this.buttonStoel17.Name = "buttonStoel17";
             this.buttonStoel17.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel17.TabIndex = 67;
@@ -1467,7 +1739,8 @@
             // buttonStoel09
             // 
             this.buttonStoel09.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel09.Location = new System.Drawing.Point(609, 121);
+            this.buttonStoel09.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel09.Location = new System.Drawing.Point(601, 123);
             this.buttonStoel09.Name = "buttonStoel09";
             this.buttonStoel09.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel09.TabIndex = 59;
@@ -1477,7 +1750,8 @@
             // buttonStoel16
             // 
             this.buttonStoel16.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel16.Location = new System.Drawing.Point(354, 172);
+            this.buttonStoel16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel16.Location = new System.Drawing.Point(346, 174);
             this.buttonStoel16.Name = "buttonStoel16";
             this.buttonStoel16.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel16.TabIndex = 66;
@@ -1487,7 +1761,8 @@
             // buttonStoel10
             // 
             this.buttonStoel10.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel10.Location = new System.Drawing.Point(660, 121);
+            this.buttonStoel10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel10.Location = new System.Drawing.Point(652, 123);
             this.buttonStoel10.Name = "buttonStoel10";
             this.buttonStoel10.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel10.TabIndex = 60;
@@ -1497,7 +1772,8 @@
             // buttonStoel15
             // 
             this.buttonStoel15.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel15.Location = new System.Drawing.Point(303, 172);
+            this.buttonStoel15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel15.Location = new System.Drawing.Point(295, 174);
             this.buttonStoel15.Name = "buttonStoel15";
             this.buttonStoel15.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel15.TabIndex = 65;
@@ -1507,7 +1783,8 @@
             // buttonStoel11
             // 
             this.buttonStoel11.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel11.Location = new System.Drawing.Point(711, 121);
+            this.buttonStoel11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel11.Location = new System.Drawing.Point(703, 123);
             this.buttonStoel11.Name = "buttonStoel11";
             this.buttonStoel11.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel11.TabIndex = 61;
@@ -1517,7 +1794,8 @@
             // buttonStoel14
             // 
             this.buttonStoel14.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel14.Location = new System.Drawing.Point(252, 172);
+            this.buttonStoel14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel14.Location = new System.Drawing.Point(244, 174);
             this.buttonStoel14.Name = "buttonStoel14";
             this.buttonStoel14.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel14.TabIndex = 64;
@@ -1527,7 +1805,8 @@
             // buttonStoel12
             // 
             this.buttonStoel12.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel12.Location = new System.Drawing.Point(150, 172);
+            this.buttonStoel12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel12.Location = new System.Drawing.Point(142, 174);
             this.buttonStoel12.Name = "buttonStoel12";
             this.buttonStoel12.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel12.TabIndex = 62;
@@ -1537,35 +1816,50 @@
             // buttonStoel13
             // 
             this.buttonStoel13.BackColor = System.Drawing.Color.Silver;
-            this.buttonStoel13.Location = new System.Drawing.Point(201, 172);
+            this.buttonStoel13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStoel13.Location = new System.Drawing.Point(193, 174);
             this.buttonStoel13.Name = "buttonStoel13";
             this.buttonStoel13.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel13.TabIndex = 63;
             this.buttonStoel13.UseVisualStyleBackColor = false;
             this.buttonStoel13.Click += new System.EventHandler(this.buttonStoel00_Click);
             // 
+            // buttonBetalen1
+            // 
+            this.buttonBetalen1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBetalen1.Image = global::EersteProjectMau.Properties.Resources.gegevensButton;
+            this.buttonBetalen1.Location = new System.Drawing.Point(571, 425);
+            this.buttonBetalen1.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonBetalen1.Name = "buttonBetalen1";
+            this.buttonBetalen1.Size = new System.Drawing.Size(169, 57);
+            this.buttonBetalen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonBetalen1.TabIndex = 103;
+            this.buttonBetalen1.TabStop = false;
+            this.buttonBetalen1.Click += new System.EventHandler(this.buttonBetalen1_Click);
+            // 
             // tabPageBetalen
             // 
             this.tabPageBetalen.BackColor = System.Drawing.Color.White;
+            this.tabPageBetalen.Controls.Add(this.bedragBetaal2);
             this.tabPageBetalen.Controls.Add(this.labelbedragBetaal1);
-            this.tabPageBetalen.Controls.Add(this.buttonVolgendeBetaal1);
-            this.tabPageBetalen.Controls.Add(this.buttonVorigeBetaal1);
             this.tabPageBetalen.Controls.Add(this.labelbedraggBetaal1);
             this.tabPageBetalen.Controls.Add(this.label7);
-            this.tabPageBetalen.Controls.Add(this.label8);
-            this.tabPageBetalen.Controls.Add(this.textBox6);
-            this.tabPageBetalen.Controls.Add(this.textBox5);
-            this.tabPageBetalen.Controls.Add(this.textBox4);
-            this.tabPageBetalen.Controls.Add(this.textBox3);
-            this.tabPageBetalen.Controls.Add(this.comboBox1);
-            this.tabPageBetalen.Controls.Add(this.label9);
-            this.tabPageBetalen.Controls.Add(this.label10);
-            this.tabPageBetalen.Controls.Add(this.label11);
-            this.tabPageBetalen.Controls.Add(this.label12);
-            this.tabPageBetalen.Controls.Add(this.label13);
-            this.tabPageBetalen.Controls.Add(this.label14);
-            this.tabPageBetalen.Controls.Add(this.textBox2);
-            this.tabPageBetalen.Controls.Add(this.textBox1);
+            this.tabPageBetalen.Controls.Add(this.landBetaal);
+            this.tabPageBetalen.Controls.Add(this.betaalPlaats);
+            this.tabPageBetalen.Controls.Add(this.betaalPostcode);
+            this.tabPageBetalen.Controls.Add(this.betaalAdres);
+            this.tabPageBetalen.Controls.Add(this.betaalAchternaam);
+            this.tabPageBetalen.Controls.Add(this.betaalLand);
+            this.tabPageBetalen.Controls.Add(this.plaatsLabel);
+            this.tabPageBetalen.Controls.Add(this.postcodeBetaal);
+            this.tabPageBetalen.Controls.Add(this.adresBetaal);
+            this.tabPageBetalen.Controls.Add(this.achternaamBetaal);
+            this.tabPageBetalen.Controls.Add(this.emailBetaal);
+            this.tabPageBetalen.Controls.Add(this.voornaamBetaal);
+            this.tabPageBetalen.Controls.Add(this.betaalVoornaam);
+            this.tabPageBetalen.Controls.Add(this.betaalEmail);
+            this.tabPageBetalen.Controls.Add(this.buttonVolgendeBetaal1);
+            this.tabPageBetalen.Controls.Add(this.buttonVorigeBetaal1);
             this.tabPageBetalen.Location = new System.Drawing.Point(4, 22);
             this.tabPageBetalen.Name = "tabPageBetalen";
             this.tabPageBetalen.Padding = new System.Windows.Forms.Padding(3);
@@ -1573,22 +1867,200 @@
             this.tabPageBetalen.TabIndex = 5;
             this.tabPageBetalen.Text = "tabPageBetalen";
             // 
+            // bedragBetaal2
+            // 
+            this.bedragBetaal2.AutoSize = true;
+            this.bedragBetaal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bedragBetaal2.Location = new System.Drawing.Point(755, 321);
+            this.bedragBetaal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bedragBetaal2.Name = "bedragBetaal2";
+            this.bedragBetaal2.Size = new System.Drawing.Size(85, 36);
+            this.bedragBetaal2.TabIndex = 63;
+            this.bedragBetaal2.Text = "Getal";
+            // 
             // labelbedragBetaal1
             // 
-            this.labelbedragBetaal1.AutoSize = true;
-            this.labelbedragBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelbedragBetaal1.Location = new System.Drawing.Point(824, 427);
+            this.labelbedragBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelbedragBetaal1.Location = new System.Drawing.Point(946, 396);
             this.labelbedragBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelbedragBetaal1.Name = "labelbedragBetaal1";
-            this.labelbedragBetaal1.Size = new System.Drawing.Size(64, 26);
+            this.labelbedragBetaal1.Size = new System.Drawing.Size(114, 46);
             this.labelbedragBetaal1.TabIndex = 59;
             this.labelbedragBetaal1.Text = "Getal";
+            // 
+            // labelbedraggBetaal1
+            // 
+            this.labelbedraggBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelbedraggBetaal1.Location = new System.Drawing.Point(726, 280);
+            this.labelbedraggBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelbedraggBetaal1.Name = "labelbedraggBetaal1";
+            this.labelbedraggBetaal1.Size = new System.Drawing.Size(140, 84);
+            this.labelbedraggBetaal1.TabIndex = 60;
+            this.labelbedraggBetaal1.Text = "Bedrag:€";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 13);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(442, 55);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Gegevens invoeren";
+            // 
+            // landBetaal
+            // 
+            this.landBetaal.AutoSize = true;
+            this.landBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.landBetaal.Location = new System.Drawing.Point(43, 321);
+            this.landBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.landBetaal.Name = "landBetaal";
+            this.landBetaal.Size = new System.Drawing.Size(79, 33);
+            this.landBetaal.TabIndex = 51;
+            this.landBetaal.Text = "Land";
+            // 
+            // betaalPlaats
+            // 
+            this.betaalPlaats.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betaalPlaats.Location = new System.Drawing.Point(551, 274);
+            this.betaalPlaats.Margin = new System.Windows.Forms.Padding(2);
+            this.betaalPlaats.Multiline = true;
+            this.betaalPlaats.Name = "betaalPlaats";
+            this.betaalPlaats.Size = new System.Drawing.Size(153, 41);
+            this.betaalPlaats.TabIndex = 50;
+            // 
+            // betaalPostcode
+            // 
+            this.betaalPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betaalPostcode.Location = new System.Drawing.Point(346, 276);
+            this.betaalPostcode.Margin = new System.Windows.Forms.Padding(2);
+            this.betaalPostcode.Multiline = true;
+            this.betaalPostcode.Name = "betaalPostcode";
+            this.betaalPostcode.Size = new System.Drawing.Size(102, 41);
+            this.betaalPostcode.TabIndex = 49;
+            // 
+            // betaalAdres
+            // 
+            this.betaalAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betaalAdres.Location = new System.Drawing.Point(346, 229);
+            this.betaalAdres.Margin = new System.Windows.Forms.Padding(2);
+            this.betaalAdres.Multiline = true;
+            this.betaalAdres.Name = "betaalAdres";
+            this.betaalAdres.Size = new System.Drawing.Size(358, 41);
+            this.betaalAdres.TabIndex = 48;
+            // 
+            // betaalAchternaam
+            // 
+            this.betaalAchternaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betaalAchternaam.Location = new System.Drawing.Point(346, 181);
+            this.betaalAchternaam.Margin = new System.Windows.Forms.Padding(2);
+            this.betaalAchternaam.Multiline = true;
+            this.betaalAchternaam.Name = "betaalAchternaam";
+            this.betaalAchternaam.Size = new System.Drawing.Size(359, 41);
+            this.betaalAchternaam.TabIndex = 47;
+            // 
+            // betaalLand
+            // 
+            this.betaalLand.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betaalLand.FormattingEnabled = true;
+            this.betaalLand.Location = new System.Drawing.Point(346, 322);
+            this.betaalLand.Margin = new System.Windows.Forms.Padding(2);
+            this.betaalLand.Name = "betaalLand";
+            this.betaalLand.Size = new System.Drawing.Size(359, 41);
+            this.betaalLand.TabIndex = 46;
+            // 
+            // plaatsLabel
+            // 
+            this.plaatsLabel.AutoSize = true;
+            this.plaatsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plaatsLabel.Location = new System.Drawing.Point(451, 277);
+            this.plaatsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.plaatsLabel.Name = "plaatsLabel";
+            this.plaatsLabel.Size = new System.Drawing.Size(104, 33);
+            this.plaatsLabel.TabIndex = 45;
+            this.plaatsLabel.Text = "Plaats:";
+            // 
+            // postcodeBetaal
+            // 
+            this.postcodeBetaal.AutoSize = true;
+            this.postcodeBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postcodeBetaal.Location = new System.Drawing.Point(43, 276);
+            this.postcodeBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.postcodeBetaal.Name = "postcodeBetaal";
+            this.postcodeBetaal.Size = new System.Drawing.Size(136, 33);
+            this.postcodeBetaal.TabIndex = 44;
+            this.postcodeBetaal.Text = "Postcode";
+            // 
+            // adresBetaal
+            // 
+            this.adresBetaal.AutoSize = true;
+            this.adresBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adresBetaal.Location = new System.Drawing.Point(43, 232);
+            this.adresBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.adresBetaal.Name = "adresBetaal";
+            this.adresBetaal.Size = new System.Drawing.Size(291, 33);
+            this.adresBetaal.TabIndex = 43;
+            this.adresBetaal.Text = "Adres + Huisnummer";
+            // 
+            // achternaamBetaal
+            // 
+            this.achternaamBetaal.AutoSize = true;
+            this.achternaamBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.achternaamBetaal.Location = new System.Drawing.Point(43, 181);
+            this.achternaamBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.achternaamBetaal.Name = "achternaamBetaal";
+            this.achternaamBetaal.Size = new System.Drawing.Size(172, 33);
+            this.achternaamBetaal.TabIndex = 42;
+            this.achternaamBetaal.Text = "Achternaam";
+            // 
+            // emailBetaal
+            // 
+            this.emailBetaal.AutoSize = true;
+            this.emailBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBetaal.Location = new System.Drawing.Point(43, 91);
+            this.emailBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emailBetaal.Name = "emailBetaal";
+            this.emailBetaal.Size = new System.Drawing.Size(99, 33);
+            this.emailBetaal.TabIndex = 41;
+            this.emailBetaal.Text = "E-mail";
+            // 
+            // voornaamBetaal
+            // 
+            this.voornaamBetaal.AutoSize = true;
+            this.voornaamBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voornaamBetaal.Location = new System.Drawing.Point(43, 134);
+            this.voornaamBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.voornaamBetaal.Name = "voornaamBetaal";
+            this.voornaamBetaal.Size = new System.Drawing.Size(149, 33);
+            this.voornaamBetaal.TabIndex = 40;
+            this.voornaamBetaal.Text = "Voornaam";
+            // 
+            // betaalVoornaam
+            // 
+            this.betaalVoornaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betaalVoornaam.Location = new System.Drawing.Point(346, 134);
+            this.betaalVoornaam.Margin = new System.Windows.Forms.Padding(2);
+            this.betaalVoornaam.Multiline = true;
+            this.betaalVoornaam.Name = "betaalVoornaam";
+            this.betaalVoornaam.Size = new System.Drawing.Size(359, 41);
+            this.betaalVoornaam.TabIndex = 39;
+            // 
+            // betaalEmail
+            // 
+            this.betaalEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betaalEmail.Location = new System.Drawing.Point(346, 88);
+            this.betaalEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.betaalEmail.Multiline = true;
+            this.betaalEmail.Name = "betaalEmail";
+            this.betaalEmail.Size = new System.Drawing.Size(358, 41);
+            this.betaalEmail.TabIndex = 38;
             // 
             // buttonVolgendeBetaal1
             // 
             this.buttonVolgendeBetaal1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVolgendeBetaal1.Image = global::EersteProjectMau.Properties.Resources.volgendeButton;
-            this.buttonVolgendeBetaal1.Location = new System.Drawing.Point(335, 378);
+            this.buttonVolgendeBetaal1.Location = new System.Drawing.Point(719, 375);
             this.buttonVolgendeBetaal1.Margin = new System.Windows.Forms.Padding(1);
             this.buttonVolgendeBetaal1.Name = "buttonVolgendeBetaal1";
             this.buttonVolgendeBetaal1.Size = new System.Drawing.Size(176, 77);
@@ -1601,7 +2073,7 @@
             // 
             this.buttonVorigeBetaal1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVorigeBetaal1.Image = global::EersteProjectMau.Properties.Resources.vorigeButton;
-            this.buttonVorigeBetaal1.Location = new System.Drawing.Point(84, 378);
+            this.buttonVorigeBetaal1.Location = new System.Drawing.Point(49, 376);
             this.buttonVorigeBetaal1.Margin = new System.Windows.Forms.Padding(1);
             this.buttonVorigeBetaal1.Name = "buttonVorigeBetaal1";
             this.buttonVorigeBetaal1.Size = new System.Drawing.Size(180, 77);
@@ -1610,175 +2082,6 @@
             this.buttonVorigeBetaal1.TabStop = false;
             this.buttonVorigeBetaal1.Click += new System.EventHandler(this.buttonVorigeBetaal1_Click);
             // 
-            // labelbedraggBetaal1
-            // 
-            this.labelbedraggBetaal1.AutoSize = true;
-            this.labelbedraggBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelbedraggBetaal1.Location = new System.Drawing.Point(800, 401);
-            this.labelbedraggBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelbedraggBetaal1.Name = "labelbedraggBetaal1";
-            this.labelbedraggBetaal1.Size = new System.Drawing.Size(88, 52);
-            this.labelbedraggBetaal1.TabIndex = 60;
-            this.labelbedraggBetaal1.Text = "Bedrag:\r\n€";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(74, 55);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(305, 55);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "Betaalpagina";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(188, 304);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 20);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "Land";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(376, 273);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(196, 25);
-            this.textBox6.TabIndex = 50;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(236, 273);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(83, 25);
-            this.textBox5.TabIndex = 49;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(236, 242);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(336, 25);
-            this.textBox4.TabIndex = 48;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(236, 211);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(336, 25);
-            this.textBox3.TabIndex = 47;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(236, 304);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(336, 25);
-            this.comboBox1.TabIndex = 46;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(322, 273);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 20);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Plaats";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(160, 273);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 20);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Postcode";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(82, 242);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 20);
-            this.label11.TabIndex = 43;
-            this.label11.Text = "Adres + Huisnummer";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(142, 211);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 20);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "Achternaam";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(180, 149);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 20);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "E-mail";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(153, 180);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 20);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Voornaam";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(236, 180);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(336, 25);
-            this.textBox2.TabIndex = 39;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(236, 149);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(336, 25);
-            this.textBox1.TabIndex = 38;
-            // 
             // betalingKlaar
             // 
             this.betalingKlaar.BackColor = System.Drawing.Color.White;
@@ -1786,12 +2089,12 @@
             this.betalingKlaar.Controls.Add(this.buttonVorigeBank1);
             this.betalingKlaar.Controls.Add(this.labelBedrag1);
             this.betalingKlaar.Controls.Add(this.labelBedragg1);
-            this.betalingKlaar.Controls.Add(this.pictureBox2);
             this.betalingKlaar.Controls.Add(this.label20);
-            this.betalingKlaar.Controls.Add(this.checkBox4);
-            this.betalingKlaar.Controls.Add(this.checkBox3);
-            this.betalingKlaar.Controls.Add(this.checkBox2);
-            this.betalingKlaar.Controls.Add(this.checkBox1);
+            this.betalingKlaar.Controls.Add(this.raboCheck);
+            this.betalingKlaar.Controls.Add(this.snsCheck);
+            this.betalingKlaar.Controls.Add(this.ingCheck);
+            this.betalingKlaar.Controls.Add(this.abnCheck);
+            this.betalingKlaar.Controls.Add(this.pictureBox2);
             this.betalingKlaar.Controls.Add(this.pictureBox4);
             this.betalingKlaar.Controls.Add(this.pictureBox6);
             this.betalingKlaar.Controls.Add(this.pictureBox7);
@@ -1802,16 +2105,15 @@
             this.betalingKlaar.Size = new System.Drawing.Size(923, 484);
             this.betalingKlaar.TabIndex = 6;
             this.betalingKlaar.Text = "betalingKlaar";
-            this.betalingKlaar.Click += new System.EventHandler(this.betalingKlaar_Click);
             // 
             // buttonVolgendeBank1
             // 
             this.buttonVolgendeBank1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVolgendeBank1.Image = global::EersteProjectMau.Properties.Resources.volgendeButton;
-            this.buttonVolgendeBank1.Location = new System.Drawing.Point(335, 378);
+            this.buttonVolgendeBank1.Location = new System.Drawing.Point(677, 375);
             this.buttonVolgendeBank1.Margin = new System.Windows.Forms.Padding(1);
             this.buttonVolgendeBank1.Name = "buttonVolgendeBank1";
-            this.buttonVolgendeBank1.Size = new System.Drawing.Size(176, 77);
+            this.buttonVolgendeBank1.Size = new System.Drawing.Size(182, 77);
             this.buttonVolgendeBank1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonVolgendeBank1.TabIndex = 72;
             this.buttonVolgendeBank1.TabStop = false;
@@ -1821,10 +2123,10 @@
             // 
             this.buttonVorigeBank1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVorigeBank1.Image = global::EersteProjectMau.Properties.Resources.vorigeButton;
-            this.buttonVorigeBank1.Location = new System.Drawing.Point(84, 378);
+            this.buttonVorigeBank1.Location = new System.Drawing.Point(47, 375);
             this.buttonVorigeBank1.Margin = new System.Windows.Forms.Padding(1);
             this.buttonVorigeBank1.Name = "buttonVorigeBank1";
-            this.buttonVorigeBank1.Size = new System.Drawing.Size(180, 77);
+            this.buttonVorigeBank1.Size = new System.Drawing.Size(209, 77);
             this.buttonVorigeBank1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonVorigeBank1.TabIndex = 71;
             this.buttonVorigeBank1.TabStop = false;
@@ -1833,24 +2135,82 @@
             // labelBedrag1
             // 
             this.labelBedrag1.AutoSize = true;
-            this.labelBedrag1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBedrag1.Location = new System.Drawing.Point(824, 427);
+            this.labelBedrag1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBedrag1.Location = new System.Drawing.Point(441, 415);
             this.labelBedrag1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBedrag1.Name = "labelBedrag1";
-            this.labelBedrag1.Size = new System.Drawing.Size(64, 26);
+            this.labelBedrag1.Size = new System.Drawing.Size(93, 37);
             this.labelBedrag1.TabIndex = 70;
             this.labelBedrag1.Text = "Getal";
             // 
             // labelBedragg1
             // 
             this.labelBedragg1.AutoSize = true;
-            this.labelBedragg1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBedragg1.Location = new System.Drawing.Point(800, 401);
+            this.labelBedragg1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBedragg1.Location = new System.Drawing.Point(417, 379);
             this.labelBedragg1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBedragg1.Name = "labelBedragg1";
-            this.labelBedragg1.Size = new System.Drawing.Size(88, 52);
+            this.labelBedragg1.Size = new System.Drawing.Size(129, 74);
             this.labelBedragg1.TabIndex = 69;
             this.labelBedragg1.Text = "Bedrag:\r\n€";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(13, 13);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(305, 55);
+            this.label20.TabIndex = 66;
+            this.label20.Text = "Betaalpagina";
+            // 
+            // raboCheck
+            // 
+            this.raboCheck.AutoSize = true;
+            this.raboCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.raboCheck.Location = new System.Drawing.Point(700, 284);
+            this.raboCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.raboCheck.Name = "raboCheck";
+            this.raboCheck.Size = new System.Drawing.Size(15, 14);
+            this.raboCheck.TabIndex = 65;
+            this.raboCheck.UseVisualStyleBackColor = true;
+            this.raboCheck.CheckedChanged += new System.EventHandler(this.raboCheck_CheckedChanged);
+            // 
+            // snsCheck
+            // 
+            this.snsCheck.AutoSize = true;
+            this.snsCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.snsCheck.Location = new System.Drawing.Point(543, 284);
+            this.snsCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.snsCheck.Name = "snsCheck";
+            this.snsCheck.Size = new System.Drawing.Size(15, 14);
+            this.snsCheck.TabIndex = 64;
+            this.snsCheck.UseVisualStyleBackColor = true;
+            this.snsCheck.CheckedChanged += new System.EventHandler(this.snsCheck_CheckedChanged);
+            // 
+            // ingCheck
+            // 
+            this.ingCheck.AutoSize = true;
+            this.ingCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ingCheck.Location = new System.Drawing.Point(380, 284);
+            this.ingCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ingCheck.Name = "ingCheck";
+            this.ingCheck.Size = new System.Drawing.Size(15, 14);
+            this.ingCheck.TabIndex = 63;
+            this.ingCheck.UseVisualStyleBackColor = true;
+            this.ingCheck.CheckedChanged += new System.EventHandler(this.ingCheck_CheckedChanged);
+            // 
+            // abnCheck
+            // 
+            this.abnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abnCheck.Location = new System.Drawing.Point(215, 284);
+            this.abnCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.abnCheck.Name = "abnCheck";
+            this.abnCheck.Size = new System.Drawing.Size(20, 20);
+            this.abnCheck.TabIndex = 62;
+            this.abnCheck.UseVisualStyleBackColor = true;
+            this.abnCheck.CheckedChanged += new System.EventHandler(this.abnCheck_CheckedChanged);
             // 
             // pictureBox2
             // 
@@ -1862,69 +2222,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 68;
             this.pictureBox2.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(74, 55);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(305, 55);
-            this.label20.TabIndex = 66;
-            this.label20.Text = "Betaalpagina";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox4.Location = new System.Drawing.Point(663, 284);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(85, 17);
-            this.checkBox4.TabIndex = 65;
-            this.checkBox4.Text = "RABOBANK";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox3.Location = new System.Drawing.Point(522, 284);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(48, 17);
-            this.checkBox3.TabIndex = 64;
-            this.checkBox3.Text = "SNS";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox2.Location = new System.Drawing.Point(364, 284);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(45, 17);
-            this.checkBox2.TabIndex = 63;
-            this.checkBox2.Text = "ING";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Location = new System.Drawing.Point(180, 284);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(83, 17);
-            this.checkBox1.TabIndex = 62;
-            this.checkBox1.Text = "ABN AMRO";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // pictureBox4
             // 
@@ -1962,8 +2259,10 @@
             // BetaalGegevens
             // 
             this.BetaalGegevens.BackColor = System.Drawing.Color.White;
-            this.BetaalGegevens.Controls.Add(this.label3);
-            this.BetaalGegevens.Controls.Add(this.label6);
+            this.BetaalGegevens.Controls.Add(this.labelBetaal1);
+            this.BetaalGegevens.Controls.Add(this.betaalBalk);
+            this.BetaalGegevens.Controls.Add(this.Getal3);
+            this.BetaalGegevens.Controls.Add(this.Bedrag3);
             this.BetaalGegevens.Controls.Add(this.textBoxControleNummer1);
             this.BetaalGegevens.Controls.Add(this.labelControlenummer1);
             this.BetaalGegevens.Controls.Add(this.textBoxJaar1);
@@ -1971,14 +2270,13 @@
             this.BetaalGegevens.Controls.Add(this.textBoxRekeningnummer1);
             this.BetaalGegevens.Controls.Add(this.textBoxNaam1);
             this.BetaalGegevens.Controls.Add(this.labelVervaldatum1);
-            this.BetaalGegevens.Controls.Add(this.label16);
-            this.BetaalGegevens.Controls.Add(this.buttonVorigeFinal1);
-            this.BetaalGegevens.Controls.Add(this.buttonBetalenFinal1);
-            this.BetaalGegevens.Controls.Add(this.labelBetaal1);
+            this.BetaalGegevens.Controls.Add(this.labelKaarthouder);
             this.BetaalGegevens.Controls.Add(this.textboxMaand1);
             this.BetaalGegevens.Controls.Add(this.textboxPasnummer1);
             this.BetaalGegevens.Controls.Add(this.labelPasnummer1);
             this.BetaalGegevens.Controls.Add(this.labelRekeningnummer1);
+            this.BetaalGegevens.Controls.Add(this.buttonVorigeFinal1);
+            this.BetaalGegevens.Controls.Add(this.buttonBetalenFinal1);
             this.BetaalGegevens.Location = new System.Drawing.Point(4, 22);
             this.BetaalGegevens.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BetaalGegevens.Name = "BetaalGegevens";
@@ -1987,30 +2285,50 @@
             this.BetaalGegevens.TabIndex = 7;
             this.BetaalGegevens.Text = "betaalGegevens";
             // 
-            // label3
+            // labelBetaal1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(824, 427);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 26);
-            this.label3.TabIndex = 116;
-            this.label3.Text = "Getal";
+            this.labelBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBetaal1.Location = new System.Drawing.Point(619, 0);
+            this.labelBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelBetaal1.Name = "labelBetaal1";
+            this.labelBetaal1.Size = new System.Drawing.Size(308, 55);
+            this.labelBetaal1.TabIndex = 63;
+            this.labelBetaal1.Text = "Betaalpagina";
             // 
-            // label6
+            // betaalBalk
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(800, 401);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 52);
-            this.label6.TabIndex = 115;
-            this.label6.Text = "Bedrag:\r\n€";
+            this.betaalBalk.Image = global::EersteProjectMau.Properties.Resources.rabo_balk;
+            this.betaalBalk.Location = new System.Drawing.Point(0, 0);
+            this.betaalBalk.Name = "betaalBalk";
+            this.betaalBalk.Size = new System.Drawing.Size(685, 55);
+            this.betaalBalk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.betaalBalk.TabIndex = 117;
+            this.betaalBalk.TabStop = false;
+            // 
+            // Getal3
+            // 
+            this.Getal3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Getal3.Location = new System.Drawing.Point(759, 428);
+            this.Getal3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Getal3.Name = "Getal3";
+            this.Getal3.Size = new System.Drawing.Size(129, 35);
+            this.Getal3.TabIndex = 116;
+            this.Getal3.Text = "Getal";
+            // 
+            // Bedrag3
+            // 
+            this.Bedrag3.AutoSize = true;
+            this.Bedrag3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bedrag3.Location = new System.Drawing.Point(730, 391);
+            this.Bedrag3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Bedrag3.Name = "Bedrag3";
+            this.Bedrag3.Size = new System.Drawing.Size(129, 74);
+            this.Bedrag3.TabIndex = 115;
+            this.Bedrag3.Text = "Bedrag:\r\n€";
             // 
             // textBoxControleNummer1
             // 
+            this.textBoxControleNummer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxControleNummer1.Location = new System.Drawing.Point(629, 324);
             this.textBoxControleNummer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxControleNummer1.Multiline = true;
@@ -2031,8 +2349,8 @@
             // 
             // textBoxJaar1
             // 
-            this.textBoxJaar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJaar1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBoxJaar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxJaar1.ForeColor = System.Drawing.Color.DarkGray;
             this.textBoxJaar1.Location = new System.Drawing.Point(572, 286);
             this.textBoxJaar1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxJaar1.Multiline = true;
@@ -2041,7 +2359,9 @@
             this.textBoxJaar1.TabIndex = 112;
             this.textBoxJaar1.Text = "Jaar";
             this.textBoxJaar1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxJaar1.Click += new System.EventHandler(this.textBoxJaar1_Click);
             this.textBoxJaar1.TextChanged += new System.EventHandler(this.textBoxJaar1_TextChanged);
+            this.textBoxJaar1.Leave += new System.EventHandler(this.textBoxJaar1_Leave);
             // 
             // label17
             // 
@@ -2056,6 +2376,7 @@
             // 
             // textBoxRekeningnummer1
             // 
+            this.textBoxRekeningnummer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRekeningnummer1.Location = new System.Drawing.Point(429, 205);
             this.textBoxRekeningnummer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxRekeningnummer1.Multiline = true;
@@ -2065,6 +2386,7 @@
             // 
             // textBoxNaam1
             // 
+            this.textBoxNaam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNaam1.Location = new System.Drawing.Point(429, 163);
             this.textBoxNaam1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxNaam1.Multiline = true;
@@ -2083,56 +2405,21 @@
             this.labelVervaldatum1.TabIndex = 107;
             this.labelVervaldatum1.Text = "Vervaldatum:";
             // 
-            // label16
+            // labelKaarthouder
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(79, 163);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(341, 29);
-            this.label16.TabIndex = 106;
-            this.label16.Text = "Kaarthouder (Volledige naam):";
-            // 
-            // buttonVorigeFinal1
-            // 
-            this.buttonVorigeFinal1.Image = global::EersteProjectMau.Properties.Resources.vorigeButton;
-            this.buttonVorigeFinal1.Location = new System.Drawing.Point(84, 378);
-            this.buttonVorigeFinal1.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonVorigeFinal1.Name = "buttonVorigeFinal1";
-            this.buttonVorigeFinal1.Size = new System.Drawing.Size(181, 77);
-            this.buttonVorigeFinal1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.buttonVorigeFinal1.TabIndex = 105;
-            this.buttonVorigeFinal1.TabStop = false;
-            this.buttonVorigeFinal1.Click += new System.EventHandler(this.buttonVorigeFinal1_Click);
-            // 
-            // buttonBetalenFinal1
-            // 
-            this.buttonBetalenFinal1.Image = global::EersteProjectMau.Properties.Resources.betalenButton;
-            this.buttonBetalenFinal1.Location = new System.Drawing.Point(463, 378);
-            this.buttonBetalenFinal1.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonBetalenFinal1.Name = "buttonBetalenFinal1";
-            this.buttonBetalenFinal1.Size = new System.Drawing.Size(223, 77);
-            this.buttonBetalenFinal1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.buttonBetalenFinal1.TabIndex = 104;
-            this.buttonBetalenFinal1.TabStop = false;
-            this.buttonBetalenFinal1.Click += new System.EventHandler(this.buttonBetalenFinal1_Click);
-            // 
-            // labelBetaal1
-            // 
-            this.labelBetaal1.AutoSize = true;
-            this.labelBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBetaal1.Location = new System.Drawing.Point(74, 55);
-            this.labelBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelBetaal1.Name = "labelBetaal1";
-            this.labelBetaal1.Size = new System.Drawing.Size(305, 55);
-            this.labelBetaal1.TabIndex = 63;
-            this.labelBetaal1.Text = "Betaalpagina";
+            this.labelKaarthouder.AutoSize = true;
+            this.labelKaarthouder.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKaarthouder.Location = new System.Drawing.Point(79, 163);
+            this.labelKaarthouder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelKaarthouder.Name = "labelKaarthouder";
+            this.labelKaarthouder.Size = new System.Drawing.Size(341, 29);
+            this.labelKaarthouder.TabIndex = 106;
+            this.labelKaarthouder.Text = "Kaarthouder (Volledige naam):";
             // 
             // textboxMaand1
             // 
-            this.textboxMaand1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxMaand1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textboxMaand1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxMaand1.ForeColor = System.Drawing.Color.DarkGray;
             this.textboxMaand1.Location = new System.Drawing.Point(428, 287);
             this.textboxMaand1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textboxMaand1.Multiline = true;
@@ -2141,10 +2428,13 @@
             this.textboxMaand1.TabIndex = 62;
             this.textboxMaand1.Text = "Maand";
             this.textboxMaand1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxMaand1.Click += new System.EventHandler(this.textboxMaand1_Click);
             this.textboxMaand1.TextChanged += new System.EventHandler(this.textboxMaand1_TextChanged);
+            this.textboxMaand1.Leave += new System.EventHandler(this.textboxMaand1_Leave);
             // 
             // textboxPasnummer1
             // 
+            this.textboxPasnummer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxPasnummer1.Location = new System.Drawing.Point(428, 245);
             this.textboxPasnummer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textboxPasnummer1.Multiline = true;
@@ -2174,18 +2464,54 @@
             this.labelRekeningnummer1.TabIndex = 59;
             this.labelRekeningnummer1.Text = "Rekeningnummer:";
             // 
-            // buttonZelfVraag1
+            // buttonVorigeFinal1
             // 
-            this.buttonZelfVraag1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonZelfVraag1.Image = global::EersteProjectMau.Properties.Resources.zelfVraagButton;
-            this.buttonZelfVraag1.Location = new System.Drawing.Point(10, 405);
-            this.buttonZelfVraag1.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonZelfVraag1.Name = "buttonZelfVraag1";
-            this.buttonZelfVraag1.Size = new System.Drawing.Size(220, 70);
-            this.buttonZelfVraag1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.buttonZelfVraag1.TabIndex = 56;
-            this.buttonZelfVraag1.TabStop = false;
-            this.buttonZelfVraag1.Click += new System.EventHandler(this.buttonZelfVraag1_Click);
+            this.buttonVorigeFinal1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVorigeFinal1.Image = global::EersteProjectMau.Properties.Resources.vorigeButton;
+            this.buttonVorigeFinal1.Location = new System.Drawing.Point(84, 378);
+            this.buttonVorigeFinal1.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonVorigeFinal1.Name = "buttonVorigeFinal1";
+            this.buttonVorigeFinal1.Size = new System.Drawing.Size(181, 77);
+            this.buttonVorigeFinal1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonVorigeFinal1.TabIndex = 105;
+            this.buttonVorigeFinal1.TabStop = false;
+            this.buttonVorigeFinal1.Click += new System.EventHandler(this.buttonVorigeFinal1_Click);
+            // 
+            // buttonBetalenFinal1
+            // 
+            this.buttonBetalenFinal1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBetalenFinal1.Image = global::EersteProjectMau.Properties.Resources.betalenButton;
+            this.buttonBetalenFinal1.Location = new System.Drawing.Point(463, 378);
+            this.buttonBetalenFinal1.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonBetalenFinal1.Name = "buttonBetalenFinal1";
+            this.buttonBetalenFinal1.Size = new System.Drawing.Size(223, 77);
+            this.buttonBetalenFinal1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonBetalenFinal1.TabIndex = 104;
+            this.buttonBetalenFinal1.TabStop = false;
+            this.buttonBetalenFinal1.Click += new System.EventHandler(this.buttonBetalenFinal1_Click);
+            // 
+            // logoBox
+            // 
+            this.logoBox.BackColor = System.Drawing.Color.Transparent;
+            this.logoBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.logoBox.Image = ((System.Drawing.Image)(resources.GetObject("logoBox.Image")));
+            this.logoBox.Location = new System.Drawing.Point(400, 7);
+            this.logoBox.Name = "logoBox";
+            this.logoBox.Size = new System.Drawing.Size(504, 78);
+            this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoBox.TabIndex = 9;
+            this.logoBox.TabStop = false;
+            // 
+            // BetalingAf
+            // 
+            this.BetalingAf.Location = new System.Drawing.Point(4, 22);
+            this.BetalingAf.Margin = new System.Windows.Forms.Padding(2);
+            this.BetalingAf.Name = "BetalingAf";
+            this.BetalingAf.Padding = new System.Windows.Forms.Padding(2);
+            this.BetalingAf.Size = new System.Drawing.Size(298, 484);
+            this.BetalingAf.TabIndex = 6;
+            this.BetalingAf.Text = "BetalingAf";
+            this.BetalingAf.UseVisualStyleBackColor = true;
             // 
             // BetalenHelp
             // 
@@ -2201,6 +2527,15 @@
             // ReserveerHelp
             // 
             this.ReserveerHelp.BackColor = System.Drawing.Color.White;
+            this.ReserveerHelp.Controls.Add(this.stoelLegenda);
+            this.ReserveerHelp.Controls.Add(this.greenButtonHelp);
+            this.ReserveerHelp.Controls.Add(this.redButtonHelp);
+            this.ReserveerHelp.Controls.Add(this.grayButtonHelp);
+            this.ReserveerHelp.Controls.Add(this.groeneStoelHelp);
+            this.ReserveerHelp.Controls.Add(this.oranjeStoelHelp);
+            this.ReserveerHelp.Controls.Add(this.grijzeStoelHelp);
+            this.ReserveerHelp.Controls.Add(this.labelReserveerHelpTitel);
+            this.ReserveerHelp.Controls.Add(this.labelReserveerHelpText);
             this.ReserveerHelp.Location = new System.Drawing.Point(4, 22);
             this.ReserveerHelp.Margin = new System.Windows.Forms.Padding(2);
             this.ReserveerHelp.Name = "ReserveerHelp";
@@ -2209,11 +2544,99 @@
             this.ReserveerHelp.TabIndex = 4;
             this.ReserveerHelp.Text = "ReserveerHelp";
             // 
+            // stoelLegenda
+            // 
+            this.stoelLegenda.BackColor = System.Drawing.Color.Transparent;
+            this.stoelLegenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stoelLegenda.Location = new System.Drawing.Point(5, 208);
+            this.stoelLegenda.Name = "stoelLegenda";
+            this.stoelLegenda.Size = new System.Drawing.Size(285, 63);
+            this.stoelLegenda.TabIndex = 109;
+            this.stoelLegenda.Text = "Betekenissen van de stoelenkleuren staan onder";
+            // 
+            // greenButtonHelp
+            // 
+            this.greenButtonHelp.BackColor = System.Drawing.Color.LimeGreen;
+            this.greenButtonHelp.Location = new System.Drawing.Point(13, 419);
+            this.greenButtonHelp.Name = "greenButtonHelp";
+            this.greenButtonHelp.Size = new System.Drawing.Size(48, 48);
+            this.greenButtonHelp.TabIndex = 108;
+            this.greenButtonHelp.UseVisualStyleBackColor = false;
+            // 
+            // redButtonHelp
+            // 
+            this.redButtonHelp.BackColor = System.Drawing.Color.Tomato;
+            this.redButtonHelp.Location = new System.Drawing.Point(13, 355);
+            this.redButtonHelp.Name = "redButtonHelp";
+            this.redButtonHelp.Size = new System.Drawing.Size(48, 48);
+            this.redButtonHelp.TabIndex = 107;
+            this.redButtonHelp.UseVisualStyleBackColor = false;
+            // 
+            // grayButtonHelp
+            // 
+            this.grayButtonHelp.BackColor = System.Drawing.Color.Silver;
+            this.grayButtonHelp.Location = new System.Drawing.Point(13, 294);
+            this.grayButtonHelp.Name = "grayButtonHelp";
+            this.grayButtonHelp.Size = new System.Drawing.Size(48, 48);
+            this.grayButtonHelp.TabIndex = 106;
+            this.grayButtonHelp.UseVisualStyleBackColor = false;
+            // 
+            // groeneStoelHelp
+            // 
+            this.groeneStoelHelp.BackColor = System.Drawing.Color.White;
+            this.groeneStoelHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groeneStoelHelp.Location = new System.Drawing.Point(67, 419);
+            this.groeneStoelHelp.Name = "groeneStoelHelp";
+            this.groeneStoelHelp.Size = new System.Drawing.Size(284, 48);
+            this.groeneStoelHelp.TabIndex = 17;
+            this.groeneStoelHelp.Text = "U heeft deze plek          \r\ngekozen";
+            // 
+            // oranjeStoelHelp
+            // 
+            this.oranjeStoelHelp.AutoSize = true;
+            this.oranjeStoelHelp.BackColor = System.Drawing.Color.White;
+            this.oranjeStoelHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oranjeStoelHelp.Location = new System.Drawing.Point(67, 365);
+            this.oranjeStoelHelp.Name = "oranjeStoelHelp";
+            this.oranjeStoelHelp.Size = new System.Drawing.Size(180, 24);
+            this.oranjeStoelHelp.TabIndex = 16;
+            this.oranjeStoelHelp.Text = "deze plek is al bezet";
+            // 
+            // grijzeStoelHelp
+            // 
+            this.grijzeStoelHelp.AutoSize = true;
+            this.grijzeStoelHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grijzeStoelHelp.Location = new System.Drawing.Point(67, 304);
+            this.grijzeStoelHelp.Name = "grijzeStoelHelp";
+            this.grijzeStoelHelp.Size = new System.Drawing.Size(217, 24);
+            this.grijzeStoelHelp.TabIndex = 15;
+            this.grijzeStoelHelp.Text = "deze plek is beschikbaar\r\n";
+            // 
+            // labelReserveerHelpTitel
+            // 
+            this.labelReserveerHelpTitel.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReserveerHelpTitel.Location = new System.Drawing.Point(8, 13);
+            this.labelReserveerHelpTitel.Name = "labelReserveerHelpTitel";
+            this.labelReserveerHelpTitel.Size = new System.Drawing.Size(177, 32);
+            this.labelReserveerHelpTitel.TabIndex = 14;
+            this.labelReserveerHelpTitel.Text = "Hulp nodig?...";
+            // 
+            // labelReserveerHelpText
+            // 
+            this.labelReserveerHelpText.BackColor = System.Drawing.Color.Transparent;
+            this.labelReserveerHelpText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReserveerHelpText.Location = new System.Drawing.Point(8, 57);
+            this.labelReserveerHelpText.Name = "labelReserveerHelpText";
+            this.labelReserveerHelpText.Size = new System.Drawing.Size(285, 131);
+            this.labelReserveerHelpText.TabIndex = 13;
+            this.labelReserveerHelpText.Text = "Hier kunt u selecteren welke stoelen u wilt.\r\n\r\nU kunt een stoel selecteren door " +
+    "erop te klikken.\r\n\r\n";
+            // 
             // FaqHelp
             // 
             this.FaqHelp.BackColor = System.Drawing.Color.White;
             this.FaqHelp.Controls.Add(this.buttonStelZelfVraagg1);
-            this.FaqHelp.Controls.Add(this.label4);
+            this.FaqHelp.Controls.Add(this.faqHelpHeader);
             this.FaqHelp.Controls.Add(this.helpTextFAQ);
             this.FaqHelp.Location = new System.Drawing.Point(4, 22);
             this.FaqHelp.Margin = new System.Windows.Forms.Padding(2);
@@ -2236,15 +2659,15 @@
             this.buttonStelZelfVraagg1.TabStop = false;
             this.buttonStelZelfVraagg1.Click += new System.EventHandler(this.buttonStelZelfVraagg1_Click);
             // 
-            // label4
+            // faqHelpHeader
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 30);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Hulp nodig?...";
+            this.faqHelpHeader.AutoSize = true;
+            this.faqHelpHeader.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.faqHelpHeader.Location = new System.Drawing.Point(8, 13);
+            this.faqHelpHeader.Name = "faqHelpHeader";
+            this.faqHelpHeader.Size = new System.Drawing.Size(150, 30);
+            this.faqHelpHeader.TabIndex = 12;
+            this.faqHelpHeader.Text = "Hulp nodig?...";
             // 
             // helpTextFAQ
             // 
@@ -2259,9 +2682,6 @@
             // ContactHelp
             // 
             this.ContactHelp.BackColor = System.Drawing.Color.White;
-            this.ContactHelp.Controls.Add(this.label29);
-            this.ContactHelp.Controls.Add(this.label28);
-            this.ContactHelp.Controls.Add(this.label27);
             this.ContactHelp.Location = new System.Drawing.Point(4, 22);
             this.ContactHelp.Margin = new System.Windows.Forms.Padding(2);
             this.ContactHelp.Name = "ContactHelp";
@@ -2274,9 +2694,8 @@
             // 
             this.AgendaHelp.BackColor = System.Drawing.Color.White;
             this.AgendaHelp.Controls.Add(this.pictureBox12);
-            this.AgendaHelp.Controls.Add(this.label26);
-            this.AgendaHelp.Controls.Add(this.label25);
-            this.AgendaHelp.Controls.Add(this.label24);
+            this.AgendaHelp.Controls.Add(this.agendaHelpText);
+            this.AgendaHelp.Controls.Add(this.agendaHelpHeader);
             this.AgendaHelp.Location = new System.Drawing.Point(4, 22);
             this.AgendaHelp.Margin = new System.Windows.Forms.Padding(2);
             this.AgendaHelp.Name = "AgendaHelp";
@@ -2288,7 +2707,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::EersteProjectMau.Properties.Resources.zelfVraagButton;
-            this.pictureBox12.Location = new System.Drawing.Point(10, 282);
+            this.pictureBox12.Location = new System.Drawing.Point(35, 412);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(236, 67);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2296,43 +2715,30 @@
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
-            // label26
+            // agendaHelpText
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(3, 76);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(268, 187);
-            this.label26.TabIndex = 2;
-            this.label26.Text = resources.GetString("label26.Text");
+            this.agendaHelpText.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agendaHelpText.Location = new System.Drawing.Point(3, 44);
+            this.agendaHelpText.Name = "agendaHelpText";
+            this.agendaHelpText.Size = new System.Drawing.Size(288, 349);
+            this.agendaHelpText.TabIndex = 2;
+            this.agendaHelpText.Text = resources.GetString("agendaHelpText.Text");
             // 
-            // label25
+            // agendaHelpHeader
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(10, 45);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(239, 17);
-            this.label25.TabIndex = 1;
-            this.label25.Text = ". . . U bent nu op de AGENDA pagina";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(5, 11);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(135, 30);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Hulp nodig?";
+            this.agendaHelpHeader.AutoSize = true;
+            this.agendaHelpHeader.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agendaHelpHeader.Location = new System.Drawing.Point(5, 11);
+            this.agendaHelpHeader.Name = "agendaHelpHeader";
+            this.agendaHelpHeader.Size = new System.Drawing.Size(135, 30);
+            this.agendaHelpHeader.TabIndex = 0;
+            this.agendaHelpHeader.Text = "Hulp nodig?";
             // 
             // HomeHelp
             // 
             this.HomeHelp.BackColor = System.Drawing.Color.White;
-            this.HomeHelp.Controls.Add(this.buttonZelfVraag1);
-            this.HomeHelp.Controls.Add(this.label2);
-            this.HomeHelp.Controls.Add(this.hulpLabel1);
-            this.HomeHelp.Controls.Add(this.huidigePaginaLabel1);
+            this.HomeHelp.Controls.Add(this.homeHulp);
+            this.HomeHelp.Controls.Add(this.homeHelpHeader);
             this.HomeHelp.Location = new System.Drawing.Point(4, 22);
             this.HomeHelp.Margin = new System.Windows.Forms.Padding(2);
             this.HomeHelp.Name = "HomeHelp";
@@ -2341,35 +2747,24 @@
             this.HomeHelp.TabIndex = 1;
             this.HomeHelp.Text = "HomeHelp";
             // 
-            // label2
+            // homeHulp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 306);
-            this.label2.TabIndex = 3;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.homeHulp.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeHulp.Location = new System.Drawing.Point(3, 56);
+            this.homeHulp.Name = "homeHulp";
+            this.homeHulp.Size = new System.Drawing.Size(288, 426);
+            this.homeHulp.TabIndex = 3;
+            this.homeHulp.Text = resources.GetString("homeHulp.Text");
             // 
-            // hulpLabel1
+            // homeHelpHeader
             // 
-            this.hulpLabel1.AutoSize = true;
-            this.hulpLabel1.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hulpLabel1.Location = new System.Drawing.Point(4, 10);
-            this.hulpLabel1.Name = "hulpLabel1";
-            this.hulpLabel1.Size = new System.Drawing.Size(150, 30);
-            this.hulpLabel1.TabIndex = 1;
-            this.hulpLabel1.Text = "Hulp nodig?...";
-            // 
-            // huidigePaginaLabel1
-            // 
-            this.huidigePaginaLabel1.AutoSize = true;
-            this.huidigePaginaLabel1.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.huidigePaginaLabel1.Location = new System.Drawing.Point(7, 53);
-            this.huidigePaginaLabel1.Name = "huidigePaginaLabel1";
-            this.huidigePaginaLabel1.Size = new System.Drawing.Size(227, 17);
-            this.huidigePaginaLabel1.TabIndex = 2;
-            this.huidigePaginaLabel1.Text = ". . . U bent nu op de HOME pagina.";
+            this.homeHelpHeader.AutoSize = true;
+            this.homeHelpHeader.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeHelpHeader.Location = new System.Drawing.Point(4, 10);
+            this.homeHelpHeader.Name = "homeHelpHeader";
+            this.homeHelpHeader.Size = new System.Drawing.Size(150, 30);
+            this.homeHelpHeader.TabIndex = 1;
+            this.homeHelpHeader.Text = "Hulp nodig?...";
             // 
             // tabControl2
             // 
@@ -2387,65 +2782,14 @@
             this.tabControl2.Size = new System.Drawing.Size(306, 510);
             this.tabControl2.TabIndex = 3;
             // 
-            // BetalingAf
-            // 
-            this.BetalingAf.Location = new System.Drawing.Point(4, 22);
-            this.BetalingAf.Margin = new System.Windows.Forms.Padding(2);
-            this.BetalingAf.Name = "BetalingAf";
-            this.BetalingAf.Padding = new System.Windows.Forms.Padding(2);
-            this.BetalingAf.Size = new System.Drawing.Size(298, 484);
-            this.BetalingAf.TabIndex = 6;
-            this.BetalingAf.Text = "BetalingAf";
-            this.BetalingAf.UseVisualStyleBackColor = true;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(5, 2);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(150, 30);
-            this.label27.TabIndex = 2;
-            this.label27.Text = "Hulp nodig?...";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(5, 44);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(248, 17);
-            this.label28.TabIndex = 3;
-            this.label28.Text = ". . . U bent nu op de CONTACT pagina.";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(-3, 77);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(266, 255);
-            this.label29.TabIndex = 4;
-            this.label29.Text = resources.GetString("label29.Text");
-            // 
-            // label30
-            // 
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(3, 2);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(284, 87);
-            this.label30.TabIndex = 15;
-            this.label30.Text = "Contact\r\n";
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.BackgroundImage = global::EersteProjectMau.Properties.Resources.CalmGrey;
+            this.BackgroundImage = global::EersteProjectMau.Properties.Resources.CalmGrey1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1216, 701);
+            this.ClientSize = new System.Drawing.Size(1284, 699);
             this.Controls.Add(this.navigatiePanel);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.logoBox);
@@ -2456,18 +2800,21 @@
             this.Load += new System.EventHandler(this.homePage_Load);
             this.navigatiePanel.ResumeLayout(false);
             this.navigatiePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.homePage1.ResumeLayout(false);
             this.homePage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reserveerButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meerFilmsButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reserveerButtonHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homePoster)).EndInit();
             this.agendaPage.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -2481,15 +2828,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.contactPage.ResumeLayout(false);
+            this.contactPage.PerformLayout();
+            this.kaartPanel.ResumeLayout(false);
+            this.kaartPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kaartBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStuurMail1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureMaps)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.FaqPage.ResumeLayout(false);
             this.FaqPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag2)).EndInit();
             this.vragenPaneel.ResumeLayout(false);
             this.vragenPaneel.PerformLayout();
             this.tabPageStoelselectie.ResumeLayout(false);
             this.tabPageStoelselectie.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.schermPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalen1)).EndInit();
             this.tabPageBetalen.ResumeLayout(false);
             this.tabPageBetalen.PerformLayout();
@@ -2505,14 +2857,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.BetaalGegevens.ResumeLayout(false);
             this.BetaalGegevens.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.betaalBalk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonVorigeFinal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
+            this.ReserveerHelp.ResumeLayout(false);
+            this.ReserveerHelp.PerformLayout();
             this.FaqHelp.ResumeLayout(false);
             this.FaqHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonStelZelfVraagg1)).EndInit();
-            this.ContactHelp.ResumeLayout(false);
-            this.ContactHelp.PerformLayout();
             this.AgendaHelp.ResumeLayout(false);
             this.AgendaHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
@@ -2530,7 +2883,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage homePage1;
         private System.Windows.Forms.TabPage agendaPage;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label homeTitel;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPageStoelselectie;
         private System.Windows.Forms.Button buttonStoel24;
@@ -2583,34 +2936,17 @@
         private System.Windows.Forms.Button buttonStoel13;
         private System.Windows.Forms.TextBox textBoxKorting;
         private System.Windows.Forms.Label labelPrijs;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage tabPageBetalen;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label kortingLabel;
         private System.Windows.Forms.TabPage betalingKlaar;
         private System.Windows.Forms.PictureBox faqButton1;
         private System.Windows.Forms.PictureBox contactButton1;
         private System.Windows.Forms.PictureBox agendaButton1;
         private System.Windows.Forms.PictureBox homeButton1;
-        private System.Windows.Forms.Label labelScore1;
         private System.Windows.Forms.Label labelCast1;
         private System.Windows.Forms.Label labelBeschrijving1;
         private System.Windows.Forms.Label labelTitel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox reserveerButton1;
+        private System.Windows.Forms.PictureBox homePoster;
+        private System.Windows.Forms.PictureBox reserveerButtonHome;
         private System.Windows.Forms.TextBox textBoxZoeken1;
         private System.Windows.Forms.Panel FaqPage;
         private System.Windows.Forms.Panel vragenPaneel;
@@ -2624,33 +2960,16 @@
         private System.Windows.Forms.Label Vraag1label;
         private System.Windows.Forms.Label Vraag3label;
         private System.Windows.Forms.DomainUpDown domainUpDown1;
-        private System.Windows.Forms.Label stuurVraag2;
         private System.Windows.Forms.Panel faqsplitter;
         private System.Windows.Forms.RichTextBox antwoorden;
         private System.Windows.Forms.TabPage contactPage;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.PictureBox PictureMaps;
-        private System.Windows.Forms.TabPage BetalenHelp;
-        private System.Windows.Forms.TabPage ReserveerHelp;
-        private System.Windows.Forms.TabPage FaqHelp;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label helpTextFAQ;
-        private System.Windows.Forms.TabPage ContactHelp;
-        private System.Windows.Forms.TabPage AgendaHelp;
-        private System.Windows.Forms.TabPage HomeHelp;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label hulpLabel1;
-        private System.Windows.Forms.Label huidigePaginaLabel1;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage BetalingAf;
-        private System.Windows.Forms.Label labelbedraggBetaal1;
-        private System.Windows.Forms.Label labelbedragBetaal1;
+        private System.Windows.Forms.RichTextBox contactInfo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox raboCheck;
+        private System.Windows.Forms.CheckBox snsCheck;
+        private System.Windows.Forms.CheckBox ingCheck;
+        private System.Windows.Forms.CheckBox abnCheck;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -2663,8 +2982,6 @@
         private System.Windows.Forms.Label labelBedrag1;
         private System.Windows.Forms.Label labelBedragg1;
         private System.Windows.Forms.PictureBox buttonBetalen1;
-        private System.Windows.Forms.PictureBox buttonVolgendeBetaal1;
-        private System.Windows.Forms.PictureBox buttonVorigeBetaal1;
         private System.Windows.Forms.PictureBox buttonVolgendeBank1;
         private System.Windows.Forms.PictureBox buttonVorigeBank1;
         private System.Windows.Forms.PictureBox buttonBetalenFinal1;
@@ -2672,16 +2989,14 @@
         private System.Windows.Forms.TextBox textBoxRekeningnummer1;
         private System.Windows.Forms.TextBox textBoxNaam1;
         private System.Windows.Forms.Label labelVervaldatum1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label labelKaarthouder;
         private System.Windows.Forms.TextBox textBoxControleNummer1;
         private System.Windows.Forms.Label labelControlenummer1;
         private System.Windows.Forms.TextBox textBoxJaar1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Getal3;
+        private System.Windows.Forms.Label Bedrag3;
         private System.Windows.Forms.Label FAQHeader;
-        private System.Windows.Forms.PictureBox buttonZelfVraag1;
-        private System.Windows.Forms.PictureBox buttonStelZelfVraagg1;
         private System.Windows.Forms.PictureBox buttonStuurMail1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DomainUpDown domainUpDown2;
@@ -2700,14 +3015,75 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox buttonZelfVraag2;
+        private System.Windows.Forms.Button plus;
+        private System.Windows.Forms.Button min;
+        private System.Windows.Forms.Panel kaartPanel;
+        private System.Windows.Forms.PictureBox kaartBox;
+        private System.Windows.Forms.Label kaarttext2;
+        private System.Windows.Forms.Label kaarttext1;
+        private System.Windows.Forms.Label labelStoelSelectieFilmTitel;
+        private System.Windows.Forms.Label labelStoelSelectieFilmDatum;
+        private System.Windows.Forms.Label huidigeVraag;
+        private System.Windows.Forms.Label agendaHeader;
+        private System.Windows.Forms.Label contactHeader;
+        private System.Windows.Forms.PictureBox betaalBalk;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label filmDatumRes;
+        private System.Windows.Forms.Label filmTitelRes;
+        private System.Windows.Forms.Label resHeader;
+        private System.Windows.Forms.TabPage tabPageBetalen;
+        private System.Windows.Forms.Label labelbedragBetaal1;
+        private System.Windows.Forms.Label labelbedraggBetaal1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label landBetaal;
+        private System.Windows.Forms.TextBox betaalPlaats;
+        private System.Windows.Forms.TextBox betaalPostcode;
+        private System.Windows.Forms.TextBox betaalAdres;
+        private System.Windows.Forms.TextBox betaalAchternaam;
+        private System.Windows.Forms.ComboBox betaalLand;
+        private System.Windows.Forms.Label plaatsLabel;
+        private System.Windows.Forms.Label postcodeBetaal;
+        private System.Windows.Forms.Label adresBetaal;
+        private System.Windows.Forms.Label achternaamBetaal;
+        private System.Windows.Forms.Label emailBetaal;
+        private System.Windows.Forms.Label voornaamBetaal;
+        private System.Windows.Forms.TextBox betaalVoornaam;
+        private System.Windows.Forms.TextBox betaalEmail;
+        private System.Windows.Forms.PictureBox buttonVolgendeBetaal1;
+        private System.Windows.Forms.PictureBox buttonVorigeBetaal1;
+        private System.Windows.Forms.Label bedragBetaal2;
+        private System.Windows.Forms.TabPage BetalingAf;
+        private System.Windows.Forms.TabPage BetalenHelp;
+        private System.Windows.Forms.TabPage ReserveerHelp;
+        private System.Windows.Forms.Label stoelLegenda;
+        private System.Windows.Forms.Button greenButtonHelp;
+        private System.Windows.Forms.Button redButtonHelp;
+        private System.Windows.Forms.Button grayButtonHelp;
+        private System.Windows.Forms.Label groeneStoelHelp;
+        private System.Windows.Forms.Label oranjeStoelHelp;
+        private System.Windows.Forms.Label grijzeStoelHelp;
+        private System.Windows.Forms.Label labelReserveerHelpTitel;
+        private System.Windows.Forms.Label labelReserveerHelpText;
+        private System.Windows.Forms.TabPage FaqHelp;
+        private System.Windows.Forms.PictureBox buttonStelZelfVraagg1;
+        private System.Windows.Forms.Label faqHelpHeader;
+        private System.Windows.Forms.Label helpTextFAQ;
+        private System.Windows.Forms.TabPage ContactHelp;
+        private System.Windows.Forms.TabPage AgendaHelp;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label agendaHelpText;
+        private System.Windows.Forms.Label agendaHelpHeader;
+        private System.Windows.Forms.TabPage HomeHelp;
+        private System.Windows.Forms.Label homeHulp;
+        private System.Windows.Forms.Label homeHelpHeader;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.Label homeBeschrijving;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox meerFilmsButton;
+        private System.Windows.Forms.PictureBox sluitKruisButton;
+        private System.Windows.Forms.PictureBox openPlusButton;
+        private System.Windows.Forms.PictureBox schermPicture1;
     }
 }
 

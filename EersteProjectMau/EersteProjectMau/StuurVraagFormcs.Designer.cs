@@ -51,7 +51,7 @@
             this.stuurVraagHulp.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stuurVraagHulp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.stuurVraagHulp.Location = new System.Drawing.Point(697, 22);
-            this.stuurVraagHulp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.stuurVraagHulp.Margin = new System.Windows.Forms.Padding(5);
             this.stuurVraagHulp.Name = "stuurVraagHulp";
             this.stuurVraagHulp.ReadOnly = true;
             this.stuurVraagHulp.Size = new System.Drawing.Size(709, 570);
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1437, 638);
             this.Controls.Add(this.stuurVraagHulp);
             this.Controls.Add(this.Onderwerp);
