@@ -33,7 +33,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.navigatiePanel = new System.Windows.Forms.Panel();
-            this.openPlusButton = new System.Windows.Forms.PictureBox();
             this.sluitKruisButton = new System.Windows.Forms.PictureBox();
             this.textBoxZoeken1 = new System.Windows.Forms.TextBox();
             this.faqButton1 = new System.Windows.Forms.PictureBox();
@@ -100,7 +99,6 @@
             this.faqsplitter = new System.Windows.Forms.Panel();
             this.antwoorden = new System.Windows.Forms.RichTextBox();
             this.tabPageStoelselectie = new System.Windows.Forms.TabPage();
-            this.schermPicture1 = new System.Windows.Forms.PictureBox();
             this.resHeader = new System.Windows.Forms.Label();
             this.filmDatumRes = new System.Windows.Forms.Label();
             this.filmTitelRes = new System.Windows.Forms.Label();
@@ -239,8 +237,8 @@
             this.homeHulp = new System.Windows.Forms.Label();
             this.homeHelpHeader = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.openPlusButton = new System.Windows.Forms.PictureBox();
             this.navigatiePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).BeginInit();
@@ -271,7 +269,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonZelfVraag2)).BeginInit();
             this.vragenPaneel.SuspendLayout();
             this.tabPageStoelselectie.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.schermPicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalen1)).BeginInit();
             this.tabPageBetalen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonVolgendeBetaal1)).BeginInit();
@@ -295,6 +292,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.HomeHelp.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
             this.SuspendLayout();
             // 
             // navigatiePanel
@@ -312,19 +310,6 @@
             this.navigatiePanel.Name = "navigatiePanel";
             this.navigatiePanel.Size = new System.Drawing.Size(1241, 30);
             this.navigatiePanel.TabIndex = 3;
-            // 
-            // openPlusButton
-            // 
-            this.openPlusButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openPlusButton.Image = global::EersteProjectMau.Properties.Resources.openHelp;
-            this.openPlusButton.Location = new System.Drawing.Point(1207, 4);
-            this.openPlusButton.Name = "openPlusButton";
-            this.openPlusButton.Size = new System.Drawing.Size(23, 22);
-            this.openPlusButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.openPlusButton.TabIndex = 16;
-            this.openPlusButton.TabStop = false;
-            this.openPlusButton.Visible = false;
-            this.openPlusButton.Click += new System.EventHandler(this.openPlusButton_Click);
             // 
             // sluitKruisButton
             // 
@@ -587,7 +572,7 @@
             this.agendaHeader.BackColor = System.Drawing.Color.DarkGray;
             this.agendaHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agendaHeader.ForeColor = System.Drawing.Color.Yellow;
-            this.agendaHeader.Location = new System.Drawing.Point(343, 22);
+            this.agendaHeader.Location = new System.Drawing.Point(5, 13);
             this.agendaHeader.Name = "agendaHeader";
             this.agendaHeader.Size = new System.Drawing.Size(191, 55);
             this.agendaHeader.TabIndex = 9;
@@ -1131,7 +1116,6 @@
             // 
             this.tabPageStoelselectie.AutoScroll = true;
             this.tabPageStoelselectie.BackColor = System.Drawing.Color.White;
-            this.tabPageStoelselectie.Controls.Add(this.schermPicture1);
             this.tabPageStoelselectie.Controls.Add(this.resHeader);
             this.tabPageStoelselectie.Controls.Add(this.filmDatumRes);
             this.tabPageStoelselectie.Controls.Add(this.filmTitelRes);
@@ -1196,16 +1180,6 @@
             this.tabPageStoelselectie.Size = new System.Drawing.Size(923, 484);
             this.tabPageStoelselectie.TabIndex = 4;
             this.tabPageStoelselectie.Text = "tabPageStoelselectie";
-            // 
-            // schermPicture1
-            // 
-            this.schermPicture1.Image = global::EersteProjectMau.Properties.Resources.bioscoopschermImg;
-            this.schermPicture1.Location = new System.Drawing.Point(272, 337);
-            this.schermPicture1.Name = "schermPicture1";
-            this.schermPicture1.Size = new System.Drawing.Size(352, 38);
-            this.schermPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.schermPicture1.TabIndex = 109;
-            this.schermPicture1.TabStop = false;
             // 
             // resHeader
             // 
@@ -1300,7 +1274,7 @@
             // 
             this.buttonStoel24.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel24.Location = new System.Drawing.Point(142, 225);
+            this.buttonStoel24.Location = new System.Drawing.Point(142, 248);
             this.buttonStoel24.Name = "buttonStoel24";
             this.buttonStoel24.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel24.TabIndex = 98;
@@ -1311,7 +1285,7 @@
             // 
             this.buttonStoel25.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel25.Location = new System.Drawing.Point(193, 225);
+            this.buttonStoel25.Location = new System.Drawing.Point(193, 248);
             this.buttonStoel25.Name = "buttonStoel25";
             this.buttonStoel25.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel25.TabIndex = 75;
@@ -1322,7 +1296,7 @@
             // 
             this.buttonStoel26.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel26.Location = new System.Drawing.Point(244, 225);
+            this.buttonStoel26.Location = new System.Drawing.Point(244, 248);
             this.buttonStoel26.Name = "buttonStoel26";
             this.buttonStoel26.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel26.TabIndex = 76;
@@ -1333,7 +1307,7 @@
             // 
             this.buttonStoel47.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel47.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel47.Location = new System.Drawing.Point(703, 276);
+            this.buttonStoel47.Location = new System.Drawing.Point(703, 299);
             this.buttonStoel47.Name = "buttonStoel47";
             this.buttonStoel47.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel47.TabIndex = 97;
@@ -1344,7 +1318,7 @@
             // 
             this.buttonStoel27.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel27.Location = new System.Drawing.Point(295, 225);
+            this.buttonStoel27.Location = new System.Drawing.Point(295, 248);
             this.buttonStoel27.Name = "buttonStoel27";
             this.buttonStoel27.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel27.TabIndex = 77;
@@ -1355,7 +1329,7 @@
             // 
             this.buttonStoel46.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel46.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel46.Location = new System.Drawing.Point(652, 276);
+            this.buttonStoel46.Location = new System.Drawing.Point(652, 299);
             this.buttonStoel46.Name = "buttonStoel46";
             this.buttonStoel46.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel46.TabIndex = 96;
@@ -1366,7 +1340,7 @@
             // 
             this.buttonStoel28.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel28.Location = new System.Drawing.Point(346, 225);
+            this.buttonStoel28.Location = new System.Drawing.Point(346, 248);
             this.buttonStoel28.Name = "buttonStoel28";
             this.buttonStoel28.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel28.TabIndex = 78;
@@ -1377,7 +1351,7 @@
             // 
             this.buttonStoel45.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel45.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel45.Location = new System.Drawing.Point(601, 276);
+            this.buttonStoel45.Location = new System.Drawing.Point(601, 299);
             this.buttonStoel45.Name = "buttonStoel45";
             this.buttonStoel45.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel45.TabIndex = 95;
@@ -1388,7 +1362,7 @@
             // 
             this.buttonStoel29.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel29.Location = new System.Drawing.Point(397, 225);
+            this.buttonStoel29.Location = new System.Drawing.Point(397, 248);
             this.buttonStoel29.Name = "buttonStoel29";
             this.buttonStoel29.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel29.TabIndex = 79;
@@ -1399,7 +1373,7 @@
             // 
             this.buttonStoel44.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel44.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel44.Location = new System.Drawing.Point(550, 276);
+            this.buttonStoel44.Location = new System.Drawing.Point(550, 299);
             this.buttonStoel44.Name = "buttonStoel44";
             this.buttonStoel44.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel44.TabIndex = 94;
@@ -1410,7 +1384,7 @@
             // 
             this.buttonStoel30.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel30.Location = new System.Drawing.Point(448, 225);
+            this.buttonStoel30.Location = new System.Drawing.Point(448, 248);
             this.buttonStoel30.Name = "buttonStoel30";
             this.buttonStoel30.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel30.TabIndex = 80;
@@ -1421,7 +1395,7 @@
             // 
             this.buttonStoel43.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel43.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel43.Location = new System.Drawing.Point(499, 276);
+            this.buttonStoel43.Location = new System.Drawing.Point(499, 299);
             this.buttonStoel43.Name = "buttonStoel43";
             this.buttonStoel43.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel43.TabIndex = 93;
@@ -1432,7 +1406,7 @@
             // 
             this.buttonStoel31.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel31.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel31.Location = new System.Drawing.Point(499, 225);
+            this.buttonStoel31.Location = new System.Drawing.Point(499, 248);
             this.buttonStoel31.Name = "buttonStoel31";
             this.buttonStoel31.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel31.TabIndex = 81;
@@ -1443,7 +1417,7 @@
             // 
             this.buttonStoel42.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel42.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel42.Location = new System.Drawing.Point(448, 276);
+            this.buttonStoel42.Location = new System.Drawing.Point(448, 299);
             this.buttonStoel42.Name = "buttonStoel42";
             this.buttonStoel42.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel42.TabIndex = 92;
@@ -1454,7 +1428,7 @@
             // 
             this.buttonStoel32.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel32.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel32.Location = new System.Drawing.Point(550, 225);
+            this.buttonStoel32.Location = new System.Drawing.Point(550, 248);
             this.buttonStoel32.Name = "buttonStoel32";
             this.buttonStoel32.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel32.TabIndex = 82;
@@ -1465,7 +1439,7 @@
             // 
             this.buttonStoel41.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel41.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel41.Location = new System.Drawing.Point(397, 276);
+            this.buttonStoel41.Location = new System.Drawing.Point(397, 299);
             this.buttonStoel41.Name = "buttonStoel41";
             this.buttonStoel41.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel41.TabIndex = 91;
@@ -1476,7 +1450,7 @@
             // 
             this.buttonStoel33.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel33.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel33.Location = new System.Drawing.Point(601, 225);
+            this.buttonStoel33.Location = new System.Drawing.Point(601, 248);
             this.buttonStoel33.Name = "buttonStoel33";
             this.buttonStoel33.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel33.TabIndex = 83;
@@ -1487,7 +1461,7 @@
             // 
             this.buttonStoel40.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel40.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel40.Location = new System.Drawing.Point(346, 276);
+            this.buttonStoel40.Location = new System.Drawing.Point(346, 299);
             this.buttonStoel40.Name = "buttonStoel40";
             this.buttonStoel40.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel40.TabIndex = 90;
@@ -1498,7 +1472,7 @@
             // 
             this.buttonStoel34.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel34.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel34.Location = new System.Drawing.Point(652, 225);
+            this.buttonStoel34.Location = new System.Drawing.Point(652, 248);
             this.buttonStoel34.Name = "buttonStoel34";
             this.buttonStoel34.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel34.TabIndex = 84;
@@ -1509,7 +1483,7 @@
             // 
             this.buttonStoel39.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel39.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel39.Location = new System.Drawing.Point(295, 276);
+            this.buttonStoel39.Location = new System.Drawing.Point(295, 299);
             this.buttonStoel39.Name = "buttonStoel39";
             this.buttonStoel39.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel39.TabIndex = 89;
@@ -1520,7 +1494,7 @@
             // 
             this.buttonStoel35.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel35.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel35.Location = new System.Drawing.Point(703, 225);
+            this.buttonStoel35.Location = new System.Drawing.Point(703, 248);
             this.buttonStoel35.Name = "buttonStoel35";
             this.buttonStoel35.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel35.TabIndex = 85;
@@ -1531,7 +1505,7 @@
             // 
             this.buttonStoel38.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel38.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel38.Location = new System.Drawing.Point(244, 276);
+            this.buttonStoel38.Location = new System.Drawing.Point(244, 299);
             this.buttonStoel38.Name = "buttonStoel38";
             this.buttonStoel38.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel38.TabIndex = 88;
@@ -1542,7 +1516,7 @@
             // 
             this.buttonStoel36.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel36.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel36.Location = new System.Drawing.Point(142, 276);
+            this.buttonStoel36.Location = new System.Drawing.Point(142, 299);
             this.buttonStoel36.Name = "buttonStoel36";
             this.buttonStoel36.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel36.TabIndex = 86;
@@ -1553,7 +1527,7 @@
             // 
             this.buttonStoel37.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel37.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel37.Location = new System.Drawing.Point(193, 276);
+            this.buttonStoel37.Location = new System.Drawing.Point(193, 299);
             this.buttonStoel37.Name = "buttonStoel37";
             this.buttonStoel37.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel37.TabIndex = 87;
@@ -1564,7 +1538,7 @@
             // 
             this.buttonStoel00.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel00.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel00.Location = new System.Drawing.Point(142, 123);
+            this.buttonStoel00.Location = new System.Drawing.Point(142, 146);
             this.buttonStoel00.Name = "buttonStoel00";
             this.buttonStoel00.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel00.TabIndex = 74;
@@ -1575,7 +1549,7 @@
             // 
             this.buttonStoel01.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel01.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel01.Location = new System.Drawing.Point(193, 123);
+            this.buttonStoel01.Location = new System.Drawing.Point(193, 146);
             this.buttonStoel01.Name = "buttonStoel01";
             this.buttonStoel01.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel01.TabIndex = 51;
@@ -1586,7 +1560,7 @@
             // 
             this.buttonStoel02.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel02.Location = new System.Drawing.Point(244, 123);
+            this.buttonStoel02.Location = new System.Drawing.Point(244, 146);
             this.buttonStoel02.Name = "buttonStoel02";
             this.buttonStoel02.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel02.TabIndex = 52;
@@ -1597,7 +1571,7 @@
             // 
             this.buttonStoel23.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel23.Location = new System.Drawing.Point(703, 174);
+            this.buttonStoel23.Location = new System.Drawing.Point(703, 197);
             this.buttonStoel23.Name = "buttonStoel23";
             this.buttonStoel23.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel23.TabIndex = 73;
@@ -1608,7 +1582,7 @@
             // 
             this.buttonStoel03.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel03.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel03.Location = new System.Drawing.Point(295, 123);
+            this.buttonStoel03.Location = new System.Drawing.Point(295, 146);
             this.buttonStoel03.Name = "buttonStoel03";
             this.buttonStoel03.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel03.TabIndex = 53;
@@ -1619,7 +1593,7 @@
             // 
             this.buttonStoel22.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel22.Location = new System.Drawing.Point(652, 174);
+            this.buttonStoel22.Location = new System.Drawing.Point(652, 197);
             this.buttonStoel22.Name = "buttonStoel22";
             this.buttonStoel22.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel22.TabIndex = 72;
@@ -1630,7 +1604,7 @@
             // 
             this.buttonStoel04.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel04.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel04.Location = new System.Drawing.Point(346, 123);
+            this.buttonStoel04.Location = new System.Drawing.Point(346, 146);
             this.buttonStoel04.Name = "buttonStoel04";
             this.buttonStoel04.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel04.TabIndex = 54;
@@ -1641,7 +1615,7 @@
             // 
             this.buttonStoel21.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel21.Location = new System.Drawing.Point(601, 174);
+            this.buttonStoel21.Location = new System.Drawing.Point(601, 197);
             this.buttonStoel21.Name = "buttonStoel21";
             this.buttonStoel21.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel21.TabIndex = 71;
@@ -1652,7 +1626,7 @@
             // 
             this.buttonStoel05.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel05.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel05.Location = new System.Drawing.Point(397, 123);
+            this.buttonStoel05.Location = new System.Drawing.Point(397, 146);
             this.buttonStoel05.Name = "buttonStoel05";
             this.buttonStoel05.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel05.TabIndex = 55;
@@ -1663,7 +1637,7 @@
             // 
             this.buttonStoel20.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel20.Location = new System.Drawing.Point(550, 174);
+            this.buttonStoel20.Location = new System.Drawing.Point(550, 197);
             this.buttonStoel20.Name = "buttonStoel20";
             this.buttonStoel20.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel20.TabIndex = 70;
@@ -1674,7 +1648,7 @@
             // 
             this.buttonStoel06.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel06.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel06.Location = new System.Drawing.Point(448, 123);
+            this.buttonStoel06.Location = new System.Drawing.Point(448, 146);
             this.buttonStoel06.Name = "buttonStoel06";
             this.buttonStoel06.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel06.TabIndex = 56;
@@ -1685,7 +1659,7 @@
             // 
             this.buttonStoel19.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel19.Location = new System.Drawing.Point(499, 174);
+            this.buttonStoel19.Location = new System.Drawing.Point(499, 197);
             this.buttonStoel19.Name = "buttonStoel19";
             this.buttonStoel19.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel19.TabIndex = 69;
@@ -1696,7 +1670,7 @@
             // 
             this.buttonStoel07.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel07.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel07.Location = new System.Drawing.Point(499, 123);
+            this.buttonStoel07.Location = new System.Drawing.Point(499, 146);
             this.buttonStoel07.Name = "buttonStoel07";
             this.buttonStoel07.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel07.TabIndex = 57;
@@ -1707,7 +1681,7 @@
             // 
             this.buttonStoel18.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel18.Location = new System.Drawing.Point(448, 174);
+            this.buttonStoel18.Location = new System.Drawing.Point(448, 197);
             this.buttonStoel18.Name = "buttonStoel18";
             this.buttonStoel18.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel18.TabIndex = 68;
@@ -1718,7 +1692,7 @@
             // 
             this.buttonStoel08.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel08.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel08.Location = new System.Drawing.Point(550, 123);
+            this.buttonStoel08.Location = new System.Drawing.Point(550, 146);
             this.buttonStoel08.Name = "buttonStoel08";
             this.buttonStoel08.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel08.TabIndex = 58;
@@ -1729,7 +1703,7 @@
             // 
             this.buttonStoel17.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel17.Location = new System.Drawing.Point(397, 174);
+            this.buttonStoel17.Location = new System.Drawing.Point(397, 197);
             this.buttonStoel17.Name = "buttonStoel17";
             this.buttonStoel17.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel17.TabIndex = 67;
@@ -1740,7 +1714,7 @@
             // 
             this.buttonStoel09.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel09.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel09.Location = new System.Drawing.Point(601, 123);
+            this.buttonStoel09.Location = new System.Drawing.Point(601, 146);
             this.buttonStoel09.Name = "buttonStoel09";
             this.buttonStoel09.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel09.TabIndex = 59;
@@ -1751,7 +1725,7 @@
             // 
             this.buttonStoel16.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel16.Location = new System.Drawing.Point(346, 174);
+            this.buttonStoel16.Location = new System.Drawing.Point(346, 197);
             this.buttonStoel16.Name = "buttonStoel16";
             this.buttonStoel16.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel16.TabIndex = 66;
@@ -1762,7 +1736,7 @@
             // 
             this.buttonStoel10.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel10.Location = new System.Drawing.Point(652, 123);
+            this.buttonStoel10.Location = new System.Drawing.Point(652, 146);
             this.buttonStoel10.Name = "buttonStoel10";
             this.buttonStoel10.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel10.TabIndex = 60;
@@ -1773,7 +1747,7 @@
             // 
             this.buttonStoel15.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel15.Location = new System.Drawing.Point(295, 174);
+            this.buttonStoel15.Location = new System.Drawing.Point(295, 197);
             this.buttonStoel15.Name = "buttonStoel15";
             this.buttonStoel15.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel15.TabIndex = 65;
@@ -1784,7 +1758,7 @@
             // 
             this.buttonStoel11.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel11.Location = new System.Drawing.Point(703, 123);
+            this.buttonStoel11.Location = new System.Drawing.Point(703, 146);
             this.buttonStoel11.Name = "buttonStoel11";
             this.buttonStoel11.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel11.TabIndex = 61;
@@ -1795,7 +1769,7 @@
             // 
             this.buttonStoel14.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel14.Location = new System.Drawing.Point(244, 174);
+            this.buttonStoel14.Location = new System.Drawing.Point(244, 197);
             this.buttonStoel14.Name = "buttonStoel14";
             this.buttonStoel14.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel14.TabIndex = 64;
@@ -1806,7 +1780,7 @@
             // 
             this.buttonStoel12.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel12.Location = new System.Drawing.Point(142, 174);
+            this.buttonStoel12.Location = new System.Drawing.Point(142, 197);
             this.buttonStoel12.Name = "buttonStoel12";
             this.buttonStoel12.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel12.TabIndex = 62;
@@ -1817,7 +1791,7 @@
             // 
             this.buttonStoel13.BackColor = System.Drawing.Color.Silver;
             this.buttonStoel13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStoel13.Location = new System.Drawing.Point(193, 174);
+            this.buttonStoel13.Location = new System.Drawing.Point(193, 197);
             this.buttonStoel13.Name = "buttonStoel13";
             this.buttonStoel13.Size = new System.Drawing.Size(48, 48);
             this.buttonStoel13.TabIndex = 63;
@@ -1827,7 +1801,7 @@
             // buttonBetalen1
             // 
             this.buttonBetalen1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBetalen1.Image = global::EersteProjectMau.Properties.Resources.gegevensButton1;
+            this.buttonBetalen1.Image = global::EersteProjectMau.Properties.Resources.betalenButton;
             this.buttonBetalen1.Location = new System.Drawing.Point(571, 425);
             this.buttonBetalen1.Margin = new System.Windows.Forms.Padding(1);
             this.buttonBetalen1.Name = "buttonBetalen1";
@@ -1905,9 +1879,9 @@
             this.label7.Location = new System.Drawing.Point(13, 13);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(442, 55);
+            this.label7.Size = new System.Drawing.Size(305, 55);
             this.label7.TabIndex = 54;
-            this.label7.Text = "Gegevens invoeren";
+            this.label7.Text = "Betaalpagina";
             // 
             // landBetaal
             // 
@@ -2782,6 +2756,19 @@
             this.tabControl2.Size = new System.Drawing.Size(306, 510);
             this.tabControl2.TabIndex = 3;
             // 
+            // openPlusButton
+            // 
+            this.openPlusButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openPlusButton.Image = global::EersteProjectMau.Properties.Resources.openHelp;
+            this.openPlusButton.Location = new System.Drawing.Point(1207, 4);
+            this.openPlusButton.Name = "openPlusButton";
+            this.openPlusButton.Size = new System.Drawing.Size(23, 22);
+            this.openPlusButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.openPlusButton.TabIndex = 16;
+            this.openPlusButton.TabStop = false;
+            this.openPlusButton.Visible = false;
+            this.openPlusButton.Click += new System.EventHandler(this.openPlusButton_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2800,7 +2787,6 @@
             this.Load += new System.EventHandler(this.homePage_Load);
             this.navigatiePanel.ResumeLayout(false);
             this.navigatiePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).EndInit();
@@ -2841,7 +2827,6 @@
             this.vragenPaneel.PerformLayout();
             this.tabPageStoelselectie.ResumeLayout(false);
             this.tabPageStoelselectie.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.schermPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalen1)).EndInit();
             this.tabPageBetalen.ResumeLayout(false);
             this.tabPageBetalen.PerformLayout();
@@ -2872,6 +2857,7 @@
             this.HomeHelp.ResumeLayout(false);
             this.HomeHelp.PerformLayout();
             this.tabControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3083,7 +3069,6 @@
         private System.Windows.Forms.PictureBox meerFilmsButton;
         private System.Windows.Forms.PictureBox sluitKruisButton;
         private System.Windows.Forms.PictureBox openPlusButton;
-        private System.Windows.Forms.PictureBox schermPicture1;
     }
 }
 

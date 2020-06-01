@@ -1827,7 +1827,7 @@
             // buttonBetalen1
             // 
             this.buttonBetalen1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBetalen1.Image = global::EersteProjectMau.Properties.Resources.gegevensButton1;
+            this.buttonBetalen1.Image = global::EersteProjectMau.Properties.Resources.gegevensButton;
             this.buttonBetalen1.Location = new System.Drawing.Point(571, 425);
             this.buttonBetalen1.Margin = new System.Windows.Forms.Padding(1);
             this.buttonBetalen1.Name = "buttonBetalen1";
