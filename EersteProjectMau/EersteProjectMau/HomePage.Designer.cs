@@ -529,7 +529,7 @@
             this.agendaHeader.BackColor = System.Drawing.Color.DarkGray;
             this.agendaHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agendaHeader.ForeColor = System.Drawing.Color.Yellow;
-            this.agendaHeader.Location = new System.Drawing.Point(5, 13);
+            this.agendaHeader.Location = new System.Drawing.Point(343, 22);
             this.agendaHeader.Name = "agendaHeader";
             this.agendaHeader.Size = new System.Drawing.Size(191, 55);
             this.agendaHeader.TabIndex = 9;
