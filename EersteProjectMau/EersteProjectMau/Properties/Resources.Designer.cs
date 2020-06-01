@@ -166,16 +166,6 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bioscoopschermImg {
-            get {
-                object obj = ResourceManager.GetObject("bioscoopschermImg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap CalmGrey {
             get {
                 object obj = ResourceManager.GetObject("CalmGrey", resourceCulture);
@@ -246,16 +236,6 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gegevensButton {
-            get {
-                object obj = ResourceManager.GetObject("gegevensButton", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap homeButton {
             get {
                 object obj = ResourceManager.GetObject("homeButton", resourceCulture);
@@ -289,16 +269,6 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap kaart {
             get {
                 object obj = ResourceManager.GetObject("kaart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap kruisHelp {
-            get {
-                object obj = ResourceManager.GetObject("kruisHelp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,16 +356,6 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap meerFilmsKnop {
-            get {
-                object obj = ResourceManager.GetObject("meerFilmsKnop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap minus {
             get {
                 object obj = ResourceManager.GetObject("minus", resourceCulture);
@@ -409,16 +369,6 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap ohvz {
             get {
                 object obj = ResourceManager.GetObject("ohvz", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap openHelp {
-            get {
-                object obj = ResourceManager.GetObject("openHelp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

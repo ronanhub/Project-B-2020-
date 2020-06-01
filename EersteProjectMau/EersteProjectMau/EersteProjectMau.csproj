@@ -62,11 +62,9 @@
     <Compile Include="Help_On_OFF.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Nietverbonden.cs">
       <SubType>Form</SubType>
@@ -108,7 +106,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Nietverbonden.resx">
       <DependentUpon>Nietverbonden.cs</DependentUpon>
@@ -127,9 +124,7 @@
     <EmbeddedResource Include="Verzonden.resx">
       <DependentUpon>Verzonden.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Data\12YearsASlave.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Data\12YearsASlave.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -262,21 +257,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sns balk.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\meerFilmsKnop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kruisHelp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\openHelp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bioscoopschermImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gegevensButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
