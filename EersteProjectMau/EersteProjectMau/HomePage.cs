@@ -43,9 +43,7 @@ namespace EersteProjectMau
 
             homePoster.Size = (tabControl2.Visible == false) ? new Size(320, 479) : new Size(215, 311);
             reserveerButtonHome.Location = (tabControl2.Visible == false) ? new Point(680, 400) : new Point(703, 380);
-            imdbHome.Location = (tabControl2.Visible == false) ? new Point(687, 450) : new Point(687, 330);
-            imdbHome.Font = (tabControl2.Visible == false) ? new Font(imdbHome.Font.FontFamily, 27): new Font(imdbHome.Font.FontFamily, 16);
-            imdbHome.Location = (tabControl2.Visible == false) ? new Point(875, 450) : new Point(687, 330);
+           
             homePoster.Location = (tabControl2.Visible == false) ? new Point(880, 5) : new Point(692, 5);
 
             buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
@@ -451,7 +449,7 @@ namespace EersteProjectMau
             Vraag8label.Text = vraag8.Vraag;
             Vraag9label.Text = vraag9.Vraag;
 
-            this.ActiveControl = label1;
+            this.ActiveControl = homeTitel;
 
 
             this.DoubleBuffered = true;
@@ -991,6 +989,24 @@ namespace EersteProjectMau
                 var stoel = vindStoel(i);
                 updatePrijs(stoel);
             }
+        private void meerFilmsButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
+        }
+
+        private void sluitKruisButton_Click(object sender, EventArgs e)
+        {
+            Help_Open_Sluit();
+            sluitKruisButton.Visible = false;
+            openPlusButton.Visible = true;
+        }
+
+        private void openPlusButton_Click(object sender, EventArgs e)
+        {
+           Help_Open_Sluit();
+           openPlusButton.Visible = false;
+           sluitKruisButton.Visible = true;
         }
     }
 }
