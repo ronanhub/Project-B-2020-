@@ -185,7 +185,6 @@
             this.buttonVorigeBank1 = new System.Windows.Forms.PictureBox();
             this.labelBedrag1 = new System.Windows.Forms.Label();
             this.labelBedragg1 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.raboCheck = new System.Windows.Forms.CheckBox();
             this.snsCheck = new System.Windows.Forms.CheckBox();
             this.ingCheck = new System.Windows.Forms.CheckBox();
@@ -237,6 +236,8 @@
             this.homeHulp = new System.Windows.Forms.Label();
             this.homeHelpHeader = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.FotoMastercard = new System.Windows.Forms.PictureBox();
+            this.FotoVisa = new System.Windows.Forms.PictureBox();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
@@ -295,6 +296,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.HomeHelp.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoMastercard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoVisa)).BeginInit();
             this.SuspendLayout();
             // 
             // navigatiePanel
@@ -1969,7 +1972,7 @@
             // 
             this.bedragBetaal2.AutoSize = true;
             this.bedragBetaal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bedragBetaal2.Location = new System.Drawing.Point(1074, 23);
+            this.bedragBetaal2.Location = new System.Drawing.Point(1053, 23);
             this.bedragBetaal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bedragBetaal2.Name = "bedragBetaal2";
             this.bedragBetaal2.Size = new System.Drawing.Size(112, 44);
@@ -1989,12 +1992,12 @@
             // labelbedraggBetaal1
             // 
             this.labelbedraggBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelbedraggBetaal1.Location = new System.Drawing.Point(890, 16);
+            this.labelbedraggBetaal1.Location = new System.Drawing.Point(848, 16);
             this.labelbedraggBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelbedraggBetaal1.Name = "labelbedraggBetaal1";
-            this.labelbedraggBetaal1.Size = new System.Drawing.Size(208, 61);
+            this.labelbedraggBetaal1.Size = new System.Drawing.Size(269, 61);
             this.labelbedraggBetaal1.TabIndex = 60;
-            this.labelbedraggBetaal1.Text = "Bedrag: €";
+            this.labelbedraggBetaal1.Text = "Bedrag: € ";
             // 
             // label7
             // 
@@ -2039,7 +2042,7 @@
             this.betaalPostcode.Name = "betaalPostcode";
             this.betaalPostcode.Size = new System.Drawing.Size(148, 49);
             this.betaalPostcode.TabIndex = 49;
-            this.betaalPostcode.Text = "AAAA00";
+            this.betaalPostcode.Text = "1234AB";
             // 
             // betaalAdres
             // 
@@ -2198,11 +2201,12 @@
             // betalingKlaar
             // 
             this.betalingKlaar.BackColor = System.Drawing.Color.White;
+            this.betalingKlaar.Controls.Add(this.FotoVisa);
+            this.betalingKlaar.Controls.Add(this.FotoMastercard);
             this.betalingKlaar.Controls.Add(this.buttonVolgendeBank1);
             this.betalingKlaar.Controls.Add(this.buttonVorigeBank1);
             this.betalingKlaar.Controls.Add(this.labelBedrag1);
             this.betalingKlaar.Controls.Add(this.labelBedragg1);
-            this.betalingKlaar.Controls.Add(this.label20);
             this.betalingKlaar.Controls.Add(this.raboCheck);
             this.betalingKlaar.Controls.Add(this.snsCheck);
             this.betalingKlaar.Controls.Add(this.ingCheck);
@@ -2267,22 +2271,11 @@
             this.labelBedragg1.TabIndex = 69;
             this.labelBedragg1.Text = "Bedrag:\r\n€";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(18, 16);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(379, 69);
-            this.label20.TabIndex = 66;
-            this.label20.Text = "Betaalpagina";
-            // 
             // raboCheck
             // 
             this.raboCheck.AutoSize = true;
             this.raboCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.raboCheck.Location = new System.Drawing.Point(934, 349);
+            this.raboCheck.Location = new System.Drawing.Point(379, 383);
             this.raboCheck.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.raboCheck.Name = "raboCheck";
             this.raboCheck.Size = new System.Drawing.Size(18, 17);
@@ -2294,7 +2287,7 @@
             // 
             this.snsCheck.AutoSize = true;
             this.snsCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.snsCheck.Location = new System.Drawing.Point(724, 349);
+            this.snsCheck.Location = new System.Drawing.Point(388, 240);
             this.snsCheck.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.snsCheck.Name = "snsCheck";
             this.snsCheck.Size = new System.Drawing.Size(18, 17);
@@ -2306,7 +2299,7 @@
             // 
             this.ingCheck.AutoSize = true;
             this.ingCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ingCheck.Location = new System.Drawing.Point(506, 349);
+            this.ingCheck.Location = new System.Drawing.Point(151, 383);
             this.ingCheck.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.ingCheck.Name = "ingCheck";
             this.ingCheck.Size = new System.Drawing.Size(18, 17);
@@ -2317,10 +2310,10 @@
             // abnCheck
             // 
             this.abnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.abnCheck.Location = new System.Drawing.Point(286, 349);
+            this.abnCheck.Location = new System.Drawing.Point(140, 221);
             this.abnCheck.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.abnCheck.Name = "abnCheck";
-            this.abnCheck.Size = new System.Drawing.Size(26, 25);
+            this.abnCheck.Size = new System.Drawing.Size(40, 36);
             this.abnCheck.TabIndex = 62;
             this.abnCheck.UseVisualStyleBackColor = true;
             this.abnCheck.CheckedChanged += new System.EventHandler(this.abnCheck_CheckedChanged);
@@ -2328,10 +2321,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(642, 173);
+            this.pictureBox2.Location = new System.Drawing.Point(285, 120);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(178, 150);
+            this.pictureBox2.Size = new System.Drawing.Size(190, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 68;
             this.pictureBox2.TabStop = false;
@@ -2339,10 +2332,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(850, 173);
+            this.pictureBox4.Location = new System.Drawing.Point(285, 287);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(186, 150);
+            this.pictureBox4.Size = new System.Drawing.Size(190, 150);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 61;
             this.pictureBox4.TabStop = false;
@@ -2350,7 +2343,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(422, 173);
+            this.pictureBox6.Location = new System.Drawing.Point(62, 287);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(190, 150);
@@ -2361,10 +2354,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(202, 173);
+            this.pictureBox7.Location = new System.Drawing.Point(62, 120);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(188, 150);
+            this.pictureBox7.Size = new System.Drawing.Size(190, 150);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 57;
             this.pictureBox7.TabStop = false;
@@ -2883,6 +2876,26 @@
             this.tabControl2.Size = new System.Drawing.Size(408, 628);
             this.tabControl2.TabIndex = 3;
             // 
+            // FotoMastercard
+            // 
+            this.FotoMastercard.Image = ((System.Drawing.Image)(resources.GetObject("FotoMastercard.Image")));
+            this.FotoMastercard.Location = new System.Drawing.Point(812, 120);
+            this.FotoMastercard.Name = "FotoMastercard";
+            this.FotoMastercard.Size = new System.Drawing.Size(190, 150);
+            this.FotoMastercard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FotoMastercard.TabIndex = 73;
+            this.FotoMastercard.TabStop = false;
+            // 
+            // FotoVisa
+            // 
+            this.FotoVisa.Image = ((System.Drawing.Image)(resources.GetObject("FotoVisa.Image")));
+            this.FotoVisa.Location = new System.Drawing.Point(812, 287);
+            this.FotoVisa.Name = "FotoVisa";
+            this.FotoVisa.Size = new System.Drawing.Size(190, 150);
+            this.FotoVisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FotoVisa.TabIndex = 74;
+            this.FotoVisa.TabStop = false;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2979,6 +2992,8 @@
             this.HomeHelp.ResumeLayout(false);
             this.HomeHelp.PerformLayout();
             this.tabControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FotoMastercard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoVisa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3072,7 +3087,6 @@
         private System.Windows.Forms.TabPage contactPage;
         private System.Windows.Forms.RichTextBox contactInfo;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.CheckBox raboCheck;
         private System.Windows.Forms.CheckBox snsCheck;
         private System.Windows.Forms.CheckBox ingCheck;
@@ -3189,6 +3203,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage BetaalPaginaCreditcard;
         private System.Windows.Forms.Label BetaalPaginaLabel;
+        private System.Windows.Forms.PictureBox FotoVisa;
+        private System.Windows.Forms.PictureBox FotoMastercard;
     }
 }
 
