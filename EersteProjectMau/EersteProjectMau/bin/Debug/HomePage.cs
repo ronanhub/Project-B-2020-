@@ -776,12 +776,6 @@ namespace EersteProjectMau
             betaalBalk.Image = Resources.rabo_balk;
         }
 
-        private void buttonBetalen1_Click(object sender, EventArgs e)
-        {
-            saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            labelbedragBetaal1.Text = totaalPrijs.ToString();
-        }
 
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
         {
@@ -988,6 +982,11 @@ namespace EersteProjectMau
            Help_Open_Sluit();
            openPlusButton.Visible = false;
            sluitKruisButton.Visible = true;
+        }
+
+        private void gegevensButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
