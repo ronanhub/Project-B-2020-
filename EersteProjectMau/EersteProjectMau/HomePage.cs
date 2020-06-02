@@ -749,7 +749,7 @@ namespace EersteProjectMau
             ingCheck.Checked = false;
             snsCheck.Checked = false;
             raboCheck.Checked = false;
-            betaalBalk.Image = Resources.abn_balk;
+  
         }
 
         private void ingCheck_CheckedChanged(object sender, EventArgs e)
@@ -757,7 +757,7 @@ namespace EersteProjectMau
             abnCheck.Checked = false;
             snsCheck.Checked = false;
             raboCheck.Checked = false;
-            betaalBalk.Image = Resources.ing_balk;
+            
         }
 
         private void snsCheck_CheckedChanged(object sender, EventArgs e)
@@ -765,7 +765,7 @@ namespace EersteProjectMau
             abnCheck.Checked = false;
             ingCheck.Checked = false;
             raboCheck.Checked = false;
-            betaalBalk.Image = Resources.sns_balk;
+            
         }
 
         private void raboCheck_CheckedChanged(object sender, EventArgs e)
@@ -773,7 +773,7 @@ namespace EersteProjectMau
             abnCheck.Checked = false;
             ingCheck.Checked = false;
             snsCheck.Checked = false;
-            betaalBalk.Image = Resources.rabo_balk;
+            
         }
 
 
@@ -923,46 +923,7 @@ namespace EersteProjectMau
 
 
 
-        private void textboxMaand1_Click(object sender, EventArgs e)
-        {
-            if (textboxMaand1.Text == "Maand")
-            {
-                textboxMaand1.Text = "";
-            }
-        }
-        private void textBoxJaar1_Click(object sender, EventArgs e)
-        {
-            if (textBoxJaar1.Text == "Jaar")
-            {
-                textBoxJaar1.Text = "";
-            }
-        }
-
-        private void textboxMaand1_Leave(object sender, EventArgs e)
-        {
-            if (textboxMaand1.Text == "")
-            {
-                textboxMaand1.Text = "Maand";
-                textboxMaand1.ForeColor = Color.DarkGray;
-            }
-        }
-        private void textBoxJaar1_Leave(object sender, EventArgs e)
-        {
-            if (textBoxJaar1.Text == "")
-            {
-                textBoxJaar1.Text = "Jaar";
-                textBoxJaar1.ForeColor = Color.DarkGray;
-            }
-        }
-        private void textBoxJaar1_TextChanged(object sender, EventArgs e)
-        {
-            textBoxJaar1.ForeColor = Color.Black;
-
-        }
-        private void textboxMaand1_TextChanged(object sender, EventArgs e)
-        {
-            textboxMaand1.ForeColor = Color.Black;
-        }
+        
 
         private void meerFilmsButton_Click(object sender, EventArgs e)
         {
@@ -988,7 +949,161 @@ namespace EersteProjectMau
         {
             saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            labelbedragBetaal1.Text = totaalPrijs.ToString();
+            bedragBetaal2.Text = totaalPrijs.ToString();
+        }
+
+        private void BetaalPaginaGeenRobot_Click(object sender, EventArgs e)
+        {
+            if ( (textboxPasnummer1.Text == "" || textboxPasnummer1.Text == "000") || (textBoxRekeningnummer1.Text  == "" || textBoxRekeningnummer1.Text == "NL00ABNA0123456789") )
+            {
+                MessageBox.Show("Vul alle gegevens in.");
+            }
+            else
+            {
+                buttonBetalenFinal1.Enabled = true;
+                BetaalPaginaGeenRobot.BackColor = Color.Lime;
+                buttonBetalenFinal1.BackColor = Color.Lime;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textboxPasnummer1_KeyPress(object sender, KeyPressEventArgs e)
+        { 
+            if (char.IsNumber(e.KeyChar) && (textboxPasnummer1.Text.Length < 3) )
+            {
+
+            }
+            else
+            {
+                e.Handled = e.KeyChar != (char)Keys.Back;
+            }
+        }
+
+        private void textBoxRekeningnummer1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBoxRekeningnummer1.Text.Length <= 1)
+            {
+                e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            }
+            
+            else if ( (textBoxRekeningnummer1.Text.Length >= 2) && (textBoxRekeningnummer1.Text.Length <= 3) )
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            
+           else if ( (textBoxRekeningnummer1.Text.Length >= 4) && textBoxRekeningnummer1.Text.Length <= 7)
+            {
+                e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            }
+            else if (textBoxRekeningnummer1.Text.Length < 18)
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else
+            {
+                 e.Handled = e.KeyChar != (char)Keys.Back;
+            }
+        }
+
+        private void betaalVoornaam_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void betaalAchternaam_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void betaalPlaats_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBoxRekeningnummer1_Click(object sender, EventArgs e)
+        {
+            if ( textBoxRekeningnummer1.Text == "NL00ABNA0123456789")
+            {
+                textBoxRekeningnummer1.Text = "";
+            }
+        }
+
+        private void textBoxRekeningnummer1_Leave(object sender, EventArgs e)
+        {
+            if (textBoxRekeningnummer1.Text == "")
+            {
+                textBoxRekeningnummer1.Text = "NL00ABNA0123456789";
+            }
+        }
+
+        private void textboxPasnummer1_Click(object sender, EventArgs e)
+        {
+            if (textboxPasnummer1.Text == "000")
+            {
+                textboxPasnummer1.Text = "";
+            }
+        }
+
+        private void textboxPasnummer1_Leave(object sender, EventArgs e)
+        {
+            if (textboxPasnummer1.Text == "")
+            {
+                textboxPasnummer1.Text = "000";
+            }
         }
     }
 }
