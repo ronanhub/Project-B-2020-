@@ -25,14 +25,14 @@ namespace EersteProjectMau
         Help_On_OFF helpKnop = new Help_On_OFF();
         public void Help_Open_Sluit()
         {
-            
+
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
             tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(930, 510);
 
             vragenPaneel.Size = (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
-            faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15); 
+            faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15);
 
             antwoorden.Location = (tabControl2.Visible == false) ? new Point(675, 53) : new Point(575, 53);
             huidigeVraag.Location = (tabControl2.Visible == false) ? new Point(669, 15) : new Point(569, 15);
@@ -42,7 +42,7 @@ namespace EersteProjectMau
 
             homePoster.Size = (tabControl2.Visible == false) ? new Size(320, 479) : new Size(215, 311);
             reserveerButtonHome.Location = (tabControl2.Visible == false) ? new Point(680, 400) : new Point(703, 380);
-           
+
             homePoster.Location = (tabControl2.Visible == false) ? new Point(880, 5) : new Point(692, 5);
 
             buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
@@ -100,7 +100,7 @@ namespace EersteProjectMau
             Color kleur;
             string nummerString = button.Name.Substring(startIndex: 11, length: 2);
             Int32.TryParse(nummerString, out nummer);
-            
+
             switch (stoelGrid[nummer].Item2)
             {
                 case status.vrij:
@@ -357,7 +357,7 @@ namespace EersteProjectMau
                 new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""), new Tuple<float,status,string>(11.0f,status.vrij,""),
                 new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,""), new Tuple<float,status,string>(10.0f,status.vrij,"")
                 };
-            }    
+            }
             return lijst;
         }
 
@@ -367,7 +367,7 @@ namespace EersteProjectMau
             List<string> Data = new List<string>();
             Data.Add("Stoel;Prijs;Status;Klant");
 
-            for(int l = 0;l< stoelLijst.Count;l++)
+            for (int l = 0; l < stoelLijst.Count; l++)
             {
                 if (stoelLijst[l].Item2 == status.keuze)
                 {
@@ -542,7 +542,7 @@ namespace EersteProjectMau
             // Add the Label and TextBox controls to the Panel.
             
         }*/
-        
+
 
         private void reserveerbutton_Click(object sender, EventArgs e)
         {
@@ -574,13 +574,13 @@ namespace EersteProjectMau
                 case status.vrij:
                     {
                         stoelStatus = status.keuze;
-                        stoelGrid[nummer] = new Tuple<float,status,string>(stoelGrid[nummer].Item1, stoelStatus, "");
+                        stoelGrid[nummer] = new Tuple<float, status, string>(stoelGrid[nummer].Item1, stoelStatus, "");
                         break;
                     }
                 case status.keuze:
                     {
                         stoelStatus = status.vrij;
-                        stoelGrid[nummer] = new Tuple<float,status,string>(stoelGrid[nummer].Item1, stoelStatus, "");
+                        stoelGrid[nummer] = new Tuple<float, status, string>(stoelGrid[nummer].Item1, stoelStatus, "");
                         break;
                     }
             }
@@ -598,7 +598,7 @@ namespace EersteProjectMau
             }
         }
 
-   
+
 
 
 
@@ -653,7 +653,7 @@ namespace EersteProjectMau
             tabControl1.SelectTab(5);
             tabControl2.SelectTab(5);
         }
-      
+
         public void naarStoelSelectie(film nieuweFilm)
         {
             tabControl1.SelectTab(4);
@@ -677,7 +677,7 @@ namespace EersteProjectMau
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FAQ FAQ FAQ FAQ FAQ FAQ FAQ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void Vraag1label_Click(object sender, EventArgs e)
         {
-            changeTextbox(vraag1.Antwoord,vraag1.Vraag);
+            changeTextbox(vraag1.Antwoord, vraag1.Vraag);
         }
         private void Vraag2label_Click(object sender, EventArgs e)
         {
@@ -740,24 +740,28 @@ namespace EersteProjectMau
 
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ BETALEN BETALEN BETALEN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        
+
 
 
 
         private void abnCheck_CheckedChanged(object sender, EventArgs e)
         {
             ingCheck.Checked = false;
-            snsCheck.Checked = false;
             raboCheck.Checked = false;
-  
+            snsCheck.Checked = false;
+            checkVisa.Checked = false;
+            checkMastercard.Checked = false;
+
         }
 
         private void ingCheck_CheckedChanged(object sender, EventArgs e)
         {
             abnCheck.Checked = false;
-            snsCheck.Checked = false;
             raboCheck.Checked = false;
-            
+            snsCheck.Checked = false;
+            checkVisa.Checked = false;
+            checkMastercard.Checked = false;
+
         }
 
         private void snsCheck_CheckedChanged(object sender, EventArgs e)
@@ -765,7 +769,9 @@ namespace EersteProjectMau
             abnCheck.Checked = false;
             ingCheck.Checked = false;
             raboCheck.Checked = false;
-            
+            checkVisa.Checked = false;
+            checkMastercard.Checked = false;
+
         }
 
         private void raboCheck_CheckedChanged(object sender, EventArgs e)
@@ -773,13 +779,15 @@ namespace EersteProjectMau
             abnCheck.Checked = false;
             ingCheck.Checked = false;
             snsCheck.Checked = false;
-            
+            checkVisa.Checked = false;
+            checkMastercard.Checked = false;
         }
 
 
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
+            tabControl2.SelectTab(4);
         }
 
         private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
@@ -792,6 +800,7 @@ namespace EersteProjectMau
         private void buttonVorigeBank1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(5);
+            tabControl2.SelectTab(5);
         }
 
         private void buttonVolgendeBank1_Click(object sender, EventArgs e)
@@ -799,6 +808,12 @@ namespace EersteProjectMau
             if (abnCheck.Checked == true || ingCheck.Checked == true || snsCheck.Checked == true || raboCheck.Checked == true)
             {
                 tabControl1.SelectTab(7);
+                tabControl2.SelectTab(7);
+            }
+            else if (checkVisa.Checked == true || checkMastercard.Checked == true)
+            {
+                tabControl1.SelectTab(8);
+                tabControl2.SelectTab(8);
             }
             else
             {
@@ -809,17 +824,19 @@ namespace EersteProjectMau
         private void buttonBetalenFinal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
             MessageBox.Show("Betaling is gelukt.");
         }
 
         private void buttonVorigeFinal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
         }
 
-        
 
-        
+
+
         private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
         {
             if (textBoxZoeken1.Text == "Zoeken...")
@@ -838,7 +855,7 @@ namespace EersteProjectMau
             stuurvraag.StartPosition = FormStartPosition.CenterScreen;
             stuurvraag.Show();
         }
-        
+
 
         private void buttonStelZelfVraagg1_Click(object sender, EventArgs e)
         {
@@ -892,7 +909,7 @@ namespace EersteProjectMau
 
         private void min_Click(object sender, EventArgs e)
         {
-            
+
             if (kaartvalue > 5)
             {
                 kaartvalue -= 1;
@@ -902,7 +919,7 @@ namespace EersteProjectMau
                     kaartBox.Image = ZoomPicture(org.Image, new Size(kaartvalue, kaartvalue));
                 }
             }
-            
+
         }
 
 
@@ -923,7 +940,7 @@ namespace EersteProjectMau
 
 
 
-        
+
 
         private void meerFilmsButton_Click(object sender, EventArgs e)
         {
@@ -940,9 +957,9 @@ namespace EersteProjectMau
 
         private void openPlusButton_Click(object sender, EventArgs e)
         {
-           Help_Open_Sluit();
-           openPlusButton.Visible = false;
-           sluitKruisButton.Visible = true;
+            Help_Open_Sluit();
+            openPlusButton.Visible = false;
+            sluitKruisButton.Visible = true;
         }
 
         private void gegevensButton_Click(object sender, EventArgs e)
@@ -950,13 +967,23 @@ namespace EersteProjectMau
             saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
             tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
             bedragBetaal2.Text = totaalPrijs.ToString();
+            tabControl2.SelectTab(5);
+
         }
 
         private void BetaalPaginaGeenRobot_Click(object sender, EventArgs e)
         {
-            if ( (textboxPasnummer1.Text == "" || textboxPasnummer1.Text == "000") || (textBoxRekeningnummer1.Text  == "" || textBoxRekeningnummer1.Text == "NL00ABNA0123456789") )
+            if ((textboxPasnummer1.Text == "" || textboxPasnummer1.Text == "000") || (textBoxRekeningnummer1.Text == "" || textBoxRekeningnummer1.Text == "NL00ABNA0123456789") )
             {
                 MessageBox.Show("Vul alle gegevens in.");
+            }
+            else if(textBoxRekeningnummer1.Text.Length != 18)
+            {
+                MessageBox.Show("Vul een geldig rekeningnummer in.");
+            }
+            else if(textboxPasnummer1.Text.Length != 3)
+            {
+                MessageBox.Show("Vul een geldig pasnummer in.");
             }
             else
             {
@@ -1103,6 +1130,217 @@ namespace EersteProjectMau
             if (textboxPasnummer1.Text == "")
             {
                 textboxPasnummer1.Text = "000";
+            }
+        }
+
+        private void betaalEmail_Click(object sender, EventArgs e)
+        {
+            if (betaalEmail.Text == "Voorbeeld@gmail.com")
+            {
+                betaalEmail.Text = "";
+            }
+        }
+
+        private void betaalEmail_Leave(object sender, EventArgs e)
+        {
+            if (betaalEmail.Text == "")
+            {
+                betaalEmail.Text = "Voorbeeld@gmail.com";
+            }
+        }
+
+        private void betaalVoornaam_Click(object sender, EventArgs e)
+        {
+            if (betaalVoornaam.Text == "Ashley")
+            {
+                betaalVoornaam.Text = "";
+            }
+        }
+
+        private void betaalVoornaam_Leave(object sender, EventArgs e)
+        {
+            if (betaalVoornaam.Text == "")
+            {
+                betaalVoornaam.Text = "Ashley";
+            }
+        }
+
+        private void betaalAchternaam_Click(object sender, EventArgs e)
+        {
+            if (betaalAchternaam.Text == "Bunk")
+            {
+                betaalAchternaam.Text = "";
+            }
+        }
+
+        private void betaalAchternaam_Leave(object sender, EventArgs e)
+        {
+            if (betaalAchternaam.Text == "")
+            {
+                betaalAchternaam.Text = "Bunk";
+            }
+        }
+
+        private void betaalAdres_Click(object sender, EventArgs e)
+        {
+            if (betaalAdres.Text == "Wijnhaven 107")
+            {
+                betaalAdres.Text = "";
+            }
+        }
+
+        private void betaalAdres_Leave(object sender, EventArgs e)
+        {
+            if (betaalAdres.Text == "")
+            {
+                betaalAdres.Text = "Wijnhaven 107";
+            }
+        }
+
+        private void betaalPostcode_Click(object sender, EventArgs e)
+        {
+            if (betaalPostcode.Text == "1234AB")
+            {
+                betaalPostcode.Text = "";
+            }
+        }
+
+        private void betaalPostcode_Leave(object sender, EventArgs e)
+        {
+            if (betaalPostcode.Text == "")
+            {
+                betaalPostcode.Text = "1234AB";
+            }
+        }
+
+        private void betaalPlaats_Click(object sender, EventArgs e)
+        {
+            if (betaalPlaats.Text == "Rotterdam")
+            {
+                betaalPlaats.Text = "";
+            }
+        }
+
+        private void betaalPostcode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (betaalPostcode.Text.Length <= 3)
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else if (betaalPostcode.Text.Length <= 5)
+            {
+                e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            }
+            else
+            {
+                e.Handled = e.KeyChar != (char)Keys.Back;
+            }
+        }
+
+        private void betaalLand_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back;
+        }
+
+        private void FotoABN_Click(object sender, EventArgs e)
+        {
+            abnCheck.Checked = true;
+        }
+
+        private void FotoSNS_Click(object sender, EventArgs e)
+        {
+            snsCheck.Checked = true;
+        }
+
+        private void FotoING_Click(object sender, EventArgs e)
+        {
+            ingCheck.Checked = true;
+        }
+
+        private void FotoRabobank_Click(object sender, EventArgs e)
+        {
+            raboCheck.Checked = true;
+        }
+
+        private void FotoMastercard_Click(object sender, EventArgs e)
+        {
+            checkMastercard.Checked = true;
+        }
+
+        private void FotoVisa_Click(object sender, EventArgs e)
+        {
+            checkVisa.Checked = true;
+        }
+
+        private void checkMastercard_CheckedChanged(object sender, EventArgs e)
+        {
+            abnCheck.Checked = false;
+            ingCheck.Checked = false;
+            raboCheck.Checked = false;
+            snsCheck.Checked = false;
+            checkVisa.Checked = false;
+           
+        }
+
+        private void checkVisa_CheckedChanged(object sender, EventArgs e)
+        {
+            abnCheck.Checked = false;
+            ingCheck.Checked = false;
+            raboCheck.Checked = false;
+            snsCheck.Checked = false;
+            checkMastercard.Checked = false;
+        }
+
+        private void VorigeCreditcard_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+        }
+
+        private void VolgendeCreditcard_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
+            MessageBox.Show("Betaling is gelukt.");
+        }
+
+        private void NaamCreditcardEigenaar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void ComboboxMaand_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back;
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back;
+        }
+
+        private void RekeningnummerCreditcard_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(RekeningnummerCreditcard.Text.Length <= 15)
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else
+            {
+                e.Handled = e.KeyChar != (char)Keys.Back;
+            }
+            
+        }
+
+        private void CvcCreditcard_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (CvcCreditcard.Text.Length <= 2)
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else
+            {
+                e.Handled = e.KeyChar != (char)Keys.Back;
             }
         }
     }

@@ -126,3 +126,22 @@ C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\Eerste
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.cs
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.Designer.cs
 C:\Users\Jasper van Tuijl\Desktop\github\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\Data\12YearsASlave.csv
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.resx
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.cs
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.Designer.cs
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\Data\12YearsASlave.csv
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe.config
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.exe
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\EersteProjectMau.pdb
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csprojAssemblyReference.cache
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Agenda.resources
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.HomePage.resources
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Nietverbonden.resources
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.properEmail.resources
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Properties.Resources.resources
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.StuurVraagFormcs.resources
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.Verzonden.resources
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.GenerateResource.cache
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.CoreCompileInputs.cache
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
+C:\Users\jaspe\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
