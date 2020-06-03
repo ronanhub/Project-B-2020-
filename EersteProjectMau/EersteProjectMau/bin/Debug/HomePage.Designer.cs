@@ -181,16 +181,18 @@
             this.buttonVolgendeBetaal1 = new System.Windows.Forms.PictureBox();
             this.buttonVorigeBetaal1 = new System.Windows.Forms.PictureBox();
             this.betalingKlaar = new System.Windows.Forms.TabPage();
+            this.RadioButtonVISA = new System.Windows.Forms.RadioButton();
+            this.RadioButtonMASTER = new System.Windows.Forms.RadioButton();
+            this.RadioButtonRABO = new System.Windows.Forms.RadioButton();
+            this.RadioButtonING = new System.Windows.Forms.RadioButton();
+            this.RadioButtonSNS = new System.Windows.Forms.RadioButton();
+            this.RadioButtonABN = new System.Windows.Forms.RadioButton();
             this.FotoVisa = new System.Windows.Forms.PictureBox();
             this.FotoMastercard = new System.Windows.Forms.PictureBox();
             this.buttonVolgendeBank1 = new System.Windows.Forms.PictureBox();
             this.buttonVorigeBank1 = new System.Windows.Forms.PictureBox();
             this.labelBedrag1 = new System.Windows.Forms.Label();
             this.labelBedragg1 = new System.Windows.Forms.Label();
-            this.raboCheck = new System.Windows.Forms.CheckBox();
-            this.snsCheck = new System.Windows.Forms.CheckBox();
-            this.ingCheck = new System.Windows.Forms.CheckBox();
-            this.abnCheck = new System.Windows.Forms.CheckBox();
             this.FotoSNS = new System.Windows.Forms.PictureBox();
             this.FotoRabobank = new System.Windows.Forms.PictureBox();
             this.FotoING = new System.Windows.Forms.PictureBox();
@@ -208,10 +210,26 @@
             this.buttonVorigeFinal1 = new System.Windows.Forms.PictureBox();
             this.buttonBetalenFinal1 = new System.Windows.Forms.PictureBox();
             this.BetaalPaginaCreditcard = new System.Windows.Forms.TabPage();
+            this.GeenRobotCreditcard = new System.Windows.Forms.Button();
+            this.VorigeCreditcard = new System.Windows.Forms.Button();
+            this.VolgendeCreditcard = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.CVCCodeCreditcard = new System.Windows.Forms.Label();
+            this.VervaldatumCreditcard = new System.Windows.Forms.Label();
+            this.LabelRekeningnummerCreditcard = new System.Windows.Forms.Label();
+            this.KaarthouderCreditcard = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComboboxMaand = new System.Windows.Forms.ComboBox();
+            this.CvcCreditcard = new System.Windows.Forms.TextBox();
+            this.RekeningnummerCreditcard = new System.Windows.Forms.TextBox();
+            this.NaamCreditcardEigenaar = new System.Windows.Forms.TextBox();
             this.BetaalPaginaLabel = new System.Windows.Forms.Label();
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.GegevensInvoerenHelp = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.BetalenHelp = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.ReserveerHelp = new System.Windows.Forms.TabPage();
             this.stoelLegenda = new System.Windows.Forms.Label();
             this.greenButtonHelp = new System.Windows.Forms.Button();
@@ -239,29 +257,11 @@
             this.homeHelpHeader = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.BankSelecterenHelp = new System.Windows.Forms.TabPage();
-            this.IdealPaginaHelp = new System.Windows.Forms.TabPage();
-            this.MastercardHelp = new System.Windows.Forms.TabPage();
-            this.checkMastercard = new System.Windows.Forms.CheckBox();
-            this.checkVisa = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.IdealPaginaHelp = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
+            this.MastercardHelp = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.NaamCreditcardEigenaar = new System.Windows.Forms.TextBox();
-            this.RekeningnummerCreditcard = new System.Windows.Forms.TextBox();
-            this.CvcCreditcard = new System.Windows.Forms.TextBox();
-            this.ComboboxMaand = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.KaarthouderCreditcard = new System.Windows.Forms.Label();
-            this.LabelRekeningnummerCreditcard = new System.Windows.Forms.Label();
-            this.VervaldatumCreditcard = new System.Windows.Forms.Label();
-            this.CVCCodeCreditcard = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.VolgendeCreditcard = new System.Windows.Forms.Button();
-            this.VorigeCreditcard = new System.Windows.Forms.Button();
-            this.GeenRobotCreditcard = new System.Windows.Forms.Button();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
@@ -313,6 +313,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonVorigeFinal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).BeginInit();
             this.BetaalPaginaCreditcard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.GegevensInvoerenHelp.SuspendLayout();
             this.BetalenHelp.SuspendLayout();
@@ -327,7 +328,6 @@
             this.BankSelecterenHelp.SuspendLayout();
             this.IdealPaginaHelp.SuspendLayout();
             this.MastercardHelp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // navigatiePanel
@@ -2148,18 +2148,18 @@
             // betalingKlaar
             // 
             this.betalingKlaar.BackColor = System.Drawing.Color.White;
-            this.betalingKlaar.Controls.Add(this.checkVisa);
-            this.betalingKlaar.Controls.Add(this.checkMastercard);
+            this.betalingKlaar.Controls.Add(this.RadioButtonVISA);
+            this.betalingKlaar.Controls.Add(this.RadioButtonMASTER);
+            this.betalingKlaar.Controls.Add(this.RadioButtonRABO);
+            this.betalingKlaar.Controls.Add(this.RadioButtonING);
+            this.betalingKlaar.Controls.Add(this.RadioButtonSNS);
+            this.betalingKlaar.Controls.Add(this.RadioButtonABN);
             this.betalingKlaar.Controls.Add(this.FotoVisa);
             this.betalingKlaar.Controls.Add(this.FotoMastercard);
             this.betalingKlaar.Controls.Add(this.buttonVolgendeBank1);
             this.betalingKlaar.Controls.Add(this.buttonVorigeBank1);
             this.betalingKlaar.Controls.Add(this.labelBedrag1);
             this.betalingKlaar.Controls.Add(this.labelBedragg1);
-            this.betalingKlaar.Controls.Add(this.raboCheck);
-            this.betalingKlaar.Controls.Add(this.snsCheck);
-            this.betalingKlaar.Controls.Add(this.ingCheck);
-            this.betalingKlaar.Controls.Add(this.abnCheck);
             this.betalingKlaar.Controls.Add(this.FotoSNS);
             this.betalingKlaar.Controls.Add(this.FotoRabobank);
             this.betalingKlaar.Controls.Add(this.FotoING);
@@ -2171,6 +2171,60 @@
             this.betalingKlaar.Size = new System.Drawing.Size(924, 484);
             this.betalingKlaar.TabIndex = 6;
             this.betalingKlaar.Text = "betalingKlaar";
+            // 
+            // RadioButtonVISA
+            // 
+            this.RadioButtonVISA.AutoSize = true;
+            this.RadioButtonVISA.Location = new System.Drawing.Point(666, 325);
+            this.RadioButtonVISA.Name = "RadioButtonVISA";
+            this.RadioButtonVISA.Size = new System.Drawing.Size(14, 13);
+            this.RadioButtonVISA.TabIndex = 82;
+            this.RadioButtonVISA.UseVisualStyleBackColor = true;
+            // 
+            // RadioButtonMASTER
+            // 
+            this.RadioButtonMASTER.AutoSize = true;
+            this.RadioButtonMASTER.Location = new System.Drawing.Point(666, 188);
+            this.RadioButtonMASTER.Name = "RadioButtonMASTER";
+            this.RadioButtonMASTER.Size = new System.Drawing.Size(14, 13);
+            this.RadioButtonMASTER.TabIndex = 81;
+            this.RadioButtonMASTER.UseVisualStyleBackColor = true;
+            // 
+            // RadioButtonRABO
+            // 
+            this.RadioButtonRABO.AutoSize = true;
+            this.RadioButtonRABO.Location = new System.Drawing.Point(281, 338);
+            this.RadioButtonRABO.Name = "RadioButtonRABO";
+            this.RadioButtonRABO.Size = new System.Drawing.Size(14, 13);
+            this.RadioButtonRABO.TabIndex = 80;
+            this.RadioButtonRABO.UseVisualStyleBackColor = true;
+            // 
+            // RadioButtonING
+            // 
+            this.RadioButtonING.AutoSize = true;
+            this.RadioButtonING.Location = new System.Drawing.Point(103, 338);
+            this.RadioButtonING.Name = "RadioButtonING";
+            this.RadioButtonING.Size = new System.Drawing.Size(14, 13);
+            this.RadioButtonING.TabIndex = 79;
+            this.RadioButtonING.UseVisualStyleBackColor = true;
+            // 
+            // RadioButtonSNS
+            // 
+            this.RadioButtonSNS.Location = new System.Drawing.Point(290, 196);
+            this.RadioButtonSNS.Name = "RadioButtonSNS";
+            this.RadioButtonSNS.Size = new System.Drawing.Size(24, 24);
+            this.RadioButtonSNS.TabIndex = 78;
+            this.RadioButtonSNS.UseVisualStyleBackColor = true;
+            // 
+            // RadioButtonABN
+            // 
+            this.RadioButtonABN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RadioButtonABN.Location = new System.Drawing.Point(46, 98);
+            this.RadioButtonABN.Name = "RadioButtonABN";
+            this.RadioButtonABN.Size = new System.Drawing.Size(142, 122);
+            this.RadioButtonABN.TabIndex = 77;
+            this.RadioButtonABN.UseVisualStyleBackColor = true;
+            this.RadioButtonABN.Visible = false;
             // 
             // FotoVisa
             // 
@@ -2243,53 +2297,6 @@
             this.labelBedragg1.Size = new System.Drawing.Size(129, 74);
             this.labelBedragg1.TabIndex = 69;
             this.labelBedragg1.Text = "Bedrag:\r\n€";
-            // 
-            // raboCheck
-            // 
-            this.raboCheck.AutoSize = true;
-            this.raboCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.raboCheck.Location = new System.Drawing.Point(284, 311);
-            this.raboCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.raboCheck.Name = "raboCheck";
-            this.raboCheck.Size = new System.Drawing.Size(15, 14);
-            this.raboCheck.TabIndex = 65;
-            this.raboCheck.UseVisualStyleBackColor = true;
-            this.raboCheck.CheckedChanged += new System.EventHandler(this.raboCheck_CheckedChanged);
-            // 
-            // snsCheck
-            // 
-            this.snsCheck.AutoSize = true;
-            this.snsCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.snsCheck.Location = new System.Drawing.Point(291, 195);
-            this.snsCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.snsCheck.Name = "snsCheck";
-            this.snsCheck.Size = new System.Drawing.Size(15, 14);
-            this.snsCheck.TabIndex = 64;
-            this.snsCheck.UseVisualStyleBackColor = true;
-            this.snsCheck.CheckedChanged += new System.EventHandler(this.snsCheck_CheckedChanged);
-            // 
-            // ingCheck
-            // 
-            this.ingCheck.AutoSize = true;
-            this.ingCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ingCheck.Location = new System.Drawing.Point(113, 311);
-            this.ingCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ingCheck.Name = "ingCheck";
-            this.ingCheck.Size = new System.Drawing.Size(15, 14);
-            this.ingCheck.TabIndex = 63;
-            this.ingCheck.UseVisualStyleBackColor = true;
-            this.ingCheck.CheckedChanged += new System.EventHandler(this.ingCheck_CheckedChanged);
-            // 
-            // abnCheck
-            // 
-            this.abnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.abnCheck.Location = new System.Drawing.Point(113, 180);
-            this.abnCheck.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.abnCheck.Name = "abnCheck";
-            this.abnCheck.Size = new System.Drawing.Size(30, 29);
-            this.abnCheck.TabIndex = 62;
-            this.abnCheck.UseVisualStyleBackColor = true;
-            this.abnCheck.CheckedChanged += new System.EventHandler(this.abnCheck_CheckedChanged);
             // 
             // FotoSNS
             // 
@@ -2515,6 +2522,171 @@
             this.BetaalPaginaCreditcard.Text = "BetaalPaginaCreditcard";
             this.BetaalPaginaCreditcard.UseVisualStyleBackColor = true;
             // 
+            // GeenRobotCreditcard
+            // 
+            this.GeenRobotCreditcard.Location = new System.Drawing.Point(278, 342);
+            this.GeenRobotCreditcard.Name = "GeenRobotCreditcard";
+            this.GeenRobotCreditcard.Size = new System.Drawing.Size(45, 49);
+            this.GeenRobotCreditcard.TabIndex = 14;
+            this.GeenRobotCreditcard.UseVisualStyleBackColor = true;
+            // 
+            // VorigeCreditcard
+            // 
+            this.VorigeCreditcard.Location = new System.Drawing.Point(51, 373);
+            this.VorigeCreditcard.Name = "VorigeCreditcard";
+            this.VorigeCreditcard.Size = new System.Drawing.Size(122, 72);
+            this.VorigeCreditcard.TabIndex = 13;
+            this.VorigeCreditcard.Text = "Vorige";
+            this.VorigeCreditcard.UseVisualStyleBackColor = true;
+            this.VorigeCreditcard.Click += new System.EventHandler(this.VorigeCreditcard_Click);
+            // 
+            // VolgendeCreditcard
+            // 
+            this.VolgendeCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VolgendeCreditcard.Location = new System.Drawing.Point(718, 373);
+            this.VolgendeCreditcard.Name = "VolgendeCreditcard";
+            this.VolgendeCreditcard.Size = new System.Drawing.Size(141, 72);
+            this.VolgendeCreditcard.TabIndex = 12;
+            this.VolgendeCreditcard.Text = "Betalen";
+            this.VolgendeCreditcard.UseVisualStyleBackColor = true;
+            this.VolgendeCreditcard.Click += new System.EventHandler(this.VolgendeCreditcard_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::EersteProjectMau.Properties.Resources.geenrobot;
+            this.pictureBox2.Location = new System.Drawing.Point(259, 314);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(343, 107);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(617, 201);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 31);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "//";
+            // 
+            // CVCCodeCreditcard
+            // 
+            this.CVCCodeCreditcard.AutoSize = true;
+            this.CVCCodeCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CVCCodeCreditcard.Location = new System.Drawing.Point(286, 258);
+            this.CVCCodeCreditcard.Name = "CVCCodeCreditcard";
+            this.CVCCodeCreditcard.Size = new System.Drawing.Size(146, 31);
+            this.CVCCodeCreditcard.TabIndex = 9;
+            this.CVCCodeCreditcard.Text = "CVC code:";
+            // 
+            // VervaldatumCreditcard
+            // 
+            this.VervaldatumCreditcard.AutoSize = true;
+            this.VervaldatumCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VervaldatumCreditcard.Location = new System.Drawing.Point(253, 201);
+            this.VervaldatumCreditcard.Name = "VervaldatumCreditcard";
+            this.VervaldatumCreditcard.Size = new System.Drawing.Size(179, 31);
+            this.VervaldatumCreditcard.TabIndex = 8;
+            this.VervaldatumCreditcard.Text = "VervalDatum:";
+            // 
+            // LabelRekeningnummerCreditcard
+            // 
+            this.LabelRekeningnummerCreditcard.AutoSize = true;
+            this.LabelRekeningnummerCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelRekeningnummerCreditcard.Location = new System.Drawing.Point(197, 144);
+            this.LabelRekeningnummerCreditcard.Name = "LabelRekeningnummerCreditcard";
+            this.LabelRekeningnummerCreditcard.Size = new System.Drawing.Size(235, 31);
+            this.LabelRekeningnummerCreditcard.TabIndex = 7;
+            this.LabelRekeningnummerCreditcard.Text = "Rekeningnummer:";
+            // 
+            // KaarthouderCreditcard
+            // 
+            this.KaarthouderCreditcard.AutoSize = true;
+            this.KaarthouderCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KaarthouderCreditcard.Location = new System.Drawing.Point(55, 91);
+            this.KaarthouderCreditcard.Name = "KaarthouderCreditcard";
+            this.KaarthouderCreditcard.Size = new System.Drawing.Size(377, 31);
+            this.KaarthouderCreditcard.TabIndex = 6;
+            this.KaarthouderCreditcard.Text = "Kaarthouder (volledige naam):";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027"});
+            this.comboBox1.Location = new System.Drawing.Point(649, 197);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(148, 41);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            // 
+            // ComboboxMaand
+            // 
+            this.ComboboxMaand.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboboxMaand.FormattingEnabled = true;
+            this.ComboboxMaand.Items.AddRange(new object[] {
+            "Januari",
+            "Februari",
+            "Maart",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Augustus",
+            "September",
+            "Oktober",
+            "November",
+            "December"});
+            this.ComboboxMaand.Location = new System.Drawing.Point(454, 197);
+            this.ComboboxMaand.Name = "ComboboxMaand";
+            this.ComboboxMaand.Size = new System.Drawing.Size(157, 41);
+            this.ComboboxMaand.TabIndex = 4;
+            this.ComboboxMaand.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboboxMaand_KeyPress);
+            // 
+            // CvcCreditcard
+            // 
+            this.CvcCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CvcCreditcard.Location = new System.Drawing.Point(454, 249);
+            this.CvcCreditcard.Multiline = true;
+            this.CvcCreditcard.Name = "CvcCreditcard";
+            this.CvcCreditcard.Size = new System.Drawing.Size(343, 50);
+            this.CvcCreditcard.TabIndex = 3;
+            this.CvcCreditcard.Text = "000";
+            this.CvcCreditcard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CvcCreditcard_KeyPress);
+            // 
+            // RekeningnummerCreditcard
+            // 
+            this.RekeningnummerCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RekeningnummerCreditcard.Location = new System.Drawing.Point(454, 144);
+            this.RekeningnummerCreditcard.Multiline = true;
+            this.RekeningnummerCreditcard.Name = "RekeningnummerCreditcard";
+            this.RekeningnummerCreditcard.Size = new System.Drawing.Size(343, 47);
+            this.RekeningnummerCreditcard.TabIndex = 2;
+            this.RekeningnummerCreditcard.Text = "0000123456789000";
+            this.RekeningnummerCreditcard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RekeningnummerCreditcard_KeyPress);
+            // 
+            // NaamCreditcardEigenaar
+            // 
+            this.NaamCreditcardEigenaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NaamCreditcardEigenaar.Location = new System.Drawing.Point(454, 91);
+            this.NaamCreditcardEigenaar.Multiline = true;
+            this.NaamCreditcardEigenaar.Name = "NaamCreditcardEigenaar";
+            this.NaamCreditcardEigenaar.Size = new System.Drawing.Size(343, 47);
+            this.NaamCreditcardEigenaar.TabIndex = 1;
+            this.NaamCreditcardEigenaar.Text = "Ashley Bunk";
+            this.NaamCreditcardEigenaar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NaamCreditcardEigenaar_KeyPress);
+            // 
             // BetaalPaginaLabel
             // 
             this.BetaalPaginaLabel.AutoSize = true;
@@ -2550,6 +2722,15 @@
             this.GegevensInvoerenHelp.Text = "BetalingAf";
             this.GegevensInvoerenHelp.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(167, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "label3";
+            // 
             // BetalenHelp
             // 
             this.BetalenHelp.Controls.Add(this.label2);
@@ -2561,6 +2742,15 @@
             this.BetalenHelp.TabIndex = 5;
             this.BetalenHelp.Text = "BetalenHelp";
             this.BetalenHelp.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(120, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
             // 
             // ReserveerHelp
             // 
@@ -2866,6 +3056,15 @@
             this.BankSelecterenHelp.Text = "BankSelecterenHelp";
             this.BankSelecterenHelp.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(145, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "label4";
+            // 
             // IdealPaginaHelp
             // 
             this.IdealPaginaHelp.Controls.Add(this.label5);
@@ -2875,6 +3074,15 @@
             this.IdealPaginaHelp.TabIndex = 8;
             this.IdealPaginaHelp.Text = "IdealPaginaHelp";
             this.IdealPaginaHelp.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(157, 208);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "label5";
             // 
             // MastercardHelp
             // 
@@ -2886,62 +3094,6 @@
             this.MastercardHelp.Text = "MastercardHelp";
             this.MastercardHelp.UseVisualStyleBackColor = true;
             // 
-            // checkMastercard
-            // 
-            this.checkMastercard.AutoSize = true;
-            this.checkMastercard.Location = new System.Drawing.Point(676, 180);
-            this.checkMastercard.Name = "checkMastercard";
-            this.checkMastercard.Size = new System.Drawing.Size(15, 14);
-            this.checkMastercard.TabIndex = 75;
-            this.checkMastercard.UseVisualStyleBackColor = true;
-            this.checkMastercard.CheckedChanged += new System.EventHandler(this.checkMastercard_CheckedChanged);
-            // 
-            // checkVisa
-            // 
-            this.checkVisa.AutoSize = true;
-            this.checkVisa.Location = new System.Drawing.Point(676, 322);
-            this.checkVisa.Name = "checkVisa";
-            this.checkVisa.Size = new System.Drawing.Size(15, 14);
-            this.checkVisa.TabIndex = 76;
-            this.checkVisa.UseVisualStyleBackColor = true;
-            this.checkVisa.CheckedChanged += new System.EventHandler(this.checkVisa_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(167, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(145, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(157, 208);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "label5";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -2950,171 +3102,6 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "label6";
-            // 
-            // NaamCreditcardEigenaar
-            // 
-            this.NaamCreditcardEigenaar.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NaamCreditcardEigenaar.Location = new System.Drawing.Point(454, 91);
-            this.NaamCreditcardEigenaar.Multiline = true;
-            this.NaamCreditcardEigenaar.Name = "NaamCreditcardEigenaar";
-            this.NaamCreditcardEigenaar.Size = new System.Drawing.Size(343, 47);
-            this.NaamCreditcardEigenaar.TabIndex = 1;
-            this.NaamCreditcardEigenaar.Text = "Ashley Bunk";
-            this.NaamCreditcardEigenaar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NaamCreditcardEigenaar_KeyPress);
-            // 
-            // RekeningnummerCreditcard
-            // 
-            this.RekeningnummerCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RekeningnummerCreditcard.Location = new System.Drawing.Point(454, 144);
-            this.RekeningnummerCreditcard.Multiline = true;
-            this.RekeningnummerCreditcard.Name = "RekeningnummerCreditcard";
-            this.RekeningnummerCreditcard.Size = new System.Drawing.Size(343, 47);
-            this.RekeningnummerCreditcard.TabIndex = 2;
-            this.RekeningnummerCreditcard.Text = "0000123456789000";
-            this.RekeningnummerCreditcard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RekeningnummerCreditcard_KeyPress);
-            // 
-            // CvcCreditcard
-            // 
-            this.CvcCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CvcCreditcard.Location = new System.Drawing.Point(454, 249);
-            this.CvcCreditcard.Multiline = true;
-            this.CvcCreditcard.Name = "CvcCreditcard";
-            this.CvcCreditcard.Size = new System.Drawing.Size(343, 50);
-            this.CvcCreditcard.TabIndex = 3;
-            this.CvcCreditcard.Text = "000";
-            this.CvcCreditcard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CvcCreditcard_KeyPress);
-            // 
-            // ComboboxMaand
-            // 
-            this.ComboboxMaand.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboboxMaand.FormattingEnabled = true;
-            this.ComboboxMaand.Items.AddRange(new object[] {
-            "Januari",
-            "Februari",
-            "Maart",
-            "April",
-            "Mei",
-            "Juni",
-            "Juli",
-            "Augustus",
-            "September",
-            "Oktober",
-            "November",
-            "December"});
-            this.ComboboxMaand.Location = new System.Drawing.Point(454, 197);
-            this.ComboboxMaand.Name = "ComboboxMaand";
-            this.ComboboxMaand.Size = new System.Drawing.Size(157, 41);
-            this.ComboboxMaand.TabIndex = 4;
-            this.ComboboxMaand.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboboxMaand_KeyPress);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "2027"});
-            this.comboBox1.Location = new System.Drawing.Point(649, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 41);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
-            // KaarthouderCreditcard
-            // 
-            this.KaarthouderCreditcard.AutoSize = true;
-            this.KaarthouderCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KaarthouderCreditcard.Location = new System.Drawing.Point(55, 91);
-            this.KaarthouderCreditcard.Name = "KaarthouderCreditcard";
-            this.KaarthouderCreditcard.Size = new System.Drawing.Size(377, 31);
-            this.KaarthouderCreditcard.TabIndex = 6;
-            this.KaarthouderCreditcard.Text = "Kaarthouder (volledige naam):";
-            // 
-            // LabelRekeningnummerCreditcard
-            // 
-            this.LabelRekeningnummerCreditcard.AutoSize = true;
-            this.LabelRekeningnummerCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRekeningnummerCreditcard.Location = new System.Drawing.Point(197, 144);
-            this.LabelRekeningnummerCreditcard.Name = "LabelRekeningnummerCreditcard";
-            this.LabelRekeningnummerCreditcard.Size = new System.Drawing.Size(235, 31);
-            this.LabelRekeningnummerCreditcard.TabIndex = 7;
-            this.LabelRekeningnummerCreditcard.Text = "Rekeningnummer:";
-            // 
-            // VervaldatumCreditcard
-            // 
-            this.VervaldatumCreditcard.AutoSize = true;
-            this.VervaldatumCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VervaldatumCreditcard.Location = new System.Drawing.Point(253, 201);
-            this.VervaldatumCreditcard.Name = "VervaldatumCreditcard";
-            this.VervaldatumCreditcard.Size = new System.Drawing.Size(179, 31);
-            this.VervaldatumCreditcard.TabIndex = 8;
-            this.VervaldatumCreditcard.Text = "VervalDatum:";
-            // 
-            // CVCCodeCreditcard
-            // 
-            this.CVCCodeCreditcard.AutoSize = true;
-            this.CVCCodeCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CVCCodeCreditcard.Location = new System.Drawing.Point(286, 258);
-            this.CVCCodeCreditcard.Name = "CVCCodeCreditcard";
-            this.CVCCodeCreditcard.Size = new System.Drawing.Size(146, 31);
-            this.CVCCodeCreditcard.TabIndex = 9;
-            this.CVCCodeCreditcard.Text = "CVC code:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(617, 201);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 31);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "//";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::EersteProjectMau.Properties.Resources.geenrobot;
-            this.pictureBox2.Location = new System.Drawing.Point(259, 314);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(343, 107);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // VolgendeCreditcard
-            // 
-            this.VolgendeCreditcard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VolgendeCreditcard.Location = new System.Drawing.Point(718, 373);
-            this.VolgendeCreditcard.Name = "VolgendeCreditcard";
-            this.VolgendeCreditcard.Size = new System.Drawing.Size(141, 72);
-            this.VolgendeCreditcard.TabIndex = 12;
-            this.VolgendeCreditcard.Text = "Betalen";
-            this.VolgendeCreditcard.UseVisualStyleBackColor = true;
-            this.VolgendeCreditcard.Click += new System.EventHandler(this.VolgendeCreditcard_Click);
-            // 
-            // VorigeCreditcard
-            // 
-            this.VorigeCreditcard.Location = new System.Drawing.Point(51, 373);
-            this.VorigeCreditcard.Name = "VorigeCreditcard";
-            this.VorigeCreditcard.Size = new System.Drawing.Size(122, 72);
-            this.VorigeCreditcard.TabIndex = 13;
-            this.VorigeCreditcard.Text = "Vorige";
-            this.VorigeCreditcard.UseVisualStyleBackColor = true;
-            this.VorigeCreditcard.Click += new System.EventHandler(this.VorigeCreditcard_Click);
-            // 
-            // GeenRobotCreditcard
-            // 
-            this.GeenRobotCreditcard.Location = new System.Drawing.Point(278, 342);
-            this.GeenRobotCreditcard.Name = "GeenRobotCreditcard";
-            this.GeenRobotCreditcard.Size = new System.Drawing.Size(45, 49);
-            this.GeenRobotCreditcard.TabIndex = 14;
-            this.GeenRobotCreditcard.UseVisualStyleBackColor = true;
             // 
             // HomePage
             // 
@@ -3199,6 +3186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.buttonBetalenFinal1)).EndInit();
             this.BetaalPaginaCreditcard.ResumeLayout(false);
             this.BetaalPaginaCreditcard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.GegevensInvoerenHelp.ResumeLayout(false);
             this.GegevensInvoerenHelp.PerformLayout();
@@ -3223,7 +3211,6 @@
             this.IdealPaginaHelp.PerformLayout();
             this.MastercardHelp.ResumeLayout(false);
             this.MastercardHelp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3317,10 +3304,6 @@
         private System.Windows.Forms.TabPage contactPage;
         private System.Windows.Forms.RichTextBox contactInfo;
         private System.Windows.Forms.PictureBox FotoSNS;
-        private System.Windows.Forms.CheckBox raboCheck;
-        private System.Windows.Forms.CheckBox snsCheck;
-        private System.Windows.Forms.CheckBox ingCheck;
-        private System.Windows.Forms.CheckBox abnCheck;
         private System.Windows.Forms.PictureBox FotoRabobank;
         private System.Windows.Forms.PictureBox FotoING;
         private System.Windows.Forms.PictureBox FotoABN;
@@ -3438,8 +3421,6 @@
         private System.Windows.Forms.TabPage BankSelecterenHelp;
         private System.Windows.Forms.TabPage IdealPaginaHelp;
         private System.Windows.Forms.TabPage MastercardHelp;
-        private System.Windows.Forms.CheckBox checkVisa;
-        private System.Windows.Forms.CheckBox checkMastercard;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -3459,6 +3440,12 @@
         private System.Windows.Forms.Button VorigeCreditcard;
         private System.Windows.Forms.Button VolgendeCreditcard;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RadioButton RadioButtonVISA;
+        private System.Windows.Forms.RadioButton RadioButtonMASTER;
+        private System.Windows.Forms.RadioButton RadioButtonRABO;
+        private System.Windows.Forms.RadioButton RadioButtonING;
+        private System.Windows.Forms.RadioButton RadioButtonSNS;
+        private System.Windows.Forms.RadioButton RadioButtonABN;
     }
 }
 

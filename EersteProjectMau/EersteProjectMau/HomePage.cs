@@ -743,47 +743,6 @@ namespace EersteProjectMau
 
 
 
-
-        private void abnCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            ingCheck.Checked = false;
-            raboCheck.Checked = false;
-            snsCheck.Checked = false;
-            checkVisa.Checked = false;
-            checkMastercard.Checked = false;
-
-        }
-
-        private void ingCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            abnCheck.Checked = false;
-            raboCheck.Checked = false;
-            snsCheck.Checked = false;
-            checkVisa.Checked = false;
-            checkMastercard.Checked = false;
-
-        }
-
-        private void snsCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            abnCheck.Checked = false;
-            ingCheck.Checked = false;
-            raboCheck.Checked = false;
-            checkVisa.Checked = false;
-            checkMastercard.Checked = false;
-
-        }
-
-        private void raboCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            abnCheck.Checked = false;
-            ingCheck.Checked = false;
-            snsCheck.Checked = false;
-            checkVisa.Checked = false;
-            checkMastercard.Checked = false;
-        }
-
-
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
@@ -805,12 +764,12 @@ namespace EersteProjectMau
 
         private void buttonVolgendeBank1_Click(object sender, EventArgs e)
         {
-            if (abnCheck.Checked == true || ingCheck.Checked == true || snsCheck.Checked == true || raboCheck.Checked == true)
+            if (RadioButtonABN.Checked == true || RadioButtonING.Checked == true || RadioButtonSNS.Checked == true || RadioButtonRABO.Checked == true)
             {
                 tabControl1.SelectTab(7);
                 tabControl2.SelectTab(7);
             }
-            else if (checkVisa.Checked == true || checkMastercard.Checked == true)
+            else if (RadioButtonMASTER.Checked == true || RadioButtonVISA.Checked == true)
             {
                 tabControl1.SelectTab(8);
                 tabControl2.SelectTab(8);
@@ -1244,52 +1203,35 @@ namespace EersteProjectMau
 
         private void FotoABN_Click(object sender, EventArgs e)
         {
-            abnCheck.Checked = true;
+            RadioButtonABN.Checked = true;
         }
 
         private void FotoSNS_Click(object sender, EventArgs e)
         {
-            snsCheck.Checked = true;
+            RadioButtonSNS.Checked = true;
         }
 
         private void FotoING_Click(object sender, EventArgs e)
         {
-            ingCheck.Checked = true;
+            RadioButtonING.Checked = true;
         }
 
         private void FotoRabobank_Click(object sender, EventArgs e)
         {
-            raboCheck.Checked = true;
+            RadioButtonRABO.Checked = true;
         }
 
         private void FotoMastercard_Click(object sender, EventArgs e)
         {
-            checkMastercard.Checked = true;
+            RadioButtonMASTER.Checked = true;
         }
 
         private void FotoVisa_Click(object sender, EventArgs e)
         {
-            checkVisa.Checked = true;
+            RadioButtonVISA.Checked = true;
         }
 
-        private void checkMastercard_CheckedChanged(object sender, EventArgs e)
-        {
-            abnCheck.Checked = false;
-            ingCheck.Checked = false;
-            raboCheck.Checked = false;
-            snsCheck.Checked = false;
-            checkVisa.Checked = false;
-           
-        }
 
-        private void checkVisa_CheckedChanged(object sender, EventArgs e)
-        {
-            abnCheck.Checked = false;
-            ingCheck.Checked = false;
-            raboCheck.Checked = false;
-            snsCheck.Checked = false;
-            checkMastercard.Checked = false;
-        }
 
         private void VorigeCreditcard_Click(object sender, EventArgs e)
         {
