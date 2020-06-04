@@ -295,6 +295,8 @@ namespace EersteProjectMau
                 returnString = returnString + ".csv";
             }
 
+            returnString.Replace('/', '-');
+
             return returnString;
         }
 
