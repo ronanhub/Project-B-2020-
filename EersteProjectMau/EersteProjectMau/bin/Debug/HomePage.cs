@@ -11,6 +11,7 @@ using System.Net;
 using System.Net.Mail;
 using System.IO;
 using EersteProjectMau.Properties;
+using System.Configuration;
 
 namespace EersteProjectMau
 {
@@ -20,6 +21,7 @@ namespace EersteProjectMau
         private FlowLayoutPanel filmPanel;
         int kaartvalue = 5;
         Image betaalkBalkImage;
+        string previousRekeningnummer = "";
 
 
         Help_On_OFF helpKnop = new Help_On_OFF();
@@ -1021,28 +1023,7 @@ namespace EersteProjectMau
 
         private void textBoxRekeningnummer1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (textBoxRekeningnummer1.Text.Length <= 1)
-            {
-                e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
-            }
             
-            else if ( (textBoxRekeningnummer1.Text.Length >= 2) && (textBoxRekeningnummer1.Text.Length <= 3) )
-            {
-                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-            }
-            
-           else if ( (textBoxRekeningnummer1.Text.Length >= 4) && textBoxRekeningnummer1.Text.Length <= 7)
-            {
-                e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
-            }
-            else if (textBoxRekeningnummer1.Text.Length < 18)
-            {
-                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-            }
-            else
-            {
-                 e.Handled = e.KeyChar != (char)Keys.Back;
-            }
         }
 
         private void betaalVoornaam_KeyPress(object sender, KeyPressEventArgs e)
@@ -1062,7 +1043,7 @@ namespace EersteProjectMau
 
         private void textBoxRekeningnummer1_Click(object sender, EventArgs e)
         {
-            if ( textBoxRekeningnummer1.Text == "NL00ABNA0123456789")
+            if ( textBoxRekeningnummer1.Text == "NL00 ABNA 0123 4567 89")
             {
                 textBoxRekeningnummer1.Text = "";
             }
@@ -1072,7 +1053,7 @@ namespace EersteProjectMau
         {
             if (textBoxRekeningnummer1.Text == "")
             {
-                textBoxRekeningnummer1.Text = "NL00ABNA0123456789";
+                textBoxRekeningnummer1.Text = "NL00 ABNA 0123 4567 89";
             }
         }
 
@@ -1203,32 +1184,45 @@ namespace EersteProjectMau
 
         private void FotoABN_Click(object sender, EventArgs e)
         {
+            ResetPictureboxes();
             RadioButtonABN.Checked = true;
+            FotoABN.BackColor = Color.Lime;
         }
 
         private void FotoSNS_Click(object sender, EventArgs e)
         {
+            ResetPictureboxes();
             RadioButtonSNS.Checked = true;
+            FotoSNS.BackColor = Color.Lime;
         }
 
         private void FotoING_Click(object sender, EventArgs e)
         {
+            ResetPictureboxes();
             RadioButtonING.Checked = true;
+            FotoING.BackColor = Color.Lime;
         }
 
         private void FotoRabobank_Click(object sender, EventArgs e)
         {
+            ResetPictureboxes();
             RadioButtonRABO.Checked = true;
+            FotoRabobank.BackColor = Color.Lime;
         }
 
         private void FotoMastercard_Click(object sender, EventArgs e)
         {
+            ResetPictureboxes();
             RadioButtonMASTER.Checked = true;
+            FotoMastercard.BackColor = Color.Lime;
         }
 
         private void FotoVisa_Click(object sender, EventArgs e)
         {
+            ResetPictureboxes();
             RadioButtonVISA.Checked = true;
+            FotoVisa.BackColor = Color.Lime;
+
         }
 
 
@@ -1284,6 +1278,160 @@ namespace EersteProjectMau
             {
                 e.Handled = e.KeyChar != (char)Keys.Back;
             }
+
+        }
+
+
+        private void ResetPictureboxes()
+        {
+            PictureBox[] pictureBoxes = new PictureBox[] { FotoABN, FotoSNS, FotoING, FotoRabobank, FotoMastercard, FotoVisa };
+            foreach (PictureBox pictureBox in pictureBoxes)
+            {
+
+                pictureBox.BackColor = Color.White;
+                //if (control.Tag != null && control.Tag.ToString() == "PaymentMethod")
+                //{
+                //    control.BackColor = Color.White;
+                //}
+            }
+        }
+
+        private void textBoxRekeningnummer1_TextChanged(object sender, EventArgs e)
+        {
+            int cursorPosition = textBoxRekeningnummer1.SelectionStart;
+            if (textBoxRekeningnummer1.Text.Length > 0)
+            { 
+                string countryCode = textBoxRekeningnummer1.Text.Substring(0, textBoxRekeningnummer1.Text.Length < 2 ? textBoxRekeningnummer1.Text.Length : 2);
+                foreach (var character in countryCode)
+                {
+                    if (!Char.IsLetter(character)) 
+                    {
+                        textBoxRekeningnummer1.Text = previousRekeningnummer;
+                        textBoxRekeningnummer1.SelectionStart = cursorPosition;
+                        return;
+                    }
+                }  
+            }
+            if (textBoxRekeningnummer1.Text.Length > 2)
+            {
+                string countryCode = textBoxRekeningnummer1.Text.Substring(2, textBoxRekeningnummer1.Text.Length < 4 ? textBoxRekeningnummer1.Text.Length-2 : 2);
+                foreach (var character in countryCode)
+                {
+                    if (!Char.IsDigit(character))
+                    {
+                        textBoxRekeningnummer1.Text = previousRekeningnummer;
+                        textBoxRekeningnummer1.SelectionStart = cursorPosition;
+                        return;
+                    }
+                }
+            }
+            if( textBoxRekeningnummer1.Text.Length == 4 && previousRekeningnummer.Length != 5)
+            {
+                cursorPosition += 1;
+                textBoxRekeningnummer1.Text += " ";
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+            else if (previousRekeningnummer.Length == 4 && textBoxRekeningnummer1.Text.Length == 5)
+            {
+                textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.Substring(0, 4) + " " + textBoxRekeningnummer1.Text.Substring(4);
+                cursorPosition +=1;
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+
+
+
+
+
+            if (textBoxRekeningnummer1.Text.Length > 5)
+            {
+                string countrycode = textBoxRekeningnummer1.Text.Substring(5, textBoxRekeningnummer1.Text.Length < 10 ? textBoxRekeningnummer1.Text.Length - 5 : 4);
+                foreach (var character in countrycode)
+                {
+                    if (!Char.IsLetter(character))
+                    {
+                        textBoxRekeningnummer1.Text = previousRekeningnummer;
+                        textBoxRekeningnummer1.SelectionStart = cursorPosition;
+                        return;
+                    }
+                }
+            }
+            if (textBoxRekeningnummer1.Text.Length == 9 && previousRekeningnummer.Length != 10)
+            {
+                cursorPosition += 1;
+                textBoxRekeningnummer1.Text += " ";
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+            else if (previousRekeningnummer.Length == 9 && textBoxRekeningnummer1.Text.Length == 10)
+            {
+                textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.Substring(6, 9) + " " + textBoxRekeningnummer1.Text.Substring(9);
+                cursorPosition += 1;
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+
+
+
+            if (textBoxRekeningnummer1.Text.Length > 10)
+            {
+                string countrycode = textBoxRekeningnummer1.Text.Substring(10, textBoxRekeningnummer1.Text.Length < 15 ? textBoxRekeningnummer1.Text.Length - 10 : 4);
+                foreach (var character in countrycode)
+                {
+                    if (!Char.IsDigit(character))
+                    {
+                        textBoxRekeningnummer1.Text = previousRekeningnummer;
+                        textBoxRekeningnummer1.SelectionStart = cursorPosition;
+                        return;
+                    }
+                }
+            }
+            if (textBoxRekeningnummer1.Text.Length == 14 && previousRekeningnummer.Length != 15)
+            {
+                cursorPosition += 1;
+                textBoxRekeningnummer1.Text += " ";
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+            else if (previousRekeningnummer.Length == 14 && textBoxRekeningnummer1.Text.Length == 15)
+            {
+                textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.Substring(10, 15) + " " + textBoxRekeningnummer1.Text.Substring(15);
+                cursorPosition += 1;
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+
+
+
+            textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.ToUpper();
+            textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            previousRekeningnummer = textBoxRekeningnummer1.Text;
+
+            
+
+            
+            //if (textBoxRekeningnummer1.Text.Length <= 1)
+            //{
+            //    e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            //}
+
+            //else if ((textBoxRekeningnummer1.Text.Length >= 2) && (textBoxRekeningnummer1.Text.Length <= 3))
+            //{
+            //    e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            //}
+
+            //else if ((textBoxRekeningnummer1.Text.Length >= 4) && textBoxRekeningnummer1.Text.Length <= 7)
+            //{
+            //    e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            //}
+            //else if (textBoxRekeningnummer1.Text.Length < 18)
+            //{
+            //    e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            //}
+            //else
+            //{
+            //    e.Handled = e.KeyChar != (char)Keys.Back;
+            //}
+        }
+
+        private void betaalPostcode_TextChanged(object sender, EventArgs e)
+        {
+            betaalPostcode.CharacterCasing = CharacterCasing.Upper;
         }
     }
 }
