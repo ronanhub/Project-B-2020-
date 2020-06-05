@@ -1342,59 +1342,59 @@ namespace EersteProjectMau
 
 
 
-            //if (textBoxRekeningnummer1.Text.Length > 5)
-            //{
-            //    string countrycode = textBoxRekeningnummer1.Text.Substring(5, textBoxRekeningnummer1.Text.Length < 10 ? textBoxRekeningnummer1.Text.Length - 5 : 4);
-            //    foreach (var character in countrycode)
-            //    {
-            //        if (!Char.IsLetter(character))
-            //        {
-            //            textBoxRekeningnummer1.Text = previousRekeningnummer;
-            //            textBoxRekeningnummer1.SelectionStart = cursorPosition;
-            //            return;
-            //        }
-            //    }
-            //}
-            //if (textBoxRekeningnummer1.Text.Length == 9 && previousRekeningnummer.Length != 10)
-            //{
-            //    cursorPosition += 1;
-            //    textBoxRekeningnummer1.Text += " ";
-            //    textBoxRekeningnummer1.SelectionStart = cursorPosition;
-            //}
-            //else if (previousRekeningnummer.Length == 9 && textBoxRekeningnummer1.Text.Length == 10)
-            //{
-            //    textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.Substring(6,9) + " " + textBoxRekeningnummer1.Text.Substring(9);
-            //    cursorPosition += 1;
-            //    textBoxRekeningnummer1.SelectionStart = cursorPosition;
-            //}
+            if (textBoxRekeningnummer1.Text.Length > 5)
+            {
+                string countrycode = textBoxRekeningnummer1.Text.Substring(5, textBoxRekeningnummer1.Text.Length < 10 ? textBoxRekeningnummer1.Text.Length - 5 : 4);
+                foreach (var character in countrycode)
+                {
+                    if (!Char.IsLetter(character))
+                    {
+                        textBoxRekeningnummer1.Text = previousRekeningnummer;
+                        textBoxRekeningnummer1.SelectionStart = cursorPosition;
+                        return;
+                    }
+                }
+            }
+            if (textBoxRekeningnummer1.Text.Length == 9 && previousRekeningnummer.Length != 10)
+            {
+                cursorPosition += 1;
+                textBoxRekeningnummer1.Text += " ";
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+            else if (previousRekeningnummer.Length == 9 && textBoxRekeningnummer1.Text.Length == 10)
+            {
+                textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.Substring(6, 9) + " " + textBoxRekeningnummer1.Text.Substring(9);
+                cursorPosition += 1;
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
 
 
 
-            //if (textBoxRekeningnummer1.Text.Length > 10)
-            //{
-            //    string countrycode = textBoxRekeningnummer1.Text.Substring(10, textBoxRekeningnummer1.Text.Length < 15 ? textBoxRekeningnummer1.Text.Length - 10 : 4);
-            //    foreach (var character in countrycode)
-            //    {
-            //        if (!Char.IsDigit(character))
-            //            {
-            //            textBoxRekeningnummer1.Text = previousRekeningnummer;
-            //            textBoxRekeningnummer1.SelectionStart = cursorPosition;
-            //            return;
-            //        }
-            //    }
-            //}
-            //if (textBoxRekeningnummer1.Text.Length == 14 && previousRekeningnummer.Length != 15)
-            //{
-            //    cursorPosition += 1;
-            //    textBoxRekeningnummer1.Text += " ";
-            //    textBoxRekeningnummer1.SelectionStart = cursorPosition;
-            //}
-            //else if (previousRekeningnummer.Length == 14 && textBoxRekeningnummer1.Text.Length == 15)
-            //{
-            //    textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.Substring(10, 15) + " " + textBoxRekeningnummer1.Text.Substring(15);
-            //    cursorPosition += 1;
-            //    textBoxRekeningnummer1.SelectionStart = cursorPosition;
-            //}
+            if (textBoxRekeningnummer1.Text.Length > 10)
+            {
+                string countrycode = textBoxRekeningnummer1.Text.Substring(10, textBoxRekeningnummer1.Text.Length < 15 ? textBoxRekeningnummer1.Text.Length - 10 : 4);
+                foreach (var character in countrycode)
+                {
+                    if (!Char.IsDigit(character))
+                    {
+                        textBoxRekeningnummer1.Text = previousRekeningnummer;
+                        textBoxRekeningnummer1.SelectionStart = cursorPosition;
+                        return;
+                    }
+                }
+            }
+            if (textBoxRekeningnummer1.Text.Length == 14 && previousRekeningnummer.Length != 15)
+            {
+                cursorPosition += 1;
+                textBoxRekeningnummer1.Text += " ";
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
+            else if (previousRekeningnummer.Length == 14 && textBoxRekeningnummer1.Text.Length == 15)
+            {
+                textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.Substring(10, 15) + " " + textBoxRekeningnummer1.Text.Substring(15);
+                cursorPosition += 1;
+                textBoxRekeningnummer1.SelectionStart = cursorPosition;
+            }
 
 
 
