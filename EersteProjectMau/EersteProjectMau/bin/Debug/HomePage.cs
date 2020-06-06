@@ -1468,11 +1468,11 @@ namespace EersteProjectMau
             {
                 MessageBox.Show("Vul een geldig rekeningnummer in.");
             }
-            else if (ComboboxMaand.Text == "")
+            else if (ComboboxMaand.Text == "Maand")
             {
                 MessageBox.Show("Vul een geldige maand in.");
             }
-            else if(ComboboxJaar .Text == "")
+            else if(ComboboxJaar .Text == "Jaar")
             {
                 MessageBox.Show("Vul een geldig jaar in.");
             }
