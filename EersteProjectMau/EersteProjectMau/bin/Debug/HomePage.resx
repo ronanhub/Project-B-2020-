@@ -32307,6 +32307,44 @@ onmogelijke situatie als de vijand dichterbij komt.</value>
         vJEAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Klik op het plaatje van uw 
+bank waarmee u wilt betalen.
+
+Als de achtergrond van het 
+plaatje groen is heeft 
+u die bank geselecteerd.
+
+Als u een bank geselecteerd 
+heeft kunt u op knop klikken
+ waar 'volgende'op staat.
+
+Waarom krijg ik een bericht 
+"Selecteer een bank."?
+Dat komt omdat u geen bank 
+gekozen heeft.</value>
+  </data>
+  <data name="TekstGegevens.Text" xml:space="preserve">
+    <value>Op deze pagina is het de 
+bedoeling dat u alle 
+gevens invult.
+
+Waarom zijn de 
+tekstvakken al ingevuld?
+dit komt omdat er in de 
+tekstvakken voorbeelden 
+staan.
+
+Als u alle gegevens ingevuld 
+heeft kunt u op de 'volgende' 
+knop klikken.
+
+Die knop kunt u rechtsonder
+vinden.
+
+
+</value>
+  </data>
   <data name="buttonStelZelfVraagg1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAoEAAACrCAYAAAAZ+0bBAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
