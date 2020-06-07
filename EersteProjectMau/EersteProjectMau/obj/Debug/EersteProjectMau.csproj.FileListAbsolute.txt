@@ -165,3 +165,4 @@ C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau
 C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.CoreCompileInputs.cache
 C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerStoelWarningForm.resources

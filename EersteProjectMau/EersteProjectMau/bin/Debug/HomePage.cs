@@ -24,6 +24,7 @@ namespace EersteProjectMau
         string previousRekeningnummer = "";
 
         selecteerBankWarningForm melding;
+        selecteerStoelWarningForm meldingStoel;
 
         Help_On_OFF helpKnop = new Help_On_OFF();
         public void Help_Open_Sluit()
@@ -952,11 +953,36 @@ namespace EersteProjectMau
 
         private void gegevensButton_Click(object sender, EventArgs e)
         {
-            saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
-            tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-            bedragBetaal2.Text = totaalPrijs.ToString();
-            tabControl2.SelectTab(5);
+            bool stoelGeselect = false;
+            foreach (var stoel in stoelGrid)
+            {
+                if (stoel.Item2 == status.keuze)
+                {
+                    stoelGeselect = true;
+                    break;
+                }
+            }
+            if (stoelGeselect)
+            {
+                saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
+                tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+                bedragBetaal2.Text = totaalPrijs.ToString();
+                tabControl2.SelectTab(5);
+            }
+            else
+            {
 
+                if (meldingStoel == null)
+                {
+                    meldingStoel = new selecteerStoelWarningForm();
+                }
+                else
+                {
+                    meldingStoel.Close();
+                    meldingStoel = new selecteerStoelWarningForm();
+                }
+                meldingStoel.Show();
+            }
         }
 
         private void BetaalPaginaGeenRobot_Click(object sender, EventArgs e)
