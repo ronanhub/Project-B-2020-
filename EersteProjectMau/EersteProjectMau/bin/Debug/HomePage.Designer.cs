@@ -267,8 +267,9 @@
             this.HelptekstIdeal = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.MastercardHelp = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
             this.GeenRobotCreditcardCheck = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
@@ -2616,6 +2617,7 @@
             // 
             // BetaalPaginaCreditcard
             // 
+            this.BetaalPaginaCreditcard.BackColor = System.Drawing.Color.White;
             this.BetaalPaginaCreditcard.Controls.Add(this.GeenRobotCreditcardCheck);
             this.BetaalPaginaCreditcard.Controls.Add(this.GeldCreditcard);
             this.BetaalPaginaCreditcard.Controls.Add(this.label9);
@@ -2640,7 +2642,6 @@
             this.BetaalPaginaCreditcard.Size = new System.Drawing.Size(1235, 599);
             this.BetaalPaginaCreditcard.TabIndex = 8;
             this.BetaalPaginaCreditcard.Text = "BetaalPaginaCreditcard";
-            this.BetaalPaginaCreditcard.UseVisualStyleBackColor = true;
             // 
             // GeldCreditcard
             // 
@@ -3301,23 +3302,16 @@
             // MastercardHelp
             // 
             this.MastercardHelp.BackColor = System.Drawing.Color.White;
-            this.MastercardHelp.Controls.Add(this.label6);
+            this.MastercardHelp.Controls.Add(this.label5);
+            this.MastercardHelp.Controls.Add(this.label4);
+            this.MastercardHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MastercardHelp.Location = new System.Drawing.Point(4, 25);
             this.MastercardHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MastercardHelp.Name = "MastercardHelp";
             this.MastercardHelp.Size = new System.Drawing.Size(400, 599);
             this.MastercardHelp.TabIndex = 9;
             this.MastercardHelp.Text = "MastercardHelp";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(160, 256);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label6";
+            this.MastercardHelp.Click += new System.EventHandler(this.MastercardHelp_Click);
             // 
             // GeenRobotCreditcardCheck
             // 
@@ -3328,6 +3322,25 @@
             this.GeenRobotCreditcardCheck.TabIndex = 17;
             this.GeenRobotCreditcardCheck.UseVisualStyleBackColor = true;
             this.GeenRobotCreditcardCheck.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(236, 39);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Hulp nodig?...";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(394, 480);
+            this.label5.TabIndex = 19;
+            this.label5.Text = resources.GetString("label5.Text");
             // 
             // HomePage
             // 
@@ -3644,7 +3657,6 @@
         private System.Windows.Forms.PictureBox FotoMastercard;
         private System.Windows.Forms.TabPage IdealPaginaHelp;
         private System.Windows.Forms.TabPage MastercardHelp;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox ComboboxJaar;
         private System.Windows.Forms.ComboBox ComboboxMaand;
         private System.Windows.Forms.TextBox CvcCreditcard;
@@ -3678,6 +3690,8 @@
         private System.Windows.Forms.Label HelptekstIdeal;
         private System.Windows.Forms.Label IdealHelpTekst;
         private System.Windows.Forms.CheckBox GeenRobotCreditcardCheck;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -23,6 +23,7 @@ namespace EersteProjectMau
         Image betaalkBalkImage;
         string previousRekeningnummer = "";
 
+        selecteerBankWarningForm melding;
 
         Help_On_OFF helpKnop = new Help_On_OFF();
         public void Help_Open_Sluit()
@@ -296,6 +297,8 @@ namespace EersteProjectMau
             {
                 returnString = returnString + ".csv";
             }
+
+            returnString.Replace('/', '-');
 
             return returnString;
         }
@@ -780,7 +783,17 @@ namespace EersteProjectMau
             }
             else
             {
-                MessageBox.Show("Kies een bank.");
+                //MessageBox.Show("Kies een bank.");
+                if (melding == null)
+                {
+                    melding = new selecteerBankWarningForm();
+                }
+                else
+                {
+                    melding.Close();
+                    melding = new selecteerBankWarningForm();
+                }
+                melding.Show();
             }
             
         }
@@ -1549,6 +1562,11 @@ namespace EersteProjectMau
         }
 
         private void labelBedrag1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MastercardHelp_Click(object sender, EventArgs e)
         {
 
         }
