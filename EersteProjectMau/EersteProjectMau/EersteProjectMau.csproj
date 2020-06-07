@@ -53,6 +53,12 @@
     <Compile Include="Agenda.Designer.cs">
       <DependentUpon>Agenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="selecteerStoelWarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selecteerStoelWarningForm.Designer.cs">
+      <DependentUpon>selecteerStoelWarningForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="selecteerBankWarningForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selecteerStoelWarningForm.resx">
+      <DependentUpon>selecteerStoelWarningForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StuurVraagFormcs.resx">
       <DependentUpon>StuurVraagFormcs.cs</DependentUpon>
