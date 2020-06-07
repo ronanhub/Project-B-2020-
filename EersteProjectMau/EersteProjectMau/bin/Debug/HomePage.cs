@@ -1278,9 +1278,19 @@ namespace EersteProjectMau
 
         private void VolgendeCreditcard_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(0);
-            tabControl2.SelectTab(0);
-            MessageBox.Show("Betaling is gelukt.");
+            if(GeenRobotCreditcardCheck.Checked == true)
+            {
+                tabControl1.SelectTab(0);
+                tabControl2.SelectTab(0);
+                MessageBox.Show("Betaling is gelukt.");
+            }
+            else
+            {
+                tabControl1.SelectTab(8);
+                tabControl2.SelectTab(8);
+                MessageBox.Show("Bevestig dat u geen robot bent.");
+            }
+            
         }
 
         private void NaamCreditcardEigenaar_KeyPress(object sender, KeyPressEventArgs e)
@@ -1486,6 +1496,7 @@ namespace EersteProjectMau
                 VolgendeCreditcard.BackColor = Color.Lime;
                 GeenRobotCreditcard.BackColor = Color.Lime;
                 VolgendeCreditcard.BackColor = Color.Lime;
+                GeenRobotCreditcardCheck.Checked = true;
             }
         }
 
