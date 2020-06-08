@@ -953,36 +953,7 @@ namespace EersteProjectMau
 
         private void gegevensButton_Click(object sender, EventArgs e)
         {
-            bool stoelGeselect = false;
-            foreach (var stoel in stoelGrid)
-            {
-                if (stoel.Item2 == status.keuze)
-                {
-                    stoelGeselect = true;
-                    break;
-                }
-            }
-            if (stoelGeselect)
-            {
-                saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
-                tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
-                bedragBetaal2.Text = totaalPrijs.ToString();
-                tabControl2.SelectTab(5);
-            }
-            else
-            {
-
-                if (meldingStoel == null)
-                {
-                    meldingStoel = new selecteerStoelWarningForm();
-                }
-                else
-                {
-                    meldingStoel.Close();
-                    meldingStoel = new selecteerStoelWarningForm();
-                }
-                meldingStoel.Show();
-            }
+           
         }
 
         private void BetaalPaginaGeenRobot_Click(object sender, EventArgs e)
@@ -1309,28 +1280,7 @@ namespace EersteProjectMau
 
 
 
-        private void VorigeCreditcard_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-            tabControl2.SelectTab(6);
-        }
-
-        private void VolgendeCreditcard_Click(object sender, EventArgs e)
-        {
-            if(GeenRobotCreditcardCheck.Checked == true)
-            {
-                tabControl1.SelectTab(0);
-                tabControl2.SelectTab(0);
-                MessageBox.Show("Betaling is gelukt.");
-            }
-            else
-            {
-                tabControl1.SelectTab(8);
-                tabControl2.SelectTab(8);
-                MessageBox.Show("Bevestig dat u geen robot bent.");
-            }
             
-        }
 
         private void NaamCreditcardEigenaar_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1595,6 +1545,66 @@ namespace EersteProjectMau
         private void MastercardHelp_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void betalengButton_Click(object sender, EventArgs e)
+        {
+            if (GeenRobotCreditcardCheck.Checked == true)
+            {
+                tabControl1.SelectTab(7);
+                tabControl2.SelectTab(7);
+            }
+            else
+            {
+                tabControl1.SelectTab(8);
+                tabControl2.SelectTab(8);
+                MessageBox.Show("Bevestig dat u geen robot bent.");
+            }
+        }
+
+        private void vorigegButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+        }
+
+        private void teruggaanButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
+        }
+
+        private void gegevensButton_Click_1(object sender, EventArgs e)
+        {
+            bool stoelGeselect = false;
+            foreach (var stoel in stoelGrid)
+            {
+                if (stoel.Item2 == status.keuze)
+                {
+                    stoelGeselect = true;
+                    break;
+                }
+            }
+            if (stoelGeselect)
+            {
+                saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
+                tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
+                bedragBetaal2.Text = totaalPrijs.ToString();
+                tabControl2.SelectTab(5);
+            }
+            else
+            {
+                if (meldingStoel == null)
+                {
+                    meldingStoel = new selecteerStoelWarningForm();
+                }
+                else
+                {
+                    meldingStoel.Close();
+                    meldingStoel = new selecteerStoelWarningForm();
+                }
+                meldingStoel.Show();
+            }
         }
     }
 }

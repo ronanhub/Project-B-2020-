@@ -156,6 +156,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap betaaaldterug {
+            get {
+                object obj = ResourceManager.GetObject("betaaaldterug", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap betalenButton {
             get {
                 object obj = ResourceManager.GetObject("betalenButton", resourceCulture);
