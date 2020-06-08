@@ -430,7 +430,7 @@
             // 
             this.agendaButton1.BackColor = System.Drawing.Color.Transparent;
             this.agendaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.agendaButton1.Image = ((System.Drawing.Image)(resources.GetObject("agendaButton1.Image")));
+            this.agendaButton1.Image = global::EersteProjectMau.Properties.Resources.agendaButton1;
             this.agendaButton1.Location = new System.Drawing.Point(411, 12);
             this.agendaButton1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.agendaButton1.Name = "agendaButton1";
