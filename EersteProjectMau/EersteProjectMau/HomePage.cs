@@ -33,7 +33,7 @@ namespace EersteProjectMau
             tabControl2.Visible = helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
             openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabPages.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(930, 510);
+            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(930, 510);
 
             vragenPaneel.Size = (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
             faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15);
@@ -437,9 +437,9 @@ namespace EersteProjectMau
 
         private void homePage_Load(object sender, EventArgs e)
         {
-            tabPages.Appearance = TabAppearance.FlatButtons;
-            tabPages.ItemSize = new Size(0, 1);
-            tabPages.SizeMode = TabSizeMode.Fixed;
+            tabControl1.Appearance = TabAppearance.FlatButtons;
+            tabControl1.ItemSize = new Size(0, 1);
+            tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl2.Appearance = TabAppearance.FlatButtons;
             tabControl2.ItemSize = new Size(0, 1);
             tabControl2.SizeMode = TabSizeMode.Fixed;
@@ -552,7 +552,7 @@ namespace EersteProjectMau
 
         private void reserveerbutton_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(4);
+            tabControl1.SelectTab(4);
             tabControl2.SelectTab(4);
         }
 
@@ -612,14 +612,14 @@ namespace EersteProjectMau
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVIGATIE NAVIGATIE NAVIGATIE NAVIGATIE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void homeButton1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(0);
+            tabControl1.SelectTab(0);
             tabControl2.SelectTab(0);
         }
 
         private void agendaButton1_Click(object sender, EventArgs e)
         {
             int aantalFilms = 3;
-            tabPages.SelectTab(1);
+            tabControl1.SelectTab(1);
             tabControl2.SelectTab(1);
             /*
             filmPanel = new FlowLayoutPanel();
@@ -641,12 +641,12 @@ namespace EersteProjectMau
         }
         private void contactButton1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(2);
+            tabControl1.SelectTab(2);
             tabControl2.SelectTab(2);
         }
         private void faqButton1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(3);
+            tabControl1.SelectTab(3);
             tabControl2.SelectTab(3);
         }
         private void reserveerButton1_Click(object sender, EventArgs e)
@@ -656,13 +656,13 @@ namespace EersteProjectMau
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(5);
+            tabControl1.SelectTab(5);
             tabControl2.SelectTab(5);
         }
 
         public void naarStoelSelectie(film nieuweFilm)
         {
-            tabPages.SelectTab(4);
+            tabControl1.SelectTab(4);
             tabControl2.SelectTab(4);
             huidigeFilm = nieuweFilm;
             stoelGrid = loadFilmStoelen(nieuweFilm.titel, nieuweFilm.datum);
@@ -751,20 +751,20 @@ namespace EersteProjectMau
 
         private void buttonVorigeBetaal1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectedTab = tabPages.Controls["tabPageStoelselectie"] as TabPage;
+            tabControl1.SelectedTab = tabControl1.Controls["tabPageStoelselectie"] as TabPage;
             tabControl2.SelectTab(4);
         }
 
         private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(6);
+            tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
             labelBedrag1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBank1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(5);
+            tabControl1.SelectTab(5);
             tabControl2.SelectTab(5);
         }
 
@@ -772,13 +772,13 @@ namespace EersteProjectMau
         {
             if (RadioButtonABN.Checked == true || RadioButtonING.Checked == true || RadioButtonSNS.Checked == true || RadioButtonRABO.Checked == true)
             {
-                tabPages.SelectTab(7);
+                tabControl1.SelectTab(7);
                 tabControl2.SelectTab(7);
                 Getal3.Text = totaalPrijs.ToString();
             }
             else if (RadioButtonMASTER.Checked == true || RadioButtonVISA.Checked == true)
             {
-                tabPages.SelectTab(8);
+                tabControl1.SelectTab(8);
                 tabControl2.SelectTab(8);
                 GeldCreditcard.Text = totaalPrijs.ToString();
             }
@@ -804,13 +804,14 @@ namespace EersteProjectMau
             if (CheckboxGeenrobot.Checked == true && textBoxRekeningnummer1.Text.Length == 18 && textboxPasnummer1.Text.Length == 3)
             {
                 
-                tabPages.SelectTab(7);
-                tabControl2.SelectTab(7);
+                tabControl1.SelectTab(0);
+                tabControl2.SelectTab(0);
+                MessageBox.Show("Betaling is gelukt.");
             }
             else
             {
                 MessageBox.Show("Bevestig dat u geen robot bent.");
-                tabPages.SelectTab(7);
+                tabControl1.SelectTab(7);
                 tabControl2.SelectTab(7);
             }
             
@@ -818,7 +819,7 @@ namespace EersteProjectMau
 
         private void buttonVorigeFinal1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(6);
+            tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
         }
 
@@ -915,13 +916,13 @@ namespace EersteProjectMau
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(6);
+            tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(7);
+            tabControl1.SelectTab(7);
             tabControl2.SelectTab(7);
         }
 
@@ -932,7 +933,7 @@ namespace EersteProjectMau
 
         private void meerFilmsButton_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(0);
+            tabControl1.SelectTab(0);
             tabControl2.SelectTab(0);
         }
 
@@ -964,7 +965,7 @@ namespace EersteProjectMau
             if (stoelGeselect)
             {
                 saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
-                tabPages.SelectedTab = tabPages.Controls["tabPageBetalen"] as TabPage;
+                tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
                 bedragBetaal2.Text = totaalPrijs.ToString();
                 tabControl2.SelectTab(5);
             }
@@ -1309,7 +1310,7 @@ namespace EersteProjectMau
 
         private void VorigeCreditcard_Click(object sender, EventArgs e)
         {
-            tabPages.SelectTab(6);
+            tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
         }
 
@@ -1317,13 +1318,13 @@ namespace EersteProjectMau
         {
             if(GeenRobotCreditcardCheck.Checked == true)
             {
-                tabPages.SelectTab(0);
+                tabControl1.SelectTab(0);
                 tabControl2.SelectTab(0);
                 MessageBox.Show("Betaling is gelukt.");
             }
             else
             {
-                tabPages.SelectTab(8);
+                tabControl1.SelectTab(8);
                 tabControl2.SelectTab(8);
                 MessageBox.Show("Bevestig dat u geen robot bent.");
             }

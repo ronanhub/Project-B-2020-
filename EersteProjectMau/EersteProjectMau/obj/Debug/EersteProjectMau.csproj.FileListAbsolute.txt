@@ -166,5 +166,3 @@ C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau
 C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
 C:\Users\santa\Documents\Github\Project-B-2020-\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerStoelWarningForm.resources
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerBankWarningForm.resources
-C:\Users\Yoga\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerStoelWarningForm.resources

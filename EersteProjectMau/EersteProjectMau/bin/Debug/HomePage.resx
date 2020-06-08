@@ -32710,23 +32710,6 @@ Klik op "Reserveer Tickets" onderin
 de pagina om Tickets te reserveren
 voor deze film!"</value>
   </data>
-  <data name="IdealHelpTekst.Text" xml:space="preserve">
-    <value>Waarom krijg ik een melding 
-die zegt: Vul alle gegevens in.
-Dit komt omdat u niet alle 
-gegevens ingevult heeft.
-
-Waarom krijg ik een melding 
-die zegt: Bevestig dat u geen
-robot bent. DIt komt omdat 
-u nog niet bevestigd
-hebt dat u geen robot bent.
-
-Dit kunt u doen door op de 
-knop te klikken  die links van 
-de tekst 'ik ben geen robot' 
-staat.</value>
-  </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Waarom krijg ik een melding 
 die zegt: Vul alle gegevens in.
@@ -32744,6 +32727,23 @@ knop te klikken  die links van
 de tekst 'ik ben geen robot' 
 staat.
 </value>
+  </data>
+  <data name="IdealHelpTekst.Text" xml:space="preserve">
+    <value>Waarom krijg ik een melding 
+die zegt: Vul alle gegevens in.
+Dit komt omdat u niet alle 
+gegevens ingevult heeft.
+
+Waarom krijg ik een melding 
+die zegt: Bevestig dat u geen
+robot bent. DIt komt omdat 
+u nog niet bevestigd
+hebt dat u geen robot bent.
+
+Dit kunt u doen door op de 
+knop te klikken  die links van 
+de tekst 'ik ben geen robot' 
+staat.</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

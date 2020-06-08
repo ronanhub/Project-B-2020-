@@ -971,6 +971,7 @@ namespace EersteProjectMau
             }
             else
             {
+
                 if (meldingStoel == null)
                 {
                     meldingStoel = new selecteerStoelWarningForm();
