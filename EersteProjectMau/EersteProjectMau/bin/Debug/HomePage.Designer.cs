@@ -56,18 +56,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.agendaHeader = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.filmdatumlabel1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -163,6 +166,8 @@
             this.buttonStoel12 = new System.Windows.Forms.Button();
             this.buttonStoel13 = new System.Windows.Forms.Button();
             this.tabPageBetalen = new System.Windows.Forms.TabPage();
+            this.LabelFilmBetaal = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.bedragBetaal2 = new System.Windows.Forms.Label();
             this.labelbedragBetaal1 = new System.Windows.Forms.Label();
             this.labelbedraggBetaal1 = new System.Windows.Forms.Label();
@@ -282,8 +287,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.uheeftbetaaldhelpp = new System.Windows.Forms.TabPage();
             this.betaaldLabelHelp = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.LabelFilmBetaal = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
@@ -532,7 +535,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(287, 48);
             this.label1.TabIndex = 8;
-            this.label1.Text = "De film van deze maand!\r\n(Donderdag 18 juni om 15:00)";
+            this.label1.Text = "De film van deze maand!\r\n(Donderdag 11 juni om 15:00)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // homeBeschrijving
@@ -647,7 +650,7 @@
             this.agendaHeader.BackColor = System.Drawing.Color.Transparent;
             this.agendaHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agendaHeader.ForeColor = System.Drawing.Color.Black;
-            this.agendaHeader.Location = new System.Drawing.Point(14, 10);
+            this.agendaHeader.Location = new System.Drawing.Point(264, 10);
             this.agendaHeader.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.agendaHeader.Name = "agendaHeader";
             this.agendaHeader.Size = new System.Drawing.Size(191, 55);
@@ -658,6 +661,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Controls.Add(this.pictureBox11);
@@ -668,11 +672,21 @@
             this.panel4.Size = new System.Drawing.Size(886, 388);
             this.panel4.TabIndex = 8;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(265, 51);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(300, 24);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Donderdag 10 September 2020";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(30, 265);
+            this.label11.Location = new System.Drawing.Point(30, 316);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 18);
             this.label11.TabIndex = 8;
@@ -706,15 +720,15 @@
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(22, 26);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(445, 55);
+            this.label22.Size = new System.Drawing.Size(247, 110);
             this.label22.TabIndex = 4;
-            this.label22.Text = "Op hoop van zegen";
+            this.label22.Text = "Op hoop \r\nvan zegen";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(28, 104);
+            this.label23.Location = new System.Drawing.Point(27, 160);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(536, 150);
             this.label23.TabIndex = 5;
@@ -724,6 +738,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox9);
@@ -733,6 +748,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(886, 388);
             this.panel3.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(262, 51);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(285, 24);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Donderdag 13 Augustus 2020";
             // 
             // label10
             // 
@@ -791,6 +816,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.filmdatumlabel1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -801,11 +827,21 @@
             this.panel2.Size = new System.Drawing.Size(886, 382);
             this.panel2.TabIndex = 1;
             // 
+            // filmdatumlabel1
+            // 
+            this.filmdatumlabel1.AutoSize = true;
+            this.filmdatumlabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filmdatumlabel1.Location = new System.Drawing.Point(265, 47);
+            this.filmdatumlabel1.Name = "filmdatumlabel1";
+            this.filmdatumlabel1.Size = new System.Drawing.Size(219, 24);
+            this.filmdatumlabel1.TabIndex = 5;
+            this.filmdatumlabel1.Text = "Donderdag 9 Juli 2020";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 229);
+            this.label6.Location = new System.Drawing.Point(16, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 18);
             this.label6.TabIndex = 4;
@@ -1222,7 +1258,7 @@
             this.antwoorden.ReadOnly = true;
             this.antwoorden.Size = new System.Drawing.Size(332, 349);
             this.antwoorden.TabIndex = 3;
-            this.antwoorden.Text = "Dit is de Textvak waar de antwoorden op de vragen staan\n";
+            this.antwoorden.Text = "Dit is het Textvak waar de antwoorden op de vragen staan\n";
             // 
             // tabPageStoelselectie
             // 
@@ -1967,11 +2003,31 @@
             this.tabPageBetalen.TabIndex = 5;
             this.tabPageBetalen.Text = "tabPageBetalen";
             // 
+            // LabelFilmBetaal
+            // 
+            this.LabelFilmBetaal.AutoSize = true;
+            this.LabelFilmBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFilmBetaal.Location = new System.Drawing.Point(634, 61);
+            this.LabelFilmBetaal.Name = "LabelFilmBetaal";
+            this.LabelFilmBetaal.Size = new System.Drawing.Size(62, 37);
+            this.LabelFilmBetaal.TabIndex = 65;
+            this.LabelFilmBetaal.Text = "gfg";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(548, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 33);
+            this.label12.TabIndex = 64;
+            this.label12.Text = "Film:";
+            // 
             // bedragBetaal2
             // 
             this.bedragBetaal2.AutoSize = true;
             this.bedragBetaal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bedragBetaal2.Location = new System.Drawing.Point(794, 13);
+            this.bedragBetaal2.Location = new System.Drawing.Point(711, 10);
             this.bedragBetaal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bedragBetaal2.Name = "bedragBetaal2";
             this.bedragBetaal2.Size = new System.Drawing.Size(93, 37);
@@ -1991,7 +2047,7 @@
             // labelbedraggBetaal1
             // 
             this.labelbedraggBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelbedraggBetaal1.Location = new System.Drawing.Point(636, 13);
+            this.labelbedraggBetaal1.Location = new System.Drawing.Point(547, 10);
             this.labelbedraggBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelbedraggBetaal1.Name = "labelbedraggBetaal1";
             this.labelbedraggBetaal1.Size = new System.Drawing.Size(202, 50);
@@ -3429,26 +3485,6 @@
             this.betaaldLabelHelp.TabIndex = 0;
             this.betaaldLabelHelp.Text = "U heeft betaald!\r\n\r\nKlik op de gele knop \r\nom verder te gaan.";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(637, 67);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 33);
-            this.label12.TabIndex = 64;
-            this.label12.Text = "Film:";
-            // 
-            // LabelFilmBetaal
-            // 
-            this.LabelFilmBetaal.AutoSize = true;
-            this.LabelFilmBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelFilmBetaal.Location = new System.Drawing.Point(776, 65);
-            this.LabelFilmBetaal.Name = "LabelFilmBetaal";
-            this.LabelFilmBetaal.Size = new System.Drawing.Size(62, 37);
-            this.LabelFilmBetaal.TabIndex = 65;
-            this.LabelFilmBetaal.Text = "gfg";
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3819,6 +3855,9 @@
         private System.Windows.Forms.Label idealLabels;
         private System.Windows.Forms.Label LabelFilmBetaal;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label filmdatumlabel1;
     }
 }
 

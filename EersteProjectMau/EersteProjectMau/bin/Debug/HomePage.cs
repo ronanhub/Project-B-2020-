@@ -973,19 +973,19 @@ namespace EersteProjectMau
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("Dunkirk", new DateTime(2020, 2, 28, 16, 30, 0));
+            film nieuweFilm = new film("Dunkirk", new DateTime(2020, 7, 9, 15, 00, 0));
             naarStoelSelectie(nieuweFilm);
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("1917", new DateTime(2020, 2, 28, 16, 30, 0));
+            film nieuweFilm = new film("1917", new DateTime(2020, 13, 8, 15, 00, 0));
             naarStoelSelectie(nieuweFilm);
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("Op hoop van zegen", new DateTime(2020, 2, 28, 16, 30, 0));
+            film nieuweFilm = new film("Op hoop van zegen", new DateTime(2020, 9, 10, 15, 00, 0));
             naarStoelSelectie(nieuweFilm);
         }
 
@@ -1730,5 +1730,7 @@ namespace EersteProjectMau
         {
             tabControl1.SelectTab(9);
         }
+
+        
     }
 }
