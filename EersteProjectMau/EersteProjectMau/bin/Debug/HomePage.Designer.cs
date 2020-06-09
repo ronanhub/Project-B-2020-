@@ -607,7 +607,7 @@
             this.homeTitel.Name = "homeTitel";
             this.homeTitel.Size = new System.Drawing.Size(489, 49);
             this.homeTitel.TabIndex = 0;
-            this.homeTitel.Text = "Welkom bij Ashelys Cinema!";
+            this.homeTitel.Text = "Welkom bij Ashleys Cinema!";
             // 
             // agendaPage
             // 
@@ -683,6 +683,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 7;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox11
             // 
@@ -748,6 +749,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox9
             // 

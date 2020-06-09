@@ -936,8 +936,10 @@ namespace EersteProjectMau
         }
         private void meerFilmsButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(0);
-            tabControl2.SelectTab(0);
+            int aantalFilms = 3;
+            tabControl1.SelectTab(1);
+            tabControl2.SelectTab(1);
+           
         }
         private void sluitKruisButton_Click(object sender, EventArgs e)
         {
