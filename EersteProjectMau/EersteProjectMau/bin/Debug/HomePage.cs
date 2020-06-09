@@ -299,7 +299,7 @@ namespace EersteProjectMau
                 returnString = returnString + ".csv";
             }
 
-            returnString.Replace('/', '-');
+            returnString.Replace('\\', '-');
 
             return returnString;
         }
