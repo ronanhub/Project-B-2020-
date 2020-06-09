@@ -174,3 +174,9 @@ C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMa
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\Data\12YearsASlave.csv
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerBankWarningForm.resources
 C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerStoelWarningForm.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.resx
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.cs
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\HomePage.Designer.cs
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\bin\Debug\Data\12YearsASlave.csv
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerBankWarningForm.resources
+E:\HDD Documenten\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.selecteerStoelWarningForm.resources
