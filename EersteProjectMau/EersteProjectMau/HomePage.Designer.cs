@@ -272,6 +272,9 @@
             this.MastercardHelp = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.openPlusButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
@@ -647,6 +650,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Controls.Add(this.pictureBox11);
             this.panel4.Controls.Add(this.label22);
@@ -701,6 +705,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox9);
             this.panel3.Controls.Add(this.label21);
@@ -756,6 +761,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label18);
@@ -3264,6 +3270,36 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Hulp nodig?...";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 18);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Genre: Oorlogsfilm";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(30, 213);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 18);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Genre: Oorlogsfilm";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(30, 265);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 18);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Genre: Drama";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3619,6 +3655,9 @@
         private System.Windows.Forms.PictureBox VolgendeCreditcard;
         private System.Windows.Forms.PictureBox vorigegButton;
         private System.Windows.Forms.PictureBox gegevensButton;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
     }
 }
 
