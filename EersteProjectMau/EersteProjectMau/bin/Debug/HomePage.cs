@@ -12,6 +12,9 @@ using System.Net.Mail;
 using System.IO;
 using EersteProjectMau.Properties;
 using System.Configuration;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
+
 
 namespace EersteProjectMau
 {
@@ -50,8 +53,17 @@ namespace EersteProjectMau
 
             buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
             buttonZelfVraag2.Visible =  (tabControl2.Visible == false) ? true : false;
-        }
 
+            betaaaldLabel.Size = (tabControl2.Visible == false) ? new Size(871, 344) : new Size(551, 344);
+        }
+        public void stopForm(string stopReden)
+        {
+            betaalStop stoppenNuuuu = new betaalStop(stopReden);
+            stoppenNuuuu.Text = stopReden;
+            stoppenNuuuu.Location = this.Location;
+            stoppenNuuuu.StartPosition = FormStartPosition.CenterScreen;
+            stoppenNuuuu.Show();
+        }
 
 
 
@@ -386,6 +398,39 @@ namespace EersteProjectMau
 
             File.WriteAllLines(fileStringMaker(filmNaam, tijdstip, true), Data);
         }
+
+
+
+
+
+        bool emailPattern = false;
+        private bool CheckOpened(string name)
+        {
+            FormCollection fc = Application.OpenForms;
+            foreach (Form frm in fc)
+            {
+                if (frm.Text == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
 
         //@@@@@@@@@@@@@@@@@@@ HET PROGRAMMA BEGNINT HIER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public HomePage()
@@ -756,9 +801,27 @@ namespace EersteProjectMau
 
         private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(6);
-            tabControl2.SelectTab(6);
-            labelBedrag1.Text = totaalPrijs.ToString();
+
+
+            if (betaalEmail.Text == "" || betaalEmail.Text == "Voorbeeld@gmail.com")
+                stopForm("Vul uw email adres in");
+            else if (betaalVoornaam.Text == "" || betaalVoornaam.Text == "Ashley")
+                stopForm("Vul uw voornaam in");
+            else if (betaalAchternaam.Text == "" || betaalAchternaam.Text == "Bunk")
+                stopForm("Vul uw achternaam in");
+            else if (emailPattern == false)
+            {
+                properEmail emailfout = new properEmail();
+
+                emailfout.mailBoxText(betaalEmail.Text);
+                emailfout.Location = this.Location;
+                emailfout.StartPosition = FormStartPosition.CenterScreen;
+                emailfout.ShowDialog();
+            }
+            else
+                tabControl1.SelectTab(6);
+                tabControl2.SelectTab(6);
+                labelBedrag1.Text = totaalPrijs.ToString();
         }
 
         private void buttonVorigeBank1_Click(object sender, EventArgs e)
@@ -800,19 +863,60 @@ namespace EersteProjectMau
 
         private void buttonBetalenFinal1_Click(object sender, EventArgs e)
         {
-            if (CheckboxGeenrobot.Checked == true && textBoxRekeningnummer1.Text.Length == 18 && textboxPasnummer1.Text.Length == 3)
-            {
-                
-                tabControl1.SelectTab(9);
-                tabControl2.SelectTab(9);
-            }
+            //
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("ashleyscinema010@gmail.com", "ashley010");
+            smtp.EnableSsl = true;
+            MailAddress mailfrom = new MailAddress("ashleyscinema010@gmail.com");
+            MailAddress mailto = new MailAddress(betaalEmail.Text);
+            MailMessage newmsg = new MailMessage(mailfrom, mailto);
+            //
+
+            if (textBoxRekeningnummer1.Text == "" || textBoxRekeningnummer1.Text == "NL00ABNA012345689")
+                stopForm("Vul een geldige rekeningnummer in");
+            else if (textboxPasnummer1.Text == "000" || textboxPasnummer1.Text == "")
+                stopForm("Vul een geldige Pasnummer code in");
+            else if(CheckboxGeenrobot.Checked == false)
+                stopForm("Bevestig dat u geen robot bent na OK.");
             else
             {
-                MessageBox.Show("Bevestig dat u geen robot bent.");
-                tabControl1.SelectTab(7);
-                tabControl2.SelectTab(7);
+                var stoelLijst = new List<int>();
+                for (int stoel = 0; stoel < stoelGrid.Count; stoel++)
+                {
+                    if (stoelGrid[stoel].Item2 == status.keuze)
+                    {
+                        stoelLijst.Add(stoel + 1);
+                    }
+                }
+                string betalinginfo = $"Beste {betaalVoornaam.Text} {betaalAchternaam.Text},\n\nDeze is mail uw ticket voor {huidigeFilm.titel} op {huidigeFilm.datum.ToString()}\n\nBewaar deze email goed want hij dient ter bevestiging voor u in de bioscoop\n\nUw stoelen zijn:\n\n";
+                
+                for (int i = 0; i < stoelLijst.Count; i++)
+                {
+                    betalinginfo += $"Stoel {stoelLijst[i]}\n";
+                }
+                betalinginfo += $"\nUw betaling gegevens:\n\nTotale bedrag: €{bedragBetaal2.Text}";
+
+                newmsg.Subject = $"Uw ticket voor {huidigeFilm.titel}";
+                newmsg.Body = betalinginfo;
+
+
+
+                bool connected = CheckForInternetConnection();
+                if (connected == true)
+                {
+                    smtp.Send(newmsg);
+                    betaaaldLabel.Text = $"U heeft betaald!\n\nTotale bedrag: €{bedragBetaal2.Text}\n\nUw ticket is naar uw e-mail adres verzonden.\n\nTot gauw!";
+                    tabControl1.SelectTab(9);
+                    tabControl2.SelectTab(9);
+                }
+                else
+                {
+                    Nietverbonden geeninternet = new Nietverbonden();
+                    geeninternet.Location = this.Location;
+                    geeninternet.StartPosition = FormStartPosition.CenterScreen;
+                    geeninternet.ShowDialog();
+                }
             }
-            
         }
 
         private void buttonVorigeFinal1_Click(object sender, EventArgs e)
@@ -936,8 +1040,8 @@ namespace EersteProjectMau
         }
         private void meerFilmsButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(0);
-            tabControl2.SelectTab(0);
+            tabControl1.SelectTab(1);
+            tabControl2.SelectTab(1);
         }
         private void sluitKruisButton_Click(object sender, EventArgs e)
         {
@@ -960,25 +1064,10 @@ namespace EersteProjectMau
 
         private void BetaalPaginaGeenRobot_Click(object sender, EventArgs e)
         {
-            if ((textboxPasnummer1.Text == "" || textboxPasnummer1.Text == "000") || (textBoxRekeningnummer1.Text == "" || textBoxRekeningnummer1.Text == "NL00ABNA0123456789"))
-            {
-                MessageBox.Show("Vul alle gegevens in.");
-            }
-            else if (textBoxRekeningnummer1.Text.Length != 18)
-            {
-                MessageBox.Show("Vul een geldig rekeningnummer in.");
-            }
-            else if (textboxPasnummer1.Text.Length != 3)
-            {
-                MessageBox.Show("Vul een geldig pasnummer in.");
-            }
-            else
-            {
                 buttonBetalenFinal1.Enabled = true;
                 BetaalPaginaGeenRobot.BackColor = Color.Lime;
                 buttonBetalenFinal1.BackColor = Color.Lime;
                 CheckboxGeenrobot.Checked = true;
-            }
         }
 
 
@@ -1180,6 +1269,15 @@ namespace EersteProjectMau
         private void betaalEmail_TextChanged(object sender, EventArgs e)
         {
             betaalEmail.ForeColor = Color.Black;
+            string pattern = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
+            if (Regex.IsMatch(betaalEmail.Text, pattern))
+            {
+                emailPattern = true;
+            }
+            else
+            {
+                emailPattern = false;
+            }
         }
         private void betaalVoornaam_TextChanged(object sender, EventArgs e)
         {
@@ -1390,17 +1488,72 @@ namespace EersteProjectMau
         }
         private void betalengButton_Click(object sender, EventArgs e)
         {
-            if (GeenRobotCreditcardCheck.Checked == true)
+            //
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("ashleyscinema010@gmail.com", "ashley010");
+            smtp.EnableSsl = true;
+            MailAddress mailfrom = new MailAddress("ashleyscinema010@gmail.com");
+            MailAddress mailto = new MailAddress(betaalEmail.Text);
+            MailMessage newmsg = new MailMessage(mailfrom, mailto);
+            //
+
+            if (NaamCreditcardEigenaar.Text == "" || NaamCreditcardEigenaar.Text == "Ashley Bunk")
+                stopForm("Vul een geldige kaarthouder in");
+            else if (RekeningnummerCreditcard.Text == "" || RekeningnummerCreditcard.Text == "0000123456780000")
+                stopForm("Vul een geldige rekeningnummer in");
+            else if (ComboboxMaand.Text == "Maand")
+                stopForm("Vul de maand in");
+            else if (ComboboxJaar.Text == "Jaar")
+                stopForm("Vul het jaar in");
+            else if (CvcCreditcard.Text == "000" || CVCCodeCreditcard.Text == "")
+                stopForm("Vul een geldige CVC code in");
+            else if (GeenRobotCreditcardCheck.Checked == false)
+                stopForm("Bevestig dat u geen robot bent na OK.");
+            else 
             {
-                tabControl1.SelectTab(9);
-                tabControl2.SelectTab(9);
+                var stoelLijst = new List<int>();
+                for (int stoel = 0; stoel < stoelGrid.Count; stoel++)
+                {
+                    if (stoelGrid[stoel].Item2 == status.keuze)
+                    {
+                        stoelLijst.Add(stoel + 1);
+                    }
+                }
+                string betalinginfo = $"Beste {betaalVoornaam.Text} {betaalAchternaam.Text},\n\nDeze email is uw ticket voor {huidigeFilm.titel} op {huidigeFilm.datum.ToString()}\n\nBewaar deze email goed want hij dient ter bevestiging voor u in de bioscoop\n\nUw stoelen zijn:\n\n";
+               
+                for (int i = 0; i < stoelLijst.Count; i++)
+                {
+                    betalinginfo += $"Stoel {stoelLijst[i]}\n";
+                }
+                betalinginfo += $"\nUw betaling gegevens:\n\nTotale bedrag: €{bedragBetaal2.Text}\nKaarthouder: {NaamCreditcardEigenaar.Text}";
+
+                newmsg.Subject = $"Uw ticket voor {huidigeFilm.titel}";
+                newmsg.Body = betalinginfo;
+
+
+
+                bool connected = CheckForInternetConnection();
+                if (GeenRobotCreditcardCheck.Checked == false)
+                {
+                    stopForm("Bevestig dat u geen robot bent na OK.");
+                }
+                else if (connected == true)
+                {
+                    smtp.Send(newmsg);
+                    betaaaldLabel.Text = $"U heeft betaald!\n\nTotale bedrag: €{bedragBetaal2.Text}\n\nUw ticket is naar uw e-mail adres verzonden.\n\nTot gauw!";
+                    tabControl1.SelectTab(9);
+                    tabControl2.SelectTab(9);
+                }
+                else
+                {
+                    Nietverbonden geeninternet = new Nietverbonden();
+                    geeninternet.Location = this.Location;
+                    geeninternet.StartPosition = FormStartPosition.CenterScreen;
+                    geeninternet.ShowDialog();
+                }
+                //saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, betaalEmail.Text);
             }
-            else
-            {
-                tabControl1.SelectTab(8);
-                tabControl2.SelectTab(8);
-                MessageBox.Show("Bevestig dat u geen robot bent.");
-            }
+
         }
         private void gegevensButton_Click_1(object sender, EventArgs e)
         {
@@ -1437,34 +1590,13 @@ namespace EersteProjectMau
 
         private void GeenRobotCreditcard_Click(object sender, EventArgs e)
         {
-            if (NaamCreditcardEigenaar.Text == "Ashley Bunk" || NaamCreditcardEigenaar.Text == "")
-            {
-                MessageBox.Show("Vul uw naam in.");
-            }
-            else if (RekeningnummerCreditcard.Text == "0000 1234 5678 0000" || RekeningnummerCreditcard.Text == "" || (RekeningnummerCreditcard.Text.Length != 16))
-            {
-                MessageBox.Show("Vul een geldig rekeningnummer in.");
-            }
-            else if (ComboboxMaand.Text == "Maand")
-            {
-                MessageBox.Show("Vul een geldige maand in.");
-            }
-            else if (ComboboxJaar.Text == "Jaar")
-            {
-                MessageBox.Show("Vul een geldig jaar in.");
-            }
-            else if (CvcCreditcard.Text == "000" || CvcCreditcard.Text == "" || CvcCreditcard.Text.Length != 3)
-            {
-                MessageBox.Show("Vul een geldige CVC code in.");
-            }
-            else
-            {
-                VolgendeCreditcard.Enabled = true;
-                VolgendeCreditcard.BackColor = Color.Lime;
-                GeenRobotCreditcard.BackColor = Color.Lime;
-                VolgendeCreditcard.BackColor = Color.Lime;
-                GeenRobotCreditcardCheck.Checked = true;
-            }
+            
+            VolgendeCreditcard.Enabled = true;
+            VolgendeCreditcard.BackColor = Color.Lime;
+            GeenRobotCreditcard.BackColor = Color.Lime;
+            VolgendeCreditcard.BackColor = Color.Lime;
+            GeenRobotCreditcardCheck.Checked = true;
+            
         }
 
 
@@ -1533,6 +1665,7 @@ namespace EersteProjectMau
                 betaalEmail.Text = "Voorbeeld@gmail.com";
                 betaalEmail.ForeColor = Color.Gray;
             }
+            
         }
         private void NaamCreditcardEigenaar_Leave(object sender, EventArgs e)
         {
@@ -1585,6 +1718,9 @@ namespace EersteProjectMau
             ComboboxJaar.ForeColor = Color.Black;
         }
 
-
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(9);
+        }
     }
 }

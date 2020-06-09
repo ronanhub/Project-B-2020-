@@ -486,6 +486,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap popcorn {
+            get {
+                object obj = ResourceManager.GetObject("popcorn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rabo_balk {
             get {
                 object obj = ResourceManager.GetObject("rabo balk", resourceCulture);

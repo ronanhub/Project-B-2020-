@@ -201,3 +201,4 @@ C:\Users\kerem\Desktop\takbranch\EersteProjectMau\EersteProjectMau\obj\Debug\Eer
 C:\Users\kerem\Desktop\takbranch\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.csproj.CoreCompileInputs.cache
 C:\Users\kerem\Desktop\takbranch\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.exe
 C:\Users\kerem\Desktop\takbranch\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.pdb
+C:\Users\kerem\Documents\GitHub\Project-B-2020-\EersteProjectMau\EersteProjectMau\obj\Debug\EersteProjectMau.betaalSTOP.resources

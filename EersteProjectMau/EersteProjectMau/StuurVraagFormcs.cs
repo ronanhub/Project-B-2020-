@@ -24,11 +24,19 @@ namespace EersteProjectMau
             foreach (Form frm in fc)
             {
                 if (frm.Text == name)
-                {
                     return true;
-                }
             }
             return false;
+        }
+
+
+        public void stopForm(string stopReden)
+        {
+            betaalStop stoppenNuuuu = new betaalStop(stopReden);
+            stoppenNuuuu.Text = stopReden;
+            stoppenNuuuu.Location = this.Location;
+            stoppenNuuuu.StartPosition = FormStartPosition.CenterScreen;
+            stoppenNuuuu.Show();
         }
 
         public static bool CheckForInternetConnection()
@@ -51,47 +59,16 @@ namespace EersteProjectMau
             InitializeComponent();
         }
 
-        private void robot_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void robot_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             validaterings.BackColor = Color.Lime;
             Verstuur.Enabled = true;
-
-
-
-
-
         }
-
-
-
-
-        private void StuurVraagFormcs_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void Eigenvraag_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
         private void validaterings_Click_1(object sender, EventArgs e)
         {
             validaterings.BackColor = Color.Lime;
             Verstuur.Enabled = true;
         }
-
-        
-
         private void validaterings_Click(object sender, EventArgs e)
         {
             validaterings.BackColor = Color.Lime;
@@ -100,88 +77,66 @@ namespace EersteProjectMau
             Verstuur.Image = Properties.Resources.send_true;
             Verstuur.Cursor = Cursors.Hand;
         }
-
         private void Verstuur_Click(object sender, EventArgs e)
         {
-            if (Email.Text == "" || Email.Text == "Email Adres")
+            if      (Voornaam.Text == "" || Voornaam.Text == "Vul hier uw voornaam in")
+                stopForm("Vul uw voornaam in");
+            else if (Achternaam.Text == "" || Achternaam.Text == "Vul hier uw achternaam in")
+                stopForm("Vul uw achternaam in");
+            else if (Onderwerp.Text == "" || Onderwerp.Text == "Vul hier het onderwerp van uw vraag in")
+                stopForm("Vul een onderwerp in");
+            else if (Eigenvraag.Text.Length < 30)
+                stopForm("Uw vraag is te kort");
+            else if (emailPattern == false)
             {
-                MessageBox.Show("Vul een email adres in");
+                properEmail emailfout = new properEmail();
+
+                errorProviderEmail.SetError(this.Email, "Vul een geldige email-adres in!");
+
+                emailfout.mailBoxText(Email.Text);
+                emailfout.Location = this.Location;
+                emailfout.StartPosition = FormStartPosition.CenterScreen;
+                emailfout.ShowDialog();
             }
             else
-            {
-                if (Onderwerp.Text == "" || Onderwerp.Text == "Onderwerp")
+            { 
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+
+                smtp.Credentials = new NetworkCredential("ashleyscinema010@gmail.com", "ashley010");
+
+                smtp.EnableSsl = true;
+
+                MailAddress mailfrom = new MailAddress("ashleyscinema010@gmail.com");
+                MailAddress mailto = new MailAddress(Email.Text);
+                MailMessage newmsg = new MailMessage(mailfrom, mailto);
+
+                newmsg.Subject = this.Onderwerp.Text;
+                newmsg.Body = $"Beste {Voornaam.Text} {Achternaam.Text},\n\nWij hebben uw vraag ontvangen en zullen ons best doen om binnen 3 werkdagen een antwoord naar u te sturen!\n\nUw vraag was:\n{  this.Eigenvraag.Text}";
+
+
+
+                bool connected = CheckForInternetConnection();
+                if (connected == true)
                 {
-                    MessageBox.Show("Vul een onderwerp in");
+                    smtp.Send(newmsg);
+
+                    Verzonden sent = new Verzonden();
+                    string results = sent.Text;
+
+                    sent.Location = this.Location;
+                    sent.StartPosition = FormStartPosition.CenterScreen;
+                    sent.ShowDialog();
+                    if (sent.closer == "Closing...")
+                    {
+                        this.Close();
+                    }
                 }
                 else
                 {
-                    if (Eigenvraag.Text == "")
-                    {
-                        MessageBox.Show("Vul een vraag in");
-                    }
-                    else
-                    {
-                        if (Eigenvraag.Text.Length < 30)
-                        {
-                            MessageBox.Show("Uw vraag is te kort");
-                        }
-                        else
-                        {
-                            if (emailPattern == false)
-                            {
-                                properEmail emailfout = new properEmail();
-
-                                errorProviderEmail.SetError(this.Email, "Vul een geldige email-adres in!");
-
-                                emailfout.mailBoxText(Email.Text);
-                                emailfout.Location = this.Location;
-                                emailfout.StartPosition = FormStartPosition.CenterScreen;
-                                emailfout.ShowDialog();
-                            }
-                            else
-                            {
-                                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-
-                                smtp.Credentials = new NetworkCredential("ashleyscinema010@gmail.com", "ashley010");
-
-                                smtp.EnableSsl = true;
-
-                                MailAddress mailfrom = new MailAddress("ashleyscinema010@gmail.com");
-                                MailAddress mailto = new MailAddress("ashleyscinema010@gmail.com");
-                                MailMessage newmsg = new MailMessage(mailfrom, mailto);
-
-                                newmsg.Subject = this.Onderwerp.Text;
-                                newmsg.Body = $"Nieuwe vraag van {Voornaam.Text} {Achternaam.Text}\n\nE-mail: {Email.Text}\n\nVraagt: {  this.Eigenvraag.Text}";
-
-
-
-                                bool connected = CheckForInternetConnection();
-                                if (connected == true)
-                                {
-                                    smtp.Send(newmsg);
-
-                                    Verzonden sent = new Verzonden();
-                                    string results = sent.Text;
-
-                                    sent.Location = this.Location;
-                                    sent.StartPosition = FormStartPosition.CenterScreen;
-                                    sent.ShowDialog();
-                                    if (sent.closer == "Closing...")
-                                    {
-                                        this.Close();
-                                    }
-                                }
-                                else
-                                {
-                                    Nietverbonden geeninternet = new Nietverbonden();
-                                    geeninternet.Location = this.Location;
-                                    geeninternet.StartPosition = FormStartPosition.CenterScreen;
-                                    geeninternet.ShowDialog();
-
-                                }
-                            }
-                        }
-                    }
+                    Nietverbonden geeninternet = new Nietverbonden();
+                    geeninternet.Location = this.Location;
+                    geeninternet.StartPosition = FormStartPosition.CenterScreen;
+                    geeninternet.ShowDialog();
                 }
             }
         }
@@ -221,10 +176,6 @@ namespace EersteProjectMau
         {
             Eigenvraag.ForeColor = Color.Black;
         }
-
-
-
-
 
 
 
@@ -268,18 +219,6 @@ namespace EersteProjectMau
                 Eigenvraag.Text = "";
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

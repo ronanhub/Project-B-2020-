@@ -264,7 +264,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StuurVraagFormcs";
             this.Text = "StuurVraagFormcs";
-            this.Load += new System.EventHandler(this.StuurVraagFormcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmail)).EndInit();
             this.ResumeLayout(false);
