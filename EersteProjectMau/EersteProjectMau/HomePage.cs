@@ -290,7 +290,7 @@ namespace EersteProjectMau
             string returnString;
 
             string titelString = filmTitel.Replace(" ", "").ToLower();
-            string datumString = tijdstip.Date.ToShortDateString();
+            string datumString = tijdstip.Day.ToString() + "-" + tijdstip.Month.ToString()+"-"+tijdstip.Year.ToString();
             string tijdString = tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
 
             returnString = titelString + "_" + datumString + "_" + tijdString;
@@ -299,7 +299,7 @@ namespace EersteProjectMau
                 returnString = returnString + ".csv";
             }
 
-            returnString.Replace('\\', '-');
+            //returnString.Replace('\\', '-');
 
             return returnString;
         }
