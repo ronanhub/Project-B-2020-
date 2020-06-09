@@ -305,5 +305,11 @@
   <ItemGroup>
     <None Include="Resources\popcorn.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\master balk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa balk.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

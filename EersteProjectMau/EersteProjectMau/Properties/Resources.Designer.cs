@@ -146,6 +146,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abn_balk1 {
+            get {
+                object obj = ResourceManager.GetObject("abn balk1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agendaButton {
             get {
                 object obj = ResourceManager.GetObject("agendaButton", resourceCulture);
@@ -436,6 +446,16 @@ namespace EersteProjectMau.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap master_balk {
+            get {
+                object obj = ResourceManager.GetObject("master balk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap meerFilmsKnop {
             get {
                 object obj = ResourceManager.GetObject("meerFilmsKnop", resourceCulture);
@@ -569,6 +589,16 @@ namespace EersteProjectMau.Properties {
         internal static System.Drawing.Bitmap stuurMailButton1 {
             get {
                 object obj = ResourceManager.GetObject("stuurMailButton1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visa_balk {
+            get {
+                object obj = ResourceManager.GetObject("visa balk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

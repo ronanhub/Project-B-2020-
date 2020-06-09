@@ -1077,6 +1077,7 @@ namespace EersteProjectMau
             RadioButtonABN.Checked = true;
             FotoABN.BackColor = Color.Lime;
             buttonVolgendeBank1.BackColor = Color.Lime;
+            bankBalk.Image = Resources.abn_balk;
         }
         private void FotoSNS_Click(object sender, EventArgs e)
         {
@@ -1084,6 +1085,7 @@ namespace EersteProjectMau
             RadioButtonSNS.Checked = true;
             FotoSNS.BackColor = Color.Lime;
             buttonVolgendeBank1.BackColor = Color.Lime;
+            bankBalk.Image = Resources.sns_balk;
         }
         private void FotoING_Click(object sender, EventArgs e)
         {
@@ -1091,6 +1093,7 @@ namespace EersteProjectMau
             RadioButtonING.Checked = true;
             FotoING.BackColor = Color.Lime;
             buttonVolgendeBank1.BackColor = Color.Lime;
+            bankBalk.Image = Resources.ing_balk;
         }
         private void FotoRabobank_Click(object sender, EventArgs e)
         {
@@ -1098,6 +1101,7 @@ namespace EersteProjectMau
             RadioButtonRABO.Checked = true;
             FotoRabobank.BackColor = Color.Lime;
             buttonVolgendeBank1.BackColor = Color.Lime;
+            bankBalk.Image = Resources.rabo_balk;
         }
         private void FotoMastercard_Click(object sender, EventArgs e)
         {
@@ -1105,6 +1109,8 @@ namespace EersteProjectMau
             RadioButtonMASTER.Checked = true;
             FotoMastercard.BackColor = Color.Lime;
             buttonVolgendeBank1.BackColor = Color.Lime;
+            creditBankBalk.Image = Resources.master_balk;
+
         }
         private void FotoVisa_Click(object sender, EventArgs e)
         {
@@ -1112,6 +1118,7 @@ namespace EersteProjectMau
             RadioButtonVISA.Checked = true;
             FotoVisa.BackColor = Color.Lime;
             buttonVolgendeBank1.BackColor = Color.Lime;
+            creditBankBalk.Image = Resources.visa_balk;
         }
 
 
@@ -1638,7 +1645,7 @@ namespace EersteProjectMau
             if (textBoxRekeningnummer1.Text == "")
             {
                 textBoxRekeningnummer1.Text = "NL00ABNA012345689";
-                textBoxRekeningnummer1.ForeColor = Color.Gray;
+                textBoxRekeningnummer1.ForeColor = Color.DarkGray;
             }
         }
         private void textboxPasnummer1_Leave(object sender, EventArgs e)
@@ -1646,7 +1653,7 @@ namespace EersteProjectMau
             if (textboxPasnummer1.Text == "")
             {
                 textboxPasnummer1.Text = "000";
-                textboxPasnummer1.ForeColor = Color.Gray;
+                textboxPasnummer1.ForeColor = Color.DarkGray;
             }
         }
         private void betaalVoornaam_Leave(object sender, EventArgs e)
