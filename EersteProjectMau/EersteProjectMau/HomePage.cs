@@ -387,6 +387,39 @@ namespace EersteProjectMau
             File.WriteAllLines(fileStringMaker(filmNaam, tijdstip, true), Data);
         }
 
+
+
+
+
+        bool emailPattern = false;
+        private bool CheckOpened(string name)
+        {
+            FormCollection fc = Application.OpenForms;
+            foreach (Form frm in fc)
+            {
+                if (frm.Text == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
         //@@@@@@@@@@@@@@@@@@@ HET PROGRAMMA BEGNINT HIER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public HomePage()
         {
@@ -756,6 +789,27 @@ namespace EersteProjectMau
 
         private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
         {
+            if (betaalEmail.Text == "")
+            {
+                MessageBox.Show("Vul uw email adres in");
+            }
+            else
+            {
+                if (betaalVoornaam.Text == "" )
+                {
+                    MessageBox.Show("Vul uw voornaam in");
+                }
+                else
+                {
+                    if (betaalAchternaam.Text == "")
+                    {
+                        MessageBox.Show("Vul uw achternaam in");
+                    }
+                    else
+                    {
+                    }
+                }
+            }
             tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
             labelBedrag1.Text = totaalPrijs.ToString();
