@@ -11,6 +11,8 @@ using System.Net;
 using System.Net.Mail;
 using System.IO;
 using EersteProjectMau.Properties;
+using System.Text.RegularExpressions;
+
 
 namespace EersteProjectMau
 {
@@ -20,6 +22,8 @@ namespace EersteProjectMau
         private FlowLayoutPanel filmPanel;
         int kaartvalue = 5;
         Image betaalkBalkImage;
+
+
 
         selecteerBankMelding melding;
 
@@ -43,10 +47,10 @@ namespace EersteProjectMau
 
             homePoster.Size = (tabControl2.Visible == false) ? new Size(320, 479) : new Size(215, 311);
             reserveerButtonHome.Location = (tabControl2.Visible == false) ? new Point(680, 400) : new Point(703, 380);
-            imdbHome.Location = (tabControl2.Visible == false) ? new Point(687, 450) : new Point(687, 330);
+
             imdbHome.Font = (tabControl2.Visible == false) ? new Font(imdbHome.Font.FontFamily, 27): new Font(imdbHome.Font.FontFamily, 16);
             imdbHome.Location = (tabControl2.Visible == false) ? new Point(875, 450) : new Point(687, 330);
-            homePoster.Location = (tabControl2.Visible == false) ? new Point(880, 5) : new Point(692, 5);
+            homePoster.Location = (tabControl2.Visible == false) ? new Point(880, 5) : new Point(682, 5);
 
             buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
             buttonZelfVraag2.Visible = (tabControl2.Visible == false) ? true : false;
@@ -384,6 +388,39 @@ namespace EersteProjectMau
 
             File.WriteAllLines(fileStringMaker(filmNaam, tijdstip, true), Data);
         }
+
+
+
+
+
+        bool emailPattern = false;
+        private bool CheckOpened(string name)
+        {
+            FormCollection fc = Application.OpenForms;
+            foreach (Form frm in fc)
+            {
+                if (frm.Text == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
 
         //@@@@@@@@@@@@@@@@@@@ HET PROGRAMMA BEGNINT HIER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         public HomePage()
@@ -791,6 +828,27 @@ namespace EersteProjectMau
 
         private void buttonVolgendeBetaal1_Click(object sender, EventArgs e)
         {
+            if (betaalEmail.Text == "")
+            {
+                MessageBox.Show("Vul uw email adres in");
+            }
+            else
+            {
+                if (betaalVoornaam.Text == "" )
+                {
+                    MessageBox.Show("Vul uw voornaam in");
+                }
+                else
+                {
+                    if (betaalAchternaam.Text == "")
+                    {
+                        MessageBox.Show("Vul uw achternaam in");
+                    }
+                    else
+                    {
+                    }
+                }
+            }
             tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
             labelBedrag1.Text = totaalPrijs.ToString();
@@ -826,9 +884,68 @@ namespace EersteProjectMau
 
         private void buttonBetalenFinal1_Click(object sender, EventArgs e)
         {
+            //
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("ashleyscinema010@gmail.com", "ashley010");
+            smtp.EnableSsl = true;
+            MailAddress mailfrom = new MailAddress("ashleyscinema010@gmail.com");
+            MailAddress mailto = new MailAddress("ashleyscinema010@gmail.com");
+            MailMessage newmsg = new MailMessage(mailfrom, mailto);
+            //
+
+            if (textBoxKaarthouder.Text == "")
+            {
+                MessageBox.Show("Vul een geldige kaarthouder in");
+            }
+            var stoelLijst = new List<int>();
+            for (int stoel = 0; stoel < stoelGrid.Count; stoel++)
+            {
+                if (stoelGrid[stoel].Item2 == status.keuze)
+                {
+                    stoelLijst.Add(stoel + 1);
+                }
+            }
+            string betalinginfo = $"Beste klant,\n\nDit is uw ticket voor {huidigeFilm.titel} op {huidigeFilm.datum.ToString()}\n\nBewaar deze email goed want hij dient ter bevestiging voor u in de bioscoop\n\nUw stoelen zijn:\n\n";
+
+            for (int i = 0; i < stoelLijst.Count; i++)
+            {
+               betalinginfo += $"Stoel {stoelLijst[i]}\n";
+            }
+            
+
+            newmsg.Subject = $"Uw ticket voor {huidigeFilm.titel}";
+            newmsg.Body = betalinginfo;
+
+
+
+            bool connected = CheckForInternetConnection();
+            if (connected == true)
+            {
+                smtp.Send(newmsg);
+
+                Verzonden sent = new Verzonden();
+                string results = sent.Text;
+
+                sent.Location = this.Location;
+                sent.StartPosition = FormStartPosition.CenterScreen;
+                sent.ShowDialog();
+                if (sent.closer == "Closing...")
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                Nietverbonden geeninternet = new Nietverbonden();
+                geeninternet.Location = this.Location;
+                geeninternet.StartPosition = FormStartPosition.CenterScreen;
+                geeninternet.ShowDialog();
+
+            }
+
             tabControl1.SelectTab(0);
             MessageBox.Show("Betaling is gelukt.");
-            saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, betaalEmail.Text);
+            //saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, betaalEmail.Text);
         }
 
         private void buttonVorigeFinal1_Click(object sender, EventArgs e)
@@ -991,6 +1108,11 @@ namespace EersteProjectMau
                 var stoel = vindStoel(i);
                 updatePrijs(stoel);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("sent to email!");
         }
     }
 }

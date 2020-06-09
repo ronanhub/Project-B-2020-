@@ -79,22 +79,7 @@ namespace EersteProjectMau
         {
 
         }
-
-        private void Email_Clicked(object sender, EventArgs e)
-        {
-
-        }
         private void Eigenvraag_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Voornaam_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Achternaam_Clicked(object sender, EventArgs e)
         {
 
         }
@@ -246,7 +231,7 @@ namespace EersteProjectMau
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         private void Voornaam_Click(object sender, EventArgs e)
         {
-            if (Voornaam.Text == "Voornaam")
+            if (Voornaam.Text == "Vul hier uw voornaam in")
             {
                 Voornaam.Text = "";
             }
@@ -254,7 +239,7 @@ namespace EersteProjectMau
 
         private void Achternaam_Click(object sender, EventArgs e)
         {
-            if (Achternaam.Text == "Achternaam")
+            if (Achternaam.Text == "Vul hier uw achternaam in")
             {
                 Achternaam.Text = "";
             }
@@ -262,7 +247,7 @@ namespace EersteProjectMau
 
         private void Email_Click(object sender, EventArgs e)
         {
-            if (Email.Text == "Email Adres")
+            if (Email.Text == "Vul hier uw email-adres in")
             {
                 Email.Text = "";
             }
@@ -270,7 +255,7 @@ namespace EersteProjectMau
 
         private void Onderwerp_Click(object sender, EventArgs e)
         {
-            if (Onderwerp.Text == "Onderwerp")
+            if (Onderwerp.Text == "Vul hier het onderwerp van uw vraag in")
             {
                 Onderwerp.Text = "";
             }
@@ -278,7 +263,7 @@ namespace EersteProjectMau
 
         private void Eigenvraag_Click(object sender, EventArgs e)
         {
-            if (Eigenvraag.Text == "Uw vraag")
+            if (Eigenvraag.Text == "Vul hier uw vraag in")
             {
                 Eigenvraag.Text = "";
             }
@@ -303,7 +288,7 @@ namespace EersteProjectMau
         {
             if (Voornaam.Text == "")
             {
-                Voornaam.Text = "Voornaam";
+                Voornaam.Text = "Vul hier uw voornaam in";
                 Voornaam.ForeColor = Color.Gray;
             }
         }
@@ -312,7 +297,7 @@ namespace EersteProjectMau
         {
             if (Achternaam.Text == "")
             {
-                Achternaam.Text = "Achternaam";
+                Achternaam.Text = "Vul hier uw achternaam in";
                 Achternaam.ForeColor = Color.Gray;
             }
         }
@@ -321,18 +306,17 @@ namespace EersteProjectMau
         {
             if (Email.Text == "")
             {
-                Email.Text = "Email Adres";
+                Email.Text = "Vul hier uw email-adres in";
                 Email.ForeColor = Color.Gray;
             }
             else
             {
-                
+
                 string pattern = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
                 if (Regex.IsMatch(Email.Text,pattern))
                 {
                     emailPattern = true;
                 }
-                
             }
         }
 
@@ -340,7 +324,7 @@ namespace EersteProjectMau
         {
             if (Onderwerp.Text == "")
             {
-                Onderwerp.Text = "Onderwerp";
+                Onderwerp.Text = "Vul hier het onderwerp van uw vraag in";
                 Onderwerp.ForeColor = Color.Gray;
             }
         }
@@ -351,8 +335,9 @@ namespace EersteProjectMau
             {
 
                 Eigenvraag.SelectionColor = Color.Gray;
-                Eigenvraag.AppendText("Uw vraag");
+                Eigenvraag.AppendText("Vul hier uw vraag in");
             }
         }
+
     }
 }
