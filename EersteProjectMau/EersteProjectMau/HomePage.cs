@@ -720,6 +720,7 @@ namespace EersteProjectMau
             basisPrijs = 0.0f;
             labelStoelSelectieFilmTitel.Text = nieuweFilm.titel;
             labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.ToString();
+            LabelFilmBetaal.Text = nieuweFilm.titel;
         }
 
 

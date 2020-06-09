@@ -184,6 +184,9 @@
             this.buttonVolgendeBetaal1 = new System.Windows.Forms.PictureBox();
             this.buttonVorigeBetaal1 = new System.Windows.Forms.PictureBox();
             this.betalingKlaar = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.creditLabels = new System.Windows.Forms.Label();
+            this.idealLabels = new System.Windows.Forms.Label();
             this.LabelKiesBank = new System.Windows.Forms.Label();
             this.RadioButtonVISA = new System.Windows.Forms.RadioButton();
             this.RadioButtonMASTER = new System.Windows.Forms.RadioButton();
@@ -279,9 +282,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.uheeftbetaaldhelpp = new System.Windows.Forms.TabPage();
             this.betaaldLabelHelp = new System.Windows.Forms.Label();
-            this.idealLabels = new System.Windows.Forms.Label();
-            this.creditLabels = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.LabelFilmBetaal = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
@@ -1936,6 +1938,8 @@
             // tabPageBetalen
             // 
             this.tabPageBetalen.BackColor = System.Drawing.Color.White;
+            this.tabPageBetalen.Controls.Add(this.LabelFilmBetaal);
+            this.tabPageBetalen.Controls.Add(this.label12);
             this.tabPageBetalen.Controls.Add(this.bedragBetaal2);
             this.tabPageBetalen.Controls.Add(this.labelbedragBetaal1);
             this.tabPageBetalen.Controls.Add(this.labelbedraggBetaal1);
@@ -1966,11 +1970,11 @@
             // bedragBetaal2
             // 
             this.bedragBetaal2.AutoSize = true;
-            this.bedragBetaal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bedragBetaal2.Location = new System.Drawing.Point(794, 13);
+            this.bedragBetaal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bedragBetaal2.Location = new System.Drawing.Point(711, 10);
             this.bedragBetaal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bedragBetaal2.Name = "bedragBetaal2";
-            this.bedragBetaal2.Size = new System.Drawing.Size(100, 39);
+            this.bedragBetaal2.Size = new System.Drawing.Size(93, 37);
             this.bedragBetaal2.TabIndex = 63;
             this.bedragBetaal2.Text = "Getal";
             // 
@@ -1986,8 +1990,8 @@
             // 
             // labelbedraggBetaal1
             // 
-            this.labelbedraggBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelbedraggBetaal1.Location = new System.Drawing.Point(636, 13);
+            this.labelbedraggBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelbedraggBetaal1.Location = new System.Drawing.Point(547, 10);
             this.labelbedraggBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelbedraggBetaal1.Name = "labelbedraggBetaal1";
             this.labelbedraggBetaal1.Size = new System.Drawing.Size(202, 50);
@@ -2009,7 +2013,7 @@
             // 
             this.landBetaal.AutoSize = true;
             this.landBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.landBetaal.Location = new System.Drawing.Point(44, 321);
+            this.landBetaal.Location = new System.Drawing.Point(56, 342);
             this.landBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.landBetaal.Name = "landBetaal";
             this.landBetaal.Size = new System.Drawing.Size(79, 33);
@@ -2020,7 +2024,7 @@
             // 
             this.betaalPlaats.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betaalPlaats.ForeColor = System.Drawing.Color.Gray;
-            this.betaalPlaats.Location = new System.Drawing.Point(586, 276);
+            this.betaalPlaats.Location = new System.Drawing.Point(598, 297);
             this.betaalPlaats.Margin = new System.Windows.Forms.Padding(2);
             this.betaalPlaats.Multiline = true;
             this.betaalPlaats.Name = "betaalPlaats";
@@ -2036,7 +2040,7 @@
             // 
             this.betaalPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betaalPostcode.ForeColor = System.Drawing.Color.Gray;
-            this.betaalPostcode.Location = new System.Drawing.Point(346, 276);
+            this.betaalPostcode.Location = new System.Drawing.Point(358, 297);
             this.betaalPostcode.Margin = new System.Windows.Forms.Padding(2);
             this.betaalPostcode.Multiline = true;
             this.betaalPostcode.Name = "betaalPostcode";
@@ -2052,7 +2056,7 @@
             // 
             this.betaalAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betaalAdres.ForeColor = System.Drawing.Color.Gray;
-            this.betaalAdres.Location = new System.Drawing.Point(346, 229);
+            this.betaalAdres.Location = new System.Drawing.Point(358, 250);
             this.betaalAdres.Margin = new System.Windows.Forms.Padding(2);
             this.betaalAdres.Multiline = true;
             this.betaalAdres.Name = "betaalAdres";
@@ -2067,7 +2071,7 @@
             // 
             this.betaalAchternaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betaalAchternaam.ForeColor = System.Drawing.Color.Gray;
-            this.betaalAchternaam.Location = new System.Drawing.Point(346, 181);
+            this.betaalAchternaam.Location = new System.Drawing.Point(358, 202);
             this.betaalAchternaam.Margin = new System.Windows.Forms.Padding(2);
             this.betaalAchternaam.Multiline = true;
             this.betaalAchternaam.Name = "betaalAchternaam";
@@ -2089,7 +2093,7 @@
             "België",
             "Duitsland",
             "Luxemburg"});
-            this.betaalLand.Location = new System.Drawing.Point(346, 322);
+            this.betaalLand.Location = new System.Drawing.Point(358, 343);
             this.betaalLand.Margin = new System.Windows.Forms.Padding(2);
             this.betaalLand.Name = "betaalLand";
             this.betaalLand.Size = new System.Drawing.Size(446, 41);
@@ -2102,7 +2106,7 @@
             // 
             this.plaatsLabel.AutoSize = true;
             this.plaatsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plaatsLabel.Location = new System.Drawing.Point(483, 279);
+            this.plaatsLabel.Location = new System.Drawing.Point(495, 300);
             this.plaatsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.plaatsLabel.Name = "plaatsLabel";
             this.plaatsLabel.Size = new System.Drawing.Size(104, 33);
@@ -2113,7 +2117,7 @@
             // 
             this.postcodeBetaal.AutoSize = true;
             this.postcodeBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postcodeBetaal.Location = new System.Drawing.Point(44, 276);
+            this.postcodeBetaal.Location = new System.Drawing.Point(56, 297);
             this.postcodeBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.postcodeBetaal.Name = "postcodeBetaal";
             this.postcodeBetaal.Size = new System.Drawing.Size(136, 33);
@@ -2124,7 +2128,7 @@
             // 
             this.adresBetaal.AutoSize = true;
             this.adresBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adresBetaal.Location = new System.Drawing.Point(44, 232);
+            this.adresBetaal.Location = new System.Drawing.Point(56, 253);
             this.adresBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.adresBetaal.Name = "adresBetaal";
             this.adresBetaal.Size = new System.Drawing.Size(291, 33);
@@ -2135,7 +2139,7 @@
             // 
             this.achternaamBetaal.AutoSize = true;
             this.achternaamBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.achternaamBetaal.Location = new System.Drawing.Point(44, 181);
+            this.achternaamBetaal.Location = new System.Drawing.Point(56, 202);
             this.achternaamBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.achternaamBetaal.Name = "achternaamBetaal";
             this.achternaamBetaal.Size = new System.Drawing.Size(172, 33);
@@ -2146,7 +2150,7 @@
             // 
             this.emailBetaal.AutoSize = true;
             this.emailBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailBetaal.Location = new System.Drawing.Point(44, 91);
+            this.emailBetaal.Location = new System.Drawing.Point(56, 112);
             this.emailBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emailBetaal.Name = "emailBetaal";
             this.emailBetaal.Size = new System.Drawing.Size(99, 33);
@@ -2157,7 +2161,7 @@
             // 
             this.voornaamBetaal.AutoSize = true;
             this.voornaamBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voornaamBetaal.Location = new System.Drawing.Point(44, 134);
+            this.voornaamBetaal.Location = new System.Drawing.Point(56, 155);
             this.voornaamBetaal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.voornaamBetaal.Name = "voornaamBetaal";
             this.voornaamBetaal.Size = new System.Drawing.Size(149, 33);
@@ -2168,7 +2172,7 @@
             // 
             this.betaalVoornaam.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betaalVoornaam.ForeColor = System.Drawing.Color.Gray;
-            this.betaalVoornaam.Location = new System.Drawing.Point(346, 134);
+            this.betaalVoornaam.Location = new System.Drawing.Point(358, 155);
             this.betaalVoornaam.Margin = new System.Windows.Forms.Padding(2);
             this.betaalVoornaam.Multiline = true;
             this.betaalVoornaam.Name = "betaalVoornaam";
@@ -2185,7 +2189,7 @@
             this.betaalEmail.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.betaalEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betaalEmail.ForeColor = System.Drawing.Color.Gray;
-            this.betaalEmail.Location = new System.Drawing.Point(346, 88);
+            this.betaalEmail.Location = new System.Drawing.Point(358, 109);
             this.betaalEmail.Margin = new System.Windows.Forms.Padding(2);
             this.betaalEmail.Multiline = true;
             this.betaalEmail.Name = "betaalEmail";
@@ -2252,6 +2256,34 @@
             this.betalingKlaar.Size = new System.Drawing.Size(924, 484);
             this.betalingKlaar.TabIndex = 6;
             this.betalingKlaar.Text = "betalingKlaar";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(176)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(0, 226);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(923, 11);
+            this.panel7.TabIndex = 86;
+            // 
+            // creditLabels
+            // 
+            this.creditLabels.AutoSize = true;
+            this.creditLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditLabels.Location = new System.Drawing.Point(10, 291);
+            this.creditLabels.Name = "creditLabels";
+            this.creditLabels.Size = new System.Drawing.Size(174, 37);
+            this.creditLabels.TabIndex = 85;
+            this.creditLabels.Text = "Creditcard:";
+            // 
+            // idealLabels
+            // 
+            this.idealLabels.AutoSize = true;
+            this.idealLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idealLabels.Location = new System.Drawing.Point(66, 123);
+            this.idealLabels.Name = "idealLabels";
+            this.idealLabels.Size = new System.Drawing.Size(117, 37);
+            this.idealLabels.TabIndex = 84;
+            this.idealLabels.Text = "iDEAL:";
             // 
             // LabelKiesBank
             // 
@@ -3397,33 +3429,25 @@
             this.betaaldLabelHelp.TabIndex = 0;
             this.betaaldLabelHelp.Text = "U heeft betaald!\r\n\r\nKlik op de gele knop \r\nom verder te gaan.";
             // 
-            // idealLabels
+            // label12
             // 
-            this.idealLabels.AutoSize = true;
-            this.idealLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idealLabels.Location = new System.Drawing.Point(66, 123);
-            this.idealLabels.Name = "idealLabels";
-            this.idealLabels.Size = new System.Drawing.Size(117, 37);
-            this.idealLabels.TabIndex = 84;
-            this.idealLabels.Text = "iDEAL:";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(548, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 33);
+            this.label12.TabIndex = 64;
+            this.label12.Text = "Film:";
             // 
-            // creditLabels
+            // LabelFilmBetaal
             // 
-            this.creditLabels.AutoSize = true;
-            this.creditLabels.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.creditLabels.Location = new System.Drawing.Point(10, 291);
-            this.creditLabels.Name = "creditLabels";
-            this.creditLabels.Size = new System.Drawing.Size(174, 37);
-            this.creditLabels.TabIndex = 85;
-            this.creditLabels.Text = "Creditcard:";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(176)))), ((int)(((byte)(0)))));
-            this.panel7.Location = new System.Drawing.Point(0, 226);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(923, 11);
-            this.panel7.TabIndex = 86;
+            this.LabelFilmBetaal.AutoSize = true;
+            this.LabelFilmBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFilmBetaal.Location = new System.Drawing.Point(634, 61);
+            this.LabelFilmBetaal.Name = "LabelFilmBetaal";
+            this.LabelFilmBetaal.Size = new System.Drawing.Size(62, 37);
+            this.LabelFilmBetaal.TabIndex = 65;
+            this.LabelFilmBetaal.Text = "gfg";
             // 
             // HomePage
             // 
@@ -3793,6 +3817,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label creditLabels;
         private System.Windows.Forms.Label idealLabels;
+        private System.Windows.Forms.Label LabelFilmBetaal;
+        private System.Windows.Forms.Label label12;
     }
 }
 
