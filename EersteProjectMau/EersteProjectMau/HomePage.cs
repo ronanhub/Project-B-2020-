@@ -30,26 +30,26 @@ namespace EersteProjectMau
         public void Help_Open_Sluit()
         {
 
-            tabControl2.Visible = helpKnop.Screen;
+            tabControl2.Visible =       helpKnop.Screen;
             helpKnop.Turn_ON_or_OFF();
-            openHelp.Text = (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
-            tabControl1.Size = (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(930, 510);
+            openHelp.Text =             (tabControl2.Visible == false) ? "OPEN HELP" : "SLUIT HELP";
+            tabControl1.Size =          (tabControl2.Visible == false) ? new Size(1231, 510) : new Size(930, 510);
 
-            vragenPaneel.Size = (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
-            faqsplitter.Location = (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15);
+            vragenPaneel.Size =         (tabControl2.Visible == false) ? new Size(629, 401) : new Size(529, 401);
+            faqsplitter.Location =      (tabControl2.Visible == false) ? new Point(652, 12) : new Point(552, 15);
 
-            antwoorden.Location = (tabControl2.Visible == false) ? new Point(675, 53) : new Point(575, 53);
-            huidigeVraag.Location = (tabControl2.Visible == false) ? new Point(669, 15) : new Point(569, 15);
-            antwoorden.Size = (tabControl2.Visible == false) ? new Size(531, 375) : new Size(331, 455);
+            antwoorden.Location =       (tabControl2.Visible == false) ? new Point(675, 53) : new Point(575, 53);
+            huidigeVraag.Location =     (tabControl2.Visible == false) ? new Point(669, 15) : new Point(569, 15);
+            antwoorden.Size =           (tabControl2.Visible == false) ? new Size(531, 375) : new Size(331, 455);
 
-            kaartPanel.Size = (tabControl2.Visible == false) ? new Size(927, 494) : new Size(627, 494);
+            kaartPanel.Size =           (tabControl2.Visible == false) ? new Size(927, 494) : new Size(627, 494);
+            sluitKruisButton.Image =    (tabControl2.Visible == true) ? Resources.kruisHelp : Resources.openHelp;
+            homePoster.Size =           (tabControl2.Visible == false) ? new Size(307, 453) : new Size(179, 259);
 
-            homePoster.Size = (tabControl2.Visible == false) ? new Size(307, 453) : new Size(179, 259);
-
-            homePoster.Location = (tabControl2.Visible == false) ? new Point(915, 5) : new Point(726, 204);
+            homePoster.Location =       (tabControl2.Visible == false) ? new Point(915, 5) : new Point(726, 204);
 
             buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
-            buttonZelfVraag2.Visible = (tabControl2.Visible == false) ? true : false;
+            buttonZelfVraag2.Visible =  (tabControl2.Visible == false) ? true : false;
         }
 
 
@@ -942,14 +942,10 @@ namespace EersteProjectMau
         private void sluitKruisButton_Click(object sender, EventArgs e)
         {
             Help_Open_Sluit();
-            sluitKruisButton.Visible = false;
-            openPlusButton.Visible = true;
         }
         private void openPlusButton_Click(object sender, EventArgs e)
         {
             Help_Open_Sluit();
-            openPlusButton.Visible = false;
-            sluitKruisButton.Visible = true;
         }
         private void vorigegButton_Click(object sender, EventArgs e)
         {
