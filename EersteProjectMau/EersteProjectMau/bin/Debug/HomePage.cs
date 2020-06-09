@@ -44,10 +44,9 @@ namespace EersteProjectMau
 
             kaartPanel.Size = (tabControl2.Visible == false) ? new Size(927, 494) : new Size(627, 494);
 
-            homePoster.Size = (tabControl2.Visible == false) ? new Size(320, 479) : new Size(215, 311);
-            reserveerButtonHome.Location = (tabControl2.Visible == false) ? new Point(680, 400) : new Point(703, 380);
+            homePoster.Size = (tabControl2.Visible == false) ? new Size(307, 453) : new Size(179, 259);
 
-            homePoster.Location = (tabControl2.Visible == false) ? new Point(880, 5) : new Point(692, 5);
+            homePoster.Location = (tabControl2.Visible == false) ? new Point(915, 5) : new Point(726, 204);
 
             buttonZelfVraag2.Location = (tabControl2.Visible == false) ? new Point(1000, 402) : new Point(1, 1);
             buttonZelfVraag2.Visible = (tabControl2.Visible == false) ? true : false;
@@ -290,7 +289,7 @@ namespace EersteProjectMau
             string returnString;
 
             string titelString = filmTitel.Replace(" ", "").ToLower();
-            string datumString = tijdstip.Date.ToShortDateString();
+            string datumString = tijdstip.Day.ToString() + "-" + tijdstip.Month.ToString()+"-"+tijdstip.Year.ToString();
             string tijdString = tijdstip.TimeOfDay.Hours.ToString() + tijdstip.TimeOfDay.Minutes.ToString();
 
             returnString = titelString + "_" + datumString + "_" + tijdString;
@@ -299,7 +298,7 @@ namespace EersteProjectMau
                 returnString = returnString + ".csv";
             }
 
-            returnString.Replace('\\', '-');
+            //returnString.Replace('\\', '-');
 
             return returnString;
         }
@@ -804,9 +803,8 @@ namespace EersteProjectMau
             if (CheckboxGeenrobot.Checked == true && textBoxRekeningnummer1.Text.Length == 18 && textboxPasnummer1.Text.Length == 3)
             {
                 
-                tabControl1.SelectTab(0);
-                tabControl2.SelectTab(0);
-                MessageBox.Show("Betaling is gelukt.");
+                tabControl1.SelectTab(9);
+                tabControl2.SelectTab(9);
             }
             else
             {
@@ -919,41 +917,37 @@ namespace EersteProjectMau
             tabControl1.SelectTab(6);
             tabControl2.SelectTab(6);
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(7);
             tabControl2.SelectTab(7);
         }
-
-
-
-
-
-
         private void meerFilmsButton_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
             tabControl2.SelectTab(0);
         }
-
         private void sluitKruisButton_Click(object sender, EventArgs e)
         {
             Help_Open_Sluit();
             sluitKruisButton.Visible = false;
             openPlusButton.Visible = true;
         }
-
         private void openPlusButton_Click(object sender, EventArgs e)
         {
             Help_Open_Sluit();
             openPlusButton.Visible = false;
             sluitKruisButton.Visible = true;
         }
-
-        private void gegevensButton_Click(object sender, EventArgs e)
+        private void vorigegButton_Click(object sender, EventArgs e)
         {
-           
+            tabControl1.SelectTab(6);
+            tabControl2.SelectTab(6);
+        }
+        private void teruggaanButton_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+            tabControl2.SelectTab(0);
         }
 
         private void BetaalPaginaGeenRobot_Click(object sender, EventArgs e)
@@ -979,60 +973,51 @@ namespace EersteProjectMau
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
 
+        private void FotoABN_Click(object sender, EventArgs e)
+        {
+            ResetPictureboxes();
+            RadioButtonABN.Checked = true;
+            FotoABN.BackColor = Color.Lime;
+            buttonVolgendeBank1.BackColor = Color.Lime;
+        }
+        private void FotoSNS_Click(object sender, EventArgs e)
+        {
+            ResetPictureboxes();
+            RadioButtonSNS.Checked = true;
+            FotoSNS.BackColor = Color.Lime;
+            buttonVolgendeBank1.BackColor = Color.Lime;
+        }
+        private void FotoING_Click(object sender, EventArgs e)
+        {
+            ResetPictureboxes();
+            RadioButtonING.Checked = true;
+            FotoING.BackColor = Color.Lime;
+            buttonVolgendeBank1.BackColor = Color.Lime;
+        }
+        private void FotoRabobank_Click(object sender, EventArgs e)
+        {
+            ResetPictureboxes();
+            RadioButtonRABO.Checked = true;
+            FotoRabobank.BackColor = Color.Lime;
+            buttonVolgendeBank1.BackColor = Color.Lime;
+        }
+        private void FotoMastercard_Click(object sender, EventArgs e)
+        {
+            ResetPictureboxes();
+            RadioButtonMASTER.Checked = true;
+            FotoMastercard.BackColor = Color.Lime;
+            buttonVolgendeBank1.BackColor = Color.Lime;
+        }
+        private void FotoVisa_Click(object sender, EventArgs e)
+        {
+            ResetPictureboxes();
+            RadioButtonVISA.Checked = true;
+            FotoVisa.BackColor = Color.Lime;
+            buttonVolgendeBank1.BackColor = Color.Lime;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox11_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void textBox9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void textboxPasnummer1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1045,7 +1030,6 @@ namespace EersteProjectMau
                 e.Handled = e.KeyChar != (char)Keys.Back;
             }
         }
-
         private void textBoxRekeningnummer1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (textBoxRekeningnummer1.Text.Length <= 1)
@@ -1072,7 +1056,6 @@ namespace EersteProjectMau
             }
             
         }
-
         private void betaalVoornaam_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
@@ -1088,125 +1071,6 @@ namespace EersteProjectMau
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
-        private void textBoxRekeningnummer1_Click(object sender, EventArgs e)
-        {
-            if (textBoxRekeningnummer1.Text == "NL00ABNA012345689")
-            {
-                textBoxRekeningnummer1.Text = "";
-            }
-        }
-
-        private void textBoxRekeningnummer1_Leave(object sender, EventArgs e)
-        {
-            if (textBoxRekeningnummer1.Text == "")
-            {
-                textBoxRekeningnummer1.Text = "NL00ABNA012345689";
-            }
-        }
-
-        private void textboxPasnummer1_Click(object sender, EventArgs e)
-        {
-            if (textboxPasnummer1.Text == "000")
-            {
-                textboxPasnummer1.Text = "";
-            }
-        }
-
-        private void textboxPasnummer1_Leave(object sender, EventArgs e)
-        {
-            if (textboxPasnummer1.Text == "")
-            {
-                textboxPasnummer1.Text = "000";
-            }
-        }
-
-        private void betaalEmail_Click(object sender, EventArgs e)
-        {
-            if (betaalEmail.Text == "Voorbeeld@gmail.com")
-            {
-                betaalEmail.Text = "";
-            }
-        }
-
-        private void betaalEmail_Leave(object sender, EventArgs e)
-        {
-            if (betaalEmail.Text == "")
-            {
-                betaalEmail.Text = "Voorbeeld@gmail.com";
-            }
-        }
-
-        private void betaalVoornaam_Click(object sender, EventArgs e)
-        {
-            if (betaalVoornaam.Text == "Ashley")
-            {
-                betaalVoornaam.Text = "";
-            }
-        }
-
-        private void betaalVoornaam_Leave(object sender, EventArgs e)
-        {
-            if (betaalVoornaam.Text == "")
-            {
-                betaalVoornaam.Text = "Ashley";
-            }
-        }
-
-        private void betaalAchternaam_Click(object sender, EventArgs e)
-        {
-            if (betaalAchternaam.Text == "Bunk")
-            {
-                betaalAchternaam.Text = "";
-            }
-        }
-
-        private void betaalAchternaam_Leave(object sender, EventArgs e)
-        {
-            if (betaalAchternaam.Text == "")
-            {
-                betaalAchternaam.Text = "Bunk";
-            }
-        }
-
-        private void betaalAdres_Click(object sender, EventArgs e)
-        {
-            if (betaalAdres.Text == "Wijnhaven 107")
-            {
-                betaalAdres.Text = "";
-            }
-        }
-
-        private void betaalAdres_Leave(object sender, EventArgs e)
-        {
-            if (betaalAdres.Text == "")
-            {
-                betaalAdres.Text = "Wijnhaven 107";
-            }
-        }
-
-        private void betaalPostcode_Click(object sender, EventArgs e)
-        {
-            if (betaalPostcode.Text == "1234AB")
-            {
-                betaalPostcode.Text = "";
-            }
-        }
-
-        private void betaalPostcode_Leave(object sender, EventArgs e)
-        {
-            if (betaalPostcode.Text == "")
-            {
-                betaalPostcode.Text = "1234AB";
-            }
-        }
-
-        private void betaalPlaats_Click(object sender, EventArgs e)
-        {
-            if (betaalPlaats.Text == "Rotterdam")
-            {
-                betaalPlaats.Text = "";
-            }
-        }
 
         private void betaalPostcode_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1224,79 +1088,24 @@ namespace EersteProjectMau
             }
         }
 
+
+
         private void betaalLand_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back;
         }
-
-        private void FotoABN_Click(object sender, EventArgs e)
-        {
-            ResetPictureboxes();
-            RadioButtonABN.Checked = true;
-            FotoABN.BackColor = Color.Lime;
-            buttonVolgendeBank1.BackColor = Color.Lime;
-        }
-
-        private void FotoSNS_Click(object sender, EventArgs e)
-        {
-            ResetPictureboxes();
-            RadioButtonSNS.Checked = true;
-            FotoSNS.BackColor = Color.Lime;
-            buttonVolgendeBank1.BackColor = Color.Lime;
-        }
-
-        private void FotoING_Click(object sender, EventArgs e)
-        {
-            ResetPictureboxes();
-            RadioButtonING.Checked = true;
-            FotoING.BackColor = Color.Lime;
-            buttonVolgendeBank1.BackColor = Color.Lime;
-        }
-
-        private void FotoRabobank_Click(object sender, EventArgs e)
-        {
-            ResetPictureboxes();
-            RadioButtonRABO.Checked = true;
-            FotoRabobank.BackColor = Color.Lime;
-            buttonVolgendeBank1.BackColor = Color.Lime;
-        }
-
-        private void FotoMastercard_Click(object sender, EventArgs e)
-        {
-            ResetPictureboxes();
-            RadioButtonMASTER.Checked = true;
-            FotoMastercard.BackColor = Color.Lime;
-            buttonVolgendeBank1.BackColor = Color.Lime;
-        }
-
-        private void FotoVisa_Click(object sender, EventArgs e)
-        {
-            ResetPictureboxes();
-            RadioButtonVISA.Checked = true;
-            FotoVisa.BackColor = Color.Lime;
-            buttonVolgendeBank1.BackColor = Color.Lime;
-
-        }
-
-
-
-            
-
         private void NaamCreditcardEigenaar_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
-
         private void ComboboxMaand_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back;
         }
-
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back;
         }
-
         private void RekeningnummerCreditcard_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (RekeningnummerCreditcard.Text.Length <= 15)
@@ -1309,7 +1118,6 @@ namespace EersteProjectMau
             }
 
         }
-
         private void CvcCreditcard_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (CvcCreditcard.Text.Length <= 2)
@@ -1320,8 +1128,8 @@ namespace EersteProjectMau
             {
                 e.Handled = e.KeyChar != (char)Keys.Back;
             }
-
         }
+
 
 
         private void ResetPictureboxes()
@@ -1338,10 +1146,57 @@ namespace EersteProjectMau
             }
         }
 
+
+
+        private void textboxPasnummer1_TextChanged(object sender, EventArgs e)
+        {
+            textboxPasnummer1.ForeColor = Color.Black;
+        }
+        private void betaalPostcode_TextChanged(object sender, EventArgs e)
+        {
+            betaalPostcode.CharacterCasing = CharacterCasing.Upper;
+            betaalPostcode.ForeColor = Color.Black;
+        }
+        private void NaamCreditcardEigenaar_TextChanged(object sender, EventArgs e)
+        {
+            NaamCreditcardEigenaar.ForeColor = Color.Black;
+        }
+        private void RekeningnummerCreditcard_TextChanged(object sender, EventArgs e)
+        {
+            RekeningnummerCreditcard.ForeColor = Color.Black;
+        }
+        private void CvcCreditcard_TextChanged(object sender, EventArgs e)
+        {
+            CvcCreditcard.ForeColor = Color.Black;
+        }
+        private void betaalEmail_TextChanged(object sender, EventArgs e)
+        {
+            betaalEmail.ForeColor = Color.Black;
+        }
+        private void betaalVoornaam_TextChanged(object sender, EventArgs e)
+        {
+            betaalVoornaam.ForeColor = Color.Black;
+        }
+        private void betaalAchternaam_TextChanged(object sender, EventArgs e)
+        {
+            betaalAchternaam.ForeColor = Color.Black;
+        }
+        private void betaalAdres_TextChanged(object sender, EventArgs e)
+        {
+            betaalAdres.ForeColor = Color.Black;
+        }
+        private void betaalPlaats_TextChanged(object sender, EventArgs e)
+        {
+            betaalPlaats.ForeColor = Color.Black;
+        }
+        private void betaalLand_TextChanged(object sender, EventArgs e)
+        {
+            betaalLand.ForeColor = Color.Black;
+        }
         private void textBoxRekeningnummer1_TextChanged(object sender, EventArgs e)
         {
             textBoxRekeningnummer1.CharacterCasing = CharacterCasing.Upper;
-
+            textBoxRekeningnummer1.ForeColor = Color.Black;
             //int cursorPosition = textBoxRekeningnummer1.SelectionStart;
             //if (textBoxRekeningnummer1.Text.Length > 0)
             //{ 
@@ -1445,50 +1300,65 @@ namespace EersteProjectMau
             //textBoxRekeningnummer1.Text = textBoxRekeningnummer1.Text.ToUpper();
             //textBoxRekeningnummer1.SelectionStart = cursorPosition;
             //previousRekeningnummer = textBoxRekeningnummer1.Text;
-
-
-
-
-
         }
 
-        private void betaalPostcode_TextChanged(object sender, EventArgs e)
+
+        private void textBoxRekeningnummer1_Click(object sender, EventArgs e)
         {
-            betaalPostcode.CharacterCasing = CharacterCasing.Upper;
+            if (textBoxRekeningnummer1.Text == "NL00ABNA012345689")
+            {
+                textBoxRekeningnummer1.Text = "";
+            }
         }
-
-        private void GeenRobotCreditcard_Click(object sender, EventArgs e)
+        private void textboxPasnummer1_Click(object sender, EventArgs e)
         {
-            if (NaamCreditcardEigenaar.Text == "Ashley Bunk" || NaamCreditcardEigenaar.Text == "")
+            if (textboxPasnummer1.Text == "000")
             {
-                MessageBox.Show("Vul uw naam in.");
-            }
-            else if (RekeningnummerCreditcard.Text == "0000 1234 5678 0000" || RekeningnummerCreditcard.Text == "" || (RekeningnummerCreditcard.Text.Length != 16))
-            {
-                MessageBox.Show("Vul een geldig rekeningnummer in.");
-            }
-            else if (ComboboxMaand.Text == "Maand")
-            {
-                MessageBox.Show("Vul een geldige maand in.");
-            }
-            else if(ComboboxJaar .Text == "Jaar")
-            {
-                MessageBox.Show("Vul een geldig jaar in.");
-            }
-            else if (CvcCreditcard.Text == "000" || CvcCreditcard.Text == "" ||CvcCreditcard.Text.Length != 3)
-            {
-                MessageBox.Show("Vul een geldige CVC code in.");
-            }
-            else
-            {
-                VolgendeCreditcard.Enabled = true;
-                VolgendeCreditcard.BackColor = Color.Lime;
-                GeenRobotCreditcard.BackColor = Color.Lime;
-                VolgendeCreditcard.BackColor = Color.Lime;
-                GeenRobotCreditcardCheck.Checked = true;
+                textboxPasnummer1.Text = "";
             }
         }
-
+        private void betaalEmail_Click(object sender, EventArgs e)
+        {
+            if (betaalEmail.Text == "Voorbeeld@gmail.com")
+            {
+                betaalEmail.Text = "";
+            }
+        }
+        private void betaalVoornaam_Click(object sender, EventArgs e)
+        {
+            if (betaalVoornaam.Text == "Ashley")
+            {
+                betaalVoornaam.Text = "";
+            }
+        }
+        private void betaalAchternaam_Click(object sender, EventArgs e)
+        {
+            if (betaalAchternaam.Text == "Bunk")
+            {
+                betaalAchternaam.Text = "";
+            }
+        }
+        private void betaalAdres_Click(object sender, EventArgs e)
+        {
+            if (betaalAdres.Text == "Wijnhaven 107")
+            {
+                betaalAdres.Text = "";
+            }
+        }
+        private void betaalPostcode_Click(object sender, EventArgs e)
+        {
+            if (betaalPostcode.Text == "1234AB")
+            {
+                betaalPostcode.Text = "";
+            }
+        }
+        private void betaalPlaats_Click(object sender, EventArgs e)
+        {
+            if (betaalPlaats.Text == "Rotterdam")
+            {
+                betaalPlaats.Text = "";
+            }
+        }
         private void NaamCreditcardEigenaar_Click(object sender, EventArgs e)
         {
             if (NaamCreditcardEigenaar.Text == "Ashley Bunk")
@@ -1496,15 +1366,6 @@ namespace EersteProjectMau
                 NaamCreditcardEigenaar.Text = "";
             }
         }
-
-        private void NaamCreditcardEigenaar_Leave(object sender, EventArgs e)
-        {
-            if (NaamCreditcardEigenaar.Text == "")
-            {
-                NaamCreditcardEigenaar.Text = "Ashley Bunk";
-            }
-        }
-
         private void RekeningnummerCreditcard_Click(object sender, EventArgs e)
         {
             if (RekeningnummerCreditcard.Text == "0000123456780000")
@@ -1512,15 +1373,6 @@ namespace EersteProjectMau
                 RekeningnummerCreditcard.Text = "";
             }
         }
-
-        private void RekeningnummerCreditcard_Leave(object sender, EventArgs e)
-        {
-            if (RekeningnummerCreditcard.Text == "")
-            {
-                RekeningnummerCreditcard.Text = "0000123456780000";
-            }
-        }
-
         private void CvcCreditcard_Click(object sender, EventArgs e)
         {
             if (CvcCreditcard.Text == "000")
@@ -1528,31 +1380,12 @@ namespace EersteProjectMau
                 CvcCreditcard.Text = "";
             }
         }
-
-        private void CvcCreditcard_Leave(object sender, EventArgs e)
-        {
-            if (CvcCreditcard.Text == "")
-            {
-                CvcCreditcard.Text = "000";
-            }
-        }
-
-        private void labelBedrag1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MastercardHelp_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void betalengButton_Click(object sender, EventArgs e)
         {
             if (GeenRobotCreditcardCheck.Checked == true)
             {
-                tabControl1.SelectTab(7);
-                tabControl2.SelectTab(7);
+                tabControl1.SelectTab(9);
+                tabControl2.SelectTab(9);
             }
             else
             {
@@ -1561,19 +1394,6 @@ namespace EersteProjectMau
                 MessageBox.Show("Bevestig dat u geen robot bent.");
             }
         }
-
-        private void vorigegButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(6);
-            tabControl2.SelectTab(6);
-        }
-
-        private void teruggaanButton_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(0);
-            tabControl2.SelectTab(0);
-        }
-
         private void gegevensButton_Click_1(object sender, EventArgs e)
         {
             bool stoelGeselect = false;
@@ -1606,5 +1426,157 @@ namespace EersteProjectMau
                 meldingStoel.Show();
             }
         }
+
+        private void GeenRobotCreditcard_Click(object sender, EventArgs e)
+        {
+            if (NaamCreditcardEigenaar.Text == "Ashley Bunk" || NaamCreditcardEigenaar.Text == "")
+            {
+                MessageBox.Show("Vul uw naam in.");
+            }
+            else if (RekeningnummerCreditcard.Text == "0000 1234 5678 0000" || RekeningnummerCreditcard.Text == "" || (RekeningnummerCreditcard.Text.Length != 16))
+            {
+                MessageBox.Show("Vul een geldig rekeningnummer in.");
+            }
+            else if (ComboboxMaand.Text == "Maand")
+            {
+                MessageBox.Show("Vul een geldige maand in.");
+            }
+            else if (ComboboxJaar.Text == "Jaar")
+            {
+                MessageBox.Show("Vul een geldig jaar in.");
+            }
+            else if (CvcCreditcard.Text == "000" || CvcCreditcard.Text == "" || CvcCreditcard.Text.Length != 3)
+            {
+                MessageBox.Show("Vul een geldige CVC code in.");
+            }
+            else
+            {
+                VolgendeCreditcard.Enabled = true;
+                VolgendeCreditcard.BackColor = Color.Lime;
+                GeenRobotCreditcard.BackColor = Color.Lime;
+                VolgendeCreditcard.BackColor = Color.Lime;
+                GeenRobotCreditcardCheck.Checked = true;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        private void betaalAdres_Leave(object sender, EventArgs e)
+        {
+            if (betaalAdres.Text == "")
+            {
+                betaalAdres.Text = "Wijnhaven 107";
+                betaalAdres.ForeColor = Color.Gray;
+            }
+        }
+        private void betaalAchternaam_Leave(object sender, EventArgs e)
+        {
+            if (betaalAchternaam.Text == "")
+            {
+                betaalAchternaam.Text = "Bunk";
+                betaalAchternaam.ForeColor = Color.Gray;
+            }
+        }
+        private void betaalPostcode_Leave(object sender, EventArgs e)
+        {
+            if (betaalPostcode.Text == "")
+            {
+                betaalPostcode.Text = "1234AB";
+                betaalPostcode.ForeColor = Color.Gray;
+            }
+        }
+        private void textBoxRekeningnummer1_Leave(object sender, EventArgs e)
+        {
+            if (textBoxRekeningnummer1.Text == "")
+            {
+                textBoxRekeningnummer1.Text = "NL00ABNA012345689";
+                textBoxRekeningnummer1.ForeColor = Color.Gray;
+            }
+        }
+        private void textboxPasnummer1_Leave(object sender, EventArgs e)
+        {
+            if (textboxPasnummer1.Text == "")
+            {
+                textboxPasnummer1.Text = "000";
+                textboxPasnummer1.ForeColor = Color.Gray;
+            }
+        }
+        private void betaalVoornaam_Leave(object sender, EventArgs e)
+        {
+            if (betaalVoornaam.Text == "")
+            {
+                betaalVoornaam.Text = "Ashley";
+                betaalVoornaam.ForeColor = Color.Gray;
+
+            }
+        }
+        private void betaalEmail_Leave(object sender, EventArgs e)
+        {
+            if (betaalEmail.Text == "")
+            {
+                betaalEmail.Text = "Voorbeeld@gmail.com";
+                betaalEmail.ForeColor = Color.Gray;
+            }
+        }
+        private void NaamCreditcardEigenaar_Leave(object sender, EventArgs e)
+        {
+            if (NaamCreditcardEigenaar.Text == "")
+            {
+                NaamCreditcardEigenaar.Text = "Ashley Bunk";
+                NaamCreditcardEigenaar.ForeColor = Color.Gray;
+            }
+        }
+        private void RekeningnummerCreditcard_Leave(object sender, EventArgs e)
+        {
+            if (RekeningnummerCreditcard.Text == "")
+            {
+                RekeningnummerCreditcard.Text = "0000123456780000";
+                RekeningnummerCreditcard.ForeColor = Color.Gray;
+            }
+        }
+        private void CvcCreditcard_Leave(object sender, EventArgs e)
+        {
+            if (CvcCreditcard.Text == "")
+            {
+                CvcCreditcard.Text = "000";
+                CvcCreditcard.ForeColor = Color.Gray;
+            }
+        }
+        private void ComboboxMaand_Leave(object sender, EventArgs e)
+        {
+            ComboboxMaand.ForeColor = Color.Gray;
+        }
+        private void ComboboxJaar_Leave(object sender, EventArgs e)
+        {
+            ComboboxJaar.ForeColor = Color.Gray;
+        }
+        private void betaalPlaats_Leave(object sender, EventArgs e)
+        {
+            if (betaalPlaats.Text == "")
+            {
+                betaalPlaats.Text = "Rotterdam";
+                betaalPlaats.ForeColor = Color.Gray;
+            }
+        }
+
+        private void ComboboxMaand_ValueMemberChanged(object sender, EventArgs e)
+        {
+            ComboboxMaand.ForeColor = Color.Black;
+        }
+
+        private void ComboboxJaar_ValueMemberChanged(object sender, EventArgs e)
+        {
+            ComboboxJaar.ForeColor = Color.Black;
+        }
+
+
     }
 }
