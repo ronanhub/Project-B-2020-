@@ -476,7 +476,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1243, 782);
+            this.tabControl1.Size = new System.Drawing.Size(1243, 628);
             this.tabControl1.TabIndex = 0;
             // 
             // homePage1
@@ -497,7 +497,7 @@
             this.homePage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage1.Name = "homePage1";
             this.homePage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.homePage1.Size = new System.Drawing.Size(1235, 753);
+            this.homePage1.Size = new System.Drawing.Size(1235, 599);
             this.homePage1.TabIndex = 0;
             this.homePage1.Text = "homePage1";
             // 
@@ -620,7 +620,7 @@
             this.agendaPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agendaPage.Name = "agendaPage";
             this.agendaPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.agendaPage.Size = new System.Drawing.Size(1235, 753);
+            this.agendaPage.Size = new System.Drawing.Size(1235, 599);
             this.agendaPage.TabIndex = 1;
             this.agendaPage.Text = "agendaPage";
             // 
@@ -965,7 +965,7 @@
             this.contactPage.Location = new System.Drawing.Point(4, 25);
             this.contactPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contactPage.Name = "contactPage";
-            this.contactPage.Size = new System.Drawing.Size(1235, 753);
+            this.contactPage.Size = new System.Drawing.Size(1235, 599);
             this.contactPage.TabIndex = 2;
             this.contactPage.Text = "contactPage";
             // 
@@ -1042,6 +1042,7 @@
             // 
             // plus
             // 
+            this.plus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plus.Image = ((System.Drawing.Image)(resources.GetObject("plus.Image")));
             this.plus.Location = new System.Drawing.Point(261, 383);
@@ -1054,6 +1055,7 @@
             // 
             // min
             // 
+            this.min.Cursor = System.Windows.Forms.Cursors.Hand;
             this.min.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.min.Image = ((System.Drawing.Image)(resources.GetObject("min.Image")));
             this.min.Location = new System.Drawing.Point(261, 260);
@@ -1083,7 +1085,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1235, 753);
+            this.tabPage4.Size = new System.Drawing.Size(1235, 599);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "FaqPage";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1103,7 +1105,7 @@
             this.FaqPage.Location = new System.Drawing.Point(0, 0);
             this.FaqPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FaqPage.Name = "FaqPage";
-            this.FaqPage.Size = new System.Drawing.Size(1235, 753);
+            this.FaqPage.Size = new System.Drawing.Size(1235, 599);
             this.FaqPage.TabIndex = 9;
             // 
             // huidigeVraag
@@ -1380,7 +1382,7 @@
             this.tabPageStoelselectie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPageStoelselectie.Name = "tabPageStoelselectie";
             this.tabPageStoelselectie.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageStoelselectie.Size = new System.Drawing.Size(1235, 753);
+            this.tabPageStoelselectie.Size = new System.Drawing.Size(1235, 599);
             this.tabPageStoelselectie.TabIndex = 4;
             this.tabPageStoelselectie.Text = "tabPageStoelselectie";
             // 
@@ -2107,7 +2109,7 @@
             this.tabPageBetalen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPageBetalen.Name = "tabPageBetalen";
             this.tabPageBetalen.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageBetalen.Size = new System.Drawing.Size(1235, 753);
+            this.tabPageBetalen.Size = new System.Drawing.Size(1235, 599);
             this.tabPageBetalen.TabIndex = 5;
             this.tabPageBetalen.Text = "tabPageBetalen";
             // 
@@ -2359,7 +2361,7 @@
             // 
             this.buttonVolgendeBetaal1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVolgendeBetaal1.Image = ((System.Drawing.Image)(resources.GetObject("buttonVolgendeBetaal1.Image")));
-            this.buttonVolgendeBetaal1.Location = new System.Drawing.Point(957, 463);
+            this.buttonVolgendeBetaal1.Location = new System.Drawing.Point(949, 487);
             this.buttonVolgendeBetaal1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.buttonVolgendeBetaal1.Name = "buttonVolgendeBetaal1";
             this.buttonVolgendeBetaal1.Size = new System.Drawing.Size(235, 95);
@@ -2372,7 +2374,7 @@
             // 
             this.buttonVorigeBetaal1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVorigeBetaal1.Image = ((System.Drawing.Image)(resources.GetObject("buttonVorigeBetaal1.Image")));
-            this.buttonVorigeBetaal1.Location = new System.Drawing.Point(67, 463);
+            this.buttonVorigeBetaal1.Location = new System.Drawing.Point(64, 487);
             this.buttonVorigeBetaal1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.buttonVorigeBetaal1.Name = "buttonVorigeBetaal1";
             this.buttonVorigeBetaal1.Size = new System.Drawing.Size(240, 95);
@@ -2408,7 +2410,7 @@
             this.betalingKlaar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.betalingKlaar.Name = "betalingKlaar";
             this.betalingKlaar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.betalingKlaar.Size = new System.Drawing.Size(1235, 753);
+            this.betalingKlaar.Size = new System.Drawing.Size(1235, 599);
             this.betalingKlaar.TabIndex = 6;
             this.betalingKlaar.Text = "betalingKlaar";
             // 
@@ -2467,7 +2469,7 @@
             // RadioButtonMASTER
             // 
             this.RadioButtonMASTER.AutoSize = true;
-            this.RadioButtonMASTER.Location = new System.Drawing.Point(435, 440);
+            this.RadioButtonMASTER.Location = new System.Drawing.Point(435, 441);
             this.RadioButtonMASTER.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RadioButtonMASTER.Name = "RadioButtonMASTER";
             this.RadioButtonMASTER.Size = new System.Drawing.Size(17, 16);
@@ -2675,7 +2677,7 @@
             this.BetaalGegevens.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BetaalGegevens.Name = "BetaalGegevens";
             this.BetaalGegevens.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BetaalGegevens.Size = new System.Drawing.Size(1235, 753);
+            this.BetaalGegevens.Size = new System.Drawing.Size(1235, 599);
             this.BetaalGegevens.TabIndex = 7;
             this.BetaalGegevens.Text = "betaalGegevens";
             // 
@@ -2856,7 +2858,7 @@
             this.BetaalPaginaCreditcard.Location = new System.Drawing.Point(4, 25);
             this.BetaalPaginaCreditcard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BetaalPaginaCreditcard.Name = "BetaalPaginaCreditcard";
-            this.BetaalPaginaCreditcard.Size = new System.Drawing.Size(1235, 753);
+            this.BetaalPaginaCreditcard.Size = new System.Drawing.Size(1235, 599);
             this.BetaalPaginaCreditcard.TabIndex = 8;
             this.BetaalPaginaCreditcard.Text = "BetaalPaginaCreditcard";
             // 
@@ -3126,7 +3128,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(1);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabPage1.Size = new System.Drawing.Size(1235, 753);
+            this.tabPage1.Size = new System.Drawing.Size(1235, 599);
             this.tabPage1.TabIndex = 9;
             this.tabPage1.Text = "betaaldPagina";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -3138,7 +3140,7 @@
             this.popCornBox.Location = new System.Drawing.Point(743, 1);
             this.popCornBox.Margin = new System.Windows.Forms.Padding(1);
             this.popCornBox.Name = "popCornBox";
-            this.popCornBox.Size = new System.Drawing.Size(491, 751);
+            this.popCornBox.Size = new System.Drawing.Size(491, 597);
             this.popCornBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.popCornBox.TabIndex = 66;
             this.popCornBox.TabStop = false;
@@ -3640,7 +3642,7 @@
             this.BackColor = System.Drawing.Color.Ivory;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1709, 822);
+            this.ClientSize = new System.Drawing.Size(1698, 817);
             this.Controls.Add(this.navigatiePanel);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.logoBox);
