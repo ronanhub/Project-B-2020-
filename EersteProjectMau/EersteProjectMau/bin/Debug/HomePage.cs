@@ -719,7 +719,7 @@ namespace EersteProjectMau
             }
             basisPrijs = 0.0f;
             labelStoelSelectieFilmTitel.Text = nieuweFilm.titel;
-            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.ToString();
+            labelStoelSelectieFilmDatum.Text = nieuweFilm.datum.ToShortDateString()+" "+nieuweFilm.datum.ToShortTimeString();
             LabelFilmBetaal.Text = nieuweFilm.titel;
         }
 
@@ -907,6 +907,7 @@ namespace EersteProjectMau
                 {
                     smtp.Send(newmsg);
                     betaaaldLabel.Text = $"U heeft betaald!\n\nTotale bedrag: €{bedragBetaal2.Text}\n\nUw ticket is naar uw e-mail adres verzonden.\n\nTot gauw!";
+                    saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, betaalEmail.Text);
                     tabControl1.SelectTab(9);
                     tabControl2.SelectTab(9);
                 }
@@ -929,13 +930,13 @@ namespace EersteProjectMau
 
 
 
-        private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxZoeken1.Text == "Zoeken...")
-            {
-                textBoxZoeken1.Text = "";
-            }
-        }
+        //private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (textBoxZoeken1.Text == "Zoeken...")
+        //    {
+        //        textBoxZoeken1.Text = "";
+        //    }
+        //}
 
         private void buttonZelfVraag2_Click(object sender, EventArgs e)
         {
@@ -1126,7 +1127,7 @@ namespace EersteProjectMau
 
         private void textboxPasnummer1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) && (textboxPasnummer1.Text.Length < 3))
+            if (char.IsNumber(e.KeyChar) && (textboxPasnummer1.Text.Length < 4))
             {
 
             }
@@ -1549,6 +1550,7 @@ namespace EersteProjectMau
                 {
                     smtp.Send(newmsg);
                     betaaaldLabel.Text = $"U heeft betaald!\n\nTotale bedrag: €{bedragBetaal2.Text}\n\nUw ticket is naar uw e-mail adres verzonden.\n\nTot gauw!";
+                    saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, betaalEmail.Text);
                     tabControl1.SelectTab(9);
                     tabControl2.SelectTab(9);
                 }
@@ -1576,7 +1578,7 @@ namespace EersteProjectMau
             }
             if (stoelGeselect)
             {
-                saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
+                //saveFilmStoelen(huidigeFilm.titel, huidigeFilm.datum, stoelGrid, "NieuweKlant");
                 tabControl1.SelectedTab = tabControl1.Controls["tabPageBetalen"] as TabPage;
                 bedragBetaal2.Text = totaalPrijs.ToString();
                 tabControl2.SelectTab(5);
