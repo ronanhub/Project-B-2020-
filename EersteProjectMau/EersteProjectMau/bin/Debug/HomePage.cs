@@ -979,7 +979,7 @@ namespace EersteProjectMau
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("1917", new DateTime(2020, 13, 8, 15, 00, 0));
+            film nieuweFilm = new film("1917", new DateTime(2020, 8, 13, 15, 00, 0));
             naarStoelSelectie(nieuweFilm);
         }
 

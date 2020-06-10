@@ -56,14 +56,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.agendaHeader = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.filmdatumlabel3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.filmdatumlabel2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -287,6 +287,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.uheeftbetaaldhelpp = new System.Windows.Forms.TabPage();
             this.betaaldLabelHelp = new System.Windows.Forms.Label();
+            this.castlabel1 = new System.Windows.Forms.Label();
+            this.castlabel2 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
@@ -545,7 +548,7 @@
             this.homeBeschrijving.Location = new System.Drawing.Point(20, 63);
             this.homeBeschrijving.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.homeBeschrijving.Name = "homeBeschrijving";
-            this.homeBeschrijving.Size = new System.Drawing.Size(880, 100);
+            this.homeBeschrijving.Size = new System.Drawing.Size(881, 100);
             this.homeBeschrijving.TabIndex = 7;
             this.homeBeschrijving.Text = resources.GetString("homeBeschrijving.Text");
             // 
@@ -661,7 +664,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.filmdatumlabel3);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Controls.Add(this.pictureBox11);
@@ -672,21 +676,21 @@
             this.panel4.Size = new System.Drawing.Size(886, 388);
             this.panel4.TabIndex = 8;
             // 
-            // label14
+            // filmdatumlabel3
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(265, 51);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(300, 24);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Donderdag 10 September 2020";
+            this.filmdatumlabel3.AutoSize = true;
+            this.filmdatumlabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filmdatumlabel3.Location = new System.Drawing.Point(265, 51);
+            this.filmdatumlabel3.Name = "filmdatumlabel3";
+            this.filmdatumlabel3.Size = new System.Drawing.Size(300, 24);
+            this.filmdatumlabel3.TabIndex = 9;
+            this.filmdatumlabel3.Text = "Donderdag 10 September 2020";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(30, 316);
+            this.label11.Location = new System.Drawing.Point(30, 348);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 18);
             this.label11.TabIndex = 8;
@@ -738,7 +742,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.castlabel2);
+            this.panel3.Controls.Add(this.filmdatumlabel2);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Controls.Add(this.pictureBox9);
@@ -749,21 +754,21 @@
             this.panel3.Size = new System.Drawing.Size(886, 388);
             this.panel3.TabIndex = 2;
             // 
-            // label13
+            // filmdatumlabel2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(262, 51);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(285, 24);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Donderdag 13 Augustus 2020";
+            this.filmdatumlabel2.AutoSize = true;
+            this.filmdatumlabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filmdatumlabel2.Location = new System.Drawing.Point(262, 51);
+            this.filmdatumlabel2.Name = "filmdatumlabel2";
+            this.filmdatumlabel2.Size = new System.Drawing.Size(285, 24);
+            this.filmdatumlabel2.TabIndex = 6;
+            this.filmdatumlabel2.Text = "Donderdag 13 Augustus 2020";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(30, 213);
+            this.label10.Location = new System.Drawing.Point(30, 245);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 18);
             this.label10.TabIndex = 8;
@@ -816,6 +821,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.castlabel1);
             this.panel2.Controls.Add(this.filmdatumlabel1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox5);
@@ -841,7 +847,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 235);
+            this.label6.Location = new System.Drawing.Point(16, 261);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 18);
             this.label6.TabIndex = 4;
@@ -3485,6 +3491,36 @@
             this.betaaldLabelHelp.TabIndex = 0;
             this.betaaldLabelHelp.Text = "U heeft betaald!\r\n\r\nKlik op de gele knop \r\nom verder te gaan.";
             // 
+            // castlabel1
+            // 
+            this.castlabel1.AutoSize = true;
+            this.castlabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.castlabel1.Location = new System.Drawing.Point(16, 234);
+            this.castlabel1.Name = "castlabel1";
+            this.castlabel1.Size = new System.Drawing.Size(309, 18);
+            this.castlabel1.TabIndex = 6;
+            this.castlabel1.Text = "Cast: Harry Styles, Cillian Murphy, Tom Hardy";
+            // 
+            // castlabel2
+            // 
+            this.castlabel2.AutoSize = true;
+            this.castlabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.castlabel2.Location = new System.Drawing.Point(29, 215);
+            this.castlabel2.Name = "castlabel2";
+            this.castlabel2.Size = new System.Drawing.Size(322, 18);
+            this.castlabel2.TabIndex = 7;
+            this.castlabel2.Text = "Cast: Dean-Charles Chapman, George MacKay";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(30, 316);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(362, 18);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Cast: Danny de Munk, Renée Soutendijk, Huub Stapel";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3855,9 +3891,12 @@
         private System.Windows.Forms.Label idealLabels;
         private System.Windows.Forms.Label LabelFilmBetaal;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label filmdatumlabel3;
+        private System.Windows.Forms.Label filmdatumlabel2;
         private System.Windows.Forms.Label filmdatumlabel1;
+        private System.Windows.Forms.Label castlabel1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label castlabel2;
     }
 }
 

@@ -929,13 +929,13 @@ namespace EersteProjectMau
 
 
 
-        private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxZoeken1.Text == "Zoeken...")
-            {
-                textBoxZoeken1.Text = "";
-            }
-        }
+        //private void textBoxZoeken1_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (textBoxZoeken1.Text == "Zoeken...")
+        //    {
+        //        textBoxZoeken1.Text = "";
+        //    }
+        //}
 
         private void buttonZelfVraag2_Click(object sender, EventArgs e)
         {
@@ -1126,7 +1126,7 @@ namespace EersteProjectMau
 
         private void textboxPasnummer1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) && (textboxPasnummer1.Text.Length < 3))
+            if (char.IsNumber(e.KeyChar) && (textboxPasnummer1.Text.Length < 4))
             {
 
             }

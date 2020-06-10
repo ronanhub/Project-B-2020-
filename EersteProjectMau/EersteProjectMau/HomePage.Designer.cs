@@ -34,7 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.navigatiePanel = new System.Windows.Forms.Panel();
             this.sluitKruisButton = new System.Windows.Forms.PictureBox();
-            this.textBoxZoeken1 = new System.Windows.Forms.TextBox();
             this.faqButton1 = new System.Windows.Forms.PictureBox();
             this.contactButton1 = new System.Windows.Forms.PictureBox();
             this.agendaButton1 = new System.Windows.Forms.PictureBox();
@@ -56,6 +55,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.agendaHeader = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.filmdatumlabel3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -63,6 +63,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.castlabel2 = new System.Windows.Forms.Label();
             this.filmdatumlabel2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -70,6 +71,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.castlabel1 = new System.Windows.Forms.Label();
             this.filmdatumlabel1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -287,9 +289,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.uheeftbetaaldhelpp = new System.Windows.Forms.TabPage();
             this.betaaldLabelHelp = new System.Windows.Forms.Label();
-            this.castlabel1 = new System.Windows.Forms.Label();
-            this.castlabel2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.navigatiePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).BeginInit();
@@ -367,7 +366,6 @@
             // 
             this.navigatiePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.navigatiePanel.Controls.Add(this.sluitKruisButton);
-            this.navigatiePanel.Controls.Add(this.textBoxZoeken1);
             this.navigatiePanel.Controls.Add(this.faqButton1);
             this.navigatiePanel.Controls.Add(this.contactButton1);
             this.navigatiePanel.Controls.Add(this.agendaButton1);
@@ -389,16 +387,6 @@
             this.sluitKruisButton.TabIndex = 15;
             this.sluitKruisButton.TabStop = false;
             this.sluitKruisButton.Click += new System.EventHandler(this.sluitKruisButton_Click);
-            // 
-            // textBoxZoeken1
-            // 
-            this.textBoxZoeken1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBoxZoeken1.Location = new System.Drawing.Point(934, 5);
-            this.textBoxZoeken1.Name = "textBoxZoeken1";
-            this.textBoxZoeken1.Size = new System.Drawing.Size(160, 20);
-            this.textBoxZoeken1.TabIndex = 14;
-            this.textBoxZoeken1.Text = "Zoeken...";
-            this.textBoxZoeken1.TextChanged += new System.EventHandler(this.textBoxZoeken1_TextChanged);
             // 
             // faqButton1
             // 
@@ -676,6 +664,16 @@
             this.panel4.Size = new System.Drawing.Size(886, 388);
             this.panel4.TabIndex = 8;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(30, 316);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(362, 18);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Cast: Danny de Munk, Renée Soutendijk, Huub Stapel";
+            // 
             // filmdatumlabel3
             // 
             this.filmdatumlabel3.AutoSize = true;
@@ -753,6 +751,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(886, 388);
             this.panel3.TabIndex = 2;
+            // 
+            // castlabel2
+            // 
+            this.castlabel2.AutoSize = true;
+            this.castlabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.castlabel2.Location = new System.Drawing.Point(29, 215);
+            this.castlabel2.Name = "castlabel2";
+            this.castlabel2.Size = new System.Drawing.Size(322, 18);
+            this.castlabel2.TabIndex = 7;
+            this.castlabel2.Text = "Cast: Dean-Charles Chapman, George MacKay";
             // 
             // filmdatumlabel2
             // 
@@ -832,6 +840,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(886, 382);
             this.panel2.TabIndex = 1;
+            // 
+            // castlabel1
+            // 
+            this.castlabel1.AutoSize = true;
+            this.castlabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.castlabel1.Location = new System.Drawing.Point(16, 234);
+            this.castlabel1.Name = "castlabel1";
+            this.castlabel1.Size = new System.Drawing.Size(309, 18);
+            this.castlabel1.TabIndex = 6;
+            this.castlabel1.Text = "Cast: Harry Styles, Cillian Murphy, Tom Hardy";
             // 
             // filmdatumlabel1
             // 
@@ -3491,36 +3509,6 @@
             this.betaaldLabelHelp.TabIndex = 0;
             this.betaaldLabelHelp.Text = "U heeft betaald!\r\n\r\nKlik op de gele knop \r\nom verder te gaan.";
             // 
-            // castlabel1
-            // 
-            this.castlabel1.AutoSize = true;
-            this.castlabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.castlabel1.Location = new System.Drawing.Point(16, 234);
-            this.castlabel1.Name = "castlabel1";
-            this.castlabel1.Size = new System.Drawing.Size(309, 18);
-            this.castlabel1.TabIndex = 6;
-            this.castlabel1.Text = "Cast: Harry Styles, Cillian Murphy, Tom Hardy";
-            // 
-            // castlabel2
-            // 
-            this.castlabel2.AutoSize = true;
-            this.castlabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.castlabel2.Location = new System.Drawing.Point(29, 215);
-            this.castlabel2.Name = "castlabel2";
-            this.castlabel2.Size = new System.Drawing.Size(322, 18);
-            this.castlabel2.TabIndex = 7;
-            this.castlabel2.Text = "Cast: Dean-Charles Chapman, George MacKay";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(30, 316);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(362, 18);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Cast: Danny de Munk, Renée Soutendijk, Huub Stapel";
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3539,7 +3527,6 @@
             this.Text = " ";
             this.Load += new System.EventHandler(this.homePage_Load);
             this.navigatiePanel.ResumeLayout(false);
-            this.navigatiePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sluitKruisButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faqButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactButton1)).EndInit();
@@ -3709,7 +3696,6 @@
         private System.Windows.Forms.Label labelTitel1;
         private System.Windows.Forms.PictureBox homePoster;
         private System.Windows.Forms.PictureBox reserveerButtonHome;
-        private System.Windows.Forms.TextBox textBoxZoeken1;
         private System.Windows.Forms.Panel FaqPage;
         private System.Windows.Forms.Panel vragenPaneel;
         private System.Windows.Forms.Label Vraag9label;
