@@ -65,7 +65,18 @@ namespace EersteProjectMau
             stoppenNuuuu.Show();
         }
 
-
+        public bool heeftVrijePlekken(string filmNaam, DateTime tijdstip)
+        {
+            var stoelLijst = loadFilmStoelen(filmNaam, tijdstip);
+            foreach(var stoel in stoelLijst)
+            {
+                if (stoel.Item2 == status.vrij)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
 
@@ -695,8 +706,18 @@ namespace EersteProjectMau
         }
         private void reserveerButton1_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));
-            naarStoelSelectie(nieuweFilm);
+            bool checkPlekken = heeftVrijePlekken("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));
+            
+            if (checkPlekken)
+                {
+                film nieuweFilm = new film("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));
+                naarStoelSelectie(nieuweFilm);
+                }
+            else
+            {
+                stopForm("Deze film is helaas uitverkocht!");
+            }
+            
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -974,20 +995,49 @@ namespace EersteProjectMau
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("Dunkirk", new DateTime(2020, 7, 9, 15, 00, 0));
-            naarStoelSelectie(nieuweFilm);
+            bool checkPlekken = heeftVrijePlekken("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));
+
+            if (checkPlekken)
+            {
+                film nieuweFilm = new film("Dunkirk", new DateTime(2020, 7, 9, 15, 00, 0));
+                naarStoelSelectie(nieuweFilm);
+            }
+            else
+            {
+                stopForm("Deze film is helaas uitverkocht!");
+            }
+
+            
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("1917", new DateTime(2020, 8, 13, 15, 00, 0));
-            naarStoelSelectie(nieuweFilm);
+            bool checkPlekken = heeftVrijePlekken("1917", new DateTime(2020, 8, 13, 15, 00, 0));
+
+            if (checkPlekken)
+            {
+                film nieuweFilm = new film("1917", new DateTime(2020, 8, 13, 15, 00, 0));
+                naarStoelSelectie(nieuweFilm);
+            }
+            else
+            {
+                stopForm("Deze film is helaas uitverkocht!");
+            }
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            film nieuweFilm = new film("Op hoop van zegen", new DateTime(2020, 9, 10, 15, 00, 0));
-            naarStoelSelectie(nieuweFilm);
+            bool checkPlekken = heeftVrijePlekken("Op hoop van zegen", new DateTime(2020, 9, 10, 15, 00, 0));
+
+            if (checkPlekken)
+            {
+                film nieuweFilm = new film("Op hoop van zegen", new DateTime(2020, 9, 10, 15, 00, 0));
+                naarStoelSelectie(nieuweFilm);
+            }
+            else
+            {
+                stopForm("Deze film is helaas uitverkocht!");
+            }
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
