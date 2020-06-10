@@ -2031,7 +2031,7 @@
             // 
             this.LabelFilmBetaal.AutoSize = true;
             this.LabelFilmBetaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelFilmBetaal.Location = new System.Drawing.Point(634, 61);
+            this.LabelFilmBetaal.Location = new System.Drawing.Point(622, 63);
             this.LabelFilmBetaal.Name = "LabelFilmBetaal";
             this.LabelFilmBetaal.Size = new System.Drawing.Size(62, 37);
             this.LabelFilmBetaal.TabIndex = 65;
@@ -2051,7 +2051,7 @@
             // 
             this.bedragBetaal2.AutoSize = true;
             this.bedragBetaal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bedragBetaal2.Location = new System.Drawing.Point(711, 10);
+            this.bedragBetaal2.Location = new System.Drawing.Point(654, 10);
             this.bedragBetaal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bedragBetaal2.Name = "bedragBetaal2";
             this.bedragBetaal2.Size = new System.Drawing.Size(93, 37);
@@ -2071,7 +2071,7 @@
             // labelbedraggBetaal1
             // 
             this.labelbedraggBetaal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelbedraggBetaal1.Location = new System.Drawing.Point(547, 10);
+            this.labelbedraggBetaal1.Location = new System.Drawing.Point(505, 10);
             this.labelbedraggBetaal1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelbedraggBetaal1.Name = "labelbedraggBetaal1";
             this.labelbedraggBetaal1.Size = new System.Drawing.Size(202, 50);
