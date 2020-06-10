@@ -102,7 +102,7 @@ namespace EersteProjectMau
             { 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
 
-                smtp.Credentials = new NetworkCredential("ashleyscinema010@gmail.com", "ashley010");
+                smtp.Credentials = new NetworkCredential("ashleyscinema010@gmail.com", "F_YB4a}5r<txEm:_");
 
                 smtp.EnableSsl = true;
 
