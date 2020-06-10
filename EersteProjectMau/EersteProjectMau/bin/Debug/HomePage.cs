@@ -995,7 +995,7 @@ namespace EersteProjectMau
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            bool checkPlekken = heeftVrijePlekken("12 Years A Slave", new DateTime(2020, 2, 21, 16, 30, 0));
+            bool checkPlekken = heeftVrijePlekken("Dunkirk", new DateTime(2020, 7, 9, 15, 00, 0));
 
             if (checkPlekken)
             {
@@ -1214,17 +1214,17 @@ namespace EersteProjectMau
         }
         private void betaalVoornaam_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void betaalAchternaam_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void betaalPlaats_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
 
@@ -1252,7 +1252,7 @@ namespace EersteProjectMau
         }
         private void NaamCreditcardEigenaar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
         private void ComboboxMaand_KeyPress(object sender, KeyPressEventArgs e)
         {
