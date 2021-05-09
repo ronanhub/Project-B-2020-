@@ -1,12 +1,12 @@
 Stoel;Prijs;Status;Klant
-0;10,8;vrij;
+0;108;vrij;
 1;10;vrij;
 2;10;bezet;safdsf@adfsg.com
 3;10;bezet;safdsf@adfsg.com
-4;11,1;vrij;
-5;11,1;vrij;
-6;11,12;vrij;
-7;11,1;vrij;
+4;111;vrij;
+5;111;vrij;
+6;1112;vrij;
+7;111;vrij;
 8;10;vrij;
 9;10;vrij;
 10;10;vrij;
@@ -16,7 +16,7 @@ Stoel;Prijs;Status;Klant
 14;10;bezet;safdsf@adfsg.com
 15;10;bezet;safdsf@adfsg.com
 16;11;vrij;
-17;11;vrij;
+17;11;bezet;kq2eihjq2o@adskljhasd.com
 18;11;vrij;
 19;11;vrij;
 20;10;bezet;safdsf@adfsg.com
